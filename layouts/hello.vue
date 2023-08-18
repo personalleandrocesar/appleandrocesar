@@ -77,16 +77,9 @@ function openPhoto() {
 
 
 
-        <div class="nav-bottom">
-          <nuxt-link to="/leandro"><Icon name='mdi:home'/></nuxt-link>
-          <nuxt-link to="/leandro/treino"><Icon name='material-symbols:exercise'/></nuxt-link>
-          <nuxt-link to="/leandro/aerobio"><Icon name='healthicons:exercise-running'/></nuxt-link>
-          <nuxt-link to="/leandro/avaliacao"><Icon name='jam:medical'/></nuxt-link>
-
-      </div>
-
       </div>
       <slot />
+      <NavBottom />
 </template>
 <style scoped>
 .name-user {

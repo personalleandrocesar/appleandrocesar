@@ -1,6 +1,6 @@
 <script setup>
 import { ref } from 'vue';
-const { data } = await useFetch('https://app.leandrocesar.com/api/leandro-cesar')
+const { data } = await useFetch('https://m.leandrocesar.com/api/leandro-cesar')
 
 const navbarOpen = ref(false);
 function openNavbar() {
@@ -16,7 +16,7 @@ function openPhoto() {
 <template>
   <NuxtLoadingIndicator /> <!-- here -->
 
-  <div>
+  <div >
       
       <div class="bar-top">
         <div class='bar-top-top'>
@@ -66,10 +66,7 @@ function openPhoto() {
         </div>
 
 
-      <div v-if="photoOpen" class="nav-bar-photo">
-        <div>
-          <nuxt-link @click="openPhoto" class="button"><Icon name='material-symbols:cancel-rounded'/></nuxt-link>
-        </div>
+      <div v-if="photoOpen" class="nav-bar-photo" @click="openPhoto">
         <div class="nav-top">
           
             <!-- Início do Nav-flow -->
@@ -86,17 +83,10 @@ function openPhoto() {
 
 
 
-
-        <div class="nav-bottom">
-          <nuxt-link to="/leandro"><Icon name='mdi:home'/></nuxt-link>
-          <nuxt-link to="/leandro/treino"><Icon name='material-symbols:exercise'/></nuxt-link>
-          <nuxt-link to="/leandro/aerobio"><Icon name='healthicons:exercise-running'/></nuxt-link>
-          <nuxt-link to="/leandro/avaliacao"><Icon name='jam:medical'/></nuxt-link>
-  
-      </div>
         
       </div>
       <slot />
+      <navBottom/>
 </template>
 <style scoped>
 .name-user {
