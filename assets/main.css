@@ -1,0 +1,187 @@
+@import './base.css';
+
+*{ 
+  font-family: "Ubuntu";
+}
+
+#app {
+  font-family: 'Ubuntu', sans-serif;
+  font-weight: normal;
+}
+
+.code {
+  border-left: 6px solid #fadb41;
+  margin: 0 0 0 0px;
+}
+.code p {
+  margin: 0 0 0 10px;
+  padding: 0;
+}
+
+.content-title-img {
+  margin: 10px;
+  display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    flex-wrap: nowrap;
+line-height: 1.2;
+}
+
+.content-main {
+  margin: 10px 5px 50px 10px;
+  display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    flex-wrap: nowrap;
+    font-size: 1.1rem;
+  }
+
+  .content-main p {
+    margin-bottom: 15px;
+    text-indent: 20px;
+  }
+
+  .content-detail {
+    margin: 10px 10px 50px 10px;
+      display: flex;
+      flex-direction: column;
+      align-items: flex-end;
+      flex-wrap: nowrap;
+      font-size: 1.1rem;
+
+  }
+
+.content-details {
+  margin: 10px;
+  display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    flex-wrap: nowrap;
+}
+
+
+table {
+  border-collapse: collapse;
+    border: .1px solid rgb(200, 200, 200);
+    letter-spacing: 1px;
+    font-size: 0.8rem;
+    margin: 10px 40px;
+
+}
+td,
+th {
+  border: 1px solid rgb(190, 190, 190);
+  padding: 10px 20px;
+}
+
+th {
+  background-color: #fadb4120;
+}
+
+td {
+  text-align: center;
+}
+
+
+caption {
+  padding: 10px;
+}
+
+a,
+.green {
+  text-decoration: none;
+  color: #fadb41;
+  transition: 0.4s;
+}
+
+.anima {
+  animation-direction: top;
+  animation: opacityAnimation 1s;
+}
+
+@keyframes opacityAnimation {
+  0% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes lightOnAnimation {
+  0% {
+    color: #fadb41;
+  }
+
+  50% {
+    color: var(--color-text);
+  }
+
+  100% {
+    color: #fadb41;
+  }
+}
+
+.lightOnAnimationOne {
+  animation-direction: left;
+  animation: 2s infinite lightOnAnimation;
+  animation-delay: 8s;
+}
+
+
+.logoAnimationNav {
+  animation-direction: top;
+  animation: opacityAnimation 1s;
+}
+
+.logoAnimationOne {
+  animation-direction: top;
+  animation: opacityAnimation 2s;
+}
+
+.logoAnimationTwo {
+  animation-direction: top;
+  animation: opacityAnimation 4s;
+}
+
+.logoAnimationTree {
+  animation-direction: top;
+  animation: opacityAnimation 6s;
+}
+
+.logoAnimationFour {
+  animation-direction: top;
+  animation: opacityAnimation 8s;
+}
+
+.logoAnimationFive {
+  animation: opacityAnimation 10s;
+}
+
+.logoAnimationSix {
+  animation-direction: top;
+  animation: opacityAnimation 12s;
+}
+
+.logoAnimationSeven {
+  animation-direction: top;
+  animation: opacityAnimation 6s;
+}
+
+.logoAnimationSevenTwo {
+  animation-direction: top;
+  animation: opacityAnimation 7s;
+}
+
+.lightOnAnimationSeven {
+  animation-direction: left;
+  animation: 3s infinite lightOnAnimation;
+  animation-delay: 5s;
+}
+
+.homeAnimation {
+  animation-direction: top;
+  animation: opacityAnimation 5s;
+}
