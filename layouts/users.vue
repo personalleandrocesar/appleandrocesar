@@ -14,7 +14,7 @@ function openPhoto() {
 </script>
 
 <template>
-  <NuxtLoadingIndicator /> <!-- here -->
+            <NuxtLoadingIndicator color='repeating-linear-gradient(to right,#00dc82 0%,#34cdfe 50%,#fadb41 100%)' height="3"/> <!-- here -->
 
   <div >
       
