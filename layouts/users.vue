@@ -23,7 +23,7 @@ function openPhoto() {
           <div class="div-img">
             <img src='/img/myFotoTwo.jpg' @click="openPhoto"/>
           </div>
-          <nuxt-link @click="openNavbar"><Icon name='streamline:interface-setting-menu-vertical-navigation-vertical-three-circle-button-menu-dots'/></nuxt-link>
+          <nuxt-link @click="openNavbar"><Icon name='octicon:three-bars-16'/></nuxt-link>
 
         </div>
           
@@ -112,8 +112,8 @@ display: flex;
 .bar-top-top a{
   cursor: pointer;
   zoom: 1.2;
-  color: #ffffff90;
-  margin: 10px 15px 30px 10px;
+  color: #ffffff;
+  margin: 5px 15px 30px 10px;
 }
 
 .button .icon {
