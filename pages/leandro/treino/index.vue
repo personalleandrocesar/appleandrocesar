@@ -1,6 +1,6 @@
 <script setup>
 const layout = "hello"
-const { data } = await useFetch('https://m.leandrocesar.com/api/leandro-cesar')
+// const { data } = await useFetch('https://m.leandrocesar.com/api/leandro-cesar')
 </script>
 
 <template>
