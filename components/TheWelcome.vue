@@ -1,6 +1,5 @@
 <script setup>
 import LCLogoTree from '../components/LCLogoTree.vue'
-const { data } = await useFetch('https://app.leandrocesar.com/api/leandro-cesar')
 </script>
 
 
