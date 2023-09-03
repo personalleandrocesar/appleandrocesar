@@ -1,22 +1,22 @@
 <script setup>
 const layout = "hello"
+import { ref } from 'vue'
+const name = ref(0)
+
+const { data, pending, error } = await useFetch(() => `/api/${name.value}`)
 </script>
+
 
 <template>
   <NuxtLayout :name="layout">
 
+    
     <div class="main">
-
-      <div class="main-div-one">
-          
-        <div class="square">
-
-        </div>  
       
+      <div class="main-div-one">
+        
         <div class="square">
           
-          
-
         </div>  
         
         <div class="square">
@@ -24,8 +24,24 @@ const layout = "hello"
           
           
         </div>  
-      
+        
+        <div class="square">
+          
+          
+          
+        </div>  
+        
       </div>
+      <div>
+            <p v-if="pending">Carregando...</p>
+            <pre v-else>
+              {{ data.nome }}
+              {{ data.idade }}
+              {{ data.nome }}
+              
+          </pre>
+            <p><button @click="name--">Previous</button> - <button @click="name++">Next</button></p>
+          </div>
   
     </div>
     

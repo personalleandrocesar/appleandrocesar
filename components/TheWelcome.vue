@@ -1,111 +1,64 @@
 <script setup>
-import LCLogoTree from '../components/LCLogoTree.vue'
+import { ref } from 'vue'
+
+// Referência reativa para email e senha
+const name = ref('')
+const senha = ref('')
+const nome = ref(0)
+
+// Variáveis para armazenar os dados da API
+const { data } = useFetch(`/api/${nome.value}`)
+
+// Função para lidar com o clique no botão "ENTRAR"
+const enterClicked = () => {
+        // Converte os dados da API em um array de credenciais
+        const credentials = Object.entries(data.value).map(([nome, senha]) => ({ nome, senha }))
+        
+        
+        if (credentials.find(cred => cred.nome === nome.value && cred.senha === senha.value)) {
+            this.$router.replace('/${nome.value}')
+        }
+    }
+    console.log(data.value)
+
+// Função para simular o clique de outro elemento (não está claro em que contexto você usa isso)
+const trigger = () => {
+    this.$refs.sendReply.click()
+}
 </script>
 
 
 <template>
+{{ data }}
     <div id="login">
-        <div>
-            <div class='logo'>
-                <LCLogoTree />
-                <h1>app.leandrocesar.com</h1>
-                <h3>Acesse sua conta</h3>
-                <div>
+            <div>
+                <div class='logo'>
+                    <LCLogoTree />
+                    <h1>app.leandrocesar.com</h1>
+                    <h3>Acesse sua conta</h3>
                     <div>
-                        <h4>E-mail</h4>
-                        <input type="email" name="" id="usuario" placeholder="Digite seu e-mail" autofocus v-model="email">
-                        <br>
-                        <h4>Senha</h4>
-                        <input type="password" @keyup.enter="trigger" name="" id="senha" placeholder="Digite sua senha"
-                            v-model="senha">
-                        <br>
                         <div>
-                            <input class='button-call' type="submit" value="ENTRAR" id="btn" @click="enterClicked"
-                                ref="sendReply">
-                            <a href="https://api.whatsapp.com/send?phone=5521936184024%20&text=Ol%C3%A1%20professor!%20Esqueci%20o%20meu%20email%20e%20minha%20senha!"
-                                target="_blank">
-                                <h5>Esqueci minha senha</h5>
-                            </a>
+                            <h4>E-mail</h4>
+                            <input type="email" name="" id="usuario" placeholder="Digite seu e-mail" autofocus v-model="nome">
+                            <br>
+                            <h4>Senha</h4>
+                            <input type="password" @keyup.enter="trigger" name="" id="senha" placeholder="Digite sua senha"
+                                v-model="senha">
+                            <br>
+                            <div>
+                                <input class='button-call' type="submit" value="ENTRAR" id="btn" @click="enterClicked"
+                                    ref="sendReply">
+                                <a href="https://api.whatsapp.com/send?phone=5521936184024%20&text=Ol%C3%A1%20professor!%20Esqueci%20o%20meu%20email%20e%20minha%20senha!"
+                                    target="_blank">
+                                    <h5>Esqueci minha senha</h5>
+                                </a>
+                            </div>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
-    </div>
 </template>
-<script>
-export default {
-    data() {
-        return {
-            email: '',
-            senha: '',
-        }
-    },
-    methods: {
-        enterClicked() {
-            if (this.email === 'admin' & this.senha === '1234') {
-                this.$router.replace('/home')
-            } if (this.email === 'lea' & this.senha === '1234') {
-                this.$router.replace('/leandro')
-            } if (this.email === 'juliobizzo@gmail.com' & this.senha === 'bizzo@julio') {
-                this.$router.replace('/julio-bizzo')
-            } if (this.email === 'amandagoncalves@gmail.com' & this.senha === 'goncalves@amanda') {
-                this.$router.replace('/amanda-goncalves')
-            } if (this.email === 'camilladimas@gmail.com' & this.senha === 'dimas@camilla') {
-                this.$router.replace('/camilla-dimas')
-            } if (this.email === 'rosanaassis@gmail.com' & this.senha === 'assis@rosana') {
-                this.$router.replace('/rosana-assis')
-            } if (this.email === 'isadorasantesso@gmail.com' & this.senha === 'santesso@isadora') {
-                this.$router.replace('/isadora-santesso')
-            } if (this.email === 'gustavorj@gmail.com' & this.senha === 'rj@gustavo') {
-                this.$router.replace('/gustavo-rj')
-            } if (this.email === 'haroldocabussu@gmail.com' & this.senha === 'cabussu@haroldo') {
-                this.$router.replace('/haroldo-cabussu')
-            } if (this.email === 'sergioluiz@gmail.com' & this.senha === 'luiz@sergio') {
-                this.$router.replace('/sergio-luiz')
-            } if (this.email === 'fabiocruz@gmail.com' & this.senha === 'cruz@fabio') {
-                this.$router.replace('/fabio-cruz')
-            } if (this.email === 'biabarcelos@gmail.com' & this.senha === 'barcelos@bia') {
-                this.$router.replace('/bianca-barcelos')
-            } if (this.email === 'lauriogarcia@gmail.com' & this.senha === 'garcia@laurio') {
-                this.$router.replace('/laurio-garcia')
-            } if (this.email === 'ygorpaixao@gmail.com' & this.senha === 'paixao@ygor') {
-                this.$router.replace('/ygor-paixao')
-            } if (this.email === 'root@gmail.com' & this.senha === '12345') {
-                this.$router.replace('/home')
-            } if (this.email === 'priscillamello@gmail.com' & this.senha === 'mello@priscilla') {
-                this.$router.replace('/priscilla-mello')
-            } if (this.email === 'karolaraujo@gmail.com' & this.senha === 'araujo@karol') {
-                this.$router.replace('/karolline-araujo')
-            } if (this.email === 'kiviatenorio@gmail.com' & this.senha === 'tenorio@kivia') {
-                this.$router.replace('/kivia-tenorio')
-            } if (this.email === 'joaocesar@gmail.com' & this.senha === 'cesar@joao') {
-                this.$router.replace('/joao-cesar')
-            } if (this.email === 'vivianemarques@gmail.com' & this.senha === 'marques@viviane') {
-                this.$router.replace('/viviane-marques')
-            } if (this.email === 'manuelaalbertino@gmail.com' & this.senha === 'albertino@manuela') {
-                this.$router.replace('/manuela-albertino')
-            } if (this.email === 'blendagruber@gmail.com' & this.senha === 'gruber@blenda') {
-                this.$router.replace('/blenda-gruber')
-            }
-
-
-
-
-        },
-        trigger() {
-            this.$refs.sendReply.click()
-        }
-    },
-
-    scrollToTop() {
-        window.scrollTo(0, 0);
-    },
-    created() {
-        console.log(`the component is now mounted.`)
-    }
-}
-</script>
 <style scoped>
 #login {
     font-family: "Philosopher";
