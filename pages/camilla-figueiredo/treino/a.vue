@@ -71,7 +71,6 @@ const nextExercise = () => {
 
         </div>
           
-        
         <div class="main-div-two">
           
           <h3>
@@ -79,7 +78,7 @@ const nextExercise = () => {
           </h3>
           <div class="square">
             <b>
-              Futura imagem de exercício
+              Futura imagem(.gif) ou vídeo!
             </b>
           </div>
           <h2>
@@ -91,19 +90,19 @@ const nextExercise = () => {
         
             <div class="exercise">
               <div class="exercise-square">
-                <b></b>Séries: {{ currentExercise.sets }} 
+                Séries: <br>{{ currentExercise.sets }} 
                 </div>
                 <div class="exercise-square">
-                  Repetições: {{ currentExercise.reps }}
+                  Repetições: <br>{{ currentExercise.reps }}
                   
                 </div>
                 <div class="exercise-square">
-                  Intervalo: {{ currentExercise.rest }} 
-                  <br>
+                  Intervalo: <br>{{ currentExercise.rest }} 
+            
                 </div>
                 
               </div>
-              <div>
+              <div class="obs">
                 {{ currentExercise.obs }}
                 <br>
               </div>
@@ -156,7 +155,7 @@ body {
   justify-content: space-around;
 }
 .main-div-two .icon{
-zoom: 2;
+zoom: 3;
 cursor: pointer;
 }
 .main-div-two h3, .main-div-two h2{
@@ -188,7 +187,7 @@ margin-left: 10px;
   justify-content: center;
   align-items: center;
   backdrop-filter: blur(5px);
-  margin: 20px 5px;
+  margin: 20px 5px 0 5px;
   border-radius: 20px;
 }
 
@@ -197,6 +196,13 @@ margin-left: 10px;
   flex-direction: row;
   justify-content: center;
   align-items: center;
+}
+.obs{
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  font-weight: bold;
 
 }
 
