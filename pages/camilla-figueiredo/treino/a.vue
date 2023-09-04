@@ -90,14 +90,29 @@ const nextExercise = () => {
         
             <div class="exercise">
               <div class="exercise-square">
-                Séries: <br>{{ currentExercise.sets }} 
+                <h4>
+                  Séries 
+                </h4>
+                <h4>
+                  {{ currentExercise.sets }} 
+                </h4>
                 </div>
                 <div class="exercise-square">
-                  Repetições: <br>{{ currentExercise.reps }}
+                  <h4>
+                    Repetições
+                  </h4>
+                  <h4>
+                    {{ currentExercise.reps }}
+                  </h4>
                   
                 </div>
                 <div class="exercise-square">
-                  Intervalo: <br>{{ currentExercise.rest }} 
+                  <h4>
+                    Intervalo
+                  </h4>
+                  <h4>
+                    {{ currentExercise.rest }} 
+                  </h4>
             
                 </div>
                 
@@ -189,18 +204,19 @@ margin-left: 10px;
   height: 80px;
   overflow-x: auto;
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
-
   backdrop-filter: blur(5px);
   margin: 20px 5px 0 5px;
   border-radius: 20px;
   color:#000;
   background-color: #095D6220;
-  
-  opacity: .5;
+  opacity: .8;
   backdrop-filter: blur(5px);
+}
+.exercise-square h4:nth-child(1) {
+  color: #095D62;
 }
 
 .button {
