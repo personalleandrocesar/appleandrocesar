@@ -46,27 +46,27 @@ const nextExercise = () => {
   <NuxtLayout :name="layout">
          <div class="main-div-one">
             
-              <div class="conf">
-                <h4>
-            TREINO
-          </h4>
-           <Icon name='mdi:alpha-a' />
-                
-              </div>  
-              <div class="conf">
-                <Icon name="material-symbols:timer-rounded"/> 
+           <div class="conf">
+             <Icon name="fluent:target-arrow-16-filled"/> 
+             <h3>
+               Definição 
+             </h3>
+             
+           </div>  
+           <div class="conf">
+             <Icon name="material-symbols:timer-rounded"/> 
+             <h3>
+               60 minutos 
+              </h3>
+              
+            </div>  
+            <div class="conf">
+              <Icon name='mdi:alpha-a-box' />
                 <h3>
-                  60 minutos 
-                </h3>
-                
-              </div>  
-              <div class="conf">
-                <Icon name="fluent:target-arrow-16-filled"/> 
-                <h3>
-                  Definição 
-                </h3>
-                
-              </div>  
+                  Quadriceps
+                </h3>           
+              
+            </div>  
             
 
         </div>

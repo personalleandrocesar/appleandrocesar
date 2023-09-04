@@ -23,9 +23,9 @@ const layout = "hello"
                 
             </div>  
             <div class="conf">
-              <Icon name="fluent:target-arrow-16-filled"/> 
+              <Icon name="mdi:calendar-weekend"/> 
               <h3>
-                Definição 
+                6 dias
               </h3>
                 
             </div>  
@@ -34,23 +34,25 @@ const layout = "hello"
       </div>
           
       <div class="main-div-two">
-            
+            <h3>
+               <Icon name='material-symbols:exercise' /> TREINOS 
+            </h3>
         <nuxt-link class="square" to="/camilla-figueiredo/treino/a">
           <h4>
-            TREINO
+            <Icon name='material-symbols:exercise' /> TREINO
           </h4>
            <Icon name='mdi:alpha-a' />
         </nuxt-link>
         <nuxt-link class="square" to="/camilla-figueiredo/treino/b">
           <h4>
-            TREINO
+           <Icon name='material-symbols:exercise' /> TREINO
           </h4>
            <Icon name='mdi:alpha-b' />
         </nuxt-link>
             
         <nuxt-link class="square" to="/camilla-figueiredo/treino/c">
           <h4>
-            TREINO
+            <Icon name='material-symbols:exercise' /> TREINO
           </h4>
            <Icon name='mdi:alpha-c' />
         </nuxt-link>
@@ -95,6 +97,12 @@ body {
   display: flex;
   flex-direction: column;
   justify-content: space-around;
+}
+.main-div-two .icon {
+  color: #095D62;
+}
+.main-div-two H3 {
+margin-left: 10PX;
 }
 
 .icon{
