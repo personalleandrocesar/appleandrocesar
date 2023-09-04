@@ -63,7 +63,7 @@ const nextExercise = () => {
             <div class="conf">
               <Icon name='mdi:alpha-a-box' />
                 <h3>
-                  Quadriceps
+                  Quadríceps
                 </h3>           
               
             </div>  
@@ -107,9 +107,14 @@ const nextExercise = () => {
                 <br>
               </div>
             </div>
+
             <div class="button" >
-              <Icon @click="previousExercise" name="mdi:arrow-left-bold-box"/>
-              <Icon @click="nextExercise" name="mdi:arrow-right-bold-box"/>
+              <span @click="previousExercise">
+                <Icon  name="mdi:chevron-left"/> ANTERIOR
+              </span>
+              <span @click="nextExercise">
+                PRÓXIMO <Icon  name="mdi:chevron-right"/>
+              </span>
             </div>
           </div>
   <br>
@@ -155,7 +160,7 @@ body {
   justify-content: space-around;
 }
 .main-div-two .icon{
-zoom: 3;
+zoom: 2;
 cursor: pointer;
 }
 .main-div-two h3, .main-div-two h2{
@@ -197,11 +202,40 @@ margin-left: 10px;
   backdrop-filter: blur(5px);
 }
 
-.button{
+.button {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  align-items: center;
+}
+.button .icon{
+  color: #fff;
   display: flex;
   flex-direction: row;
   justify-content: center;
   align-items: center;
+}
+.button span:nth-child(1){
+  background-color: #095D62;
+  color: #fff;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  border-radius: 20px;
+  padding-right: 15px;
+}
+.button span:nth-child(2){
+  background-color: #095D62;
+  color: #fff;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  border-radius: 20px;
+  padding-left: 15px;
 }
 .obs{
   display: flex;
