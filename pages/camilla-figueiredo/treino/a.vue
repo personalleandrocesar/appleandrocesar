@@ -163,10 +163,11 @@ body {
 zoom: 2;
 cursor: pointer;
 }
-.main-div-two h3, .main-div-two h2{
+ .main-div-two h2{
 margin-left: 10px;
+text-transform: uppercase;
 }
-.main-div-two h3, .main-div-two h2{
+.main-div-two h3{
 margin-left: 10px;
 }
 
@@ -243,6 +244,7 @@ margin-left: 10px;
   justify-content: center;
   align-items: center;
   font-weight: bold;
+  margin: 0 25px 10px 25px;
 
 }
 
