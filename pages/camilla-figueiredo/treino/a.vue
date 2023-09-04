@@ -5,9 +5,36 @@ import { ref, computed } from 'vue'
 
 const dataTreino = ref({
   treino: [
+    // serie A
     { id: 'Exercício 1', nome: 'Extensora', sets: 4, reps: '8 +10" +4', rest: '40"', obs: '' },
     { id: 'Exercício 2', nome: 'Agachamento Búlgaro', sets: 3, reps: '10', rest: '40"', obs: '' },
     { id: 'Exercício 3', nome: 'Agachamento Sumô', sets: 3, reps: '20', rest: '40"', obs: '* Fazer sobre os steps, falhando;' },
+    { id: 'Exercício 4', nome: 'Abdominal infra', sets: 3, reps: '20', rest: '40"', obs: '*Fazer na paralela;' },
+    { id: 'Exercício 5', nome: 'Adução de quadril na polia baixa', sets: 3, reps: '', rest: '40"', obs: '' },
+    { id: 'Exercício 6', nome: 'fd', sets: 3, reps: '', rest: '40"', obs: '' },
+    { id: 'Exercício 7', nome: 'fd', sets: 3, reps: '', rest: '40"', obs: '' },
+    { id: 'Exercício 8', nome: 'fd', sets: 3, reps: '', rest: '40"', obs: '' },
+    { id: 'Exercício 9', nome: 'fd', sets: 3, reps: '', rest: '40"', obs: '' },
+    { id: 'Exercício 10', nome: 'fd', sets: 3, reps: '', rest: '40"', obs: '' },
+    { id: 'Exercício 11', nome: 'fd', sets: 3, reps: '', rest: '40"', obs: '' },
+    { id: 'Exercício 12', nome: 'fd', sets: 3, reps: '', rest: '40"', obs: '' },
+    // serie B
+    { id: 'Exercício 1', nome: 'fd', sets: 3, reps: '', rest: '40"', obs: '' },
+    { id: 'Exercício 2', nome: 'fd', sets: 3, reps: '', rest: '40"', obs: '' },
+    { id: 'Exercício 3', nome: 'fd', sets: 3, reps: '', rest: '40"', obs: '' },
+    { id: 'Exercício 4', nome: 'fd', sets: 3, reps: '', rest: '40"', obs: '' },
+    { id: 'Exercício 5', nome: 'fd', sets: 3, reps: '', rest: '40"', obs: '' },
+    { id: 'Exercício 6', nome: 'fd', sets: 3, reps: '', rest: '40"', obs: '' },
+    { id: 'Exercício 7', nome: 'fd', sets: 3, reps: '', rest: '40"', obs: '' },
+    { id: 'Exercício 8', nome: 'fd', sets: 3, reps: '', rest: '40"', obs: '' },
+    { id: 'Exercício 9', nome: 'fd', sets: 3, reps: '', rest: '40"', obs: '' },
+    { id: 'Exercício 10', nome: 'fd', sets: 3, reps: '', rest: '40"', obs: '' },
+    { id: 'Exercício 11', nome: 'fd', sets: 3, reps: '', rest: '40"', obs: '' },
+    { id: 'Exercício 12', nome: 'fd', sets: 3, reps: '', rest: '40"', obs: '' },
+    // serie C
+    { id: 'Exercício 1', nome: 'fd', sets: 3, reps: '', rest: '40"', obs: '' },
+    { id: 'Exercício 2', nome: 'fd', sets: 3, reps: '', rest: '40"', obs: '' },
+    { id: 'Exercício 3', nome: 'fd', sets: 3, reps: '', rest: '40"', obs: '' },
     { id: 'Exercício 4', nome: 'fd', sets: 3, reps: '', rest: '40"', obs: '' },
     { id: 'Exercício 5', nome: 'fd', sets: 3, reps: '', rest: '40"', obs: '' },
     { id: 'Exercício 6', nome: 'fd', sets: 3, reps: '', rest: '40"', obs: '' },
@@ -54,19 +81,19 @@ const nextExercise = () => {
              
            </div>  
            <div class="conf">
-             <Icon name="material-symbols:timer-rounded"/> 
+             <Icon name='mdi:alpha-a-box' />
              <h3>
-               60 minutos 
-              </h3>
+               Quadríceps
+              </h3>           
               
             </div>  
             <div class="conf">
-              <Icon name='mdi:alpha-a-box' />
-                <h3>
-                  Quadríceps
-                </h3>           
-              
-            </div>  
+              <Icon name="material-symbols:timer-rounded"/> 
+              <h3>
+                60 minutos 
+               </h3>
+               
+             </div>  
             
 
         </div>

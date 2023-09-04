@@ -16,16 +16,16 @@ const layout = "hello"
                 
             </div>  
             <div class="conf">
-              <Icon name="material-symbols:timer-rounded"/> 
+              <Icon name="mdi:calendar-weekend"/> 
               <h3>
-                60 minutos 
+                6 dias
               </h3>
                 
             </div>  
             <div class="conf">
-              <Icon name="mdi:calendar-weekend"/> 
+              <Icon name="material-symbols:timer-rounded"/> 
               <h3>
-                6 dias
+                60 minutos 
               </h3>
                 
             </div>  
