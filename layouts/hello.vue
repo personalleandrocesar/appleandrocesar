@@ -54,9 +54,9 @@ function openPhoto() {
           </div>
 
           </div>
+            <!-- <nuxt-link to="/home">Home</nuxt-link>
             <nuxt-link to="/home">Home</nuxt-link>
-            <nuxt-link to="/home">Home</nuxt-link>
-            <nuxt-link to="/home">Home</nuxt-link>
+            <nuxt-link to="/home">Home</nuxt-link> -->
           </div>
         </div>
 

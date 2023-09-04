@@ -17,9 +17,9 @@ function openPhoto() {
     <div>
 
         <div class="nav-bottom">
-            <nuxt-link to="/leandro">
-                <Icon name='mdi:home' />
-            </nuxt-link>
+                        <nuxt-link to="/leandro/treino">
+                    <Icon name='material-symbols:exercise' />
+                </nuxt-link>
             <nuxt-link to="/leandro/treino/a">
                 <Icon name='mdi:alpha-a' />
             </nuxt-link>

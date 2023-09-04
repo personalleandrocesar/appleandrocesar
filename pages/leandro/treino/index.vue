@@ -1,36 +1,5 @@
 <script setup>
 const layout = "hello"
-
-import { ref, computed } from 'vue'
-
-const dataTreino = ref({
-  treino: [
-    { nome: 'Exercício 1', sets: 3, reps: 12, rest: '40"' },
-    { nome: 'Exercício 2', sets: 4, reps: 10 },
-    { nome: 'Exercício 3', sets: 3, reps: 15 },
-    // Adicione mais exercícios conforme necessário
-  ]
-})
-
-const treino = ref(0)
-
-const currentExercise = computed(() => {
-  return dataTreino.value.treino[treino.value]
-})
-
-const pending = ref(false)
-
-const previousExercise = () => {
-  if (treino.value > 0) {
-    treino.value--
-  }
-}
-
-const nextExercise = () => {
-  if (treino.value < dataTreino.value.treino.length - 1) {
-    treino.value++
-  }
-}
 </script>
 
 <template>
@@ -39,48 +8,27 @@ const nextExercise = () => {
           
       <div class="main-div-one">
             
-          <div class="square">
-              
-          </div>  
-            
-        <div class="square">
-              
-              
-              
-        </div>  
-            
-        <div class="square">
-              
-              
-              
-        </div>  
+        <nuxt-link class="square" to="/leandro/treino/a">
+          <h4>TREINO</h4>
+          <br>
+          <br>
+          <br>
+           <Icon name='mdi:alpha-a' />
+        </nuxt-link>
+        <nuxt-link class="square" to="/leandro/treino/b">
+          <h4>TREINO</h4>
+          <br>
+          <br>
+          <br>
+           <Icon name='mdi:alpha-b' />
+        </nuxt-link>
             
       </div>
 
     </div>
 
 
-    <h1>Avaliação</h1>
-    <div>
-      <p v-if="pending">Carregando...</p>
-      <div v-else>
-
-          <div>
-            <pre>
-              {{ currentExercise.nome }}
-              {{ currentExercise.sets }}
-              {{ currentExercise.reps }}
-              {{ currentExercise.rest }}
-            </pre>
-
-            <p>
-              <button @click="previousExercise">Anterior</button>
-              -
-              <button @click="nextExercise">Próximo</button>
-            </p>
-          </div>
-      </div>
-    </div>
+    
 
 </NuxtLayout>
 </template>
@@ -109,17 +57,21 @@ body {
   justify-content: space-around;
 }
 
+.icon{
+  zoom: 1.4;
+}
+
 .square {  
-  color:#e1a918;
-  background-color: #095D6270;
+  color:#000;
+  background-color: #095D6220;
+    backdrop-filter: blur(15px);
   overflow-x: auto;
   display: flex;
   flex-direction: row;
   justify-content: center;
   align-items: center;
-  opacity: 1;
-  backdrop-filter: blur(25px);
-  height: 15px;
+  opacity: .5;
+  backdrop-filter: blur(5px);
   width: 100%;
   margin: 20px 10px;
   border-radius: 20px;
