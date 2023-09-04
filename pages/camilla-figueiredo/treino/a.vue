@@ -161,6 +161,9 @@ cursor: pointer;
 .main-div-two h3, .main-div-two h2{
 margin-left: 10px;
 }
+.main-div-two h3, .main-div-two h2{
+margin-left: 10px;
+}
 
 .exercise {
   display: flex;
@@ -179,8 +182,8 @@ margin-left: 10px;
   padding: 5px 10px;
   color:#fff;
   height: 80px;
-  background-color: #095D62;
-    backdrop-filter: blur(15px);
+  background-color: #095D6220;
+  backdrop-filter: blur(15px);
   overflow-x: auto;
   display: flex;
   flex-direction: row;
@@ -189,6 +192,11 @@ margin-left: 10px;
   backdrop-filter: blur(5px);
   margin: 20px 5px 0 5px;
   border-radius: 20px;
+  color:#000;
+  background-color: #095D6220;
+  backdrop-filter: blur(15px);
+  opacity: .5;
+  backdrop-filter: blur(5px);
 }
 
 .button{
@@ -208,37 +216,36 @@ margin-left: 10px;
 
 .icon{
   zoom: 1.4;
-  color: #095D62;
+  color: #fadb41;
 }
 
 .conf {  
-  color:#000;
+  color:#fff;
   height: 80px;
-  background-color: #095D6220;
+  background-color: #095D62;
     backdrop-filter: blur(15px);
   overflow-x: auto;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  opacity: .5;
   backdrop-filter: blur(5px);
   width: 100%;
   margin: 20px 10px;
   border-radius: 20px;
 }
 .square {  
-  color:#000;
   height: 150px;
+  color:#000;
   background-color: #095D6220;
-    backdrop-filter: blur(15px);
+  backdrop-filter: blur(15px);
+  opacity: .5;
+  backdrop-filter: blur(5px);
   overflow-x: auto;
   display: flex;
   flex-direction: row;
   justify-content: center;
   align-items: center;
-  opacity: .5;
-  backdrop-filter: blur(5px);
   width: 90%;
   margin: 20px auto;
   border-radius: 20px;
