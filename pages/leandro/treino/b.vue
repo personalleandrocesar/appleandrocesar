@@ -1,5 +1,5 @@
 <script setup>
-const layout = "hello"
+const layout = "duo"
 
 import { ref, computed } from 'vue'
 

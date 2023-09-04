@@ -8,6 +8,19 @@ export default defineEventHandler((event) => {
       "avaliação": {
         "idade": 36,
         "altura": 1.8
+      },
+      "treino": {
+        1: {
+          "nome": "Cadeira Extensora",
+          "sets": "3" ,
+          "reps": "15",
+          " rest": '40"'
+        },
+        2: {
+          "nome": "Cadeira Flexora",
+          "sets": "3",
+          "reps": "15",
+        }
       }
   }
 })

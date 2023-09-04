@@ -79,7 +79,7 @@ function openPhoto() {
 
       </div>
       <slot />
-      <NavBottom />
+      <NavBottomTwo />
 </template>
 <style scoped>
 .name-user {

@@ -1,6 +1,6 @@
 <script setup>
 import { ref } from 'vue';
-const { data } = await useFetch('https://m.leandrocesar.com/api/leandro-cesar')
+const { data } = await useFetch('/api/leandrocesar')
 // const { data, pending, error, refresh } = await useFetch(`https://professorleandrocesar.com/usuarios/`, {})
 
 const navbarOpen = ref(false);
