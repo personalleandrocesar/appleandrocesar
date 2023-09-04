@@ -99,20 +99,19 @@ body {
 
 .icon{
   zoom: 1.4;
-  color: #095D62;
+  color: #fadb41;
 }
 
 .conf {  
-  color:#000;
+  color:#fff;
   height: 80px;
-  background-color: #095D6220;
+  background-color: #095D62;
     backdrop-filter: blur(15px);
   overflow-x: auto;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  opacity: .5;
   backdrop-filter: blur(5px);
   width: 100%;
   margin: 20px 10px;

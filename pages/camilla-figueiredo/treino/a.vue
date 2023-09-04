@@ -180,21 +180,19 @@ margin-left: 10px;
   text-transform:uppercase;
   border-radius: 5px;
   padding: 5px 10px;
-  color:#fff;
   height: 80px;
-  background-color: #095D6220;
-  backdrop-filter: blur(15px);
   overflow-x: auto;
   display: flex;
   flex-direction: row;
   justify-content: center;
   align-items: center;
+
   backdrop-filter: blur(5px);
   margin: 20px 5px 0 5px;
   border-radius: 20px;
   color:#000;
   background-color: #095D6220;
-  backdrop-filter: blur(15px);
+  
   opacity: .5;
   backdrop-filter: blur(5px);
 }
