@@ -12,8 +12,8 @@ import LCLogoTree from '../components/LCLogoTree.vue'
                 <h3>Acesse sua conta</h3>
                 <div>
                     <div>
-                        <h4>E-mail</h4>
-                        <input type="email" name="" id="usuario" placeholder="Digite seu e-mail" autofocus v-model="email">
+                        <h4>Usuário</h4>
+                        <input type="user" name="" id="usuario" placeholder="Digite seu usuário" autofocus v-model="user">
                         <br>
                         <h4>Senha</h4>
                         <input type="password" @keyup.enter="trigger" name="" id="senha" placeholder="Digite sua senha"
@@ -22,7 +22,7 @@ import LCLogoTree from '../components/LCLogoTree.vue'
                         <div>
                             <input class='button-call' type="submit" value="ENTRAR" id="btn" @click="enterClicked"
                                 ref="sendReply">
-                            <a href="https://api.whatsapp.com/send?phone=5521936184024%20&text=Ol%C3%A1%20professor!%20Esqueci%20o%20meu%20email%20e%20minha%20senha!"
+                            <a href="https://api.whatsapp.com/send?phone=5521936184024%20&text=Ol%C3%A1%20professor!%20Esqueci%20o%20meu%20user%20e%20minha%20senha!"
                                 target="_blank">
                                 <h5>Esqueci minha senha</h5>
                             </a>
@@ -37,55 +37,55 @@ import LCLogoTree from '../components/LCLogoTree.vue'
 export default {
     data() {
         return {
-            email: '',
+            user: '',
             senha: '',
         }
     },
     methods: {
         enterClicked() {
-            if (this.email === 'admin' & this.senha === '1234') {
+            if (this.user === 'admin' & this.senha === '1234') {
                 this.$router.replace('/home')
-            } if (this.email === 'lea' & this.senha === '1234') {
-                this.$router.replace('/leandro')
-            } if (this.email === 'juliobizzo@gmail.com' & this.senha === 'bizzo@julio') {
+            } if (this.user === 'camillafigueiredo' & this.senha === 'figueiredo@Ca') {
+                this.$router.replace('/camilla-figueiredo')
+            } if (this.user === 'juliobizzo@gmail.com' & this.senha === 'bizzo@julio') {
                 this.$router.replace('/julio-bizzo')
-            } if (this.email === 'amandagoncalves@gmail.com' & this.senha === 'goncalves@amanda') {
+            } if (this.user === 'amandagoncalves@gmail.com' & this.senha === 'goncalves@amanda') {
                 this.$router.replace('/amanda-goncalves')
-            } if (this.email === 'camilladimas@gmail.com' & this.senha === 'dimas@camilla') {
+            } if (this.user === 'camilladimas@gmail.com' & this.senha === 'dimas@camilla') {
                 this.$router.replace('/camilla-dimas')
-            } if (this.email === 'rosanaassis@gmail.com' & this.senha === 'assis@rosana') {
+            } if (this.user === 'rosanaassis@gmail.com' & this.senha === 'assis@rosana') {
                 this.$router.replace('/rosana-assis')
-            } if (this.email === 'isadorasantesso@gmail.com' & this.senha === 'santesso@isadora') {
+            } if (this.user === 'isadorasantesso@gmail.com' & this.senha === 'santesso@isadora') {
                 this.$router.replace('/isadora-santesso')
-            } if (this.email === 'gustavorj@gmail.com' & this.senha === 'rj@gustavo') {
+            } if (this.user === 'gustavorj@gmail.com' & this.senha === 'rj@gustavo') {
                 this.$router.replace('/gustavo-rj')
-            } if (this.email === 'haroldocabussu@gmail.com' & this.senha === 'cabussu@haroldo') {
+            } if (this.user === 'haroldocabussu@gmail.com' & this.senha === 'cabussu@haroldo') {
                 this.$router.replace('/haroldo-cabussu')
-            } if (this.email === 'sergioluiz@gmail.com' & this.senha === 'luiz@sergio') {
+            } if (this.user === 'sergioluiz@gmail.com' & this.senha === 'luiz@sergio') {
                 this.$router.replace('/sergio-luiz')
-            } if (this.email === 'fabiocruz@gmail.com' & this.senha === 'cruz@fabio') {
+            } if (this.user === 'fabiocruz@gmail.com' & this.senha === 'cruz@fabio') {
                 this.$router.replace('/fabio-cruz')
-            } if (this.email === 'biabarcelos@gmail.com' & this.senha === 'barcelos@bia') {
+            } if (this.user === 'biabarcelos@gmail.com' & this.senha === 'barcelos@bia') {
                 this.$router.replace('/bianca-barcelos')
-            } if (this.email === 'lauriogarcia@gmail.com' & this.senha === 'garcia@laurio') {
+            } if (this.user === 'lauriogarcia@gmail.com' & this.senha === 'garcia@laurio') {
                 this.$router.replace('/laurio-garcia')
-            } if (this.email === 'ygorpaixao@gmail.com' & this.senha === 'paixao@ygor') {
+            } if (this.user === 'ygorpaixao@gmail.com' & this.senha === 'paixao@ygor') {
                 this.$router.replace('/ygor-paixao')
-            } if (this.email === 'root@gmail.com' & this.senha === '12345') {
+            } if (this.user === 'root@gmail.com' & this.senha === '12345') {
                 this.$router.replace('/home')
-            } if (this.email === 'priscillamello@gmail.com' & this.senha === 'mello@priscilla') {
+            } if (this.user === 'priscillamello@gmail.com' & this.senha === 'mello@priscilla') {
                 this.$router.replace('/priscilla-mello')
-            } if (this.email === 'karolaraujo@gmail.com' & this.senha === 'araujo@karol') {
+            } if (this.user === 'karolaraujo@gmail.com' & this.senha === 'araujo@karol') {
                 this.$router.replace('/karolline-araujo')
-            } if (this.email === 'kiviatenorio@gmail.com' & this.senha === 'tenorio@kivia') {
+            } if (this.user === 'kiviatenorio@gmail.com' & this.senha === 'tenorio@kivia') {
                 this.$router.replace('/kivia-tenorio')
-            } if (this.email === 'joaocesar@gmail.com' & this.senha === 'cesar@joao') {
+            } if (this.user === 'joaocesar@gmail.com' & this.senha === 'cesar@joao') {
                 this.$router.replace('/joao-cesar')
-            } if (this.email === 'vivianemarques@gmail.com' & this.senha === 'marques@viviane') {
+            } if (this.user === 'vivianemarques@gmail.com' & this.senha === 'marques@viviane') {
                 this.$router.replace('/viviane-marques')
-            } if (this.email === 'manuelaalbertino@gmail.com' & this.senha === 'albertino@manuela') {
+            } if (this.user === 'manuelaalbertino@gmail.com' & this.senha === 'albertino@manuela') {
                 this.$router.replace('/manuela-albertino')
-            } if (this.email === 'blendagruber@gmail.com' & this.senha === 'gruber@blenda') {
+            } if (this.user === 'blendagruber@gmail.com' & this.senha === 'gruber@blenda') {
                 this.$router.replace('/blenda-gruber')
             }
 

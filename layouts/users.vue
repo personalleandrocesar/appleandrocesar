@@ -1,6 +1,6 @@
 <script setup>
 import { ref } from 'vue';
-const { data } = await useFetch('/api/leandrocesar')
+const { data } = await useFetch('/api/camillaFigueiredo')
 // const { data, pending, error, refresh } = await useFetch(`https://professorleandrocesar.com/usuarios/`, {})
 
 const navbarOpen = ref(false);
@@ -22,7 +22,7 @@ function openPhoto() {
       <div class="bar-top">
         <div class='bar-top-top'>
           <div class="div-img">
-            <img src='/img/myFotoTwo.jpg' @click="openPhoto"/>
+            <img src='/img/camilla-figueiredo.jpeg' @click="openPhoto"/>
           </div>
           <nuxt-link @click="openNavbar"><Icon name='octicon:three-bars-16'/></nuxt-link>
 
@@ -47,7 +47,7 @@ function openPhoto() {
             <!-- Início do Nav-flow -->
             <div class="nav-flow">
               <div  class="div-img">
-                <img src='/img/myFotoTwo.jpg' @click="openPhoto"/>
+                <img src='/img/camilla-figueiredo.jpeg' @click="openPhoto"/>
               </div>
               <div>
                 <h2>
@@ -73,7 +73,7 @@ function openPhoto() {
             <!-- Início do Nav-flow -->
             <div class="nav-flow-photo">
               <div  class="div-img-full">
-                <img src='/img/myFotoTwo.jpg'/>
+                <img src='/img/camilla-figueiredo.jpeg'/>
               </div>
           </div>
 

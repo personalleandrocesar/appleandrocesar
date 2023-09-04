@@ -17,19 +17,19 @@ function openPhoto() {
     <div>
 
         <div class="nav-bottom">
-                        <nuxt-link to="/leandro/treino">
+                        <nuxt-link to="/camilla-figueiredo/treino">
                     <Icon name='material-symbols:exercise' />
                 </nuxt-link>
-            <nuxt-link to="/leandro/treino/a">
+            <nuxt-link to="/camilla-figueiredo/treino/a">
                 <Icon name='mdi:alpha-a' />
             </nuxt-link>
-            <nuxt-link to="/leandro/treino/b">
+            <nuxt-link to="/camilla-figueiredo/treino/b">
                 <Icon name='mdi:alpha-b' />
             </nuxt-link>
-            <nuxt-link to="/leandro/treino/c">
+            <nuxt-link to="/camilla-figueiredo/treino/c">
                 <Icon name='mdi:alpha-c' />
             </nuxt-link>
-            <nuxt-link to="/leandro/aerobio">
+            <nuxt-link to="/camilla-figueiredo/aerobio">
                 <Icon name='healthicons:exercise-running' />
             </nuxt-link>
 

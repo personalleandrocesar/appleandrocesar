@@ -35,20 +35,20 @@ const layout = "hello"
           
       <div class="main-div-two">
             
-        <nuxt-link class="square" to="/leandro/treino/a">
+        <nuxt-link class="square" to="/camilla-figueiredo/treino/a">
           <h4>
             TREINO
           </h4>
            <Icon name='mdi:alpha-a' />
         </nuxt-link>
-        <nuxt-link class="square" to="/leandro/treino/b">
+        <nuxt-link class="square" to="/camilla-figueiredo/treino/b">
           <h4>
             TREINO
           </h4>
            <Icon name='mdi:alpha-b' />
         </nuxt-link>
             
-        <nuxt-link class="square" to="/leandro/treino/c">
+        <nuxt-link class="square" to="/camilla-figueiredo/treino/c">
           <h4>
             TREINO
           </h4>
@@ -89,10 +89,6 @@ body {
   display: flex;
   flex-direction: row;
   justify-content: space-around;
-}
-
-a {
-  
 }
 .main-div-two {
   overflow-x: auto;
