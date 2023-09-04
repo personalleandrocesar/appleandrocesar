@@ -6,25 +6,59 @@ const layout = "hello"
   <NuxtLayout :name="layout">
     <div class="main">
           
-      <div class="main-div-one">
+        <div class="main-div-one">
+            
+            <div class="conf">
+              <Icon name="fluent:target-arrow-16-filled"/> 
+              <h3>
+                Definição 
+              </h3>
+                
+            </div>  
+            <div class="conf">
+              <Icon name="material-symbols:timer-rounded"/> 
+              <h3>
+                60 minutos 
+              </h3>
+                
+            </div>  
+            <div class="conf">
+              <Icon name="fluent:target-arrow-16-filled"/> 
+              <h3>
+                Definição 
+              </h3>
+                
+            </div>  
+            
+
+      </div>
+          
+      <div class="main-div-two">
             
         <nuxt-link class="square" to="/leandro/treino/a">
-          <h4>TREINO</h4>
-          <br>
-          <br>
-          <br>
+          <h4>
+            TREINO
+          </h4>
            <Icon name='mdi:alpha-a' />
         </nuxt-link>
         <nuxt-link class="square" to="/leandro/treino/b">
-          <h4>TREINO</h4>
-          <br>
-          <br>
-          <br>
+          <h4>
+            TREINO
+          </h4>
            <Icon name='mdi:alpha-b' />
         </nuxt-link>
             
+        <nuxt-link class="square" to="/leandro/treino/c">
+          <h4>
+            TREINO
+          </h4>
+           <Icon name='mdi:alpha-c' />
+        </nuxt-link>
+            
       </div>
-
+<br>
+<br>
+<br>
     </div>
 
 
@@ -57,12 +91,40 @@ body {
   justify-content: space-around;
 }
 
-.icon{
-  zoom: 1.4;
+a {
+  
+}
+.main-div-two {
+  overflow-x: auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
 }
 
+.icon{
+  zoom: 1.4;
+  color: #095D62;
+}
+
+.conf {  
+  color:#000;
+  height: 80px;
+  background-color: #095D6220;
+    backdrop-filter: blur(15px);
+  overflow-x: auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  opacity: .5;
+  backdrop-filter: blur(5px);
+  width: 100%;
+  margin: 20px 10px;
+  border-radius: 20px;
+}
 .square {  
   color:#000;
+  height: 100px;
   background-color: #095D6220;
     backdrop-filter: blur(15px);
   overflow-x: auto;
@@ -72,8 +134,8 @@ body {
   align-items: center;
   opacity: .5;
   backdrop-filter: blur(5px);
-  width: 100%;
-  margin: 20px 10px;
+  width: 90%;
+  margin: 20px auto;
   border-radius: 20px;
 }
 

@@ -26,11 +26,11 @@ function openPhoto() {
             <nuxt-link to="/leandro/treino/b">
                 <Icon name='mdi:alpha-b' />
             </nuxt-link>
+            <nuxt-link to="/leandro/treino/c">
+                <Icon name='mdi:alpha-c' />
+            </nuxt-link>
             <nuxt-link to="/leandro/aerobio">
                 <Icon name='healthicons:exercise-running' />
-            </nuxt-link>
-            <nuxt-link to="/leandro/avaliacao">
-                <Icon name='jam:medical' />
             </nuxt-link>
 
         </div>
