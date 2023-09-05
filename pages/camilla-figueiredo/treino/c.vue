@@ -14,7 +14,7 @@ const dataTreino = ref({
     { id: 'Exercício 6', nome: 'Tríceps Máquina', sets: 3, reps: '15', rest: '40"', obs: '' },
     { id: 'Exercício 7', nome: 'Remada alta', sets: 3, reps: '15', rest: '40"', obs: '*Fazer na polia baixa;' },
     { id: 'Exercício 8', nome: 'Tríceps corda', sets: 3, reps: '15 (c/ 1")', rest: '40"', obs: 'Segurar 1 segundo a cada repetição' },
-    { id: 'Exercício 9', nome: 'fd', sets: 3, reps: '', rest: '40"', obs: '' },
+    { id: 'Exercício 9', nome: 'Biceps martelo', sets: 3, reps: '12', rest: '40"', obs: '' },
     { id: 'Exercício 10', nome: 'fd', sets: 3, reps: '', rest: '40"', obs: '' },
     { id: 'Exercício 11', nome: 'fd', sets: 3, reps: '', rest: '40"', obs: '' },
     { id: 'Exercício 12', nome: 'fd', sets: 3, reps: '', rest: '40"', obs: '' },
