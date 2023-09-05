@@ -5,42 +5,17 @@ import { ref, computed } from 'vue'
 
 const dataTreino = ref({
   treino: [
-    // serie A
-    { id: 'Exercício 1', nome: 'Extensora', sets: 4, reps: '8 +10" +4', rest: '40"', obs: '' },
-    { id: 'Exercício 2', nome: 'Agachamento Búlgaro', sets: 3, reps: '10', rest: '40"', obs: '*Segurar halteres de 7 kg;' },
-    { id: 'Exercício 3', nome: 'Agachamento Sumô', sets: 3, reps: '20 (2T)', rest: '40"', obs: '*Fazer sobre os steps, falhando;' },
-    { id: 'Exercício 4', nome: 'Abdominal infra', sets: 3, reps: '20', rest: '40"', obs: '*Fazer na paralela;' },
-    { id: 'Exercício 5', nome: 'Adução de quadril', sets: 3, reps: '12', rest: '20"', obs: '*Fazer na polia Baixa;' },
-    { id: 'Exercício 6', nome: 'Agachamento no smith', sets: 4, reps: '10', rest: '40"', obs: '*Falhando, fazer até 80º de amplitude;' },
-    { id: 'Exercício 7', nome: 'Cadeira adutora', sets: 3, reps: '15 +15c +isometria', rest: '40"', obs: '*c =curtas; isometria= segurar até não aguentar mais;' },
-    { id: 'Exercício 8', nome: 'Abs. Remador Completo', sets: 3, reps: 'Falha', rest: '40"', obs: '*Fazer até não aguentar mais;' },
-    { id: 'Exercício 9', nome: 'Jump Squat', sets: 3, reps: '20"', rest: '40"', obs: '*Fazer com os pés abduzidos; executar os saltos em 20 segundos' },
     // serie B
-    { id: 'Exercício 1', nome: 'Mesa flexora', sets: 4, reps: '', rest: '40"', obs: '' },
-    { id: 'Exercício 2', nome: 'Stiff', sets: 3, reps: '', rest: '40"', obs: '' },
-    { id: 'Exercício 3', nome: 'Elevação de pelve', sets: 3, reps: '', rest: '40"', obs: '' },
-    { id: 'Exercício 4', nome: 'Cadeira flexora', sets: 3, reps: '', rest: '40"', obs: '' },
-    { id: 'Exercício 5', nome: 'Extensão de gluteo', sets: 3, reps: '', rest: '20"', obs: '*Fazer na polia baixa' },
-    { id: 'Exercício 6', nome: 'Hiperextensão lombar', sets: 3, reps: '', rest: '40"', obs: '' },
-    { id: 'Exercício 7', nome: 'Leg press 45º', sets: 3, reps: '', rest: '40"', obs: '' },
-    { id: 'Exercício 8', nome: 'Abdutora', sets: 3, reps: '', rest: '40"', obs: '' },
-    { id: 'Exercício 9', nome: 'Prancha lateral', sets: 3, reps: '', rest: '40"', obs: 'Fazer dinâmicamente' },
-    { id: 'Exercício 10', nome: 'fd', sets: 3, reps: '', rest: '40"', obs: '' },
-    { id: 'Exercício 11', nome: 'fd', sets: 3, reps: '', rest: '40"', obs: '' },
-    { id: 'Exercício 12', nome: 'fd', sets: 3, reps: '', rest: '40"', obs: '' },
-    // serie C
-    { id: 'Exercício 1', nome: 'fd', sets: 3, reps: '', rest: '40"', obs: '' },
-    { id: 'Exercício 2', nome: 'fd', sets: 3, reps: '', rest: '40"', obs: '' },
-    { id: 'Exercício 3', nome: 'fd', sets: 3, reps: '', rest: '40"', obs: '' },
-    { id: 'Exercício 4', nome: 'fd', sets: 3, reps: '', rest: '40"', obs: '' },
-    { id: 'Exercício 5', nome: 'fd', sets: 3, reps: '', rest: '40"', obs: '' },
-    { id: 'Exercício 6', nome: 'fd', sets: 3, reps: '', rest: '40"', obs: '' },
-    { id: 'Exercício 7', nome: 'fd', sets: 3, reps: '', rest: '40"', obs: '' },
-    { id: 'Exercício 8', nome: 'fd', sets: 3, reps: '', rest: '40"', obs: '' },
-    { id: 'Exercício 9', nome: 'fd', sets: 3, reps: '', rest: '40"', obs: '' },
-    { id: 'Exercício 10', nome: 'fd', sets: 3, reps: '', rest: '40"', obs: '' },
-    { id: 'Exercício 11', nome: 'fd', sets: 3, reps: '', rest: '40"', obs: '' },
-    { id: 'Exercício 12', nome: 'fd', sets: 3, reps: '', rest: '40"', obs: '' },
+    { id: 'Exercício 1', nome: 'Mesa flexora', sets: 4, reps: '10 +10"', rest: '40"', obs: '*Fazer +10" de isometria no final do movimento;' },
+    { id: 'Exercício 2', nome: 'Stiff', sets: 3, reps: '20', rest: '40"', obs: '*Fazer falhando;' },
+    { id: 'Exercício 3', nome: 'Elevação de pelve', sets: 3, reps: '15', rest: '40"', obs: '*Fazer com HNL no banco reto;' },
+    { id: 'Exercício 4', nome: 'Cadeira flexora', sets: 3, reps: '20', rest: '40"', obs: '*Falhando na última repetição;' },
+    { id: 'Exercício 5', nome: 'Extensão de gluteo', sets: 3, reps: '12', rest: '20"', obs: '*Fazer na polia baixa' },
+    { id: 'Exercício 6', nome: 'Hiperextensão lombar', sets: 3, reps: '20', rest: '40"', obs: '*Fazer no aparelho;' },
+    { id: 'Exercício 7', nome: 'Leg press 45º', sets: 3, reps: '10 (c/ 1")', rest: '40"', obs: '*Segurar 1 segundo em baixo a cada repetição;' },
+    { id: 'Exercício 8', nome: 'Abdutora', sets: 3, reps: '8/15', rest: '40"', obs: '*Drop-set: fazer 8 rep., -diminúi o peso: +15;' },
+    { id: 'Exercício 9', nome: 'Prancha lateral', sets: 3, reps: '15', rest: '40"', obs: '*Fazer dinâmicamente - encostando a parte lateral do gluteo no solo;' },
+    { id: 'Exercício 10', nome: 'Agachamento Livre', sets: 3, reps: '12', rest: '40"', obs: '*Descer até 80º' },
     // Adicione mais exercícios conforme necessário
   ]
 })
