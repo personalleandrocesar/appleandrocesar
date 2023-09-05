@@ -5,9 +5,42 @@ import { ref, computed } from 'vue'
 
 const dataTreino = ref({
   treino: [
-    { nome: 'Exercício 1', sets: 3, reps: 12, rest: '40"' },
-    { nome: 'Exercício 2', sets: 4, reps: 10 },
-    { nome: 'Exercício 3', sets: 3, reps: 15 },
+    // serie A
+    { id: 'Exercício 1', nome: 'Extensora', sets: 4, reps: '8 +10" +4', rest: '40"', obs: '' },
+    { id: 'Exercício 2', nome: 'Agachamento Búlgaro', sets: 3, reps: '10', rest: '40"', obs: '*Segurar halteres de 7 kg;' },
+    { id: 'Exercício 3', nome: 'Agachamento Sumô', sets: 3, reps: '20 (2T)', rest: '40"', obs: '*Fazer sobre os steps, falhando;' },
+    { id: 'Exercício 4', nome: 'Abdominal infra', sets: 3, reps: '20', rest: '40"', obs: '*Fazer na paralela;' },
+    { id: 'Exercício 5', nome: 'Adução de quadril', sets: 3, reps: '12', rest: '20"', obs: '*Fazer na polia Baixa;' },
+    { id: 'Exercício 6', nome: 'Agachamento no smith', sets: 4, reps: '10', rest: '40"', obs: '*Falhando, fazer até 80º de amplitude;' },
+    { id: 'Exercício 7', nome: 'Cadeira adutora', sets: 3, reps: '15 +15c +isometria', rest: '40"', obs: '*c =curtas; isometria= segurar até não aguentar mais;' },
+    { id: 'Exercício 8', nome: 'Abs. Remador Completo', sets: 3, reps: 'Falha', rest: '40"', obs: '*Fazer até não aguentar mais;' },
+    { id: 'Exercício 9', nome: 'Jump Squat', sets: 3, reps: '20"', rest: '40"', obs: '*Fazer com os pés abduzidos; executar os saltos em 20 segundos' },
+    // serie B
+    { id: 'Exercício 1', nome: 'fd', sets: 3, reps: '', rest: '40"', obs: '' },
+    { id: 'Exercício 2', nome: 'fd', sets: 3, reps: '', rest: '40"', obs: '' },
+    { id: 'Exercício 3', nome: 'fd', sets: 3, reps: '', rest: '40"', obs: '' },
+    { id: 'Exercício 4', nome: 'fd', sets: 3, reps: '', rest: '40"', obs: '' },
+    { id: 'Exercício 5', nome: 'fd', sets: 3, reps: '', rest: '40"', obs: '' },
+    { id: 'Exercício 6', nome: 'fd', sets: 3, reps: '', rest: '40"', obs: '' },
+    { id: 'Exercício 7', nome: 'fd', sets: 3, reps: '', rest: '40"', obs: '' },
+    { id: 'Exercício 8', nome: 'fd', sets: 3, reps: '', rest: '40"', obs: '' },
+    { id: 'Exercício 9', nome: 'fd', sets: 3, reps: '', rest: '40"', obs: '' },
+    { id: 'Exercício 10', nome: 'fd', sets: 3, reps: '', rest: '40"', obs: '' },
+    { id: 'Exercício 11', nome: 'fd', sets: 3, reps: '', rest: '40"', obs: '' },
+    { id: 'Exercício 12', nome: 'fd', sets: 3, reps: '', rest: '40"', obs: '' },
+    // serie C
+    { id: 'Exercício 1', nome: 'fd', sets: 3, reps: '', rest: '40"', obs: '' },
+    { id: 'Exercício 2', nome: 'fd', sets: 3, reps: '', rest: '40"', obs: '' },
+    { id: 'Exercício 3', nome: 'fd', sets: 3, reps: '', rest: '40"', obs: '' },
+    { id: 'Exercício 4', nome: 'fd', sets: 3, reps: '', rest: '40"', obs: '' },
+    { id: 'Exercício 5', nome: 'fd', sets: 3, reps: '', rest: '40"', obs: '' },
+    { id: 'Exercício 6', nome: 'fd', sets: 3, reps: '', rest: '40"', obs: '' },
+    { id: 'Exercício 7', nome: 'fd', sets: 3, reps: '', rest: '40"', obs: '' },
+    { id: 'Exercício 8', nome: 'fd', sets: 3, reps: '', rest: '40"', obs: '' },
+    { id: 'Exercício 9', nome: 'fd', sets: 3, reps: '', rest: '40"', obs: '' },
+    { id: 'Exercício 10', nome: 'fd', sets: 3, reps: '', rest: '40"', obs: '' },
+    { id: 'Exercício 11', nome: 'fd', sets: 3, reps: '', rest: '40"', obs: '' },
+    { id: 'Exercício 12', nome: 'fd', sets: 3, reps: '', rest: '40"', obs: '' },
     // Adicione mais exercícios conforme necessário
   ]
 })
@@ -35,54 +68,106 @@ const nextExercise = () => {
 
 <template>
   <NuxtLayout :name="layout">
-    <div class="main">
-          
-      <div class="main-div-one">
-            
-          <div class="square">
-              
-          </div>  
-            
-        <div class="square">
-              
-              
-              
-        </div>  
-            
-        <div class="square">
-              
-              
-              
-        </div>  
-            
+    <div class="main-div-one">
+
+      <div class="conf">
+        <Icon name="fluent:target-arrow-16-filled" />
+        <h3>
+          Definição
+        </h3>
+
       </div>
+      <div class="conf">
+        <Icon name='mdi:alpha-c-box' />
+        <h3>
+          Braço
+        </h3>
+
+      </div>
+      <div class="conf">
+        <Icon name="material-symbols:timer-rounded" />
+        <h3>
+          60 minutos
+        </h3>
+
+      </div>
+
 
     </div>
 
+    <div class="main-div-two">
 
-    <h1>Avaliação</h1>
-    <div>
+      <h3>
+        {{ currentExercise.id }}
+      </h3>
+      <div class="square">
+        <b>
+          Futura imagem(.gif) ou vídeo!
+        </b>
+      </div>
+      <h2>
+        {{ currentExercise.nome }}
+      </h2>
+
       <p v-if="pending">Carregando...</p>
       <div v-else>
 
-          <div>
-            <pre>
-              {{ currentExercise.nome }}
+        <div class="exercise">
+          <div class="exercise-square">
+            <h4>
+              Séries
+            </h4>
+            <h4>
               {{ currentExercise.sets }}
-              {{ currentExercise.reps }}
-              {{ currentExercise.rest }}
-            </pre>
-
-            <p>
-              <button @click="previousExercise">Anterior</button>
-              -
-              <button @click="nextExercise">Próximo</button>
-            </p>
+            </h4>
           </div>
+          <div class="exercise-square">
+            <h4>
+              Repetições
+            </h4>
+            <h4>
+              {{ currentExercise.reps }}
+            </h4>
+
+          </div>
+          <div class="exercise-square">
+            <h4>
+              Intervalo
+            </h4>
+            <h4>
+              {{ currentExercise.rest }}
+            </h4>
+
+          </div>
+
+        </div>
+        <div class="obs">
+          {{ currentExercise.obs }}
+          <br>
+        </div>
+      </div>
+
+      <div class="button">
+        <span @click="previousExercise">
+          <Icon name="mdi:chevron-left" /> ANTERIOR
+        </span>
+        <span @click="nextExercise">
+          PRÓXIMO
+          <Icon name="mdi:chevron-right" />
+        </span>
       </div>
     </div>
+    <br>
+    <br>
+    <br>
 
-</NuxtLayout>
+
+
+
+    <div>
+    </div>
+
+  </NuxtLayout>
 </template>
 
     
@@ -109,20 +194,145 @@ body {
   justify-content: space-around;
 }
 
-.square {  
-  color:#e1a918;
-  background-color: #095D6270;
+.main-div-two {
   overflow-x: auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+}
+
+.main-div-two .icon {
+  zoom: 2;
+  cursor: pointer;
+}
+
+.main-div-two h2 {
+  margin-left: 10px;
+  text-transform: uppercase;
+}
+
+.main-div-two h3 {
+  margin-left: 10px;
+}
+
+.exercise {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  margin: 0 10px;
+  justify-content: center;
+}
+
+.exercise-square {
+  background-color: #095D62;
+  color: #fff;
+  width: max-content;
+  text-transform: uppercase;
+  border-radius: 5px;
+  padding: 5px 10px;
+  height: 80px;
+  overflow-x: auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  backdrop-filter: blur(5px);
+  margin: 20px 5px 0 5px;
+  border-radius: 20px;
+  color: #000;
+  background-color: #095D6220;
+  opacity: .8;
+  backdrop-filter: blur(5px);
+}
+
+.exercise-square h4:nth-child(1) {
+  color: #095D62;
+}
+
+.button {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  align-items: center;
+}
+
+.button .icon {
+  color: #fff;
   display: flex;
   flex-direction: row;
   justify-content: center;
   align-items: center;
-  opacity: 1;
-  backdrop-filter: blur(25px);
-  height: 15px;
+}
+
+.button span:nth-child(1) {
+  background-color: #095D62;
+  color: #fff;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  border-radius: 20px;
+  padding-right: 15px;
+}
+
+.button span:nth-child(2) {
+  background-color: #095D62;
+  color: #fff;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  border-radius: 20px;
+  padding-left: 15px;
+}
+
+.obs {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  font-weight: bold;
+  margin: 0 25px 10px 25px;
+
+}
+
+.icon {
+  zoom: 1.4;
+  color: #fadb41;
+}
+
+.conf {
+  color: #fff;
+  height: 80px;
+  background-color: #095D62;
+  backdrop-filter: blur(15px);
+  overflow-x: auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  backdrop-filter: blur(5px);
   width: 100%;
   margin: 20px 10px;
   border-radius: 20px;
 }
 
+.square {
+  height: 150px;
+  color: #000;
+  background-color: #095D6220;
+  backdrop-filter: blur(15px);
+  opacity: .5;
+  backdrop-filter: blur(5px);
+  overflow-x: auto;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  width: 90%;
+  margin: 20px auto;
+  border-radius: 20px;
+}
 </style>
