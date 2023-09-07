@@ -14,7 +14,7 @@ const dataTreino = ref({
     { id: 'Exercício 6', nome: 'Agachamento no smith', sets: 4, reps: '10', rest: '40"', obs: '*Falhando, fazer até 80º de amplitude;' },
     { id: 'Exercício 7', nome: 'Cadeira adutora', sets: 3, reps: '15 +15c +iso', rest: '40"', obs: '*c =curtas; iso= isometria= segurar até não aguentar mais;' },
     { id: 'Exercício 8', nome: 'Abs. Remador Completo', sets: 3, reps: 'Falha', rest: '40"', obs: '*Fazer até não aguentar mais;' },
-    { id: 'Exercício 9', nome: 'Jump Squat', sets: 3, reps: '20"', rest: '40"', obs: '*Fazer com os pés abduzidos; executar os saltos em 20 segundos' },
+    { id: 'Exercício 9', nome: 'Jump Squat', sets: 3, reps: '20"', rest: '40"', obs: '*Fazer com os pés abduzidos; executar os saltos em 20 segundos;' },
     { id: 'Exercício 10', nome: 'Panturrilhas em pé', sets: 3, reps: '20(2T)', rest: '40"', obs: '*Fazer no aparelho;' },
    
     // Adicione mais exercícios conforme necessário
@@ -195,11 +195,8 @@ margin-left: 10px;
 }
 
 .exercise-square {
-  background-color: #095D62;
-  color: #fff;
   width: max-content;
   text-transform:uppercase;
-  border-radius: 5px;
   padding: 5px 10px;
   height: 80px;
   overflow-x: auto;
@@ -207,13 +204,14 @@ margin-left: 10px;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  backdrop-filter: blur(5px);
   margin: 20px 5px 0 5px;
-  border-radius: 20px;
+  border-radius: 12px;
   color:#000;
   background-color: #095D6220;
-  opacity: .8;
+  opacity: .9;
   backdrop-filter: blur(5px);
+
+  border: 2px solid #05959c30; 
 }
 .exercise-square h4:nth-child(1) {
   color: #095D62;
@@ -224,7 +222,9 @@ margin-left: 10px;
   flex-direction: row;
   justify-content: space-evenly;
   align-items: center;
+
 }
+
 .button .icon{
   color: #fff;
   display: flex;
@@ -242,6 +242,7 @@ margin-left: 10px;
   cursor: pointer;
   border-radius: 10px;
   padding-right: 25px;
+  border: 2px solid #05959c; 
 }
 .button span:nth-child(2){
   background-color: #095D62;
@@ -253,7 +254,11 @@ margin-left: 10px;
   cursor: pointer;
   border-radius: 10px;
   padding-left: 28px;
+  border: 2px solid #05959c; 
 }
+/* 
+border: 2px solid #2cd3db;
+*/ 
 .obs{
   display: flex;
   flex-direction: row;
@@ -282,14 +287,16 @@ margin-left: 10px;
   backdrop-filter: blur(5px);
   width: 100%;
   margin: 20px 10px;
-  border-radius: 20px;
+  border-radius: 20px;  
+  border: 2px solid #44acb1; 
+
 }
+
+
 .square {  
   height: 150px;
   color:#000;
   background-color: #095D6220;
-  backdrop-filter: blur(15px);
-  opacity: .5;
   backdrop-filter: blur(5px);
   overflow-x: auto;
   display: flex;
@@ -299,6 +306,7 @@ margin-left: 10px;
   width: 90%;
   margin: 20px auto;
   border-radius: 20px;
+  border: 3px solid #05959c60; 
 }
 
 </style>
