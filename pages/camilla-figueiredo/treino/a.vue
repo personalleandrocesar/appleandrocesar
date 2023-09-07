@@ -240,8 +240,8 @@ margin-left: 10px;
   justify-content: center;
   align-items: center;
   cursor: pointer;
-  border-radius: 20px;
-  padding-right: 15px;
+  border-radius: 10px;
+  padding-right: 25px;
 }
 .button span:nth-child(2){
   background-color: #095D62;
@@ -251,8 +251,8 @@ margin-left: 10px;
   justify-content: center;
   align-items: center;
   cursor: pointer;
-  border-radius: 20px;
-  padding-left: 15px;
+  border-radius: 10px;
+  padding-left: 28px;
 }
 .obs{
   display: flex;
