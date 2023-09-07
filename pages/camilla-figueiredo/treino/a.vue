@@ -15,7 +15,7 @@ const dataTreino = ref({
     { id: 'Exercício 7', nome: 'Cadeira adutora', sets: 3, reps: '15 +15c +iso', rest: '40"', obs: '*c =curtas; iso= isometria= segurar até não aguentar mais;' },
     { id: 'Exercício 8', nome: 'Abs. Remador Completo', sets: 3, reps: 'Falha', rest: '40"', obs: '*Fazer até não aguentar mais;' },
     { id: 'Exercício 9', nome: 'Jump Squat', sets: 3, reps: '20"', rest: '40"', obs: '*Fazer com os pés abduzidos; executar os saltos em 20 segundos' },
-    { id: 'Exercício 10', nome: 'Panturrilhas em pé', sets: 3, reps: '20(2T)"', rest: '40"', obs: '*Fazer no aparelho;' },
+    { id: 'Exercício 10', nome: 'Panturrilhas em pé', sets: 3, reps: '20(2T)', rest: '40"', obs: '*Fazer no aparelho;' },
    
     // Adicione mais exercícios conforme necessário
   ]

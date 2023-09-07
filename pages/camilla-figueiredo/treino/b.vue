@@ -247,8 +247,8 @@ body {
   justify-content: center;
   align-items: center;
   cursor: pointer;
-  border-radius: 20px;
-  padding-right: 15px;
+  border-radius: 10px;
+  padding-right: 25px;
 }
 
 .button span:nth-child(2) {
@@ -259,8 +259,8 @@ body {
   justify-content: center;
   align-items: center;
   cursor: pointer;
-  border-radius: 20px;
-  padding-left: 15px;
+  border-radius: 10px;
+  padding-left: 28px;
 }
 
 .obs {
@@ -309,4 +309,6 @@ body {
   width: 90%;
   margin: 20px auto;
   border-radius: 20px;
-}</style>
+}
+
+</style>
