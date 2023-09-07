@@ -4,7 +4,7 @@ const layout = "hello"
 
 <template>
   <NuxtLayout :name="layout">
-    <div class="main">
+    <div>
           
         <div class="main-div-one">
             
@@ -186,7 +186,7 @@ body {
   flex-direction: row;
   justify-content: flex-start;
   align-items: center;
-  width: 90%;
+  width: 95%;
   margin: 5px auto;
   border-radius: 20px;
   border: 3px solid #05959c60; 

@@ -303,10 +303,10 @@ border: 2px solid #2cd3db;
   flex-direction: row;
   justify-content: center;
   align-items: center;
-  width: 90%;
+  width: 100%;
   margin: 20px auto;
-  border-radius: 20px;
-  border: 3px solid #05959c60; 
+  border-top: 2px solid #05959c40; 
+  border-bottom: 2px solid #05959c40; 
 }
 
 </style>
