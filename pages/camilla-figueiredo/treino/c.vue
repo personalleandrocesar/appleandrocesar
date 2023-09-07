@@ -55,7 +55,7 @@ const nextExercise = () => {
 
       </div>
       <div class="conf">
-        <Icon name='mdi:alpha-c-box' />
+        <Icon name='mingcute:fitness-fill' />
         <h3>
           Braço
         </h3>

@@ -208,15 +208,13 @@ display: flex;
 }
 .div-img-full {
   border-radius: 50%;
-  margin: 10px 10px 30px 10px;
-  border: solid 2px #fadb41;
-  background-color: #fadb41;
   z-index: 3;
-
+  
 }
 
 .div-img-full img{
   height: 180px;
+  border: solid 5px #fadb41;
   border-radius: 50%;
 }
 

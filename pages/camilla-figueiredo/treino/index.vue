@@ -34,27 +34,84 @@ const layout = "hello"
       </div>
           
       <div class="main-div-two">
-            <h3>
-               <Icon name='material-symbols:exercise' /> TREINOS 
+        <h3>
+              <Icon name='material-symbols:exercise' /> TREINOS 
             </h3>
         <nuxt-link class="square" to="/camilla-figueiredo/treino/a">
-          <h4>
-            <Icon name='material-symbols:exercise' /> TREINO
-          </h4>
-           <Icon name='mdi:alpha-a' />
-        </nuxt-link>
+
+      
+
+            <div>
+              <h4>
+                <Icon name='material-symbols:exercise' /> 
+              </h4>
+              <h4>
+                TREINO
+                <Icon name='mdi:alpha-a' />
+              </h4>
+            </div>
+            
+            <div>
+              <h3>
+              </h3>
+              
+              <h4>
+                <Icon name="game-icons:leg"/> 
+              </h4>
+              <h4>
+                Quadríceps
+              </h4>
+
+            </div>
+          </nuxt-link>
         <nuxt-link class="square" to="/camilla-figueiredo/treino/b">
-          <h4>
-           <Icon name='material-symbols:exercise' /> TREINO
-          </h4>
-           <Icon name='mdi:alpha-b' />
+        <div>
+                <h4>
+                  <Icon name='material-symbols:exercise' /> 
+                </h4>
+                <h4>
+                  TREINO
+                  <Icon name='mdi:alpha-b' />
+                </h4>
+              </div>
+            
+              <div>
+                <h3>
+                </h3>
+              
+                <h4>
+                  <Icon name="solar:body-shape-bold"/> 
+                </h4>
+                <h4>
+                  Glúteo
+                </h4>
+
+              </div>
         </nuxt-link>
             
         <nuxt-link class="square" to="/camilla-figueiredo/treino/c">
-          <h4>
-            <Icon name='material-symbols:exercise' /> TREINO
-          </h4>
-           <Icon name='mdi:alpha-c' />
+          <div>
+                <h4>
+                  <Icon name='material-symbols:exercise' /> 
+                </h4>
+                <h4>
+                  TREINO
+                  <Icon name='mdi:alpha-c' />
+                </h4>
+              </div>
+            
+              <div>
+                <h3>
+                </h3>
+              
+                <h4>
+                  <Icon name="mingcute:fitness-fill"/> 
+                </h4>
+                <h4>
+                  Braço
+                </h4>
+
+              </div>
         </nuxt-link>
             
       </div>
@@ -86,30 +143,6 @@ body {
   justify-items: center;
 }
 
-.main-div-one {
-  overflow-x: auto;
-  display: flex;
-  flex-direction: row;
-  justify-content: space-around;
-}
-.main-div-two {
-  overflow-x: auto;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-around;
-}
-.main-div-two .icon {
-  color: #095D62;
-}
-.main-div-two H3 {
-margin-left: 10PX;
-}
-
-.icon{
-  zoom: 1.4;
-  color: #fadb41;
-}
-
 .conf {  
     color:#fff;
   height: 80px;
@@ -126,20 +159,85 @@ margin-left: 10PX;
   border-radius: 20px;  
   border: 2px solid #44acb1; 
 }
+
+.main-div-one {
+  overflow-x: auto;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+}
+.main-div-two {
+  overflow-x: auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: left;
+}
+.main-div-two .icon {
+  color: #095D62;
+}
+
 .square {  
-height: 150px;
   color:#000;
   background-color: #095D6220;
   backdrop-filter: blur(5px);
   overflow-x: auto;
   display: flex;
   flex-direction: row;
-  justify-content: center;
+  justify-content: flex-start;
   align-items: center;
   width: 90%;
-  margin: 20px auto;
+  margin: 5px auto;
   border-radius: 20px;
   border: 3px solid #05959c60; 
 }
+
+.square div:nth-child(1) {
+  padding-right: 12px;
+
+}
+
+.square div:nth-child(2), .square div:nth-child(3){
+  margin: auto;
+  border: none;
+}
+.main-div-two H3 {
+margin-left: 20px;
+
+}
+.main-div-two h4 {
+display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+.main-div-two a div {
+  border-right: 3px solid #05959c60;
+  margin-left: 15px;
+  height: 100px;
+  display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.main-div-two h4 .icon{
+margin-left: -3px;
+}
+.main-div-two div .icon{
+margin-top: -1px;
+display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+.icon{
+  zoom: 1.4;
+  color: #fadb41;
+  margin-left: -5px;
+  margin-top: -2.5px;
+}
+
+
+
 
 </style>

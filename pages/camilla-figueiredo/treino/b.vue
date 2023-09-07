@@ -53,7 +53,7 @@ const nextExercise = () => {
 
       </div>
       <div class="conf">
-        <Icon name='mdi:alpha-b-box' />
+        <Icon name='solar:body-shape-bold' />
         <h3>
           Glúteo
         </h3>

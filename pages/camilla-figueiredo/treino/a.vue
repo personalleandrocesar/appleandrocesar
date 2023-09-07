@@ -54,7 +54,7 @@ const nextExercise = () => {
              
            </div>  
            <div class="conf">
-             <Icon name='mdi:alpha-a-box' />
+             <Icon name='game-icons:leg' />
              <h3>
                Quadríceps
               </h3>           
