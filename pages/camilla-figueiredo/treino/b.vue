@@ -149,6 +149,10 @@ const nextExercise = () => {
 
 
 
+    
+
+
+
 <style scoped>
 body {
   background: #fff;
@@ -199,11 +203,8 @@ body {
 }
 
 .exercise-square {
-  background-color: #095D62;
-  color: #fff;
   width: max-content;
   text-transform: uppercase;
-  border-radius: 5px;
   padding: 5px 10px;
   height: 80px;
   overflow-x: auto;
@@ -211,13 +212,14 @@ body {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  backdrop-filter: blur(5px);
   margin: 20px 5px 0 5px;
-  border-radius: 20px;
+  border-radius: 12px;
   color: #000;
   background-color: #095D6220;
-  opacity: .8;
+  opacity: .9;
   backdrop-filter: blur(5px);
+
+  border: 2px solid #05959c30;
 }
 
 .exercise-square h4:nth-child(1) {
@@ -229,6 +231,7 @@ body {
   flex-direction: row;
   justify-content: space-evenly;
   align-items: center;
+
 }
 
 .button .icon {
@@ -249,6 +252,7 @@ body {
   cursor: pointer;
   border-radius: 10px;
   padding-right: 25px;
+  border: 2px solid #05959c;
 }
 
 .button span:nth-child(2) {
@@ -261,8 +265,12 @@ body {
   cursor: pointer;
   border-radius: 10px;
   padding-left: 28px;
+  border: 2px solid #05959c;
 }
 
+/* 
+border: 2px solid #2cd3db;
+*/
 .obs {
   display: flex;
   flex-direction: row;
@@ -292,14 +300,15 @@ body {
   width: 100%;
   margin: 20px 10px;
   border-radius: 20px;
+  border: 2px solid #44acb1;
+
 }
+
 
 .square {
   height: 150px;
   color: #000;
   background-color: #095D6220;
-  backdrop-filter: blur(15px);
-  opacity: .5;
   backdrop-filter: blur(5px);
   overflow-x: auto;
   display: flex;
@@ -309,6 +318,5 @@ body {
   width: 90%;
   margin: 20px auto;
   border-radius: 20px;
-}
-
-</style>
+  border: 3px solid #05959c60;
+}</style>

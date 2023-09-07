@@ -111,7 +111,7 @@ margin-left: 10PX;
 }
 
 .conf {  
-  color:#fff;
+    color:#fff;
   height: 80px;
   background-color: #095D62;
     backdrop-filter: blur(15px);
@@ -123,23 +123,23 @@ margin-left: 10PX;
   backdrop-filter: blur(5px);
   width: 100%;
   margin: 20px 10px;
-  border-radius: 20px;
+  border-radius: 20px;  
+  border: 2px solid #44acb1; 
 }
 .square {  
+height: 150px;
   color:#000;
-  height: 100px;
   background-color: #095D6220;
-    backdrop-filter: blur(15px);
+  backdrop-filter: blur(5px);
   overflow-x: auto;
   display: flex;
   flex-direction: row;
   justify-content: center;
   align-items: center;
-  opacity: .5;
-  backdrop-filter: blur(5px);
   width: 90%;
   margin: 20px auto;
   border-radius: 20px;
+  border: 3px solid #05959c60; 
 }
 
 </style>
