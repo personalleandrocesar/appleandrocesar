@@ -102,7 +102,7 @@ function openPhoto() {
   height: 140px;
   background-color: #095d62;
   position: fixed;
-  top: 3;
+  top: 3px;
   width: 100%;
   margin-bottom: 140px ;
   
