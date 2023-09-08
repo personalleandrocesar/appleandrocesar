@@ -18,7 +18,7 @@ export default defineComponent({
         },
         height: {
             type: Number,
-            default: 4
+            default: 3
         },
         color: {
             type: [String, Boolean],
