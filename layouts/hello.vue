@@ -93,7 +93,7 @@ function openPhoto() {
 .bar-top {
   background-color: #095d62;
   position: fixed;
-  top: 3px;
+  top: 0px;
   width: 100%;
   z-index: 1000;
   
