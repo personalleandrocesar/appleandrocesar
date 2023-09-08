@@ -1,7 +1,12 @@
 <script setup>
+import { ref, computed } from 'vue'
 const layout = "duo"
 
-import { ref, computed } from 'vue'
+const photoOpen = ref(false);
+function openPhoto() {
+  photoOpen.value = !photoOpen.value;
+}
+
 
 const dataTreino = ref({
   treino: [
@@ -80,7 +85,7 @@ const nextExercise = () => {
             <b>
               Futura imagem(.gif) ou vídeo!
             </b>
-          </div>
+          </div >
           <h2>
             {{ currentExercise.nome }}
           </h2>
