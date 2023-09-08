@@ -34,9 +34,9 @@ function openPhoto() {
         </div>
 
 
-        <div class="nav-top">
-
-          <div>
+        
+        <div>
+            <div class="nav-top">
 
             <!-- Início do Nav-flow -->
             <div class="nav-flow">
