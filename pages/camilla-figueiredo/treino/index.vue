@@ -134,6 +134,7 @@ const layout = "hello"
 body {
   background: #fff;
   color: #616161;
+
 }
 
 .main {
@@ -158,6 +159,7 @@ body {
   margin: 20px 10px;
   border-radius: 20px;  
   border: 2px solid #44acb1; 
+  margin-top: 110px;
 }
 
 .main-div-one {

@@ -61,7 +61,7 @@
   justify-content: center;
   align-self: center;
   text-align: center;
-  margin-top: -20px;
+  margin-top: 120px;
 }
 
 .body-timeline{

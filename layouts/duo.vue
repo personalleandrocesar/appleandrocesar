@@ -90,6 +90,15 @@ function openPhoto() {
   font-weight: bold;
 }
 
+.bar-top {
+  background-color: #095d62;
+  position: fixed;
+  top: 1;
+  width: 100%;
+  z-index: 1000;
+
+}
+
 .bar-top-top {
   background-color: #095d62;
   display: flex;

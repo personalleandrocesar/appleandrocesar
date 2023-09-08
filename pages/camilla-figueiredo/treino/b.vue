@@ -151,7 +151,6 @@ const nextExercise = () => {
 
     
 
-
 <style scoped>
 body {
   background: #fff;
@@ -160,26 +159,10 @@ body {
 
 .main {
   display: flex;
+  margin-top: 140px;
   flex-direction: column;
   justify-content: space-around;
   justify-items: center;
-}
-
-.conf {
-  color: #fff;
-  height: 80px;
-  background-color: #095D62;
-  backdrop-filter: blur(15px);
-  overflow-x: auto;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  backdrop-filter: blur(5px);
-  width: 100%;
-  margin: 20px 10px;
-  border-radius: 20px;
-  border: 2px solid #44acb1;
 }
 
 .main-div-one {
@@ -318,6 +301,7 @@ border: 2px solid #2cd3db;
   margin: 20px 10px;
   border-radius: 20px;
   border: 2px solid #44acb1;
+  margin-top: 110px;
 
 }
 

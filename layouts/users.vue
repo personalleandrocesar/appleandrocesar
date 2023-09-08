@@ -101,10 +101,15 @@ function openPhoto() {
 .bar-top {
   height: 140px;
   background-color: #095d62;
+  position: fixed;
+  top: 1;
+  width: 100%;
+  margin-bottom: 140px ;
+  
 }
 .bar-top-top {
   background-color: #095d62;
-display: flex;
+  display: flex;
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
