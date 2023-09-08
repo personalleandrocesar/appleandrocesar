@@ -170,17 +170,17 @@ display: flex;
 }
 .div-img {
   height: 50px;
-  width: 50px;
   border-radius: 50%;
   margin: 10px 10px 30px 10px;
   border: solid 2px #fadb41;
   background-color: #fadb41;
   z-index: 3;
-  
+  width: 50px;
 }
 
 .div-img img{
   height: 46px;
+  width: 46px;
   border-radius: 50%;
 }
 .nav-flow h2 { 
@@ -208,7 +208,7 @@ display: flex;
   backdrop-filter: blur(5px);
   background-color: #ffffff50;
 }
-.nav-flow-photo { 
+.nav-flow-photo {
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -221,17 +221,16 @@ display: flex;
 }
 .div-img-full {
   border-radius: 50%;
-  margin: 10px 10px 30px 10px;
-  border: solid 2px #fadb41;
-  background-color: #fadb41;
   z-index: 3;
   
 }
 
 .div-img-full img{
   height: 180px;
+  border: solid 5px #fadb41;
   border-radius: 50%;
 }
+
 
 .nav-bottom {
   display: flex;
