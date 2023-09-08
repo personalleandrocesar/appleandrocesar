@@ -2,7 +2,7 @@ export default defineEventHandler((event) => {
   return {
       "nome": "Camilla",
       "nomeCompleto": "Camilla Figueiredo",
-      "email": "",
+      "email": "seu@email.com",
       "senha": "1234",
       "idade": 36,
       "avaliação": {

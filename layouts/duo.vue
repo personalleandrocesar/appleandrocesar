@@ -89,15 +89,17 @@ function openPhoto() {
   margin: 10px 10px;
   font-weight: bold;
 }
+
 .bar-top-top {
   background-color: #095d62;
-display: flex;
+  display: flex;
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
   text-align: left;
 }
-.bar-top-top a{
+
+.bar-top-top a {
   cursor: pointer;
   zoom: 1.2;
   color: #ffffff;
@@ -119,7 +121,7 @@ display: flex;
   background-color: #ffffff50;
 }
 
-.nav-top{
+.nav-top {
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -127,7 +129,7 @@ display: flex;
   text-align: center;
 }
 
-.nav-top a{
+.nav-top a {
   font-size: 1.4em;
 }
 
@@ -155,28 +157,31 @@ display: flex;
   font-weight: bold;
   margin: 0 30px 0 0;
 }
+
 .div-img {
   height: 50px;
-  width: 50px;
   border-radius: 50%;
   margin: 10px 10px 30px 10px;
   border: solid 2px #fadb41;
   background-color: #fadb41;
   z-index: 3;
-
+  width: 50px;
 }
 
-.div-img img{
+.div-img img {
   height: 46px;
+  width: 46px;
   border-radius: 50%;
 }
+
 .nav-flow h2 {
   color: #fadb41;
   text-transform: capitalize;
   line-height: 1;
   margin-right: 10px;
 }
-.nav-flow div{
+
+.nav-flow div {
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
@@ -195,6 +200,7 @@ display: flex;
   backdrop-filter: blur(5px);
   background-color: #ffffff50;
 }
+
 .nav-flow-photo {
   display: flex;
   flex-direction: column;
@@ -206,17 +212,16 @@ display: flex;
   font-size: .8em;
   font-weight: bold;
 }
+
 .div-img-full {
   border-radius: 50%;
-  margin: 10px 10px 30px 10px;
-  border: solid 2px #fadb41;
-  background-color: #fadb41;
   z-index: 3;
 
 }
 
-.div-img-full img{
+.div-img-full img {
   height: 180px;
+  border: solid 5px #fadb41;
   border-radius: 50%;
 }
 
@@ -229,16 +234,16 @@ display: flex;
   background-color: #095D6220;
   backdrop-filter: blur(15px);
   padding: 3px;
-    font-size: 12px;
-    position: fixed;
-    text-align: center;
-    z-index: 800;
-    border-radius: 30px;
-  }
+  font-size: 12px;
+  position: fixed;
+  text-align: center;
+  z-index: 800;
+  border-radius: 30px;
+}
 
-  .nav-bottom a {
-    zoom:1.2;
-    padding: 15px;
+.nav-bottom a {
+  zoom: 1.2;
+  padding: 15px;
   border-radius: 20%;
   color: #095D6260;
 }
@@ -248,14 +253,10 @@ display: flex;
   border-radius: 40%;
   background-color: #095D6220;
 }
-.nav-bottom a.router-link-exact-active  {
+
+.nav-bottom a.router-link-exact-active {
   padding: 15px;
   border-radius: 40%;
   color: #e1a918;
   background-color: #fadb4150;
-}
-
-
-
-
-</style>
+}</style>
