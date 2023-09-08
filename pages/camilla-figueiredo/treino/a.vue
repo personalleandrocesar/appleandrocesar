@@ -6,7 +6,7 @@ import { ref, computed } from 'vue'
 const dataTreino = ref({
   treino: [
     // serie A
-    { id: 'Exercício 1', nome: 'Extensora', sets: 4, reps: '8 +10" +4', rest: '40"', obs: '' },
+    { id: 'Exercício 1', nome: 'Extensora', sets: 4, reps: '8 +10" +4', rest: '40"', obs: '', img: 'https://webapp.leandrocesar.com/assets/preImagem.a7bdea72.jpg' },
     { id: 'Exercício 2', nome: 'Agachamento Búlgaro', sets: 3, reps: '10', rest: '40"', obs: '*Segurar halteres de 7 kg;' },
     { id: 'Exercício 3', nome: 'Agachamento Sumô', sets: 3, reps: '20 (2T)', rest: '40"', obs: '*Fazer sobre os steps, falhando;' },
     { id: 'Exercício 4', nome: 'Abdominal infra', sets: 3, reps: '20', rest: '40"', obs: '*Fazer na paralela;' },
