@@ -95,7 +95,7 @@ function openPhoto() {
   position: fixed;
   top: 0px;
   width: 100%;
-  z-index: 1000;
+  z-index: 1400;
   
 }
 .bar-top-top {
