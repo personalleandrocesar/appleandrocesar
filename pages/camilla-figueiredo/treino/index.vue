@@ -233,7 +233,6 @@ display: flex;
 .icon{
   zoom: 1.4;
   color: #fadb41;
-  margin-left: -5px;
   margin-top: -2.5px;
 }
 

@@ -162,6 +162,23 @@ body {
   justify-items: center;
 }
 
+.conf {  
+    color:#fff;
+  height: 80px;
+  background-color: #095D62;
+    backdrop-filter: blur(15px);
+  overflow-x: auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  backdrop-filter: blur(5px);
+  width: 100%;
+  margin: 20px 10px;
+  border-radius: 20px;  
+  border: 2px solid #44acb1; 
+}
+
 .main-div-one {
   overflow-x: auto;
   display: flex;
@@ -270,8 +287,9 @@ border: 2px solid #2cd3db;
 }
 
 .icon{
-  zoom: 1.4;
+   zoom: 1.4;
   color: #fadb41;
+  margin-top: -2.5px;
 }
 
 .conf {  
