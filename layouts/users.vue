@@ -17,9 +17,9 @@ function openPhoto() {
 <template>
             <NuxtLoadingIndicator color='repeating-linear-gradient(to right,#00dc82 0%,#34cdfe 50%,#fadb41 100%)'/> <!-- here -->
 
+            <div class="bar-top">
   <div >
       
-      <div class="bar-top">
         <div class='bar-top-top'>
           <div class="div-img">
             <img src='/img/camilla-figueiredo.jpeg' @click="openPhoto"/>
@@ -90,6 +90,10 @@ function openPhoto() {
       <navBottom/>
 </template>
 <style scoped>
+.nuxt-loading-indicator {
+  color: #fff;
+}
+
 .name-user {
   color: #fadb41;
   font-size: 1.4em;
