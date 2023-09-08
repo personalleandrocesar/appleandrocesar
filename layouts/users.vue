@@ -90,9 +90,6 @@ function openPhoto() {
       <navBottom/>
 </template>
 <style scoped>
-.nuxt-loading-indicator {
-  color: #fff;
-}
 
 .name-user {
   color: #fadb41;
@@ -109,6 +106,7 @@ function openPhoto() {
   top: 0px;
   width: 100%;
   margin-bottom: 140px ;
+  z-index: 1006;
   
 }
 .bar-top-top {
@@ -252,7 +250,7 @@ function openPhoto() {
     font-size: 12px;
     position: fixed;
     text-align: center;
-    z-index: 800;
+    z-index: 8;
     border-radius: 30px;
   }
   
@@ -270,6 +268,7 @@ function openPhoto() {
   background-color: #095D6220;
 }
 .nav-bottom a.router-link-exact-active  {
+  z-index: 8;
   padding: 15px;
   border-radius: 30px;
   color: #e1a918;
