@@ -32,19 +32,19 @@ const layout = "hello"
 
 
             </div>
-
+            
             <div class="main-div-two">
+
                 <h3>
-                    <Icon name='material-symbols:exercise' /> TREINOS
+                    <Icon name='healthicons:exercise-running' /> Aeróbio
                 </h3>
+            </div>
+            <div class="main-div-two">
                 <nuxt-link class="square" to="/camilla-figueiredo/treino/a">
 
 
 
                     <div>
-                        <h4>
-                            <Icon name='material-symbols:exercise' />
-                        </h4>
                         <h4>
                             TREINO
                             <Icon name='mdi:alpha-a' />
@@ -67,9 +67,6 @@ const layout = "hello"
                 <nuxt-link class="square" to="/camilla-figueiredo/treino/b">
                     <div>
                         <h4>
-                            <Icon name='material-symbols:exercise' />
-                        </h4>
-                        <h4>
                             TREINO
                             <Icon name='mdi:alpha-b' />
                         </h4>
@@ -91,9 +88,6 @@ const layout = "hello"
 
                 <nuxt-link class="square" to="/camilla-figueiredo/treino/c">
                     <div>
-                        <h4>
-                            <Icon name='material-symbols:exercise' />
-                        </h4>
                         <h4>
                             TREINO
                             <Icon name='mdi:alpha-c' />
@@ -149,11 +143,11 @@ body {
     height: 80px;
     background-color: #095D62;
     backdrop-filter: blur(15px);
-    overflow-x: auto;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    flex-wrap: nowrap;
     backdrop-filter: blur(5px);
     width: 100%;
     margin: 20px 10px;
@@ -163,16 +157,27 @@ body {
 }
 
 .main-div-one {
-    overflow-x: auto;
+overflow-x: hidden;
     display: flex;
     flex-direction: row;
     justify-content: space-around;
+    align-items: center;
+    text-align: center;
+}
+
+.main-div-two:nth-child(2) {
+overflow-x: hidden;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: flex-end;
+    text-align: left;
 }
 
 .main-div-two {
-    overflow-x: auto;
+    overflow-x: hidden;
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
     justify-content: space-around;
     align-items: left;
 }
@@ -182,23 +187,24 @@ body {
 }
 
 .square {
-    color: #000;
-    background-color: #095D6220;
+    color: #555;
+    background-color: #095D6210;
     backdrop-filter: blur(5px);
     overflow-x: auto;
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
     justify-content: flex-start;
     align-items: center;
-    width: 95%;
+    width: 30%;
+    height: 300px;
     margin: 5px auto;
     border-radius: 20px;
-    border: 3px solid #05959c60;
+    border: 2px solid #05959c09;
+    overflow-x: hidden;
 }
 
 .square div:nth-child(1) {
-    padding-right: 12px;
-
+    height: 60px;
 }
 
 .square div:nth-child(2),
@@ -214,14 +220,17 @@ body {
 
 .main-div-two h4 {
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
 }
 
+.main-div-two h4:nth-child(1){
+}
+
 .main-div-two a div {
-    border-right: 3px solid #05959c60;
-    margin-left: 15px;
+    border-bottom: .1px solid #05959c20;
+    width: 90%;
     height: 100px;
     display: flex;
     flex-direction: column;
