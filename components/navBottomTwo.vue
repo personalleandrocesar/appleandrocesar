@@ -29,8 +29,8 @@ function openPhoto() {
             <nuxt-link to="/camilla-figueiredo/treino/c">
                 <Icon name='mdi:alpha-c' />
             </nuxt-link>
-            <nuxt-link to="/camilla-figueiredo/aerobio">
-                <Icon name='healthicons:exercise-running' />
+            <nuxt-link to="/camilla-figueiredo/cardio">
+                <Icon name='material-symbols:cardiology' />
             </nuxt-link>
 
         </div>

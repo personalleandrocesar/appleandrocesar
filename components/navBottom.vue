@@ -23,8 +23,8 @@ function openPhoto() {
             <nuxt-link to="/camilla-figueiredo/treino">
                 <Icon name='material-symbols:exercise' />
             </nuxt-link>
-            <nuxt-link to="/camilla-figueiredo/aerobio">
-                <Icon name='healthicons:exercise-running' />
+            <nuxt-link to="/camilla-figueiredo/cardio">
+                <Icon name='material-symbols:cardiology' />
             </nuxt-link>
             <nuxt-link to="/camilla-figueiredo/avaliacao">
                 <Icon name='jam:medical' />
