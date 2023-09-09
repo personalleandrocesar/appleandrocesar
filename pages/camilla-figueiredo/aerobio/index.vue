@@ -195,7 +195,7 @@ overflow-x: hidden;
     flex-direction: column;
     justify-content: flex-start;
     align-items: center;
-    width: 30%;
+    width: 32.5%;
     height: 300px;
     margin: 5px auto;
     border-radius: 20px;
