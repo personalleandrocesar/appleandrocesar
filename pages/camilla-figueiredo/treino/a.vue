@@ -212,12 +212,12 @@ margin-left: 10px;
   align-items: center;
   margin: 20px 5px 0 5px;
   border-radius: 12px;
-  color:#000;
+  color:#555;
   background-color: #095D6220;
   opacity: .9;
   backdrop-filter: blur(5px);
 
-  border: 2px solid #05959c30; 
+  border: 1px solid #05959c10; 
 }
 .exercise-square h4:nth-child(1) {
   color: #095D62;
@@ -303,7 +303,7 @@ border: 2px solid #2cd3db;
 
 .square {  
   height: 150px;
-  color:#000;
+  color:#555;
   background-color: #095D6220;
   backdrop-filter: blur(5px);
   overflow-x: auto;
@@ -313,8 +313,8 @@ border: 2px solid #2cd3db;
   align-items: center;
   width: 100%;
   margin: 20px auto;
-  border-top: 2px solid #05959c40; 
-  border-bottom: 2px solid #05959c40; 
+  border-top: 2px solid #05959c10; 
+  border-bottom: 2px solid #05959c10; 
 }
 
 </style>
