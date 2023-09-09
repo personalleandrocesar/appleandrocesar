@@ -191,7 +191,7 @@ body {
   width: 95%;
   margin: 5px auto;
   border-radius: 20px;
-  border: .1px solid #05959c20; 
+  border: 2px solid #05959c20; 
 }
 
 .square div:nth-child(1) {
@@ -214,7 +214,7 @@ display: flex;
   align-items: center;
 }
 .main-div-two a div {
-  border-right: .1px solid #05959c10;
+  border-right: 2px solid #05959c20;
   margin-left: 15px;
   height: 100px;
   display: flex;
