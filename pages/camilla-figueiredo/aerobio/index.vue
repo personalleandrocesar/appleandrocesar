@@ -199,7 +199,7 @@ overflow-x: hidden;
     height: 300px;
     margin: 5px auto;
     border-radius: 20px;
-    border: 2px solid #05959c09;
+    border: 2px solid #05959c20;
     overflow-x: hidden;
 }
 
@@ -229,7 +229,7 @@ overflow-x: hidden;
 }
 
 .main-div-two a div {
-    border-bottom: .1px solid #05959c20;
+    border-bottom: 2px solid #05959c20;
     width: 90%;
     height: 100px;
     display: flex;
