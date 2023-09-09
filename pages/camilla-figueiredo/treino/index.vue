@@ -188,7 +188,7 @@ body {
   flex-direction: row;
   justify-content: flex-start;
   align-items: center;
-  width: 95%;
+  width: 99%;
   margin: 5px auto;
   border-radius: 20px;
   border: 2px solid #05959c20; 
