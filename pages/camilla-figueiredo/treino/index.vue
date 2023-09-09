@@ -180,7 +180,7 @@ body {
 }
 
 .square {  
-  color:#000;
+  color:#555;
   background-color: #095D6220;
   backdrop-filter: blur(5px);
   overflow-x: auto;
@@ -191,7 +191,7 @@ body {
   width: 95%;
   margin: 5px auto;
   border-radius: 20px;
-  border: 3px solid #05959c60; 
+  border: .1px solid #05959c20; 
 }
 
 .square div:nth-child(1) {
@@ -214,7 +214,7 @@ display: flex;
   align-items: center;
 }
 .main-div-two a div {
-  border-right: 3px solid #05959c60;
+  border-right: .1px solid #05959c10;
   margin-left: 15px;
   height: 100px;
   display: flex;
