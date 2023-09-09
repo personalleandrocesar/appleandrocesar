@@ -196,7 +196,7 @@ overflow-x: hidden;
     justify-content: flex-start;
     align-items: center;
     width: 32.5%;
-    height: 300px;
+    height: 180px;
     margin: 5px auto;
     border-radius: 20px;
     border: 2px solid #05959c20;
@@ -204,7 +204,7 @@ overflow-x: hidden;
 }
 
 .square div:nth-child(1) {
-    height: 60px;
+    height: 70px;
 }
 
 .square div:nth-child(2),
