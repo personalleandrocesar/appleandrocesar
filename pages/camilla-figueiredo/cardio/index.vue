@@ -36,7 +36,7 @@ const layout = "hello"
             <div class="main-div-two">
 
                 <h3>
-                    <Icon name='healthicons:exercise-running' /> Aeróbio
+                    <Icon name='material-symbols:cardiology' /> Cardio
                 </h3>
             </div>
             <div class="main-div-two">
