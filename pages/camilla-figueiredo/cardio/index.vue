@@ -40,7 +40,7 @@ const layout = "hello"
                 </h3>
             </div>
             <div class="main-div-two">
-                <nuxt-link class="square" to="/camilla-figueiredo/treino/a">
+                <nuxt-link class="square">
 
 
 
@@ -56,15 +56,15 @@ const layout = "hello"
                         </h3>
 
                         <h4>
-                            <Icon name="game-icons:leg" />
+                            <Icon name="healthicons:exercise-running" />
                         </h4>
                         <h4>
-                            Quadríceps
+                            Esteira
                         </h4>
 
                     </div>
                 </nuxt-link>
-                <nuxt-link class="square" to="/camilla-figueiredo/treino/b">
+                <nuxt-link class="square" >
                     <div>
                         <h4>
                             TREINO
@@ -77,16 +77,16 @@ const layout = "hello"
                         </h3>
 
                         <h4>
-                            <Icon name="solar:body-shape-bold" />
+                            <Icon name="mdi:escalator" />
                         </h4>
                         <h4>
-                            Glúteo
+                            Escada
                         </h4>
 
                     </div>
                 </nuxt-link>
 
-                <nuxt-link class="square" to="/camilla-figueiredo/treino/c">
+                <nuxt-link class="square" >
                     <div>
                         <h4>
                             TREINO
@@ -99,10 +99,10 @@ const layout = "hello"
                         </h3>
 
                         <h4>
-                            <Icon name="mingcute:fitness-fill" />
+                            <Icon name="healthicons:exercise-bicycle" />
                         </h4>
                         <h4>
-                            Braço
+                            Bicicleta
                         </h4>
 
                     </div>
