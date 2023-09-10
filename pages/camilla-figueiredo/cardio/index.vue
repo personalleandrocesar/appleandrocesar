@@ -85,8 +85,6 @@ function openDivTree() {
                     </div>
 
                     <div>
-                        <h3>
-                        </h3>
 
                         <h4>
                             <Icon name="healthicons:exercise-running" />
@@ -106,8 +104,6 @@ function openDivTree() {
                     </div>
 
                     <div>
-                        <h3>
-                        </h3>
 
                         <h4>
                             <Icon name="mdi:escalator" />
@@ -128,9 +124,6 @@ function openDivTree() {
                     </div>
 
                     <div>
-                        <h3>
-                        </h3>
-
                         <h4>
                             <Icon name="healthicons:exercise-bicycle" />
                         </h4>
@@ -142,19 +135,28 @@ function openDivTree() {
                 </nuxt-link>
             </div>
             <div v-if="divOne" class="squareRes" >
-                <h1>
-                    One
-                </h1>
-              </div>
+                      <div class="main-div-tree">
+                                <h3>
+                                    Esteira
+                                </h3>
+
+                            </div>
+            </div>
               <div v-else-if="divTwo" class="squareRes">
-                <h1>
-                    Two
-                </h1>
-              </div>
+                      <div class="main-div-tree">
+                                <h3>
+                                    Escada
+                                </h3>
+
+                            </div>
+                  </div>
               <div v-else-if="divTree" class="squareRes">
-                  <h1>
-                      Tree
-                    </h1>
+                  <div class="main-div-tree">
+                            <h3>
+                                Bicicleta
+                            </h3>
+
+                        </div>
                 </div>
                 <div v-else class="info" >
                     <div class="arrowUp">
@@ -162,7 +164,7 @@ function openDivTree() {
                         <Icon name="ic:round-arrow-drop-up" />
                         <Icon name="ic:round-arrow-drop-up" />
                     </div>
-                        <h5>Escolha uma das opções de acordo com o treino do dia!</h5>
+                        <h5>Clique acima e veja detalhes do Cardio do dia!</h5>
                 </div>
               <br>
               <br>
@@ -193,7 +195,6 @@ body {
 
 .squareRes {
       color:#555;
-  background-color: #095D6210;
   backdrop-filter: blur(5px);
   overflow-x: auto;
   display: flex;
@@ -202,8 +203,7 @@ body {
   align-items: center;
   width: 99%;
   margin: 5px auto;
-  border-radius: 5px;
-  border: 1px solid #05959c10;
+  border-radius: 10px;
 }
 
 .arrowUp {
@@ -277,6 +277,19 @@ overflow-x: hidden;
 .main-div-two .icon {
     color: #095D62;
 }
+.main-div-tree {
+    overflow-x: hidden;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    color: #095D62;
+    margin: 0 3px 0 15px;
+    align-items: center;
+}
+
+.main-div-tree  {
+}
+
 
 .square {
     color: #555;
