@@ -1,5 +1,11 @@
 <script setup>
+import { ref } from 'vue';
 const layout = "hello"
+
+const navbarOpen = ref(false);
+function openNavbar() {
+    navbarOpen.value = !navbarOpen.value;
+}
 </script>
 
 <template>
