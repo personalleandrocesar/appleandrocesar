@@ -135,26 +135,35 @@ function openDivTree() {
                 </nuxt-link>
             </div>
             <div v-if="divOne" class="squareRes" >
-                      <div class="main-div-tree">
-                                <h3>
-                                    Esteira
-                                </h3>
+                    <div class="main-div-tree">
+                        <div>
+                            <Icon name="ph:clock-countdown-fill" />
+                            <h4>
+                                30 minutos
+                            </h4>
+                        </div>
 
-                            </div>
+                    </div>
             </div>
               <div v-else-if="divTwo" class="squareRes">
                       <div class="main-div-tree">
-                                <h3>
-                                    Escada
-                                </h3>
-
+                            <div>
+                                <Icon name="ph:clock-countdown-fill" />
+                                <h4>
+                                    15 minutos
+                                </h4>
                             </div>
+
+                        </div>
                   </div>
               <div v-else-if="divTree" class="squareRes">
                   <div class="main-div-tree">
-                            <h3>
-                                Bicicleta
-                            </h3>
+                            <div>
+                                <Icon name="ph:clock-countdown-fill" />
+                                <h4>
+                                    20 minutos
+                                </h4>
+                            </div>
 
                         </div>
                 </div>
@@ -200,10 +209,10 @@ body {
     overflow-x: auto;
     display: flex;
     flex-direction: column;
-    justify-content: flex-start;
+    justify-content: center;
     align-items: flex-start;
     width: 99.5%;
-    height: 180px;
+    height: 140px;
     margin: 5px auto;
     border-radius: 20px;
     border: 2px solid #05959c20;
@@ -287,11 +296,24 @@ overflow-x: hidden;
 .main-div-tree {
     overflow-x: hidden;
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
     justify-content: center;
     color: #095D62;
     margin: 0 3px 0 15px;
     align-items: center;
+}
+.main-div-tree div {
+    overflow-x: hidden;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: #095D62;
+    margin: 0 3px 0 15px;
+}
+
+.main-div-tree .icon {
+color: #095D62;
 }
 
 
