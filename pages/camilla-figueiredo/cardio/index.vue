@@ -145,21 +145,29 @@ function openDivTree() {
                 <h1>
                     One
                 </h1>
-            </div>
-            <div v-if="divTwo" class="squareRes">
+              </div>
+              <div v-else-if="divTwo" class="squareRes">
                 <h1>
                     Two
                 </h1>
-            </div>
-            <div v-if="divTree" class="squareRes">
-                <h1>
-                    Tree
-                </h1>
-            </div>
-            <br>
-            <br>
-            <br>
-        </div>
+              </div>
+              <div v-else-if="divTree" class="squareRes">
+                  <h1>
+                      Tree
+                    </h1>
+                </div>
+                <div v-else class="info" >
+                    <div class="arrowUp">
+                        <Icon name="ic:round-arrow-drop-up" />
+                        <Icon name="ic:round-arrow-drop-up" />
+                        <Icon name="ic:round-arrow-drop-up" />
+                    </div>
+                        <h5>Escolha uma das opções de acordo com o treino do dia!</h5>
+                </div>
+              <br>
+              <br>
+              <br>
+             </div>
 
 
 
@@ -196,6 +204,23 @@ body {
   margin: 5px auto;
   border-radius: 5px;
   border: 1px solid #05959c10;
+}
+
+.arrowUp {
+    display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+}
+.arrowUp .icon {
+    color: #095D6280;
+}
+
+.info h5{
+    text-align: center;
+    margin-top: -5px;
+    color: #555;
+    font-weight: 700;
 }
 
 .main {
