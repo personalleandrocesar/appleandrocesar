@@ -194,16 +194,23 @@ body {
 }
 
 .squareRes {
-      color:#555;
-  backdrop-filter: blur(5px);
-  overflow-x: auto;
-  display: flex;
-  flex-direction: row;
-  justify-content: flex-start;
-  align-items: center;
-  width: 99%;
-  margin: 5px auto;
-  border-radius: 10px;
+  
+    color: #555;
+    backdrop-filter: blur(5px);
+    overflow-x: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    width: 99.5%;
+    height: 180px;
+    margin: 5px auto;
+    border-radius: 20px;
+    border: 2px solid #05959c20;
+    overflow-x: hidden;
+    background-color: #095D6230;
+    border-top: 3px solid #05959c40;
+    border-bottom: 3px solid #05959c40;
 }
 
 .arrowUp {
@@ -285,9 +292,6 @@ overflow-x: hidden;
     color: #095D62;
     margin: 0 3px 0 15px;
     align-items: center;
-}
-
-.main-div-tree  {
 }
 
 
