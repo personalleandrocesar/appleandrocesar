@@ -313,7 +313,9 @@ overflow-x: hidden;
 }
 .squared {
     background-color: #095D6230;
-    border: 2px solid #05959c40;
+    border: 2px solid #05959c20;
+    border-top: 3px solid #05959c40;
+    border-bottom: 3px solid #05959c40;
 }
 
 .square div:nth-child(1) {
