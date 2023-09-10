@@ -2,9 +2,36 @@
 import { ref } from 'vue';
 const layout = "hello"
 
-const navbarOpen = ref(false);
-function openNavbar() {
-    navbarOpen.value = !navbarOpen.value;
+const divOne = ref(false);
+const divTwo = ref(false);
+const divTree = ref(false);
+const divAplicar = ref(false);
+const divAplicarTwo = ref(false);
+const divAplicarTree = ref(false);
+
+function openDivOne() {
+    divOne.value = !divOne.value;
+    divTwo.value = false
+    divTree.value = false
+    divAplicar.value = !divAplicar.value
+    divAplicarTwo.value = false
+    divAplicarTree.value = false
+}
+function openDivTwo() {
+    divTwo.value = !divTwo.value;
+    divOne.value = false;
+    divTree.value = false;
+    divAplicarTwo.value = !divAplicarTwo.value
+    divAplicar.value = false
+    divAplicarTree.value = false
+}
+function openDivTree() {
+    divTree.value = !divTree.value;
+    divOne.value = false;
+    divTwo.value = false;
+    divAplicarTree.value = !divAplicarTree.value
+    divAplicarTwo.value = false
+    divAplicar.value = false
 }
 </script>
 
@@ -39,14 +66,14 @@ function openNavbar() {
 
             </div>
             
-            <div class="main-div-two">
+            <div class="main-div-two" >
 
                 <h3>
                     <Icon name='material-symbols:cardiology' /> Cardio
                 </h3>
             </div>
-            <div class="main-div-two">
-                <nuxt-link class="square">
+            <div class="main-div-two"  >
+                <nuxt-link @click="openDivOne" class="square" :class="{ squared: divAplicar }" >
 
 
 
@@ -70,7 +97,7 @@ function openNavbar() {
 
                     </div>
                 </nuxt-link>
-                <nuxt-link class="square" >
+                <nuxt-link @click="openDivTwo" class="square" :class="{ squared: divAplicarTwo }">
                     <div>
                         <h4>
                             TREINO
@@ -92,7 +119,7 @@ function openNavbar() {
                     </div>
                 </nuxt-link>
 
-                <nuxt-link class="square" >
+                <nuxt-link @click="openDivTree" class="square" :class="{ squared: divAplicarTree }">
                     <div>
                         <h4>
                             TREINO
@@ -113,7 +140,21 @@ function openNavbar() {
 
                     </div>
                 </nuxt-link>
-
+            </div>
+            <div v-if="divOne" class="squareRes" >
+                <h1>
+                    One
+                </h1>
+            </div>
+            <div v-if="divTwo" class="squareRes">
+                <h1>
+                    Two
+                </h1>
+            </div>
+            <div v-if="divTree" class="squareRes">
+                <h1>
+                    Tree
+                </h1>
             </div>
             <br>
             <br>
@@ -135,6 +176,26 @@ body {
     background: #fff;
     color: #616161;
 
+}
+
+.black {
+    border: 1px solid #fadb41;
+    text-transform: lowercase;
+}
+
+.squareRes {
+      color:#555;
+  background-color: #095D6210;
+  backdrop-filter: blur(5px);
+  overflow-x: auto;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+  width: 99%;
+  margin: 5px auto;
+  border-radius: 5px;
+  border: 1px solid #05959c10;
 }
 
 .main {
@@ -208,6 +269,10 @@ overflow-x: hidden;
     border: 2px solid #05959c20;
     overflow-x: hidden;
 }
+.squared {
+    background-color: #095D6230;
+    border: 2px solid #05959c40;
+}
 
 .square div:nth-child(1) {
     height: 70px;
@@ -229,9 +294,6 @@ overflow-x: hidden;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-}
-
-.main-div-two h4:nth-child(1){
 }
 
 .main-div-two a div {
