@@ -192,6 +192,8 @@ body {
   margin: 5px auto;
   border-radius: 20px;
   border: 2px solid #05959c20; 
+    border-top: 3px solid #05959c40;
+    border-bottom: 3px solid #05959c40;
 }
 
 .square div:nth-child(1) {
