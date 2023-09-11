@@ -136,17 +136,24 @@ function openDivTree() {
             </div>
             <div v-if="divOne" class="squareRes" >
                     <div class="main-div-tree">
+                        
                         <div>
                             <Icon name="ph:clock-countdown-fill" />
                             <h4>
-                                30 minutos
+                                20 minutos
                             </h4>
                         </div>
 
+                        <div>
+                            <h4>Correr direto entre velocidade de 7.0 km/h.</h4>
+
+                        </div>
+                        
                     </div>
             </div>
               <div v-else-if="divTwo" class="squareRes">
                       <div class="main-div-tree">
+                        
                             <div>
                                 <Icon name="ph:clock-countdown-fill" />
                                 <h4>
@@ -154,10 +161,20 @@ function openDivTree() {
                                 </h4>
                             </div>
 
+                            <div>
+                                <h4>
+                                    Fazer intervalado: 1' minuto subindo o mais 
+                                    rápido possível, 3' com descanso ativo em velocidade 
+                                    menor.
+                                </h4>
+
+                            </div>
+                        
                         </div>
                   </div>
               <div v-else-if="divTree" class="squareRes">
-                  <div class="main-div-tree">
+                 <div class="main-div-tree">
+                        
                             <div>
                                 <Icon name="ph:clock-countdown-fill" />
                                 <h4>
@@ -165,6 +182,13 @@ function openDivTree() {
                                 </h4>
                             </div>
 
+                            <div>
+                                <h4>
+                                    Fazer pesado, direto o máximo que puder, mantendo o ritmo.
+                                </h4>
+
+                            </div>
+                        
                         </div>
                 </div>
                 <div v-else class="info" >
@@ -202,25 +226,6 @@ body {
     text-transform: lowercase;
 }
 
-.squareRes {
-  
-    color: #555;
-    backdrop-filter: blur(5px);
-    overflow-x: auto;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: flex-start;
-    width: 99.5%;
-    height: 140px;
-    margin: 5px auto;
-    border-radius: 20px;
-    border: 2px solid #05959c20;
-    overflow-x: hidden;
-    background-color: #095D6230;
-    border-top: 3px solid #05959c40;
-    border-bottom: 3px solid #05959c40;
-}
 
 .arrowUp {
     display: flex;
@@ -290,16 +295,42 @@ overflow-x: hidden;
     align-items: left;
 }
 
+.main-div-tree div {
+    height: max-content;
+}
+
 .main-div-two .icon {
     color: #095D62;
+}
+
+
+.squareRes {
+  
+    color: #555;
+    backdrop-filter: blur(5px);
+    overflow-x: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    width: 99.5%;
+    height: 140px;
+    margin: 5px auto;
+    border-radius: 20px;
+    border: 2px solid #05959c20;
+    overflow-x: hidden;
+    background-color: #095D6230;
+    border-top: 3px solid #05959c40;
+    line-height: 1.2;
+    border-bottom: 3px solid #05959c40;
 }
 .main-div-tree {
     overflow-x: hidden;
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
     justify-content: center;
     color: #095D62;
-    margin: 0 3px 0 15px;
+    margin: 0 3px 0 1px;
     align-items: center;
 }
 .main-div-tree div {
@@ -309,7 +340,18 @@ overflow-x: hidden;
     justify-content: center;
     align-items: center;
     color: #095D62;
+    margin: 0 3px 0 1px;
+    width: 30%;
+}
+.main-div-tree div:nth-child(2) {
+    overflow-x: hidden;
     margin: 0 3px 0 15px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: #095D62;
+    width: 60%;
 }
 
 .main-div-tree .icon {
