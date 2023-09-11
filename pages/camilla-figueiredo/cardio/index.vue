@@ -163,7 +163,7 @@ function openDivTree() {
 
                             <div>
                                 <h4>
-                                    Fazer intervalado: 1' minuto subindo o mais 
+                                    Fazer intervalado: <br> 1' minuto subindo o mais 
                                     rápido possível, 3' com descanso ativo em velocidade 
                                     menor.
                                 </h4>
