@@ -39,13 +39,13 @@ function openDivTree() {
     <NuxtLayout :name="layout">
         <div class="conf">
 
-            <div class="main-div-two">
+            <div class="main-div-one">
 
                 <h3>
                     <Icon name='jam:medical' /> AVALIAÇÕES
                 </h3>
             </div>
-            <div class="main-div-two">
+            <div class="main-div-one">
                 <nuxt-link @click="openDivOne" class="square" :class="{ squared: divAplicar }">
 
 
@@ -81,6 +81,21 @@ function openDivTree() {
             <div v-if="divOne" class="squareRes">
                 <div class="main-div-tree">
 
+                    
+                    <div>
+                        <h2>IMC</h2>
+                        <h3>
+                            20,5
+                        </h3>
+                        <h3>
+                            Peso normal
+                        </h3>
+                    </div>
+
+
+                </div>
+                <div class="main-div-tree">
+
                     <div>
                         <h4>MASSA</h4>
                         <Icon name="fa6-solid:weight-scale" />
@@ -94,12 +109,6 @@ function openDivTree() {
                         <h4>
                             1.60 m
                         </h4>
-                    </div>
-                    <div>
-                        <h2>IMC</h2>
-                        <h3>
-                            20,5
-                        </h3>
                     </div>
 
 
@@ -320,7 +329,7 @@ body {
     text-align: center;
 }
 
-.main-div-two:nth-child(1) {
+.main-div-one:nth-child(1) {
     overflow-x: hidden;
     display: flex;
     flex-direction: row;
@@ -329,7 +338,7 @@ body {
     text-align: left;
     margin: 0 0 10px 0;
 }
-.main-div-two:nth-child(2) {
+.main-div-one:nth-child(2) {
     overflow-x: hidden;
     display: flex;
     flex-direction: row;
@@ -338,7 +347,7 @@ body {
     text-align: left;
 }
 
-.main-div-two {
+.main-div-one {
     overflow-x: hidden;
     display: flex;
     flex-direction: row;
@@ -350,7 +359,7 @@ body {
     height: max-content;
 }
 
-.main-div-two .icon {
+.main-div-one .icon {
     color: #095D62;
 }
 
@@ -466,19 +475,19 @@ text-align: center;
 }
 
 
-.main-div-two H3 {
+.main-div-one H3 {
     margin-left: 20px;
 
 }
 
-.main-div-two h4 {
+.main-div-one h4 {
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
 }
 
-.main-div-two a div {
+.main-div-one a div {
     width: 90%;
     display: flex;
     flex-direction: column;
@@ -486,11 +495,11 @@ text-align: center;
     align-items: center;
 }
 
-.main-div-two h4 .icon {
+.main-div-one h4 .icon {
     margin-left: -3px;
 }
 
-.main-div-two div .icon {
+.main-div-one div .icon {
     margin-top: -1px;
     display: flex;
     flex-direction: row;
