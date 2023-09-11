@@ -52,7 +52,7 @@ function openDivTree() {
 
                     <div>
                         <h4>
-                            <Icon name='material-symbols:swap-driving-apps-wheel-outline' />
+                            <Icon name='material-symbols:measuring-tape-outline-rounded' />
                             MEDIDAS
                         </h4>
                     </div>
@@ -82,18 +82,122 @@ function openDivTree() {
                 <div class="main-div-tree">
 
                     <div>
-                        <Icon name="ph:clock-countdown-fill" />
+                        <h4>MASSA</h4>
+                        <Icon name="fa6-solid:weight-scale" />
                         <h4>
-                            20 minutos
+                            20 kg
                         </h4>
                     </div>
-
                     <div>
-                        <h4>Correr direto entre velocidade de 7.0 km/h.</h4>
-
+                        <h4>ALTURA</h4>
+                        <Icon name="pixelarticons:human-height" />
+                        <h4>
+                            1.60 m
+                        </h4>
+                    </div>
+                    <div>
+                        <h2>IMC</h2>
+                        <h3>
+                            20,5
+                        </h3>
                     </div>
 
+
                 </div>
+                <div class="main-div-four ">
+
+                    <div class="left">
+                        <h4>
+                            <Icon name='material-symbols:measuring-tape-outline-rounded' />
+                            CIRCUNFERÊNCIA
+                        </h4>
+                    </div>
+                </div>
+                <div class="main-div-five">
+
+                        
+                        <div>
+                            <h3>Pescoço:</h3>
+                            <h4>
+                                20,5 cm
+                            </h4>
+                        </div>
+                        <div>
+                            <h3>Ombro:</h3>
+                            <h4>
+                                20,5 cm
+                            </h4>
+                        </div>
+
+                    </div>
+                <div class="main-div-five">
+
+                        
+                        <div>
+                            <h3>Pescoço:</h3>
+                            <h4>
+                                20,5 cm
+                            </h4>
+                        </div>
+                        <div>
+                            <h3>Ombro:</h3>
+                            <h4>
+                                20,5 cm
+                            </h4>
+                        </div>
+
+                    </div>
+                <div class="main-div-five">
+
+                        
+                        <div>
+                            <h3>Pescoço:</h3>
+                            <h4>
+                                20,5 cm
+                            </h4>
+                        </div>
+                        <div>
+                            <h3>Ombro:</h3>
+                            <h4>
+                                20,5 cm
+                            </h4>
+                        </div>
+
+                    </div>
+                <div class="main-div-five">
+
+                        
+                        <div>
+                            <h3>Pescoço:</h3>
+                            <h4>
+                                20,5 cm
+                            </h4>
+                        </div>
+                        <div>
+                            <h3>Ombro:</h3>
+                            <h4>
+                                20,5 cm
+                            </h4>
+                        </div>
+
+                    </div>
+                <div class="main-div-five">
+
+                        
+                        <div>
+                            <h3>Pescoço:</h3>
+                            <h4>
+                                20,5 cm
+                            </h4>
+                        </div>
+                        <div>
+                            <h3>Ombro:</h3>
+                            <h4>
+                                20,5 cm
+                            </h4>
+                        </div>
+
+                    </div>
             </div>
             <div v-else-if="divTwo" class="squareRes">
                 <div class="main-div-tree">
@@ -165,9 +269,15 @@ body {
 
 }
 
-.black {
-    border: 1px solid #fadb41;
-    text-transform: lowercase;
+.left {
+    text-align: left;
+    color: #095D62;
+    margin-left: 10px;
+    margin-top: 20px;
+}
+
+.left .icon {
+    color: #095D62;
 }
 
 
@@ -217,6 +327,7 @@ body {
     justify-content: flex-start;
     align-items: flex-end;
     text-align: left;
+    margin: 0 0 10px 0;
 }
 .main-div-two:nth-child(2) {
     overflow-x: hidden;
@@ -251,17 +362,14 @@ body {
     overflow-x: auto;
     display: flex;
     flex-direction: column;
-    justify-content: center;
-    align-items: flex-start;
+    justify-content: space-around;
     width: 99.5%;
-    height: 140px;
     margin: 5px auto;
     border-radius: 20px;
     border: 2px solid #05959c20;
     overflow-x: hidden;
-    background-color: #095D6230;
+    background-color: #095D6220;
     border-top: 3px solid #05959c40;
-    line-height: 1.2;
     border-bottom: 3px solid #05959c40;
 }
 
@@ -269,10 +377,33 @@ body {
     overflow-x: hidden;
     display: flex;
     flex-direction: row;
-    justify-content: center;
+    justify-content: space-around;
     color: #095D62;
-    margin: 0 3px 0 1px;
+    margin: 20px 3px 20px 1px;
     align-items: center;
+}
+.main-div-five {
+    overflow-x: hidden;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
+    color: #095D62;
+    margin: 20px 3px 20px 1px;
+}
+
+.main-div-five div{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
+
+}
+
+.main-div-five h4 {
+    font-size: 1.3em;
+    color: #06a5ae;
+    margin-left: 4px;
 }
 
 .main-div-tree div {
@@ -283,7 +414,6 @@ body {
     align-items: center;
     color: #095D62;
     margin: 0 3px 0 1px;
-    width: 30%;
 }
 
 .main-div-tree div:nth-child(2) {
@@ -293,11 +423,20 @@ body {
     justify-content: center;
     align-items: center;
     color: #095D62;
-    width: 60%;
 }
 
 .main-div-tree .icon {
     color: #095D62;
+}
+.main-div-tree h2 {
+margin-bottom: -10px;
+color: #06a5ae;
+}
+.main-div-tree h3 {
+color: #06a5ae;
+}
+.main-div-tree h4 {
+text-align: center;
 }
 
 
@@ -323,6 +462,7 @@ body {
     border: 2px solid #05959c20;
     border-top: 3px solid #05959c40;
     border-bottom: 3px solid #05959c40;
+    color: #095D62;
 }
 
 
@@ -361,5 +501,4 @@ body {
 .icon {
     zoom: 1.4;
     color: #fadb41;
-    margin-top: -2.5px;
 }</style>
