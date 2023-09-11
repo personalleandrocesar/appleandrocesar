@@ -145,7 +145,7 @@ function openDivTree() {
                         </div>
 
                         <div>
-                            <h4>Correr direto entre velocidade de 7.0 km/h.</h4>
+                            <h4>Correr direto entre velocidade de 7.0 km/h a 8.5 km/h.</h4>
 
                         </div>
                         
