@@ -126,12 +126,6 @@ function openDivTree() {
 
                         
                         <div>
-                            <h3>Pescoço:</h3>
-                            <h4>
-                                20,5 cm
-                            </h4>
-                        </div>
-                        <div>
                             <h3>Ombro:</h3>
                             <h4>
                                 20,5 cm
@@ -148,8 +142,12 @@ function openDivTree() {
                                 20,5 cm
                             </h4>
                         </div>
+
+                    </div>
+                <div class="main-div-five">
+
                         <div>
-                            <h3>Ombro:</h3>
+                            <h3>Tórax:</h3>
                             <h4>
                                 20,5 cm
                             </h4>
@@ -160,13 +158,7 @@ function openDivTree() {
 
                         
                         <div>
-                            <h3>Pescoço:</h3>
-                            <h4>
-                                20,5 cm
-                            </h4>
-                        </div>
-                        <div>
-                            <h3>Ombro:</h3>
+                            <h3>Tórax inspirado:</h3>
                             <h4>
                                 20,5 cm
                             </h4>
@@ -177,13 +169,7 @@ function openDivTree() {
 
                         
                         <div>
-                            <h3>Pescoço:</h3>
-                            <h4>
-                                20,5 cm
-                            </h4>
-                        </div>
-                        <div>
-                            <h3>Ombro:</h3>
+                            <h3>Tórax expirado:</h3>
                             <h4>
                                 20,5 cm
                             </h4>
@@ -194,13 +180,35 @@ function openDivTree() {
 
                         
                         <div>
-                            <h3>Pescoço:</h3>
+                            <h3>Cintura:</h3>
                             <h4>
                                 20,5 cm
                             </h4>
                         </div>
-                        <div>
-                            <h3>Ombro:</h3>
+
+                    </div>
+                <div class="main-div-five">
+
+                        
+                    <div>
+                            <h3>Quadril:</h3>
+                            <h4>
+                                20,5 cm
+                            </h4>
+                        </div>
+
+                    </div>
+                <div class="main-div-five">
+
+                        
+                    <div>
+                            <h3>Quadril:</h3>
+                            <h4>
+                                20,5 cm
+                            </h4>
+                        </div>
+                    <div>
+                            <h3>Quadril:</h3>
                             <h4>
                                 20,5 cm
                             </h4>
@@ -395,10 +403,10 @@ body {
     overflow-x: hidden;
     display: flex;
     flex-direction: row;
-    align-items: center;
-    justify-content: space-around;
+    align-items: flex-start;
+    justify-content: flex-start;
     color: #095D62;
-    margin: 20px 3px 20px 1px;
+    margin: 0px 3px 0px 30px;
 }
 
 .main-div-five div{
