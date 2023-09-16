@@ -1,6 +1,14 @@
 <script setup>
 import { ref } from 'vue';
+const { data } = await useFetch('/api/camillaFigueiredo')
 const layout = "hello"
+
+
+const imc = function imcCalc () {    
+    const massa = data.avaliacao.massa
+    const altura = data.avaliacao.altura
+   return massa / (altura) * (altura)
+}  
 
 const divOne = ref(true);
 const divTwo = ref(false);
@@ -8,6 +16,7 @@ const divTree = ref(false);
 const divAplicar = ref(true);
 const divAplicarTwo = ref(false);
 const divAplicarTree = ref(false);
+
 
 function openDivOne() {
     divOne.value = !divOne.value;
@@ -85,7 +94,7 @@ function openDivTree() {
                     <div>
                         <h2>IMC</h2>
                         <h3>
-                            20,5
+                            {{ this.imc }}
                         </h3>
                         <h3>
                             Peso normal
@@ -100,14 +109,14 @@ function openDivTree() {
                         <h4>MASSA</h4>
                         <Icon name="fa6-solid:weight-scale" />
                         <h4>
-                            20 kg
+                           {{ data.avaliacao.massa }} kg
                         </h4>
                     </div>
                     <div>
                         <h4>ALTURA</h4>
                         <Icon name="pixelarticons:human-height" />
                         <h4>
-                            1.60 m
+                             {{ data.avaliacao.altura }} m
                         </h4>
                     </div>
 
