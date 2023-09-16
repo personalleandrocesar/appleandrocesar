@@ -4,12 +4,6 @@ const { data } = await useFetch('/api/camillaFigueiredo')
 const layout = "hello"
 
 
-const imc = function imcCalc () {    
-    const massa = data.avaliacao.massa
-    const altura = data.avaliacao.altura
-   return massa / (altura) * (altura)
-}  
-
 const divOne = ref(true);
 const divTwo = ref(false);
 const divTree = ref(false);
@@ -94,7 +88,7 @@ function openDivTree() {
                     <div>
                         <h2>IMC</h2>
                         <h3>
-                            {{ this.imc }}
+                            {{ imc }}
                         </h3>
                         <h3>
                             Peso normal
@@ -449,6 +443,9 @@ body {
     justify-content: center;
     align-items: center;
     color: #095D62;
+}
+.main-div-tree:nth-child(2) {
+    margin-top: -15px;
 }
 
 .main-div-tree .icon {
