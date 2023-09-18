@@ -87,7 +87,7 @@ function openDivTree() {
                     <div>
                         <h2>IMC</h2>
                         <h3>
-                            {{ imc }}
+                            25.6
                         </h3>
                         <h3>
                             Peso normal
@@ -130,7 +130,7 @@ function openDivTree() {
                         <div>
                             <h3>Ombro:</h3>
                             <h4>
-                                20,5 cm
+                                {{ data.avaliacao.ombro }} cm
                             </h4>
                         </div>
 
@@ -141,7 +141,7 @@ function openDivTree() {
                         <div>
                             <h3>Pescoço:</h3>
                             <h4>
-                                20,5 cm
+                                {{ data.avaliacao.pescoco }} cm
                             </h4>
                         </div>
 
@@ -151,7 +151,7 @@ function openDivTree() {
                         <div>
                             <h3>Tórax:</h3>
                             <h4>
-                                20,5 cm
+                                {{ data.avaliacao.torax }} cm
                             </h4>
                         </div>
 
@@ -160,9 +160,9 @@ function openDivTree() {
 
                         
                         <div>
-                            <h3>Tórax inspirado:</h3>
+                            <h3>Tórax Contraído:</h3>
                             <h4>
-                                20,5 cm
+                                {{ data.avaliacao.toraxContraido }} cm
                             </h4>
                         </div>
 
@@ -173,7 +173,7 @@ function openDivTree() {
                         <div>
                             <h3>Tórax expirado:</h3>
                             <h4>
-                                20,5 cm
+                                {{ data.avaliacao.toraxRelaxado }} cm
                             </h4>
                         </div>
 
@@ -184,7 +184,7 @@ function openDivTree() {
                         <div>
                             <h3>Cintura:</h3>
                             <h4>
-                                20,5 cm
+                                {{ data.avaliacao.cintura }} cm
                             </h4>
                         </div>
 
@@ -195,24 +195,69 @@ function openDivTree() {
                     <div>
                             <h3>Quadril:</h3>
                             <h4>
-                                20,5 cm
+                                {{ data.avaliacao.quadril }} cm
                             </h4>
                         </div>
 
                     </div>
-                <div class="main-div-five">
+                    <div class="main-div-six ">
+
+                        <div>
+                            <h3>
+                                Lado esquerdo
+                            </h3>
+                            <h3>
+                                Lado direito
+                            </h3>
+                        </div>
+                    </div>
+                <div class="main-div-six">
 
                         
                     <div>
-                            <h3>Quadril:</h3>
+                            <h3>Coxa medial:</h3>
+                            <h3>Coxa medial:</h3>
+                        </div>
+                        <div>
+                        <h4>
+                            {{ data.avaliacao.altura }} cm
+                        </h4>
                             <h4>
-                                20,5 cm
+                                {{ data.avaliacao.altura }} cm
                             </h4>
                         </div>
+
+                    </div>
+                <div class="main-div-six">
+
+                        
                     <div>
-                            <h3>Quadril:</h3>
+                            <h3>Coxa distal:</h3>
+                            <h3>Coxa distal:</h3>
+                        </div>
+                        <div>
+                        <h4>
+                            {{ data.avaliacao.altura }} cm
+                        </h4>
                             <h4>
-                                20,5 cm
+                                {{ data.avaliacao.altura }} cm
+                            </h4>
+                        </div>
+
+                    </div>
+                <div class="main-div-six">
+
+                        
+                    <div>
+                            <h3>Perna:</h3>
+                            <h3>Perna:</h3>
+                        </div>
+                        <div>
+                        <h4>
+                            {{ data.avaliacao.altura }} cm
+                        </h4>
+                            <h4>
+                                {{ data.avaliacao.altura }} cm
                             </h4>
                         </div>
 
@@ -384,12 +429,9 @@ body {
     justify-content: space-around;
     width: 99.5%;
     margin: 5px auto;
-    border-radius: 20px;
-    border: 2px solid #05959c20;
+    border-radius: 10px;
     overflow-x: hidden;
     background-color: #095D6220;
-    border-top: 3px solid #05959c40;
-    border-bottom: 3px solid #05959c40;
 }
 
 .main-div-tree {
@@ -420,6 +462,29 @@ body {
 }
 
 .main-div-five h4 {
+    font-size: 1.3em;
+    color: #06a5ae;
+    margin-left: 4px;
+}
+.main-div-six {
+    overflow-x: hidden;
+    display: flex;
+    flex-direction: column;
+    align-items: space-around;
+    justify-content: space-around;
+    color: #095D62;
+    margin: 0px 3px 0px 10px;
+}
+
+.main-div-six div{
+    display: flex;
+    flex-direction: row;
+    align-items: space-around;
+    justify-content: space-around;
+
+}
+
+.main-div-six h4 {
     font-size: 1.3em;
     color: #06a5ae;
     margin-left: 4px;

@@ -316,13 +316,10 @@ overflow-x: hidden;
     width: 99.5%;
     height: 140px;
     margin: 5px auto;
-    border-radius: 20px;
-    border: 2px solid #05959c20;
+    border-radius: 10px;
     overflow-x: hidden;
     background-color: #095D6230;
-    border-top: 3px solid #05959c40;
     line-height: 1.2;
-    border-bottom: 3px solid #05959c40;
 }
 .main-div-tree {
     overflow-x: hidden;

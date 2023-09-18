@@ -190,12 +190,18 @@ body {
   align-items: center;
   width: 99%;
   margin: 5px auto;
-  border-radius: 20px;
-  border: 2px solid #05959c20; 
-    border-top: 3px solid #05959c40;
-    border-bottom: 3px solid #05959c40;
+    border-radius: 20px;
+    border: .1px solid #05959c20;
+    border-right: 6px solid #05959c80;
+    line-height: 1.4;
+    transition: all .4s;
 }
 
+.square:hover {
+    background-color: #095D6230;
+    border-right: 6px solid #05959c;
+
+}
 .square div:nth-child(1) {
   padding-right: 12px;
 

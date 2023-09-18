@@ -136,7 +136,7 @@ body {
     overflow-x: auto;
     display: flex;
     flex-direction: column;
-    justify-content: space-around;
+    justify-content: space-between;
     align-items: left;
 }
 
@@ -158,7 +158,7 @@ body {
     border-radius: 20px;
     border: .1px solid #05959c20;
     border-right: 6px solid #05959c80;
-    line-height: 1.2;
+    line-height: 1.4;
     transition: all .4s;
 }
 
@@ -169,7 +169,7 @@ body {
 }
 
 .square div:nth-child(1) {
-    padding-right: 12px;
+    padding-right: 20px;
 
 }
 
@@ -202,11 +202,11 @@ body {
 }
 
 .main-div-two h4 .icon {
-    margin-left: -3px;
+    margin-left: 1px;
 }
 
 .main-div-two div .icon {
-    margin-top: -1px;
+    margin-top: 0px;
     display: flex;
     flex-direction: row;
     justify-content: center;
@@ -216,5 +216,4 @@ body {
 .icon {
     zoom: 1.4;
     color: #fadb41;
-    margin-top: -2.5px;
 }</style>
