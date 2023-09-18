@@ -204,14 +204,65 @@ function openDivTree() {
 
                         <div>
                             <h3>
-                                Lado esquerdo
+                                esquerdo
                             </h3>
                             <h3>
-                                Lado direito
+                                direito
                             </h3>
                         </div>
                     </div>
-                <div class="main-div-six">
+                <div class="main-div-seven">
+
+                        
+                    <div>
+                            <h3>Braço relaxado:</h3>
+                            <h3>Braço relaxado:</h3>
+                        </div>
+                        <div>
+                        <h4>
+                            {{ data.avaliacao.altura }} cm
+                        </h4>
+                            <h4>
+                                {{ data.avaliacao.altura }} cm
+                            </h4>
+                        </div>
+
+                    </div>
+                <div class="main-div-seven">
+
+                        
+                    <div>
+                            <h3>braço contraído:</h3>
+                            <h3>braço contraído:</h3>
+                        </div>
+                        <div>
+                        <h4>
+                            {{ data.avaliacao.altura }} cm
+                        </h4>
+                            <h4>
+                                {{ data.avaliacao.altura }} cm
+                            </h4>
+                        </div>
+
+                    </div>
+                <div class="main-div-seven">
+
+                        
+                    <div>
+                            <h3>Antebraço:</h3>
+                            <h3>Antebraço:</h3>
+                        </div>
+                        <div>
+                        <h4>
+                            {{ data.avaliacao.altura }} cm
+                        </h4>
+                            <h4>
+                                {{ data.avaliacao.altura }} cm
+                            </h4>
+                        </div>
+
+                    </div>
+                <div class="main-div-seven">
 
                         
                     <div>
@@ -228,7 +279,7 @@ function openDivTree() {
                         </div>
 
                     </div>
-                <div class="main-div-six">
+                <div class="main-div-seven">
 
                         
                     <div>
@@ -245,7 +296,7 @@ function openDivTree() {
                         </div>
 
                     </div>
-                <div class="main-div-six">
+                <div class="main-div-seven">
 
                         
                     <div>
@@ -260,6 +311,8 @@ function openDivTree() {
                                 {{ data.avaliacao.altura }} cm
                             </h4>
                         </div>
+                        <br>
+                        <br>
 
                     </div>
             </div>
@@ -473,7 +526,7 @@ body {
     align-items: space-around;
     justify-content: space-around;
     color: #095D62;
-    margin: 0px 3px 0px 10px;
+    margin: 20px 3px 0px 10px;
 }
 
 .main-div-six div{
@@ -484,7 +537,31 @@ body {
 
 }
 
-.main-div-six h4 {
+.main-div-six h3 {
+    font-size: 1.3em;
+    color: #095D62;
+    text-transform: uppercase;
+    margin-left: 4px;
+}
+.main-div-seven {
+    overflow-x: hidden;
+    display: flex;
+    flex-direction: column;
+    align-items: space-around;
+    justify-content: space-around;
+    color: #095D62;
+    margin: 0px 3px 0px 10px;
+}
+
+.main-div-seven div{
+    display: flex;
+    flex-direction: row;
+    align-items: space-around;
+    justify-content: space-around;
+
+}
+
+.main-div-seven h4 {
     font-size: 1.3em;
     color: #06a5ae;
     margin-left: 4px;

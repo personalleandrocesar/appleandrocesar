@@ -17,10 +17,16 @@ export default defineEventHandler((event) => {
       "cintura": 45,
       "quadril": 95,
       // Lado direito
+      "bracoDireitoRelaxado": 18,
+      "bracoDireitoContraido": 18,
+      "antebracoDireito": 18,
       "coxaMedialDireita": 60,
       "coxaDistalDireita": 60,
       "pernaDireita": 40,
       // Lado esquerdo
+      "bracoEsquerdoRelaxado": 18,
+      "bracoEsquerdoContraido": 18,
+      "antebracoEsquerdo": 18,
       "coxaMedialEsquerda": 60,
       "coxaDistalEsquerda": 60,
       "pernaEsquerda": 40,
