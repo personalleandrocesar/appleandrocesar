@@ -3,7 +3,6 @@ import { ref } from 'vue';
 const { data } = await useFetch('/api/camillaFigueiredo')
 const layout = "hello"
 
-
 const divOne = ref(true);
 const divTwo = ref(false);
 const divTree = ref(false);

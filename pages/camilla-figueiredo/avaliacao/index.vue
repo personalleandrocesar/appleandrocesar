@@ -1,4 +1,5 @@
 <script setup>
+const { data } = await useFetch('/api/camillaFigueiredo')
 const layout = "hello"
 </script>
 
@@ -55,11 +56,23 @@ const layout = "hello"
                         </h3>
 
                         <h4>
-                            <Icon name="game-icons:leg" />
+                            <Icon name="fa6-solid:weight-scale" />
                         </h4>
                         <h4>
-                            Quadríceps
+                               {{ data.avaliacao.massa }} kg
+                            </h4>
+
+                    </div>
+                    <div>
+                        <h3>
+                        </h3>
+
+                        <h4>
+                            <Icon name="material-symbols:body-fat-rounded" />
                         </h4>
+                        <h4>
+                               {{ data.avaliacao.altura }} %
+                            </h4>
 
                     </div>
                 </nuxt-link>
@@ -143,10 +156,16 @@ body {
     width: 99%;
     margin: 5px auto;
     border-radius: 20px;
-    border: 2px solid #05959c20;
-    border-top: 3px solid #05959c40;
+    border: .1px solid #05959c20;
+    border-right: 6px solid #05959c80;
     line-height: 1.2;
-    border-bottom: 3px solid #05959c40;
+    transition: all .4s;
+}
+
+.square:hover {
+    background-color: #095D6230;
+    border-right: 6px solid #05959c;
+
 }
 
 .square div:nth-child(1) {
