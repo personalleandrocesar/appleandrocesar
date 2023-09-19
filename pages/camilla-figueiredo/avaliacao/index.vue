@@ -71,7 +71,7 @@ const layout = "hello"
                             <Icon name="material-symbols:body-fat-rounded" />
                         </h4>
                         <h4>
-                               {{ data.avaliacao.altura }} %
+                               24 %
                             </h4>
 
                     </div>

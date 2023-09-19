@@ -321,32 +321,13 @@ function openDivTree() {
 
                     
                     <div>
-                        <h2>IMC</h2>
+                        <h2>% Gordura</h2>
                         <h3>
-                            25.6
+                            24.0
                         </h3>
                         <h3>
-                            Peso normal
+                            Acima da média
                         </h3>
-                    </div>
-
-
-                </div>
-                <div class="main-div-tree">
-
-                    <div>
-                        <h4>MASSA</h4>
-                        <Icon name="fa6-solid:weight-scale" />
-                        <h4>
-                           {{ data.avaliacao.massa }} kg
-                        </h4>
-                    </div>
-                    <div>
-                        <h4>ALTURA</h4>
-                        <Icon name="pixelarticons:human-height" />
-                        <h4>
-                             {{ data.avaliacao.altura }} m
-                        </h4>
                     </div>
 
 
@@ -355,8 +336,8 @@ function openDivTree() {
 
                     <div class="left">
                         <h4>
-                            <Icon name='material-symbols:measuring-tape-outline-rounded' />
-                            CIRCUNFERÊNCIA
+                            <Icon name='material-symbols:body-fat' />
+                            DOBRAS CUTÂNEAS
                         </h4>
                     </div>
                 </div>
@@ -364,9 +345,9 @@ function openDivTree() {
 
                         
                         <div>
-                            <h3>Ombro:</h3>
+                            <h3>Tricipital:</h3>
                             <h4>
-                                {{ data.avaliacao.ombro }} cm
+                                {{ data.avaliacao.tricipital }} mm
                             </h4>
                         </div>
 
@@ -375,9 +356,9 @@ function openDivTree() {
 
                         
                         <div>
-                            <h3>Pescoço:</h3>
+                            <h3>Subescapular:</h3>
                             <h4>
-                                {{ data.avaliacao.pescoco }} cm
+                                {{ data.avaliacao.subEscapular }} mm
                             </h4>
                         </div>
 
@@ -385,20 +366,9 @@ function openDivTree() {
                 <div class="main-div-five">
 
                         <div>
-                            <h3>Tórax:</h3>
+                            <h3>Axilar Média:</h3>
                             <h4>
-                                {{ data.avaliacao.torax }} cm
-                            </h4>
-                        </div>
-
-                    </div>
-                <div class="main-div-five">
-
-                        
-                        <div>
-                            <h3>Tórax Contraído:</h3>
-                            <h4>
-                                {{ data.avaliacao.toraxContraido }} cm
+                                {{ data.avaliacao.axilarMedia }} mm
                             </h4>
                         </div>
 
@@ -407,9 +377,9 @@ function openDivTree() {
 
                         
                         <div>
-                            <h3>Tórax expirado:</h3>
+                            <h3>Abdominal:</h3>
                             <h4>
-                                {{ data.avaliacao.toraxRelaxado }} cm
+                                {{ data.avaliacao.abdominal }} mm
                             </h4>
                         </div>
 
@@ -418,9 +388,9 @@ function openDivTree() {
 
                         
                         <div>
-                            <h3>Cintura:</h3>
+                            <h3>Supra-Ilíaca:</h3>
                             <h4>
-                                {{ data.avaliacao.cintura }} cm
+                                {{ data.avaliacao.supraIliaca }} mm
                             </h4>
                         </div>
 
@@ -428,138 +398,97 @@ function openDivTree() {
                 <div class="main-div-five">
 
                         
-                    <div>
-                            <h3>Quadril:</h3>
-                            <h4>
-                                {{ data.avaliacao.quadril }} cm
-                            </h4>
-                        </div>
-
-                    </div>
-                    <div class="main-div-six ">
-
                         <div>
-                            <h3>
-                                esquerdo
-                            </h3>
-                            <h3>
-                                direito
-                            </h3>
-                        </div>
-                    </div>
-                <div class="main-div-seven">
-
-                        
-                    <div>
-                            <h3>Braço relaxado:</h3>
-                            <h3>Braço relaxado:</h3>
-                        </div>
-                        <div>
-                        <h4>
-                            {{ data.avaliacao.bracoEsquerdoRelaxado }} cm
-                        </h4>
-                            <h4>
-                                {{ data.avaliacao.bracoDireitoRelaxado }} cm
-                            </h4>
-                        </div>
-
-                    </div>
-                <div class="main-div-seven">
-
-                        
-                    <div>
-                            <h3>braço contraído:</h3>
-                            <h3>braço contraído:</h3>
-                        </div>
-                        <div>
-                        <h4>
-                            {{ data.avaliacao.bracoEsquerdoContraido }} cm
-                        </h4>
-                            <h4>
-                                {{ data.avaliacao.bracoDireitoContraido }} cm
-                            </h4>
-                        </div>
-
-                    </div>
-                <div class="main-div-seven">
-
-                        
-                    <div>
-                            <h3>Antebraço:</h3>
-                            <h3>Antebraço:</h3>
-                        </div>
-                        <div>
-                        <h4>
-                            {{ data.avaliacao.antebracoEsquerdo }} cm
-                        </h4>
-                            <h4>
-                                {{ data.avaliacao.antebracoDireito }} cm
-                            </h4>
-                        </div>
-
-                    </div>
-                <div class="main-div-seven">
-
-                        
-                    <div>
                             <h3>Coxa medial:</h3>
-                            <h3>Coxa medial:</h3>
-                        </div>
-                        <div>
-                        <h4>
-                            {{ data.avaliacao.coxaMedialEsquerda }} cm
-                        </h4>
                             <h4>
-                                {{ data.avaliacao.coxaMedialDireita }} cm
+                                {{ data.avaliacao.coxa }} mm
                             </h4>
                         </div>
 
                     </div>
-                <div class="main-div-seven">
-
-                        
-                    <div>
-                            <h3>Coxa distal:</h3>
-                            <h3>Coxa distal:</h3>
-                        </div>
-                        <div>
-                        <h4>
-                            {{ data.avaliacao.coxaDistalEsquerda }} cm
-                        </h4>
-                            <h4>
-                                {{ data.avaliacao.coxaDistalDireita }} cm
-                            </h4>
-                        </div>
-
-                    </div>
-                <div class="main-div-seven">
+                <div class="main-div-five">
 
                         
                     <div>
                             <h3>Perna:</h3>
-                            <h3>Perna:</h3>
-                        </div>
-                        <div>
-                        <h4>
-                            {{ data.avaliacao.pernaEsquerda }} cm
-                        </h4>
                             <h4>
-                                {{ data.avaliacao.pernaDireita }} cm
+                                {{ data.avaliacao.perna }} mm
                             </h4>
                         </div>
-                        <br>
-                        <br>
 
                     </div>
+                     <div class="main-div-four ">
+
+                        <div class="left">
+                            <h4>
+                                DIÂMETROS ÓSSEOS
+                            </h4>
+                        </div>
+                    </div>
+                    <div class="main-div-five">
+
+                        
+                            <div>
+                                <h3>Úmero:</h3>
+                                <h4>
+                                    {{ data.avaliacao.umero }} mm
+                                </h4>
+                            </div>
+
+                        </div>
+                    <div class="main-div-five">
+
+                        
+                            <div>
+                                <h3>Punho:</h3>
+                                <h4>
+                                    {{ data.avaliacao.punho }} mm
+                                </h4>
+                            </div>
+
+                        </div>
+                    <div class="main-div-five">
+
+                        
+                            <div>
+                                <h3>Fêmur:</h3>
+                                <h4>
+                                    {{ data.avaliacao.femur }} mm
+                                </h4>
+                            </div>
+
+                        </div>
+                    <div class="main-div-five">
+
+                        
+                            <div>
+                                <h3>Tornozelo:</h3>
+                                <h4>
+                                    {{ data.avaliacao.tornozelo }} mm
+                                </h4>
+                            </div>
+
+                        </div>
+                        <br>
+                        <br>
             </div>
     <div v-else-if="divTree" class="squareRes">
         <div class="main-div-tree">
 
                     
                     <div>
-                        <h2>IMC</h2>
+                        <h2>Flexão de braços</h2>
                         <h3>
-                            25.6
+                            25
+                        </h3>
+                        <h3>
+                            Peso normal
+                        </h3>
+                    </div>
+                    <div>
+                        <h2>Abdominal</h2>
+                        <h3>
+                            30
                         </h3>
                         <h3>
                             Peso normal
@@ -568,225 +497,6 @@ function openDivTree() {
 
 
                 </div>
-                <div class="main-div-tree">
-
-                    <div>
-                        <h4>MASSA</h4>
-                        <Icon name="fa6-solid:weight-scale" />
-                        <h4>
-                           {{ data.avaliacao.massa }} kg
-                        </h4>
-                    </div>
-                    <div>
-                        <h4>ALTURA</h4>
-                        <Icon name="pixelarticons:human-height" />
-                        <h4>
-                             {{ data.avaliacao.altura }} m
-                        </h4>
-                    </div>
-
-
-                </div>
-                <div class="main-div-four ">
-
-                    <div class="left">
-                        <h4>
-                            <Icon name='material-symbols:measuring-tape-outline-rounded' />
-                            CIRCUNFERÊNCIA
-                        </h4>
-                    </div>
-                </div>
-                <div class="main-div-five">
-
-                        
-                        <div>
-                            <h3>Ombro:</h3>
-                            <h4>
-                                {{ data.avaliacao.ombro }} cm
-                            </h4>
-                        </div>
-
-                    </div>
-                <div class="main-div-five">
-
-                        
-                        <div>
-                            <h3>Pescoço:</h3>
-                            <h4>
-                                {{ data.avaliacao.pescoco }} cm
-                            </h4>
-                        </div>
-
-                    </div>
-                <div class="main-div-five">
-
-                        <div>
-                            <h3>Tórax:</h3>
-                            <h4>
-                                {{ data.avaliacao.torax }} cm
-                            </h4>
-                        </div>
-
-                    </div>
-                <div class="main-div-five">
-
-                        
-                        <div>
-                            <h3>Tórax Contraído:</h3>
-                            <h4>
-                                {{ data.avaliacao.toraxContraido }} cm
-                            </h4>
-                        </div>
-
-                    </div>
-                <div class="main-div-five">
-
-                        
-                        <div>
-                            <h3>Tórax expirado:</h3>
-                            <h4>
-                                {{ data.avaliacao.toraxRelaxado }} cm
-                            </h4>
-                        </div>
-
-                    </div>
-                <div class="main-div-five">
-
-                        
-                        <div>
-                            <h3>Cintura:</h3>
-                            <h4>
-                                {{ data.avaliacao.cintura }} cm
-                            </h4>
-                        </div>
-
-                    </div>
-                <div class="main-div-five">
-
-                        
-                    <div>
-                            <h3>Quadril:</h3>
-                            <h4>
-                                {{ data.avaliacao.quadril }} cm
-                            </h4>
-                        </div>
-
-                    </div>
-                    <div class="main-div-six ">
-
-                        <div>
-                            <h3>
-                                esquerdo
-                            </h3>
-                            <h3>
-                                direito
-                            </h3>
-                        </div>
-                    </div>
-                <div class="main-div-seven">
-
-                        
-                    <div>
-                            <h3>Braço relaxado:</h3>
-                            <h3>Braço relaxado:</h3>
-                        </div>
-                        <div>
-                        <h4>
-                            {{ data.avaliacao.bracoEsquerdoRelaxado }} cm
-                        </h4>
-                            <h4>
-                                {{ data.avaliacao.bracoDireitoRelaxado }} cm
-                            </h4>
-                        </div>
-
-                    </div>
-                <div class="main-div-seven">
-
-                        
-                    <div>
-                            <h3>braço contraído:</h3>
-                            <h3>braço contraído:</h3>
-                        </div>
-                        <div>
-                        <h4>
-                            {{ data.avaliacao.bracoEsquerdoContraido }} cm
-                        </h4>
-                            <h4>
-                                {{ data.avaliacao.bracoDireitoContraido }} cm
-                            </h4>
-                        </div>
-
-                    </div>
-                <div class="main-div-seven">
-
-                        
-                    <div>
-                            <h3>Antebraço:</h3>
-                            <h3>Antebraço:</h3>
-                        </div>
-                        <div>
-                        <h4>
-                            {{ data.avaliacao.antebracoEsquerdo }} cm
-                        </h4>
-                            <h4>
-                                {{ data.avaliacao.antebracoDireito }} cm
-                            </h4>
-                        </div>
-
-                    </div>
-                <div class="main-div-seven">
-
-                        
-                    <div>
-                            <h3>Coxa medial:</h3>
-                            <h3>Coxa medial:</h3>
-                        </div>
-                        <div>
-                        <h4>
-                            {{ data.avaliacao.coxaMedialEsquerda }} cm
-                        </h4>
-                            <h4>
-                                {{ data.avaliacao.coxaMedialDireita }} cm
-                            </h4>
-                        </div>
-
-                    </div>
-                <div class="main-div-seven">
-
-                        
-                    <div>
-                            <h3>Coxa distal:</h3>
-                            <h3>Coxa distal:</h3>
-                        </div>
-                        <div>
-                        <h4>
-                            {{ data.avaliacao.coxaDistalEsquerda }} cm
-                        </h4>
-                            <h4>
-                                {{ data.avaliacao.coxaDistalDireita }} cm
-                            </h4>
-                        </div>
-
-                    </div>
-                <div class="main-div-seven">
-
-                        
-                    <div>
-                            <h3>Perna:</h3>
-                            <h3>Perna:</h3>
-                        </div>
-                        <div>
-                        <h4>
-                            {{ data.avaliacao.pernaEsquerda }} cm
-                        </h4>
-                            <h4>
-                                {{ data.avaliacao.pernaDireita }} cm
-                            </h4>
-                        </div>
-                        <br>
-                        <br>
-
-                    </div>
             </div>
             <div v-else class="info">
                 <div class="arrowUp">
