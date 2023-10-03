@@ -1,11 +1,13 @@
-<script setup>
+<script setup lang="ts">
+const route = useRoute()
+const { data } = await useFetch(`/api.nuxtjs.dev/mountains/${route.params.slug}`)
 
-const route = useRoute();
-
-console.log(route.params.id);
 </script>
 <template>
-    <div>
-        Você está em: {{ $route.params.id }}
+  <div>
+    <h1>{{ $route.params.id }}</h1>
+    <NuxtLink @click="$router.push(`/user/${(Math.random() * 100).toFixed()}`)">Ramdom</NuxtLink>
+    <br>
+  <NuxtLink :to="`/user/${nome}/treino`">Fixo</NuxtLink>
     </div>
 </template>

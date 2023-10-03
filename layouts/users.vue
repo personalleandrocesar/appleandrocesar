@@ -1,5 +1,6 @@
 <script setup>
 import { ref } from 'vue';
+const route = useRoute()
 const { data } = await useFetch('/api/camillaFigueiredo')
 // const { data, pending, error, refresh } = await useFetch(`https://professorleandrocesar.com/usuarios/`, {})
 
