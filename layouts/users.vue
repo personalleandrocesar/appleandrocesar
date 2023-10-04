@@ -23,7 +23,7 @@ function openPhoto() {
       
         <div class='bar-top-top'>
           <div class="div-img">
-            <img src='/img/camilla-figueiredo.jpeg' @click="openPhoto"/>
+            <img :src="data.foto" @click="openPhoto"/>
           </div>
           <nuxt-link @click="openNavbar"><Icon name='octicon:three-bars-16'/></nuxt-link>
 
@@ -32,7 +32,7 @@ function openPhoto() {
           <span class="name-user">
             Olá, {{ data.nome }}
           </span>
-        
+         
       </div>
 
       <div v-if="navbarOpen" class="nav-bar">
@@ -48,7 +48,7 @@ function openPhoto() {
             <!-- Início do Nav-flow -->
             <div class="nav-flow">
               <div  class="div-img">
-                <img src='/img/camilla-figueiredo.jpeg' @click="openPhoto"/>
+                <img :src="data.foto" @click="openPhoto"/>
               </div>
               <div>
                 <h2>
@@ -74,7 +74,7 @@ function openPhoto() {
             <!-- Início do Nav-flow -->
             <div class="nav-flow-photo">
               <div  class="div-img-full">
-                <img src='/img/camilla-figueiredo.jpeg'/>
+                <img :src="data.foto"/>
               </div>
           </div>
 
