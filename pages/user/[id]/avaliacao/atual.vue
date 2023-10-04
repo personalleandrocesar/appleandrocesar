@@ -4,7 +4,7 @@ const route = useRoute()
 const layout = "hello"
 
 
-const { data, error, refresh } = await useFetch(`/api/${ route.params.id }`)
+const { data, error, refresh } = await useFetch(`/api/${ route.params.id }/avaliacao/atual`)
 
 
 // //
@@ -129,14 +129,14 @@ function openDivTree() {
                         <h4>MASSA</h4>
                         <Icon name="fa6-solid:weight-scale" />
                         <h4>
-                           {{ data.avaliacao.massa }} kg
+                           {{ data.massa }} kg
                         </h4>
                     </div>
                     <div>
                         <h4>ALTURA</h4>
                         <Icon name="pixelarticons:human-height" />
                         <h4>
-                             {{ data.avaliacao.altura }} m
+                             {{ data.altura }} m
                         </h4>
                     </div>
 
@@ -157,7 +157,7 @@ function openDivTree() {
                         <div>
                             <h3>Ombro:</h3>
                             <h4>
-                                {{ data.avaliacao.ombro }} cm
+                                {{ data.ombro }} cm
                             </h4>
                         </div>
 
@@ -168,7 +168,7 @@ function openDivTree() {
                         <div>
                             <h3>Pescoço:</h3>
                             <h4>
-                                {{ data.avaliacao.pescoco }} cm
+                                {{ data.pescoco }} cm
                             </h4>
                         </div>
 
@@ -178,7 +178,7 @@ function openDivTree() {
                         <div>
                             <h3>Tórax:</h3>
                             <h4>
-                                {{ data.avaliacao.torax }} cm
+                                {{ data.torax }} cm
                             </h4>
                         </div>
 
@@ -189,7 +189,7 @@ function openDivTree() {
                         <div>
                             <h3>Tórax Contraído:</h3>
                             <h4>
-                                {{ data.avaliacao.toraxContraido }} cm
+                                {{ data.toraxContraido }} cm
                             </h4>
                         </div>
 
@@ -200,7 +200,7 @@ function openDivTree() {
                         <div>
                             <h3>Tórax expirado:</h3>
                             <h4>
-                                {{ data.avaliacao.toraxRelaxado }} cm
+                                {{ data.toraxRelaxado }} cm
                             </h4>
                         </div>
 
@@ -211,7 +211,7 @@ function openDivTree() {
                         <div>
                             <h3>Cintura:</h3>
                             <h4>
-                                {{ data.avaliacao.cintura }} cm
+                                {{ data.cintura }} cm
                             </h4>
                         </div>
 
@@ -222,7 +222,7 @@ function openDivTree() {
                     <div>
                             <h3>Quadril:</h3>
                             <h4>
-                                {{ data.avaliacao.quadril }} cm
+                                {{ data.quadril }} cm
                             </h4>
                         </div>
 
@@ -247,10 +247,10 @@ function openDivTree() {
                         </div>
                         <div>
                         <h4>
-                            {{ data.avaliacao.bracoEsquerdoRelaxado }} cm
+                            {{ data.bracoEsquerdoRelaxado }} cm
                         </h4>
                             <h4>
-                                {{ data.avaliacao.bracoDireitoRelaxado }} cm
+                                {{ data.bracoDireitoRelaxado }} cm
                             </h4>
                         </div>
 
@@ -264,10 +264,10 @@ function openDivTree() {
                         </div>
                         <div>
                         <h4>
-                            {{ data.avaliacao.bracoEsquerdoContraido }} cm
+                            {{ data.bracoEsquerdoContraido }} cm
                         </h4>
                             <h4>
-                                {{ data.avaliacao.bracoDireitoContraido }} cm
+                                {{ data.bracoDireitoContraido }} cm
                             </h4>
                         </div>
 
@@ -281,10 +281,10 @@ function openDivTree() {
                         </div>
                         <div>
                         <h4>
-                            {{ data.avaliacao.antebracoEsquerdo }} cm
+                            {{ data.antebracoEsquerdo }} cm
                         </h4>
                             <h4>
-                                {{ data.avaliacao.antebracoDireito }} cm
+                                {{ data.antebracoDireito }} cm
                             </h4>
                         </div>
 
@@ -298,10 +298,10 @@ function openDivTree() {
                         </div>
                         <div>
                         <h4>
-                            {{ data.avaliacao.coxaMedialEsquerda }} cm
+                            {{ data.coxaMedialEsquerda }} cm
                         </h4>
                             <h4>
-                                {{ data.avaliacao.coxaMedialDireita }} cm
+                                {{ data.coxaMedialDireita }} cm
                             </h4>
                         </div>
 
@@ -315,10 +315,10 @@ function openDivTree() {
                         </div>
                         <div>
                         <h4>
-                            {{ data.avaliacao.coxaDistalEsquerda }} cm
+                            {{ data.coxaDistalEsquerda }} cm
                         </h4>
                             <h4>
-                                {{ data.avaliacao.coxaDistalDireita }} cm
+                                {{ data.coxaDistalDireita }} cm
                             </h4>
                         </div>
 
@@ -332,10 +332,10 @@ function openDivTree() {
                         </div>
                         <div>
                         <h4>
-                            {{ data.avaliacao.pernaEsquerda }} cm
+                            {{ data.pernaEsquerda }} cm
                         </h4>
                             <h4>
-                                {{ data.avaliacao.pernaDireita }} cm
+                                {{ data.pernaDireita }} cm
                             </h4>
                         </div>
                         <br>
@@ -374,7 +374,7 @@ function openDivTree() {
                         <div>
                             <h3>Tricipital:</h3>
                             <h4>
-                                {{ data.avaliacao.tricipital }} mm
+                                {{ data.tricipital }} mm
                             </h4>
                         </div>
 
@@ -385,7 +385,7 @@ function openDivTree() {
                         <div>
                             <h3>Subescapular:</h3>
                             <h4>
-                                {{ data.avaliacao.subEscapular }} mm
+                                {{ data.subEscapular }} mm
                             </h4>
                         </div>
 
@@ -395,7 +395,7 @@ function openDivTree() {
                         <div>
                             <h3>Axilar Média:</h3>
                             <h4>
-                                {{ data.avaliacao.axilarMedia }} mm
+                                {{ data.axilarMedia }} mm
                             </h4>
                         </div>
 
@@ -406,7 +406,7 @@ function openDivTree() {
                         <div>
                             <h3>Abdominal:</h3>
                             <h4>
-                                {{ data.avaliacao.abdominal }} mm
+                                {{ data.abdominal }} mm
                             </h4>
                         </div>
 
@@ -417,7 +417,7 @@ function openDivTree() {
                         <div>
                             <h3>Supra-Ilíaca:</h3>
                             <h4>
-                                {{ data.avaliacao.supraIliaca }} mm
+                                {{ data.supraIliaca }} mm
                             </h4>
                         </div>
 
@@ -428,7 +428,7 @@ function openDivTree() {
                         <div>
                             <h3>Coxa medial:</h3>
                             <h4>
-                                {{ data.avaliacao.coxa }} mm
+                                {{ data.coxa }} mm
                             </h4>
                         </div>
 
@@ -439,7 +439,7 @@ function openDivTree() {
                     <div>
                             <h3>Perna:</h3>
                             <h4>
-                                {{ data.avaliacao.perna }} mm
+                                {{ data.perna }} mm
                             </h4>
                         </div>
 
@@ -458,7 +458,7 @@ function openDivTree() {
                             <div>
                                 <h3>Úmero:</h3>
                                 <h4>
-                                    {{ data.avaliacao.umero }} mm
+                                    {{ data.umero }} mm
                                 </h4>
                             </div>
 
@@ -469,7 +469,7 @@ function openDivTree() {
                             <div>
                                 <h3>Punho:</h3>
                                 <h4>
-                                    {{ data.avaliacao.punho }} mm
+                                    {{ data.punho }} mm
                                 </h4>
                             </div>
 
@@ -480,7 +480,7 @@ function openDivTree() {
                             <div>
                                 <h3>Fêmur:</h3>
                                 <h4>
-                                    {{ data.avaliacao.femur }} mm
+                                    {{ data.femur }} mm
                                 </h4>
                             </div>
 
@@ -491,7 +491,7 @@ function openDivTree() {
                             <div>
                                 <h3>Tornozelo:</h3>
                                 <h4>
-                                    {{ data.avaliacao.tornozelo }} mm
+                                    {{ data.tornozelo }} mm
                                 </h4>
                             </div>
 

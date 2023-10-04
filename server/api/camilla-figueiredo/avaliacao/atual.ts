@@ -1,11 +1,5 @@
 export default defineEventHandler((event) => {
   return {
-    "nome": "Camilla",
-    "nomeCompleto": "Camilla Figueiredo",
-    "email": "camila@email.com",
-    "senha": "1234",
-    "foto": "https://m.leandrocesar.com/img/camilla-figueiredo.jpeg",
-    "avaliacao": {
       "idade": 36,
       "massa": 40,
       "altura": 1.6,
@@ -48,5 +42,4 @@ export default defineEventHandler((event) => {
 
 
     }
-  }
 })
