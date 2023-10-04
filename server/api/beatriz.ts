@@ -7,6 +7,7 @@ export default defineEventHandler((event) => {
       "idade": 26,
       "avaliação": {
         "Peso": 99.1,
+        "massa": 99.1,
         "altura": 1.65,
         "nascimeto": 16/10/1996,
         "pescoço": 33.5,

@@ -1,35 +1,36 @@
 <script setup>
 import { ref } from 'vue'
+import { useRouter } from 'vue-router'
 
-// Referência reativa para email e senha
-const name = ref('')
+const user = ref('')
 const senha = ref('')
-const nome = ref(0)
+const sendReply = ref('')
+const router = useRouter()
 
-// Variáveis para armazenar os dados da API
-const { data } = useFetch(`/api/${nome.value}`)
-
-// Função para lidar com o clique no botão "ENTRAR"
 const enterClicked = () => {
-        // Converte os dados da API em um array de credenciais
-        const credentials = Object.entries(data.value).map(([nome, senha]) => ({ nome, senha }))
-        
-        
-        if (credentials.find(cred => cred.nome === nome.value && cred.senha === senha.value)) {
-            this.$router.replace('/${nome.value}')
-        }
+    if (user.value === 'admin' && senha.value === '1234') {
+        router.replace('/home')
+    } else if (user.value === 'camillafigueiredo' && senha.value === 'figueiredo@Ca') {
+        router.replace('/camilla-figueiredo')
+    } else if (user.value === 'juliobizzo@gmail.com' && senha.value === 'bizzo@julio') {
+        router.replace('/julio-bizzo')
     }
-    console.log(data.value)
+}
 
-// Função para simular o clique de outro elemento (não está claro em que contexto você usa isso)
 const trigger = () => {
-    this.$refs.sendReply.click()
+    sendReply.value.click()
+}
+
+const scrollToTop = () => {
+    window.scrollTo(0, 0)
+}
+
+const created = () => {
+    console.log('the component is now mounted.')
 }
 </script>
 
-
 <template>
-{{ data }}
     <div id="login">
             <div>
                 <div class='logo'>

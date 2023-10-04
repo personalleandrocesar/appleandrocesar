@@ -2,11 +2,11 @@ export default defineEventHandler((event) => {
   return {
     "nome": "Camilla",
     "nomeCompleto": "Camilla Figueiredo",
-    "email": "seu@email.com",
+    "email": "camila@email.com",
     "senha": "1234",
     "avaliacao": {
       "idade": 36,
-      "massa": 50,
+      "massa": 40,
       "altura": 1.6,
       "nascimeto": "12/12/2012",
       "pescoco": 5.8,

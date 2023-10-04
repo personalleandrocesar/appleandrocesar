@@ -6,7 +6,7 @@ export default defineEventHandler((event) => {
       "senha": "1234",
       "idade": 47,
       "avaliação": {
-        "Peso": 74.7,
+        "massa": 74,
         "altura": 1.80,
         "nascimeto": 20/1/1976,
         "pescoço": 36.5,

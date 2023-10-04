@@ -1,5 +1,6 @@
 <script setup>
 import { ref } from 'vue';
+const route = useRoute()
 
 const navbarOpen = ref(false);
 function openNavbar() {
@@ -17,7 +18,22 @@ function openPhoto() {
     <div>
 
         <div class="nav-bottom">
-                        <nuxt-link to="/camilla-figueiredo/treino">
+            <nuxt-link :to="`/user/${route.params.id}/treino`">
+                <Icon name='material-symbols:exercise' />
+            </nuxt-link>
+            <nuxt-link :to="`/user/${route.params.id}/treino/a`">
+                <Icon name='mdi:alpha-a' />
+            </nuxt-link>
+            <nuxt-link :to="`/user/${route.params.id}/treino/b`">
+                <Icon name='mdi:alpha-b' />
+            </nuxt-link>
+            <nuxt-link :to="`/user/${route.params.id}/treino/c`">
+                <Icon name='mdi:alpha-c' />
+            </nuxt-link>
+            <nuxt-link :to="`/user/${route.params.id}/cardio`">
+                <Icon name='material-symbols:cardiology' />
+            </nuxt-link>
+                        <!-- <nuxt-link to="/camilla-figueiredo/treino">
                     <Icon name='material-symbols:exercise' />
                 </nuxt-link>
             <nuxt-link to="/camilla-figueiredo/treino/a">
@@ -31,7 +47,7 @@ function openPhoto() {
             </nuxt-link>
             <nuxt-link to="/camilla-figueiredo/cardio">
                 <Icon name='material-symbols:cardiology' />
-            </nuxt-link>
+            </nuxt-link> -->
 
         </div>
 

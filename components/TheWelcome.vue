@@ -46,9 +46,9 @@ export default {
             if (this.user === 'admin' & this.senha === '1234') {
                 this.$router.replace('/home')
             } if (this.user === 'camillafigueiredo' & this.senha === 'figueiredo@Ca') {
-                this.$router.replace('/camilla-figueiredo')
-            } if (this.user === 'juliobizzo@gmail.com' & this.senha === 'bizzo@julio') {
-                this.$router.replace('/julio-bizzo')
+                this.$router.replace('/user/camilla-figueiredo')
+            } if (this.user === 'leandrocesar' & this.senha === '1234') {
+                this.$router.replace('/user/leandro-cesar')
             } if (this.user === 'amandagoncalves@gmail.com' & this.senha === 'goncalves@amanda') {
                 this.$router.replace('/amanda-goncalves')
             } if (this.user === 'camilladimas@gmail.com' & this.senha === 'dimas@camilla') {

@@ -1,7 +1,7 @@
 <script setup>
 import { ref } from 'vue';
 const route = useRoute()
-const { data } = await useFetch('/api/camillaFigueiredo')
+const { data, error, refresh } = await useFetch(`/api/${route.params.id}`)
 // const { data, pending, error, refresh } = await useFetch(`https://professorleandrocesar.com/usuarios/`, {})
 
 const navbarOpen = ref(false);
