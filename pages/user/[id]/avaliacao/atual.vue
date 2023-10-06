@@ -5,6 +5,33 @@ const route = useRoute()
 
 const { data, error, refresh } = await useFetch(`/api/${route.params.id}/avaliacao/atual`)
 
+
+const peso = data.value.massa.toFixed(2)
+const altura = data.value.altura.toFixed(2)
+
+const calcIMC = computed(() => {
+    return (peso / ( altura * altura )).toFixed(1)
+})
+
+const classIMC = computed(() => {
+
+    if (percGHomens >= 10 && percGHomens <= 24.9) {
+        return 'Normal';
+    } else if (percGHomens >= 25 && percGHomens <= 29.9) {
+        return 'Sobrepeso';
+    } else if (percGHomens >= 30 && percGHomens <= 34.9) {
+        return 'Obesidade Moderada';
+    } else if (percGHomens >= 35 && percGHomens <= 39.9) {
+        return 'Obesidade Elevada';
+    } else if (percGHomens > 39.9) {
+        return 'Obesidade Mórbida';
+    } else {
+        return 'Digite os valores certo para saber seu %G!!'
+    }
+
+})
+
+
 const sexo = data.value.sexo
 const idade = data.value.idade
 const dTorax = data.value.dtorax
@@ -78,9 +105,14 @@ const divAplicar = ref(true);
 const divAplicarTwo = ref(false);
 const divAplicarTree = ref(false);
 const divInfoPercentual = ref(false)
+const divInfoIMC = ref(false)
 
 function infoPercentual() {
     divInfoPercentual.value = !divInfoPercentual.value
+}
+
+function infoIMC() {
+    divInfoIMC.value = !divInfoIMC.value
 }
 
 function openDivOne() {
@@ -153,40 +185,136 @@ function openDivTree() {
                 </nuxt-link>
             </div>
             <div v-if="divOne" class="squareRes">
-                <div class="main-div-tree">
-
-                    
-                    <div>
-                        <h2>IMC</h2>
-                        <h3>
-                            25.6
-                        </h3>
-                        <h3>
-                            Peso normal
-                        </h3>
-                    </div>
-
-
-                </div>
+                
                 <div class="main-div-tree">
 
                     <div>
                         <h4>MASSA</h4>
                         <Icon name="fa6-solid:weight-scale" />
                         <h4>
-                           {{ data.massa }} kg
+                           {{ peso }} kg
                         </h4>
                     </div>
                     <div>
                         <h4>ALTURA</h4>
                         <Icon name="pixelarticons:human-height" />
                         <h4>
-                             {{ data.altura }} m
+                             {{ altura }} m
                         </h4>
                     </div>
 
 
                 </div>
+                <div class="main-div-tree">
+
+                    
+                        <div>
+                            <h2>IMC</h2>
+                            <h3>
+                                {{ calcIMC }}
+                            </h3>
+                            <h3>
+                                Peso normal <Icon @click="infoIMC" name="material-symbols:info-outline-rounded" size="14"/>
+                            </h3>
+                        </div>
+
+
+                    </div>
+
+                <div class="main-div-tree-info">
+
+                            <div v-if="divInfoIMC">
+                                <table>
+                                    <tr>
+                                        <th>
+                                            Classificação
+                                        </th>
+                                    
+                                        <th>
+                                            
+                                            IMC (kgm²)
+                                        </th>
+                                        <th>
+                                            Risco de <br> Co-morbidades
+                                        </th>
+                                    </tr>
+                                    <tr>
+
+                                        <td>
+                                            Baixo Peso
+                                        </td>
+                                        <td>
+                                            &lt; 18.5
+                                        </td>
+                                        <td>
+                                            Baixo 
+                                        </td>
+                                    </tr>
+                                    <tr>
+
+                                        <td>
+                                            Normal
+                                        </td>
+                                        <td>
+                                            18.5 - 24.9
+                                        </td>
+                                        <td>
+                                            Ausente
+                                        </td>
+                                    </tr>
+                                    <tr>
+
+                                        <td>
+                                            Sobrepeso
+                                        </td>
+                                        <td>
+                                            25.0 - 29.9
+                                        </td>
+                                        <td>
+                                            Aumentado
+                                        </td>
+                                    </tr>
+                                    <tr>
+
+                                        <td>
+                                            Obesidade classe 1
+                                        </td>
+                                        <td>
+                                            30.0 - 34.9
+                                        </td>
+                                        <td>
+                                            Moderado
+                                        </td>
+                                    </tr>
+                                    <tr>
+
+                                        <td>
+                                            Obesidade classe 2
+                                        </td>
+                                        <td>
+                                            35.0 - 39.9
+                                        </td>
+                                        <td>
+                                            Severo
+                                        </td>
+                                    </tr>
+                                    <tr>
+
+                                        <td>
+                                            Obesidade classe 3
+                                        </td>
+                                        <td>
+                                            &ge; 40.0
+                                        </td>
+                                        <td>
+                                            Muito Severo
+                                        </td>
+                                    </tr>
+                                </table>
+                            </div>
+                        </div>
+
+
                 <div class="main-div-four ">
 
                     <div class="left">
@@ -403,7 +531,7 @@ function openDivTree() {
                     </div>
 
                 </div>
-                    <div class="main-div-tree">
+                    <div class="main-div-tree-info">
 
                         <div v-if="divInfoPercentual">
                             <table>
@@ -640,21 +768,15 @@ function openDivTree() {
 
                     
                     <div>
-                        <h2>Flexão de braços</h2>
+                        <h2>Flexões de braços</h2>
                         <h3>
-                            25
-                        </h3>
-                        <h3>
-                            Peso normal
+                            {{ data.flexaoBraco }}
                         </h3>
                     </div>
                     <div>
-                        <h2>Abdominal</h2>
+                        <h2>Abdominais</h2>
                         <h3>
-                            30
-                        </h3>
-                        <h3>
-                            Peso normal
+                            {{ data.flexaoAbdominal }}
                         </h3>
                     </div>
 
@@ -810,6 +932,10 @@ th, td {
     color: #095D62;
     margin: 20px 3px 20px 1px;
     align-items: center;
+}
+
+.main-div-tree-info {
+    margin: 0px auto 20px auto;
 }
 
 .main-div-five {

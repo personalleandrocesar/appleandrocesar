@@ -2,8 +2,8 @@ export default defineEventHandler((event) => {
   return {
       "data": "06/10/1986",
       "idade": 36,
-      "massa": 42,
-      "altura": 1.6,
+      "massa": 86.30,
+      "altura": 1.80,
       "nascimeto": "12/12/2012",
       "sexo": "feminino",
       "pescoco": 5.8,
@@ -42,7 +42,8 @@ export default defineEventHandler((event) => {
       "femur": 6.8,
       "tornozelo": 4.8,
       // Testes
-
+      "flexaoBraco": 25,
+      "flexaoAbdominal": 45
 
     }
 })
