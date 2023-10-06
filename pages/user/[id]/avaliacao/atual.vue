@@ -77,7 +77,11 @@ const divTree = ref(false);
 const divAplicar = ref(true);
 const divAplicarTwo = ref(false);
 const divAplicarTree = ref(false);
+const divInfoPercentual = ref(false)
 
+function infoPercentual() {
+    divInfoPercentual.value = !divInfoPercentual.value
+}
 
 function openDivOne() {
     divOne.value = !divOne.value;
@@ -394,12 +398,92 @@ function openDivTree() {
                             {{ percentualFat }}
                         </h3>
                         <h3>
-                            {{ classify }}
+                            {{ classify }} <Icon @click="infoPercentual" name="material-symbols:info-outline-rounded" size="14"/>
                         </h3>
                     </div>
 
-
                 </div>
+                    <div class="main-div-tree">
+
+                        <div v-if="divInfoPercentual">
+                            <table>
+                                <tr>
+                                    <th>
+                                        Classificação
+                                    </th>
+                                    
+                                    <th>
+                                        Mulheres
+                                    </th>
+                                    <th>
+                                        Homens
+                                    </th>
+                                </tr>
+                                <tr>
+
+                                    <td>
+                                        Normal
+                                    </td>
+                                    <td>
+                                        10.0 - 24.9
+                                    </td>
+                                    <td>
+                                        5.0 - 14.9
+                                    </td>
+                                </tr>
+                                <tr>
+
+                                    <td>
+                                        Sobrepeso
+                                    </td>
+                                    <td>
+                                        25.0 - 29.9
+                                    </td>
+                                    <td>
+                                        15.0 - 19.9
+                                    </td>
+                                </tr>
+                                <tr>
+
+                                    <td>
+                                        Obesidade Moderada
+                                    </td>
+                                    <td>
+                                        30.0 - 34.9
+                                    </td>
+                                    <td>
+                                        20.0 - 24.9
+                                    </td>
+                                </tr>
+                                <tr>
+
+                                    <td>
+                                        Obesidade Elevada
+                                    </td>
+                                    <td>
+                                        35.0 - 39.9
+                                    </td>
+                                    <td>
+                                        25.0 - 29.9
+                                    </td>
+                                </tr>
+                                <tr>
+
+                                    <td>
+                                        Obesidade Mórbida
+                                    </td>
+                                    <td>
+                                        > 39.9
+                                    </td>
+                                    <td>
+                                        > 29.9
+                                    </td>
+                                </tr>
+                            </table>
+                        </div>
+                    </div>
+
+
                 <div class="main-div-four ">
 
                     <div class="left">
@@ -409,6 +493,17 @@ function openDivTree() {
                         </h4>
                     </div>
                 </div>
+                <div class="main-div-five">
+
+                        
+                        <div>
+                            <h3>Tórax:</h3>
+                            <h4>
+                                {{ data.dtorax }} mm
+                            </h4>
+                        </div>
+
+                    </div>
                 <div class="main-div-five">
 
                         
@@ -456,9 +551,9 @@ function openDivTree() {
 
                         
                         <div>
-                            <h3>Supra-Ilíaca:</h3>
+                            <h3>Supra-espinhal:</h3>
                             <h4>
-                                {{ data.supraIliaca }} mm
+                                {{ data.supraEspinhal }} mm
                             </h4>
                         </div>
 
@@ -596,6 +691,16 @@ body {
 
 }
 
+table {
+    margin: 0;
+}
+
+th, td {
+    margin: 0 3px;
+    padding: 0 7px;
+    text-align: center;
+}
+
 .left {
     text-align: left;
     color: #095D62;
@@ -706,6 +811,7 @@ body {
     margin: 20px 3px 20px 1px;
     align-items: center;
 }
+
 .main-div-five {
     overflow-x: hidden;
     display: flex;
