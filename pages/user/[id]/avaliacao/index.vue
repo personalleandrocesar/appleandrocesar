@@ -1,7 +1,34 @@
 <script setup>
+import { ref, computed } from 'vue'
 const layout = "hello"
 const route = useRoute()
-const { data } = await useFetch('/api/camilla-figueiredo')
+
+const { data, error, refresh } = await useFetch(`/api/${route.params.id}/avaliacao/atual`)
+
+const sexo = data.value.sexo
+const idade = data.value.idade
+const dTorax = data.value.dtorax
+const abdominal = data.value.abdominal
+const coxa = data.value.coxa
+const triceps = data.value.tricipital
+const supraespinhal = data.value.supraEspinhal
+
+const homens = dTorax + abdominal + coxa
+const mulheres = triceps + supraespinhal + coxa
+
+const dcHomens = 1.109380 - (0.0008267 * (homens)) + (0.0000016 * (homens * homens)) - (0.0002574 * (idade))
+const dcMulheres = 1.0994921 - (0.0009929 * (mulheres)) + (0.0000023 * (mulheres * mulheres)) - (0.0001392 * (idade))
+
+const percGHomens = (((4.95 / dcHomens) - 4.50) * 100).toFixed(1)
+const percGMulheres = (((4.95 / dcMulheres) - 4.50) * 100).toFixed(1)
+
+
+const percentualFat = computed(() => {
+    if (sexo === "feminino") {
+        return percGMulheres
+    } return percGHomens
+})
+
 </script>
 
 <template>
@@ -39,7 +66,7 @@ const { data } = await useFetch('/api/camilla-figueiredo')
                 <h3>
                     <Icon name='jam:medical' /> AVALIAÇÕES
                 </h3>
-                <nuxt-link class="square" :to="`/user/${route.params.id}/avaliacao/1`">
+                <nuxt-link class="square" :to="`/user/${route.params.id}/avaliacao/atual`">
 
 
 
@@ -48,7 +75,7 @@ const { data } = await useFetch('/api/camilla-figueiredo')
                             <Icon name='material-symbols:event' />
                         </h4>
                         <h4>
-                            13/09/2023
+                            {{ data.data }}
                         </h4>
                     </div>
 
@@ -60,7 +87,7 @@ const { data } = await useFetch('/api/camilla-figueiredo')
                             <Icon name="fa6-solid:weight-scale" />
                         </h4>
                         <h4>
-                               {{ data.avaliacao.massa }} kg
+                               {{ data.massa }} kg
                             </h4>
 
                     </div>
@@ -72,7 +99,7 @@ const { data } = await useFetch('/api/camilla-figueiredo')
                             <Icon name="material-symbols:body-fat-rounded" />
                         </h4>
                         <h4>
-                               24 %
+                               {{ percentualFat }} %
                             </h4>
 
                     </div>

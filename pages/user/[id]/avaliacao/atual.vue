@@ -1,34 +1,75 @@
 <script setup>
-import { ref } from 'vue';
-const route = useRoute()
+import { ref, computed } from 'vue'
 const layout = "hello"
+const route = useRoute()
+
+const { data, error, refresh } = await useFetch(`/api/${route.params.id}/avaliacao/atual`)
+
+const sexo = data.value.sexo
+const idade = data.value.idade
+const dTorax = data.value.dtorax
+const abdominal = data.value.abdominal
+const coxa = data.value.coxa
+const triceps = data.value.tricipital
+const supraespinhal = data.value.supraEspinhal
+
+const homens = dTorax + abdominal + coxa
+const mulheres = triceps + supraespinhal + coxa
+
+const dcHomens = 1.109380 - (0.0008267 * (homens)) + (0.0000016 * (homens * homens)) - (0.0002574 * (idade))
+const dcMulheres = 1.0994921 - (0.0009929 * (mulheres)) + (0.0000023 * (mulheres * mulheres)) - (0.0001392 * (idade))
+
+const percGHomens = (((4.95 / dcHomens) - 4.50) * 100).toFixed(1)
+const percGMulheres = (((4.95 / dcMulheres) - 4.50) * 100).toFixed(1)
 
 
-const { data, error, refresh } = await useFetch(`/api/${ route.params.id }/avaliacao/atual`)
+const percentualFat = computed(() => {
+    if (sexo === "feminino") {
+        return percGMulheres
+    } return percGHomens
+})
 
+const classHomens = computed(() => {
 
-// //
+    if ( percGHomens >= 10 && percGHomens <= 24.9) {
+        return 'Normal';
+    } else if (percGHomens >= 25 && percGHomens <= 29.9) {
+        return 'Sobrepeso';
+    } else if (percGHomens >= 30 && percGHomens <= 34.9) {
+        return 'Obesidade Moderada';
+    } else if (percGHomens >= 35 && percGHomens <= 39.9) {
+        return 'Obesidade Elevada';
+    } else if (percGHomens > 39.9) {
+        return 'Obesidade Mórbida';
+    } else {
+        return 'Digite os valores certo para saber seu %G!!'
+    }
 
-// const fetchData = async () => {
-//     const { data } = await useFetch(`/api/${route.path}`);
-//     return data;
-// };
+})
 
-// let data = '';
+const classMulheres = computed(() => {
 
-// // Assista às mudanças em route.path e faça a solicitação HTTP
-// watch(route, async (newRoute, oldRoute) => {
-//     if (newRoute.path !== oldRoute.path) {
-//         data = await fetchData();
-//     }
-// });
+    if ( percGHomens >= 10 && percGHomens <= 24.9) {
+        return 'Normal';
+    } else if (percGHomens >= 25 && percGHomens <= 29.9) {
+        return 'Sobrepeso';
+    } else if (percGHomens >= 30 && percGHomens <= 34.9) {
+        return 'Obesidade Moderada';
+    } else if (percGHomens >= 35 && percGHomens <= 39.9) {
+        return 'Obesidade Elevada';
+    } else if (percGHomens > 39.9) {
+        return 'Obesidade Mórbida';
+    } else {
+        return 'Digite os valores certo para saber seu %G!!'
+    }
 
-// // Inicialize os dados
-// fetchData().then((initialData) => {
-//     data = initialData;
-// });
+})
 
-// //
+const classify = computed(() => {
+    if (sexo === "feminino") {
+        return classMulheres.value
+    } return classHomens.value
+})
 
 const divOne = ref(true);
 const divTwo = ref(false);
@@ -350,10 +391,10 @@ function openDivTree() {
                     <div>
                         <h2>% Gordura</h2>
                         <h3>
-                            24.0
+                            {{ percentualFat }}
                         </h3>
                         <h3>
-                            Acima da média
+                            {{ classify }}
                         </h3>
                     </div>
 

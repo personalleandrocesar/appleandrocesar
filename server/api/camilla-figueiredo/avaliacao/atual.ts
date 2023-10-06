@@ -1,9 +1,11 @@
 export default defineEventHandler((event) => {
   return {
+      "data": "06/10/1986",
       "idade": 36,
-      "massa": 40,
+      "massa": 42,
       "altura": 1.6,
       "nascimeto": "12/12/2012",
+      "sexo": "masculino",
       "pescoco": 5.8,
       "ombro": 12.8,
       "torax": 50,
@@ -25,12 +27,13 @@ export default defineEventHandler((event) => {
       "coxaMedialEsquerda": 60,
       "coxaDistalEsquerda": 60,
       "pernaEsquerda": 40,
-      // Dobras cutâneas
+      // Dobras cutâneas,
+      "dtorax": 10,
       "tricipital": 18,
       "subEscapular": 13,
       "axilarMedia": 11,
       "abdominal": 22,
-      "supraIliaca": 15,
+      "supraEspinhal": 15,
       "coxa": 12,
       "perna": 10,
       // Diâmetros ósseos
