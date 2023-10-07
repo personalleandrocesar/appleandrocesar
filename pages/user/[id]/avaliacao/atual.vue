@@ -5,7 +5,11 @@ const route = useRoute()
 
 const { data, error, refresh } = await useFetch(`/api/${route.params.id}/avaliacao/atual`)
 
+const now = computed(() => Date())
 
+console.log(now);
+
+const divInfoIMC = ref(false)
 const peso = data.value.massa.toFixed(2)
 const altura = data.value.altura.toFixed(2)
 
@@ -13,24 +17,32 @@ const calcIMC = computed(() => {
     return (peso / ( altura * altura )).toFixed(1)
 })
 
+
 const classIMC = computed(() => {
 
-    if (percGHomens >= 10 && percGHomens <= 24.9) {
+    if (calcIMC < 18.5) {
+        return 'Baixo Peso';
+    } else if (calcIMC >= 18.5 && calcIMC <= 24.9) {
         return 'Normal';
-    } else if (percGHomens >= 25 && percGHomens <= 29.9) {
+    } else if (calcIMC >= 25.0 && calcIMC <= 29.9) {
         return 'Sobrepeso';
-    } else if (percGHomens >= 30 && percGHomens <= 34.9) {
-        return 'Obesidade Moderada';
-    } else if (percGHomens >= 35 && percGHomens <= 39.9) {
-        return 'Obesidade Elevada';
-    } else if (percGHomens > 39.9) {
-        return 'Obesidade Mórbida';
+    } else if (calcIMC >= 30 && calcIMC <= 34.9) {
+        return 'Obesidade classe 1';
+    } else if (calcIMC >= 35 && calcIMC <= 39.9) {
+        return 'Obesidade classe 2';
+    } else if (calcIMC >= 40.0) {
+        return 'Obesidade classe 3';
     } else {
-        return 'Digite os valores certo para saber seu %G!!'
+        return 'Digite os valores certo para saber seu IMC!!'
     }
 
 })
 
+const resClassIMC = classIMC.value
+
+function infoIMC() {
+    divInfoIMC.value = !divInfoIMC.value
+}
 
 const sexo = data.value.sexo
 const idade = data.value.idade
@@ -105,15 +117,11 @@ const divAplicar = ref(true);
 const divAplicarTwo = ref(false);
 const divAplicarTree = ref(false);
 const divInfoPercentual = ref(false)
-const divInfoIMC = ref(false)
 
 function infoPercentual() {
     divInfoPercentual.value = !divInfoPercentual.value
 }
 
-function infoIMC() {
-    divInfoIMC.value = !divInfoIMC.value
-}
 
 function openDivOne() {
     divOne.value = !divOne.value;
@@ -148,7 +156,8 @@ function openDivTree() {
             <div class="main-div-one">
 
                 <h3>
-                    <Icon name='jam:medical' /> AVALIAÇÕES
+                    <Icon name='jam:medical' /> AVALIAÇÕES <br>
+                    {{  now }}
                 </h3>
             </div>
             <div class="main-div-one">
@@ -214,7 +223,7 @@ function openDivTree() {
                                 {{ calcIMC }}
                             </h3>
                             <h3>
-                                Peso normal <Icon @click="infoIMC" name="material-symbols:info-outline-rounded" size="14"/>
+                                {{ resClassIMC }} <Icon @click="infoIMC" name="material-symbols:info-outline-rounded" size="14"/>
                             </h3>
                         </div>
 
