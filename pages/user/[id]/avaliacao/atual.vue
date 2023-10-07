@@ -5,7 +5,7 @@ const route = useRoute()
 
 const { data, error, refresh } = await useFetch(`/api/${route.params.id}/avaliacao/atual`)
 
-const now = computed(() => Date())
+const now = computed(() => Date().toString())
 
 console.log(now);
 
