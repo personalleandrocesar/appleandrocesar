@@ -2,14 +2,34 @@
 useHead({
   titleTemplate: 'App Leandro Cesar',  
 })
+const counter = useState('counter', () => Math.round(0))
+
 </script>
 
 <template>
           <NuxtLoadingIndicator color='repeating-linear-gradient(to right,#00dc82 0%,#34cdfe 50%,#fadb41 100%)'/> <!-- here -->
+          <div class="count">
+           Counter: {{ counter }}
+           <button @click="counter++">
+             +
+           </button>
+           <button @click="counter--">
+             -
+           </button>
+         </div>
      <NuxtPage />
 </template>
 
 <style scoped>
+
+.count {
+  position: fixed;
+  top: 20px;
+  left: 100px;
+  color: #fadb41;
+  font-weight: 800;
+  z-index: 100000;
+}
 .logo {
   display: flex;
   justify-content: center;
