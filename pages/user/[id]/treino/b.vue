@@ -9,8 +9,8 @@ function openPhoto() {
 }
 
 
-const dataTreino = await useFetch(`/api/${route.params.id}/treino/atual/b`)
-
+const dataConf = await useFetch(`/api/${route.params.id}`)
+const dataTreino = await useFetch(`/api/${route.params.id}/treino/atual/a`)
 
 const treino = ref(0)
 
@@ -40,21 +40,21 @@ const nextExercise = () => {
       <div class="conf">
         <Icon name="fluent:target-arrow-16-filled" />
         <h3>
-          Definição
+          {{ dataConf.data.value.objetivo }}
         </h3>
 
       </div>
       <div class="conf">
         <Icon name='solar:body-shape-bold' />
         <h3>
-          Glúteo
+          {{ currentExercise.grupo }}
         </h3>
 
       </div>
       <div class="conf">
         <Icon name="material-symbols:timer-rounded" />
         <h3>
-          60 minutos
+        {{ dataConf.data.value.tempo }}
         </h3>
 
       </div>
@@ -67,6 +67,7 @@ const nextExercise = () => {
       <h3>
         {{ currentExercise.id }}
       </h3>
+      
       <div class="square">
         <b>
           Futura imagem(.gif) ou vídeo!
@@ -116,7 +117,7 @@ const nextExercise = () => {
 
       <div class="button">
         <span @click="previousExercise">
-          <Icon name="mdi:chevron-left" /> ANTERIOR
+          <Icon name="mdi:chevron-left" />
         </span>
         <span @click="nextExercise">
           PRÓXIMO
@@ -242,7 +243,7 @@ body {
   align-items: center;
   cursor: pointer;
   border-radius: 10px;
-  padding-right: 25px;
+  border-radius: 50%;
   border: 2px solid #05959c;
 }
 
@@ -297,6 +298,39 @@ border: 2px solid #2cd3db;
 
 }
 
+
+.main-div-one {
+  overflow-x: auto;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  margin-top: 90px;
+}
+.main-div-one .icon{
+   zoom: 1.4;
+  color: #095D62;
+  margin-top: -2.5px;
+}
+
+.conf {  
+  color:#555;
+  height: 80px;
+    backdrop-filter: blur(15px);
+  overflow-x: auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  margin: 10px 10px;
+  border-radius: 20px;  
+
+
+      background-color: #095D6210;
+    border: 2px solid #05959c20;
+    border-top: 3px solid #05959c40;
+    border-bottom: 3px solid #05959c40;
+}
 
 .square {
   height: 150px;

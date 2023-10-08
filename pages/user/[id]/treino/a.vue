@@ -35,33 +35,6 @@ const nextExercise = () => {
 
 <template>
   <NuxtLayout :name="layout">
-         <div class="main-div-one">
-            
-           <div class="conf">
-             <Icon name="fluent:target-arrow-16-filled"/> 
-             <h3>
-               Definição 
-             </h3>
-             
-           </div>  
-           <div class="conf">
-             <Icon name='game-icons:leg' />
-             <h3>
-               Quadríceps
-              </h3>           
-              
-            </div>  
-            <div class="conf">
-              <Icon name="material-symbols:timer-rounded"/> 
-              <h3>
-                60 minutos 
-               </h3>
-               
-             </div>  
-            
-
-        </div>
-          
         <div class="main-div-two">
           
           <h3>
@@ -161,6 +134,7 @@ body {
   justify-content: space-around;
 }
 .main-div-two {
+    position: relative;
   overflow-x: auto;
   display: flex;
   flex-direction: column;
@@ -282,7 +256,6 @@ border: 2px solid #2cd3db;
   margin: 20px 10px;
   border-radius: 20px;  
   border: 2px solid #44acb1; 
-  margin-top: 110px;
 
 }
 
