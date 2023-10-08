@@ -11,10 +11,10 @@ function openPhoto() {
 
 const dataTreino = await useFetch(`/api/${route.params.id}/treino/atual/a`)
 
-const treino = ref(0)
 
 const currentExercise = computed(() => {
   return dataTreino.value.treino[treino.value]
+  console.log(dataTreino.value);
 })
 
 const pending = ref(false)
