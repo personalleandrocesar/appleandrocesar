@@ -1,29 +1,21 @@
 <script setup>
-const layout = "duo"
-
 import { ref, computed } from 'vue'
+const layout = "duo"
+const route = useRoute()
 
-const dataTreino = ref({
-  treino: [
-    // serie B
-    { id: 'Exercício 1', nome: 'Mesa flexora', sets: 4, reps: '10 +10"', rest: '40"', obs: '*Fazer +10" de isometria no final do movimento;' },
-    { id: 'Exercício 2', nome: 'Stiff', sets: 3, reps: '20', rest: '40"', obs: '*Fazer falhando;' },
-    { id: 'Exercício 3', nome: 'Elevação de pelve', sets: 3, reps: '15', rest: '40"', obs: '*Fazer com HNL no banco reto;' },
-    { id: 'Exercício 4', nome: 'Cadeira flexora', sets: 3, reps: '20', rest: '40"', obs: '*Falhando na última repetição;' },
-    { id: 'Exercício 5', nome: 'Extensão de gluteo', sets: 3, reps: '12', rest: '20"', obs: '*Fazer na polia baixa' },
-    { id: 'Exercício 6', nome: 'Hiperextensão lombar', sets: 3, reps: '20', rest: '40"', obs: '*Fazer no aparelho;' },
-    { id: 'Exercício 7', nome: 'Leg press 45º', sets: 3, reps: '10 (c/ 1")', rest: '40"', obs: '*Segurar 1 segundo em baixo a cada repetição;' },
-    { id: 'Exercício 8', nome: 'Abdutora', sets: 3, reps: '8/15', rest: '40"', obs: '*Drop-set: fazer 8 rep., -diminúi o peso: +15;' },
-    { id: 'Exercício 9', nome: 'Prancha lateral', sets: 3, reps: '15', rest: '40"', obs: '*Fazer dinâmicamente - encostando a parte lateral do gluteo no solo;' },
-    { id: 'Exercício 10', nome: 'Agachamento Livre', sets: 3, reps: '12', rest: '40"', obs: '*Descer até 80º' },
-    // Adicione mais exercícios conforme necessário
-  ]
-})
+const photoOpen = ref(false);
+function openPhoto() {
+  photoOpen.value = !photoOpen.value;
+}
+
+
+const dataTreino = await useFetch(`/api/${route.params.id}/treino/atual/b`)
+
 
 const treino = ref(0)
 
 const currentExercise = computed(() => {
-  return dataTreino.value.treino[treino.value]
+  return dataTreino.data.value[treino.value]
 })
 
 const pending = ref(false)
@@ -35,7 +27,7 @@ const previousExercise = () => {
 }
 
 const nextExercise = () => {
-  if (treino.value < dataTreino.value.treino.length - 1) {
+  if (treino.value < dataTreino.data.value.length - 1) {
     treino.value++
   }
 }

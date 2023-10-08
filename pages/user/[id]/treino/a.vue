@@ -12,9 +12,10 @@ function openPhoto() {
 const dataTreino = await useFetch(`/api/${route.params.id}/treino/atual/a`)
 
 
+const treino = ref(0)
+
 const currentExercise = computed(() => {
-  return dataTreino.value.treino[treino.value]
-  console.log(dataTreino.value);
+  return dataTreino.data.value[treino.value]
 })
 
 const pending = ref(false)
@@ -26,7 +27,7 @@ const previousExercise = () => {
 }
 
 const nextExercise = () => {
-  if (treino.value < dataTreino.value.treino.length - 1) {
+  if (treino.value < dataTreino.data.value.length - 1) {
     treino.value++
   }
 }
