@@ -4,6 +4,6 @@ export default defineEventHandler((event) => {
     "nomeCompleto": "Leandro Cesar Ramos da Costa",
     "email": "leandrocesar.goo@gmail.com",
     "senha": "1234",
-    "foto": "https://m.leandrocesar.com/img/leandro-cesar.jpeg",
+    "foto": "https://m.leandrocesar.com/img/myFotoTwo.jpg",
   }
 })
