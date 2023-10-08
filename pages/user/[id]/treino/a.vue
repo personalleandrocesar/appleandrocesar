@@ -69,7 +69,7 @@ const nextExercise = () => {
           </h3>
           <div class="square">
             <b>
-              Futura imagem(.gif) ou vídeo!
+              {{ currentExercise.img }}
             </b>
           </div >
           <h2>
