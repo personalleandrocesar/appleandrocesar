@@ -12,21 +12,20 @@ const altura = data.value.altura.toFixed(2)
 const calcIMC = computed(() => {
     return (peso / ( altura * altura )).toFixed(1)
 })
-
-
+1
 const classIMC = computed(() => {
 
-    if (calcIMC < 18.5) {
+    if (calcIMC.value < 18.5) {
         return 'Baixo Peso';
-    } else if (calcIMC >= 18.5 && calcIMC <= 24.9) {
+    } else if (calcIMC.value >= 18.5 && calcIMC.value <= 24.9) {
         return 'Normal';
-    } else if (calcIMC >= 25.0 && calcIMC <= 29.9) {
+    } else if (calcIMC.value >= 25.0 && calcIMC.value <= 29.9) {
         return 'Sobrepeso';
-    } else if (calcIMC >= 30 && calcIMC <= 34.9) {
+    } else if (calcIMC.value >= 30 && calcIMC.value <= 34.9) {
         return 'Obesidade classe 1';
-    } else if (calcIMC >= 35 && calcIMC <= 39.9) {
+    } else if (calcIMC.value >= 35 && calcIMC.value <= 39.9) {
         return 'Obesidade classe 2';
-    } else if (calcIMC >= 40.0) {
+    } else if (calcIMC.value >= 40.0) {
         return 'Obesidade classe 3';
     } else {
         return 'Digite os valores certo para saber seu IMC!!'

@@ -2,12 +2,6 @@
 const layout = "hello"
 const route = useRoute()
 
-
-const counter = useState('counter', () => Math.round(0))
-
-const user = useCookie('userInfo', { watch: true })
-
-console.log(counter.value);
 </script>
 
 <template>
@@ -19,7 +13,8 @@ console.log(counter.value);
             <div class="conf">
               <Icon name="fluent:target-arrow-16-filled"/> 
               <h3>
-                Definição {{ counter }} {{ user }}               </h3>
+                Definição
+               </h3>
                 
             </div>  
             <div class="conf">

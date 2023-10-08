@@ -1,26 +1,27 @@
-<script setup lang="ts">
-import { DSAEncoding } from 'crypto';
+<script setup>
 
 useHead({
   titleTemplate: 'App Leandro Cesar',  
 })
-const counter = useState('counter', () => Math.round(0))
 
-const user = useCookie( 'userInfo', {watch: true} )
+const counter = useCookie('counter')
+counter.value = counter.value || Math.round(Math.random() * 1000)
 
-console.log(counter.value);
+const ste =  useState( 'se', () => 2)
 
-const runtimeConfig = useRuntimeConfig()
 
-console.log(runtimeConfig.apiSecret)
-console.log(runtimeConfig.public.apiBase)
+console.log(counter);
+console.log(ste.value);
 
 </script>
 
 <template>
           <NuxtLoadingIndicator color='repeating-linear-gradient(to right,#00dc82 0%,#34cdfe 50%,#fadb41 100%)'/> <!-- here -->
-     {{ counter }} 
-     <NuxtPage />
+          <NuxtPage />
+<div class="count">
+  
+  {{ ste }}
+</div>
 </template>
 
 <style scoped>
