@@ -241,7 +241,47 @@ body {
     align-items: center;
 }
 
+
 .icon {
-    zoom: 1.4;
-    color: #fadb41;
-}</style>
+  zoom: 1.4;
+  color: #fadb41;
+  margin-top: -2.5px;
+}
+
+.main-div-one {
+  overflow-x: auto;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  margin-top: 90px;
+  width: 100%;
+}
+.main-div-one .icon{
+   zoom: 1.4;
+  color: #095D62;
+  margin-top: -2.5px;
+}
+
+.conf {  
+  color:#555;
+  height: 80px;
+    backdrop-filter: blur(15px);
+  overflow-x: auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 32.5%;
+  margin: 10px auto;
+  border-radius: 20px;  
+
+
+      background-color: #095D6210;
+    border: 2px solid #05959c20;
+    border-top: 3px solid #05959c40;
+    border-bottom: 3px solid #05959c40;
+}
+
+
+
+</style>

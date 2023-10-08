@@ -9,8 +9,8 @@ function openPhoto() {
 }
 
 
+const dataConf = await useFetch(`/api/${route.params.id}`)
 const dataTreino = await useFetch(`/api/${route.params.id}/treino/atual/c`)
-
 
 const treino = ref(0)
 
@@ -34,34 +34,35 @@ const nextExercise = () => {
 </script>
 
 <template>
-  <NuxtLayout :name="layout">
-    <div class="main-div-one">
+    <NuxtLayout :name="layout">
+    
+      <div class="main-div-one">
 
-      <div class="conf">
-        <Icon name="fluent:target-arrow-16-filled" />
-        <h3>
-          Definição
-        </h3>
+
+        <div class="conf">
+          <Icon name="fluent:target-arrow-16-filled" />
+          <h3>
+            {{ dataConf.data.value.objetivo }}
+          </h3>
+
+        </div>
+        <div class="conf">
+          <Icon name='solar:body-shape-bold' />
+          <h3>
+            {{ currentExercise.grupo }}
+          </h3>
+
+        </div>
+        <div class="conf">
+          <Icon name="material-symbols:timer-rounded" />
+          <h3>
+          {{ dataConf.data.value.tempo }}
+          </h3>
+
+        </div>
+
 
       </div>
-      <div class="conf">
-        <Icon name='mingcute:fitness-fill' />
-        <h3>
-          Braço
-        </h3>
-
-      </div>
-      <div class="conf">
-        <Icon name="material-symbols:timer-rounded" />
-        <h3>
-          60 minutos
-        </h3>
-
-      </div>
-
-
-    </div>
-
     <div class="main-div-two">
 
       <h3>
@@ -271,30 +272,44 @@ border: 2px solid #2cd3db;
   margin: 0 25px 10px 25px;
 
 }
-
 .icon {
   zoom: 1.4;
   color: #fadb41;
   margin-top: -2.5px;
 }
 
-.conf {
-  color: #fff;
+.main-div-one {
+  overflow-x: auto;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  margin-top: 90px;
+  width: 100%;
+}
+.main-div-one .icon{
+   zoom: 1.4;
+  color: #095D62;
+  margin-top: -2.5px;
+}
+
+.conf {  
+  color:#555;
   height: 80px;
-  background-color: #095D62;
-  backdrop-filter: blur(15px);
+    backdrop-filter: blur(15px);
   overflow-x: auto;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  backdrop-filter: blur(5px);
-  width: 100%;
-  margin: 20px 10px;
-  border-radius: 20px;
-  border: 2px solid #44acb1;
-  margin-top: 110px;
+  width: 32.5%;
+  margin: 10px auto;
+  border-radius: 20px;  
 
+
+      background-color: #095D6210;
+    border: 2px solid #05959c20;
+    border-top: 3px solid #05959c40;
+    border-bottom: 3px solid #05959c40;
 }
 
 

@@ -1,40 +1,68 @@
 <script setup>
-const layout = "hello"
+import { ref, computed } from 'vue'
+const layout = "duo"
 const route = useRoute()
 
+const photoOpen = ref(false);
+function openPhoto() {
+  photoOpen.value = !photoOpen.value;
+}
+
+
+const dataConf = await useFetch(`/api/${route.params.id}`)
+const dataTreino = await useFetch(`/api/${route.params.id}/treino/atual/a`)
+
+const treino = ref(0)
+
+const currentExercise = computed(() => {
+  return dataTreino.data.value[treino.value]
+})
+
+const pending = ref(false)
+
+const previousExercise = () => {
+  if (treino.value > 0) {
+    treino.value--
+  }
+}
+
+const nextExercise = () => {
+  if (treino.value < dataTreino.data.value.length - 1) {
+    treino.value++
+  }
+}
 </script>
 
 <template>
-  <NuxtLayout :name="layout">
-    <div>
-          
+      <NuxtLayout :name="layout">
+    
         <div class="main-div-one">
-            
-            <div class="conf">
-              <Icon name="fluent:target-arrow-16-filled"/> 
-              <h3>
-                Definição
-               </h3>
-                
-            </div>  
-            <div class="conf">
-              <Icon name="mdi:calendar-weekend"/> 
-              <h3>
-                6 dias
-              </h3>
-                
-            </div>  
-            <div class="conf">
-              <Icon name="material-symbols:timer-rounded"/> 
-              <h3>
-                60 minutos 
-              </h3>
-                
-            </div>  
-            
 
-      </div>
-          
+
+          <div class="conf">
+            <Icon name="fluent:target-arrow-16-filled" />
+            <h3>
+              {{ dataConf.data.value.objetivo }}
+            </h3>
+
+          </div>
+          <div class="conf">
+            <Icon name='mdi:calendar-weekend' />
+            <h3>
+              {{ dataConf.data.value.dias }}
+            </h3>
+
+          </div>
+          <div class="conf">
+            <Icon name="material-symbols:timer-rounded" />
+            <h3>
+            {{ dataConf.data.value.tempo }}
+            </h3>
+
+          </div>
+          </div>
+
+
       <div class="main-div-two">
         <h3>
               <Icon name='material-symbols:exercise' /> TREINOS 
@@ -66,6 +94,8 @@ const route = useRoute()
 
             </div>
           </nuxt-link>
+
+          
         <nuxt-link class="square" :to="`/user/${route.params.id}/treino/b`">
         <div>
                 <h4>
@@ -120,10 +150,7 @@ const route = useRoute()
 <br>
 <br>
 <br>
-    </div>
 
-
-    
 
 </NuxtLayout>
 </template>
@@ -242,11 +269,46 @@ display: flex;
   justify-content: center;
   align-items: center;
 }
-.icon{
+.icon {
   zoom: 1.4;
   color: #fadb41;
   margin-top: -2.5px;
 }
+
+.main-div-one {
+  overflow-x: auto;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  margin-top: 90px;
+  width: 100%;
+}
+.main-div-one .icon{
+   zoom: 1.4;
+  color: #095D62;
+  margin-top: -2.5px;
+}
+
+.conf {  
+  color:#555;
+  height: 80px;
+    backdrop-filter: blur(15px);
+  overflow-x: auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 32.5%;
+  margin: 10px auto;
+  border-radius: 20px;  
+
+
+      background-color: #095D6210;
+    border: 2px solid #05959c20;
+    border-top: 3px solid #05959c40;
+    border-bottom: 3px solid #05959c40;
+}
+
 
 
 

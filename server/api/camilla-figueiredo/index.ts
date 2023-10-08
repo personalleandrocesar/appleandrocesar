@@ -5,9 +5,9 @@ export default defineEventHandler((event) => {
     "email": "camila@email.com",
     "senha": "1234",
     "foto": "https://m.leandrocesar.com/img/camilla-figueiredo.jpeg",
-    
+
     "objetivo": "Definição",
     "tempo": "60 min.",
-    "tipoA": "Quadriceps"
+    "dias": "6 dias"
   }
 })

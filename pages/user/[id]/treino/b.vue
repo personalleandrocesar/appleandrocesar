@@ -10,7 +10,7 @@ function openPhoto() {
 
 
 const dataConf = await useFetch(`/api/${route.params.id}`)
-const dataTreino = await useFetch(`/api/${route.params.id}/treino/atual/a`)
+const dataTreino = await useFetch(`/api/${route.params.id}/treino/atual/b`)
 
 const treino = ref(0)
 
@@ -35,7 +35,9 @@ const nextExercise = () => {
 
 <template>
   <NuxtLayout :name="layout">
+    
     <div class="main-div-one">
+
 
       <div class="conf">
         <Icon name="fluent:target-arrow-16-filled" />
@@ -117,7 +119,7 @@ const nextExercise = () => {
 
       <div class="button">
         <span @click="previousExercise">
-          <Icon name="mdi:chevron-left" />
+          <Icon name="mdi:chevron-left" /> ANTERIOR
         </span>
         <span @click="nextExercise">
           PRÓXIMO
@@ -243,7 +245,7 @@ body {
   align-items: center;
   cursor: pointer;
   border-radius: 10px;
-  border-radius: 50%;
+  padding-right: 25px;
   border: 2px solid #05959c;
 }
 
@@ -279,32 +281,13 @@ border: 2px solid #2cd3db;
   margin-top: -2.5px;
 }
 
-.conf {
-  color: #fff;
-  height: 80px;
-  background-color: #095D62;
-  backdrop-filter: blur(15px);
-  overflow-x: auto;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  backdrop-filter: blur(5px);
-  width: 100%;
-  margin: 20px 10px;
-  border-radius: 20px;
-  border: 2px solid #44acb1;
-  margin-top: 110px;
-
-}
-
-
 .main-div-one {
   overflow-x: auto;
   display: flex;
   flex-direction: row;
   justify-content: space-around;
   margin-top: 90px;
+  width: 100%;
 }
 .main-div-one .icon{
    zoom: 1.4;
@@ -321,8 +304,8 @@ border: 2px solid #2cd3db;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  width: 100%;
-  margin: 10px 10px;
+  width: 32.5%;
+  margin: 10px auto;
   border-radius: 20px;  
 
 
@@ -346,4 +329,5 @@ border: 2px solid #2cd3db;
   margin: 20px auto;
   border-top: 2px solid #05959c10;
   border-bottom: 2px solid #05959c10;
-}</style>
+}
+</style>
