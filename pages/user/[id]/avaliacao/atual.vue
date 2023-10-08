@@ -5,10 +5,6 @@ const route = useRoute()
 
 const { data, error, refresh } = await useFetch(`/api/${route.params.id}/avaliacao/atual`)
 
-const now = computed(() => Date().toString())
-
-console.log(now);
-
 const divInfoIMC = ref(false)
 const peso = data.value.massa.toFixed(2)
 const altura = data.value.altura.toFixed(2)
@@ -156,8 +152,7 @@ function openDivTree() {
             <div class="main-div-one">
 
                 <h3>
-                    <Icon name='jam:medical' /> AVALIAÇÕES <br>
-                    {{  now }}
+                    <Icon name='jam:medical' /> AVALIAÇÕES
                 </h3>
             </div>
             <div class="main-div-one">

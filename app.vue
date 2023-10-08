@@ -1,22 +1,25 @@
 <script setup lang="ts">
+import { DSAEncoding } from 'crypto';
+
 useHead({
   titleTemplate: 'App Leandro Cesar',  
 })
 const counter = useState('counter', () => Math.round(0))
 
+const user = useCookie( 'userInfo', {watch: true} )
+
+console.log(counter.value);
+
+const runtimeConfig = useRuntimeConfig()
+
+console.log(runtimeConfig.apiSecret)
+console.log(runtimeConfig.public.apiBase)
+
 </script>
 
 <template>
           <NuxtLoadingIndicator color='repeating-linear-gradient(to right,#00dc82 0%,#34cdfe 50%,#fadb41 100%)'/> <!-- here -->
-          <div class="count">
-           Counter: {{ counter }}
-           <button @click="counter++">
-             +
-           </button>
-           <button @click="counter--">
-             -
-           </button>
-         </div>
+     {{ counter }} 
      <NuxtPage />
 </template>
 
