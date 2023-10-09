@@ -3,6 +3,7 @@ import { ref, computed } from 'vue'
 const layout = "hello"
 const route = useRoute()
 
+const dataConf = await useFetch(`/api/${route.params.id}`)
 const { data, error, refresh } = await useFetch(`/api/${route.params.id}/avaliacao/atual`)
 
 const sexo = data.value.sexo
@@ -40,21 +41,21 @@ const percentualFat = computed(() => {
                 <div class="conf">
                     <Icon name="fluent:target-arrow-16-filled" />
                     <h3>
-                        Definição
+                        {{ dataConf.data.value.objetivo }}
                     </h3>
 
                 </div>
                 <div class="conf">
                     <Icon name="mdi:calendar-weekend" />
                     <h3>
-                        6 dias
+                        {{ dataConf.data.value.dias }}
                     </h3>
 
                 </div>
                 <div class="conf">
                     <Icon name="material-symbols:timer-rounded" />
                     <h3>
-                        60 minutos
+                        {{ dataConf.data.value.tempo }}
                     </h3>
 
                 </div>

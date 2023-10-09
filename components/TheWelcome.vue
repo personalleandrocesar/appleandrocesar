@@ -8,7 +8,7 @@ import LCLogoTree from '../components/LCLogoTree.vue'
         <div>
             <div class='logo'>
                 <LCLogoTree />
-                <h1>app.leandrocesar.com</h1>
+                <h1>m.leandrocesar.com</h1>
                 <h3>Acesse sua conta</h3>
                 <div>
                     <div>

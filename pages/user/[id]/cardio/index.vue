@@ -10,7 +10,7 @@ function openPhoto() {
 
 
 const dataConf = await useFetch(`/api/${route.params.id}`)
-const dataTreino = await useFetch(`/api/${route.params.id}/treino/atual/a`)
+const dataTreino = await useFetch(`/api/${route.params.id}/cardio/atual`)
 
 
 const divOne = ref(false);
@@ -55,21 +55,21 @@ function openDivTree() {
                 <div class="conf">
                     <Icon name="fluent:target-arrow-16-filled" />
                     <h3>
-                        Definição
+                        {{ dataConf.data.value.objetivo }}
                     </h3>
 
                 </div>
                 <div class="conf">
                     <Icon name="mdi:calendar-weekend" />
                     <h3>
-                        6 dias
+                        {{ dataConf.data.value.dias }}
                     </h3>
 
                 </div>
                 <div class="conf">
                     <Icon name="material-symbols:timer-rounded" />
                     <h3>
-                        60 minutos
+                        {{ dataConf.data.value.tempo }}
                     </h3>
 
                 </div>
@@ -97,11 +97,11 @@ function openDivTree() {
 
                     <div>
 
-                        <h4>
+                        <!-- <h4>
                             <Icon name="healthicons:exercise-running" />
-                        </h4>
+                        </h4> -->
                         <h4>
-                            Esteira
+                            {{ dataTreino.data.value.cardioA }}
                         </h4>
 
                     </div>
@@ -116,11 +116,11 @@ function openDivTree() {
 
                     <div>
 
-                        <h4>
+                        <!-- <h4>
                             <Icon name="mdi:escalator" />
-                        </h4>
+                        </h4> -->
                         <h4>
-                            Escada
+                            {{ dataTreino.data.value.cardioB }}
                         </h4>
 
                     </div>
@@ -135,11 +135,11 @@ function openDivTree() {
                     </div>
 
                     <div>
-                        <h4>
+                        <!-- <h4>
                             <Icon name="healthicons:exercise-bicycle" />
-                        </h4>
+                        </h4> -->
                         <h4>
-                            Bicicleta
+                            {{ dataTreino.data.value.cardioC }}
                         </h4>
 
                     </div>
@@ -151,12 +151,12 @@ function openDivTree() {
                         <div>
                             <Icon name="ph:clock-countdown-fill" />
                             <h4>
-                                20 minutos
+                                {{ dataTreino.data.value.cardioATime }}
                             </h4>
                         </div>
 
                         <div>
-                            <h4>Correr direto entre velocidade de 7.0 km/h a 8.5 km/h.</h4>
+                            <h4>{{ dataTreino.data.value.cardioADescription }}</h4>
 
                         </div>
                         
@@ -168,15 +168,13 @@ function openDivTree() {
                             <div>
                                 <Icon name="ph:clock-countdown-fill" />
                                 <h4>
-                                    15 minutos
+                                    {{ dataTreino.data.value.cardioBTime }}
                                 </h4>
                             </div>
 
                             <div>
                                 <h4>
-                                    Fazer intervalado: <br> 1' minuto subindo o mais 
-                                    rápido possível, 3' com descanso ativo em velocidade 
-                                    menor.
+                                    {{ dataTreino.data.value.cardioBDescription }}
                                 </h4>
 
                             </div>
@@ -189,13 +187,13 @@ function openDivTree() {
                             <div>
                                 <Icon name="ph:clock-countdown-fill" />
                                 <h4>
-                                    20 minutos
+                                    {{ dataTreino.data.value.cardioCTime }}
                                 </h4>
                             </div>
 
                             <div>
                                 <h4>
-                                    Fazer pesado, direto o máximo que puder, mantendo o ritmo.
+                                    {{ dataTreino.data.value.cardioCDescription }}
                                 </h4>
 
                             </div>
