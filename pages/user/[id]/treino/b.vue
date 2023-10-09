@@ -46,13 +46,13 @@ const nextExercise = () => {
         </h3>
 
       </div>
-      <div class="conf">
+      <!-- <div class="conf">
         <Icon name='solar:body-shape-bold' />
         <h3>
           {{ currentExercise.grupo }}
         </h3>
 
-      </div>
+      </div> -->
       <div class="conf">
         <Icon name="material-symbols:timer-rounded" />
         <h3>

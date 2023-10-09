@@ -85,9 +85,9 @@ const nextExercise = () => {
               <h3>
               </h3>
               
-              <h4>
+              <!-- <h4>
                 <Icon name="game-icons:leg"/> 
-              </h4>
+              </h4> -->
               <h4>
                 Quadríceps
               </h4>
@@ -111,9 +111,9 @@ const nextExercise = () => {
                 <h3>
                 </h3>
               
-                <h4>
+                <!-- <h4>
                   <Icon name="solar:body-shape-bold"/> 
-                </h4>
+                </h4> -->
                 <h4>
                   Glúteo
                 </h4>
@@ -136,9 +136,9 @@ const nextExercise = () => {
                 <h3>
                 </h3>
               
-                <h4>
+                <!-- <h4>
                   <Icon name="mingcute:fitness-fill"/> 
-                </h4>
+                </h4> -->
                 <h4>
                   Braço
                 </h4>
