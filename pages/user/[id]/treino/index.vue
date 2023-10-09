@@ -1,6 +1,6 @@
 <script setup>
 import { ref, computed } from 'vue'
-const layout = "duo"
+const layout = "hello"
 const route = useRoute()
 
 const photoOpen = ref(false);

@@ -11,6 +11,11 @@ function openPhoto() {
     photoOpen.value = !photoOpen.value;
 }
 
+function scrollToTop() {
+    window.scrollTo(0, 0);
+}
+
+
 </script>
 
 <template>
@@ -18,28 +23,28 @@ function openPhoto() {
     <div>
 
         <div class="nav-bottom">
-            <NuxtLink :to="`/user/${route.params.id}`">
+            <NuxtLink :to="`/user/${route.params.id}`" @click.native="scrollToTop()">
             <Icon name='mdi:home' />
         </NuxtLink>
-        <nuxt-link :to="`/user/${route.params.id}/treino`">
+        <nuxt-link :to="`/user/${route.params.id}/treino`" @click.native="scrollToTop()">
             <Icon name='material-symbols:exercise' />
         </nuxt-link>
-        <nuxt-link :to="`/user/${route.params.id}/cardio`">
+        <nuxt-link :to="`/user/${route.params.id}/cardio`" @click.native="scrollToTop()">
             <Icon name='material-symbols:cardiology' />
         </nuxt-link>
-        <nuxt-link :to="`/user/${route.params.id}/avaliacao`">
+        <nuxt-link :to="`/user/${route.params.id}/avaliacao`" @click.native="scrollToTop()">
             <Icon name='jam:medical' />
         </nuxt-link>
-        <!-- <nuxt-link to="/camilla-figueiredo">
+        <!-- <nuxt-link to="/camilla-figueiredo" @click.native="scrollToTop()">
             <Icon name='mdi:home' />
         </nuxt-link>
-            <nuxt-link to="/camilla-figueiredo/treino">
+            <nuxt-link to="/camilla-figueiredo/treino" @click.native="scrollToTop()">
                 <Icon name='material-symbols:exercise' />
             </nuxt-link>
-            <nuxt-link to="/camilla-figueiredo/cardio">
+            <nuxt-link to="/camilla-figueiredo/cardio" @click.native="scrollToTop()">
                 <Icon name='material-symbols:cardiology' />
             </nuxt-link>
-            <nuxt-link to="/camilla-figueiredo/avaliacao">
+            <nuxt-link to="/camilla-figueiredo/avaliacao" @click.native="scrollToTop()">
                 <Icon name='jam:medical' />
             </nuxt-link> -->
 

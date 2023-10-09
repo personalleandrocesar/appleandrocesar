@@ -11,6 +11,10 @@ function openPhoto() {
     photoOpen.value = !photoOpen.value;
 }
 
+function scrollToTop() {
+    window.scrollTo(0, 0);
+}
+
 </script>
 
 <template>
@@ -18,34 +22,34 @@ function openPhoto() {
     <div>
 
         <div class="nav-bottom">
-            <nuxt-link :to="`/user/${route.params.id}/treino`">
+            <nuxt-link :to="`/user/${route.params.id}/treino`" @click.native="scrollToTop()">
                 <Icon name='material-symbols:exercise' />
             </nuxt-link>
-            <nuxt-link :to="`/user/${route.params.id}/treino/a`">
+            <nuxt-link :to="`/user/${route.params.id}/treino/a`" @click.native="scrollToTop()">
                 <Icon name='mdi:alpha-a' />
             </nuxt-link>
-            <nuxt-link :to="`/user/${route.params.id}/treino/b`">
+            <nuxt-link :to="`/user/${route.params.id}/treino/b`" @click.native="scrollToTop()">
                 <Icon name='mdi:alpha-b' />
             </nuxt-link>
-            <nuxt-link :to="`/user/${route.params.id}/treino/c`">
+            <nuxt-link :to="`/user/${route.params.id}/treino/c`" @click.native="scrollToTop()">
                 <Icon name='mdi:alpha-c' />
             </nuxt-link>
-            <nuxt-link :to="`/user/${route.params.id}/cardio`">
+            <nuxt-link :to="`/user/${route.params.id}/cardio`" @click.native="scrollToTop()">
                 <Icon name='material-symbols:cardiology' />
             </nuxt-link>
-                        <!-- <nuxt-link to="/camilla-figueiredo/treino">
+                        <!-- <nuxt-link to="/camilla-figueiredo/treino" @click.native="scrollToTop()">
                     <Icon name='material-symbols:exercise' />
                 </nuxt-link>
-            <nuxt-link to="/camilla-figueiredo/treino/a">
+            <nuxt-link to="/camilla-figueiredo/treino/a" @click.native="scrollToTop()">
                 <Icon name='mdi:alpha-a' />
             </nuxt-link>
-            <nuxt-link to="/camilla-figueiredo/treino/b">
+            <nuxt-link to="/camilla-figueiredo/treino/b" @click.native="scrollToTop()">
                 <Icon name='mdi:alpha-b' />
             </nuxt-link>
-            <nuxt-link to="/camilla-figueiredo/treino/c">
+            <nuxt-link to="/camilla-figueiredo/treino/c" @click.native="scrollToTop()">
                 <Icon name='mdi:alpha-c' />
             </nuxt-link>
-            <nuxt-link to="/camilla-figueiredo/cardio">
+            <nuxt-link to="/camilla-figueiredo/cardio" @click.native="scrollToTop()">
                 <Icon name='material-symbols:cardiology' />
             </nuxt-link> -->
 
