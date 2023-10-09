@@ -8,6 +8,9 @@ export default defineEventHandler((event) => {
 
     "objetivo": "Definição",
     "tempo": "60 min.",
-    "dias": "6 dias"
+    "dias": "6 dias",
+    "treinoA": "Quadriceps",
+    "treinoB": "Gluteo",
+    "treinoC": "Braço"
   }
 })
