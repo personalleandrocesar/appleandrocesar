@@ -148,8 +148,6 @@ const nextExercise = () => {
             
       </div>
 <br>
-<br>
-<br>
 
 
 </NuxtLayout>
