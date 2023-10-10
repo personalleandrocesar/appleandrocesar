@@ -12,6 +12,6 @@ export default defineEventHandler((event) => {
     { id: 'Exercício 10', nome: 'Panturrilhas em pé', sets: 3, reps: '20(2T)', rest: '40"', grupo: 'Quadriceps', obs: '*Fazer no aparelho;', img: 'https://m.leandrocesar.com/img/preImagem.png'}
     
     // Nova
-    { id: 'Exercício 1', nome: 'Extea', sets: 4, reps: '8 +10" +4', rest: '40"', grupo: 'Quadriceps', obs: '', img: 'https://m.leandrocesar.com/img/preImagem.png' },
+    
   ]
 })
