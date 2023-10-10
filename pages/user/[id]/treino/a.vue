@@ -69,7 +69,7 @@ const nextExercise = () => {
         <div class="main-div-two">
           
           <h3>
-            {{ currentExercise.id }}
+            {{ currentExercise.num }}
           </h3>
           <img :src="currentExercise.img" class="square"/>
           <h2>

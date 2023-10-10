@@ -66,7 +66,7 @@ const nextExercise = () => {
     <div class="main-div-two">
 
       <h3>
-        {{ currentExercise.id }}
+        {{ currentExercise.num }}
       </h3>
       <div class="square">
         <b>

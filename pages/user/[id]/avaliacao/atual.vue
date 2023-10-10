@@ -40,7 +40,7 @@ function infoIMC() {
 }
 
 const sexo = data.value.sexo
-const idade = data.value.idade
+const idade = data.value.numade
 const dTorax = data.value.dtorax
 const abdominal = data.value.abdominal
 const coxa = data.value.coxa
