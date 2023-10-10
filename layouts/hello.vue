@@ -3,6 +3,10 @@ import { ref } from 'vue';
 const route = useRoute()
 const { data, error, refresh } = await useFetch(`/api/${route.params.id}`)
 
+
+const el = ref(null)
+const { toggle } = useFullscreen(el)
+
 const navbarOpen = ref(false);
 function openNavbar() {
   navbarOpen.value = !navbarOpen.value;
@@ -24,8 +28,11 @@ function openPhoto() {
           <div class="div-img">
             <img :src="data.foto" @click="openPhoto"/>
           </div>
-            <nuxt-link @click="openNavbar"><Icon name='octicon:three-bars-16'/></nuxt-link>
+            <div class="mZero">
 
+              <nuxt-link @click="toggle"><Icon name='octicon:screen-full'/></nuxt-link>
+              <nuxt-link @click="openNavbar"><Icon name='octicon:three-bars-16'/></nuxt-link>
+            </div>
         </div>
       </div>
 
@@ -90,7 +97,10 @@ function openPhoto() {
   margin: 10px 10px;
   font-weight: bold;
 }
-
+.mZero{
+  margin-top: -30px;
+  padding: 0;
+}
 .bar-top {
   background-color: #095d62;
   position: fixed;
@@ -112,6 +122,10 @@ display: flex;
   zoom: 1.2;
   color: #ffffff;
   margin: 5px 15px 30px 10px;
+}
+
+.bar-top-top a:nth-child(1){
+  margin: 5px 5px 30px 10px;
 }
 
 .button .icon {

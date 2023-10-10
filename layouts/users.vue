@@ -30,7 +30,7 @@ function openPhoto() {
           <div class="div-img">
             <img :src="data.foto" @click="openPhoto"/>
           </div>
-          <div>
+          <div class="mZero">
 
             <nuxt-link @click="toggle"><Icon name='octicon:screen-full'/></nuxt-link>
             <nuxt-link @click="openNavbar"><Icon name='octicon:three-bars-16'/></nuxt-link>
@@ -118,6 +118,11 @@ function openPhoto() {
   margin-bottom: 140px ;
   z-index: 1006;
   
+}
+
+.mZero{
+  margin-top: -30px;
+  padding: 0;
 }
 .bar-top-top {
   background-color: #095d62;
