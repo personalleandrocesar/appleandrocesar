@@ -304,7 +304,7 @@ border: 2px solid #2cd3db;
 .square {  
   height: 144px;
   color:#555;
-  background-color: #095D6220;
+  background-color: #fff;
   backdrop-filter: blur(5px);
   overflow-x: auto;
   display: flex;
@@ -313,8 +313,7 @@ border: 2px solid #2cd3db;
   align-items: center;
   min-width: 340px ;
   margin: 20px auto;
-  border-top: 2px solid #05959c10; 
-  border-bottom: 2px solid #05959c10; 
+  border: 2px solid #05959c10; 
 }
 
 </style>
