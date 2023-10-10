@@ -109,6 +109,8 @@ export default {
 <style scoped>
 #login {
     font-family: "Philosopher";
+    background-color: #095d62;
+    min-height: 100vh;
 }
 
 
@@ -119,7 +121,6 @@ export default {
     flex-direction: column;
     align-items: center;
     flex-wrap: wrap;
-    margin: 20px 0 0px 0;
 }
 
 .logo h1 {
