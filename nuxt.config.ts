@@ -29,6 +29,7 @@ export default defineNuxtConfig({
   modules: [
   '@nuxt/content',
   'nuxt-icon',
+  '@vueuse/nuxt'
   ],
   content: {
     // https://content.nuxtjs.org/api/configuration

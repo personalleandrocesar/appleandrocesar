@@ -1,6 +1,11 @@
 <script setup>
 import { ref } from 'vue';
 const route = useRoute()
+
+const el = ref(null)
+const { toggle } = useFullscreen(el)
+
+
 const { data, error, refresh } = await useFetch(`/api/${route.params.id}`)
 // const { data, pending, error, refresh } = await useFetch(`https://professorleandrocesar.com/usuarios/`, {})
 
@@ -26,6 +31,10 @@ function openPhoto() {
             <img :src="data.foto" @click="openPhoto"/>
           </div>
           <nuxt-link @click="openNavbar"><Icon name='octicon:three-bars-16'/></nuxt-link>
+
+          <button @click="toggle">
+          Go Fullscreen
+        </button>
 
         </div>
           
