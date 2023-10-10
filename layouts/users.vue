@@ -4,6 +4,7 @@ const route = useRoute()
 
 const el = ref(null)
 const { toggle } = useFullscreen(el)
+const notification = ref()
 
 
 const { data, error, refresh } = await useFetch(`/api/${route.params.id}`)
@@ -32,6 +33,8 @@ function openPhoto() {
           </div>
           <div class="mZero">
 
+            <nuxt-link v-if="notification" ><Icon name='ic:baseline-notifications-active'/></nuxt-link>
+            <nuxt-link v-else ><Icon name='ic:round-notifications-none'/></nuxt-link>
             <nuxt-link @click="toggle"><Icon name='octicon:screen-full'/></nuxt-link>
             <nuxt-link @click="openNavbar"><Icon name='octicon:three-bars-16'/></nuxt-link>
           </div>
@@ -138,7 +141,7 @@ function openPhoto() {
   color: #ffffff;
   margin: 5px 15px 30px 10px;
 }
-.bar-top-top a:nth-child(1){
+.bar-top-top a:nth-child(1),.bar-top-top a:nth-child(2){
   margin: 5px 5px 30px 10px;
 }
 

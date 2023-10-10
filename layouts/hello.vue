@@ -28,12 +28,15 @@ function openPhoto() {
           <div class="div-img">
             <img :src="data.foto" @click="openPhoto"/>
           </div>
-            <div class="mZero">
+                  <div class="mZero">
 
+              <nuxt-link v-if="notification" ><Icon name='ic:baseline-notifications-active'/></nuxt-link>
+              <nuxt-link v-else ><Icon name='ic:round-notifications-none'/></nuxt-link>
               <nuxt-link @click="toggle"><Icon name='octicon:screen-full'/></nuxt-link>
               <nuxt-link @click="openNavbar"><Icon name='octicon:three-bars-16'/></nuxt-link>
             </div>
-        </div>
+
+          </div>
       </div>
 
       <div v-if="navbarOpen" class="nav-bar">
@@ -124,10 +127,9 @@ display: flex;
   margin: 5px 15px 30px 10px;
 }
 
-.bar-top-top a:nth-child(1){
-  margin: 5px 5px 30px 10px;
-}
-
+.bar-top-top a:nth-child(1),.bar-top-top a:nth-child(2){
+    margin: 5px 5px 30px 10px;
+  }
 .button .icon {
   cursor: pointer;
   zoom: 1.4;

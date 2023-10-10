@@ -12,5 +12,8 @@ export default defineEventHandler((event) => {
     "treinoA": "Quadriceps",
     "treinoB": "Gluteo",
     "treinoC": "Braço"
+
+    // Dados Menu Global
+    
   }
 })
