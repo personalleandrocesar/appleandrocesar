@@ -30,11 +30,11 @@ function openPhoto() {
           <div class="div-img">
             <img :src="data.foto" @click="openPhoto"/>
           </div>
-          <nuxt-link @click="openNavbar"><Icon name='octicon:three-bars-16'/></nuxt-link>
+          <div>
 
-          <button @click="toggle">
-          Go Fullscreen
-        </button>
+            <nuxt-link @click="toggle"><Icon name='octicon:screen-full'/></nuxt-link>
+            <nuxt-link @click="openNavbar"><Icon name='octicon:three-bars-16'/></nuxt-link>
+          </div>
 
         </div>
           
@@ -132,6 +132,9 @@ function openPhoto() {
   zoom: 1.2;
   color: #ffffff;
   margin: 5px 15px 30px 10px;
+}
+.bar-top-top a:nth-child(1){
+  margin: 5px 5px 30px 10px;
 }
 
 .button .icon {
