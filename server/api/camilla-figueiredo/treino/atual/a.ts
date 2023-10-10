@@ -1,6 +1,6 @@
 export default defineEventHandler((event) => {
   return [
-    { id: 'Exercício 1', nome: 'Extensora', sets: 4, reps: '8 +10" +4', rest: '40"', grupo: 'Quadriceps', obs: '', img: 'https://m.leandrocesar.com/public/preImagem.jpg' },
+    { id: 'Exercício 1', nome: 'Extensora', sets: 4, reps: '8 +10" +4', rest: '40"', grupo: 'Quadriceps', obs: '', img: 'https://m.leandrocesar.com/img/preImagem.png' },
     { id: 'Exercício 2', nome: 'Agachamento Búlgaro', sets: 3, reps: '10', rest: '40"', grupo: 'Quadriceps', obs: '*Segurar halteres de 7 kg;' },
     { id: 'Exercício 3', nome: 'Agachamento Sumô', sets: 3, reps: '20 (2T)', rest: '40"', grupo: 'Quadriceps', obs: '*Fazer sobre os steps, falhando;' },
     { id: 'Exercício 4', nome: 'Abdominal infra', sets: 3, reps: '20', rest: '40"', grupo: 'Quadriceps', obs: '*Fazer na paralela;' },
