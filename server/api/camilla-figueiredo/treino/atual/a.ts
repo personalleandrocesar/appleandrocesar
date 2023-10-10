@@ -1,6 +1,5 @@
 export default defineEventHandler((event) => {
   return [
-  
     // Série Atual
    { num: 'Exercício 1', nome: 'Agachamento no Smith', sets: 4, reps: '15', rest: '50"', grupo: 'Quadríceps', obs: 'Descer até 80°. Fazer falhando;', img: 'https://m.leandrocesar.com/img/preImagem.png'},
    { num: 'Exercício 2', nome: 'Flexão de quadril', sets: 3, reps: '12', rest: '40"', grupo: 'Quadríceps', obs: 'Fazer com Caneleriras.', img: 'https://m.leandrocesar.com/img/preImagem.png'},

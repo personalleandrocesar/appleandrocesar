@@ -69,12 +69,7 @@ const nextExercise = () => {
       <h3>
         {{ currentExercise.num }}
       </h3>
-      
-      <div class="square">
-        <b>
-          Futura imagem(.gif) ou vídeo!
-        </b>
-      </div>
+      <img :src="currentExercise.img" class="square"/>
       <h2>
         {{ currentExercise.nome }}
       </h2>
@@ -316,18 +311,17 @@ border: 2px solid #2cd3db;
 }
 
 .square {
-  height: 150px;
-  color: #555;
-  background-color: #095D6220;
+  height: 144px;
+  color:#555;
+  background-color: #fff;
   backdrop-filter: blur(5px);
   overflow-x: auto;
   display: flex;
   flex-direction: row;
   justify-content: center;
   align-items: center;
-  width: 100%;
+  min-width: 340px ;
   margin: 20px auto;
-  border-top: 2px solid #05959c10;
-  border-bottom: 2px solid #05959c10;
+  border: 2px solid #05959c10; 
 }
 </style>
