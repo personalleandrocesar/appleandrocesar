@@ -8,6 +8,9 @@ function openPhoto() {
   photoOpen.value = !photoOpen.value;
 }
 
+// var a = "Meu nome é ";
+// var b = "Tiago!";
+// var c = a.concat(b);
 
 const dataConf = await useFetch(`/api/${route.params.id}`)
 const dataTreino = await useFetch(`/api/${route.params.id}/treino/atual/a`)
