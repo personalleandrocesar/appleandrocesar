@@ -311,6 +311,7 @@ border: 2px solid #2cd3db;
   flex-direction: row;
   justify-content: center;
   align-items: center;
+  min-width: 340px ;
   margin: 20px auto;
   border-top: 2px solid #05959c10; 
   border-bottom: 2px solid #05959c10; 
