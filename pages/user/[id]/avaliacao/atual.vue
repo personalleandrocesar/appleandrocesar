@@ -40,7 +40,7 @@ function infoIMC() {
 }
 
 const sexo = data.value.sexo
-const idade = data.value.idadeade
+const idade = data.value.idade
 const dTorax = data.value.dtorax
 const abdominal = data.value.abdominal
 const coxa = data.value.coxa
@@ -62,7 +62,7 @@ const percentualFat = computed(() => {
         return percGMulheres
     } return percGHomens
 })
-
+    
 const classHomens = computed(() => {
 
     if ( percGHomens >= 10 && percGHomens <= 24.9) {
