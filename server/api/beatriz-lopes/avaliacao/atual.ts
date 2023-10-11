@@ -1,7 +1,7 @@
 export default defineEventHandler((event) => {
   return {
       "data": "06/10/1986",
-      "numade": 36,
+      "idade": 36,
       "massa": 78,
       "altura": 1.80,
       "nascimeto": "12/12/2012",
@@ -10,7 +10,7 @@ export default defineEventHandler((event) => {
       "ombro": 12.8,
       "torax": 50,
       "toraxRelaxado": 48,
-      "toraxContranumo": 51,
+      "toraxContraido": 51,
       "cintura": 45,
       "quadril": 95,
       // Lado direito

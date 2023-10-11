@@ -4,7 +4,7 @@ export default defineEventHandler((event) => {
       "nomeCompleto": "Beatriz Rocha Lopes",
       "email": "beabentos2@gmail.com",
       "senha": "1234",
-      "numade": 26,
+      "idade": 26,
       "avaliação": {
         "Peso": 99.1,
         "massa": 99.1,
@@ -14,7 +14,7 @@ export default defineEventHandler((event) => {
         "ombro": 113.5,
         "torax": 100,
         "toraxRelaxado": 99.5,
-        "toraxContranumo": 102.5,
+        "toraxContraido": 102.5,
         "cintura": 100,
         "abdomen": 126,
         "quadril": 128,
