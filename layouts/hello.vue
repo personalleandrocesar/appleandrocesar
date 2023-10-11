@@ -310,10 +310,12 @@ display: flex;
   flex-direction: row;
   justify-content: space-around;
   width: 100%;
+  
 }
 .main-div-one .icon{
-   zoom: 1.2;
+   zoom: 1.4;
   color: #fff;
+  margin-top: 2px;
 }
 
 .conf {  
@@ -328,7 +330,6 @@ display: flex;
   padding: 5px 0;
   border-radius: 10px 10px 0 0;
       background-color: #ffffff30;
-      font-size: .8em;
 }
 
 
