@@ -6,7 +6,7 @@ export default defineEventHandler((event) => {
     "senha": "lopes@Be",
     "foto": "https://m.leandrocesar.com/img/beatriz-lopes.png",
 
-    "objetivo": "Emagrecimento",
+    "objetivo": "Diminuir %G.",
     "tempo": "60 min.",
     "dias": "6 dias",
     "treinoA": "Perna",
