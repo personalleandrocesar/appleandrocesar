@@ -26,17 +26,42 @@ function openPhoto() {
 
     <div class='bar-top-top'>
           <div class="div-img">
-            <img :src="data.foto" @click="openPhoto"/>
+            <img :src="data.foto" @click="openNavbar"/>
           </div>
                   <div class="mZero">
 
               <nuxt-link v-if="notification" ><Icon name='ic:baseline-notifications-active'/></nuxt-link>
               <nuxt-link v-else ><Icon name='ic:round-notifications-none'/></nuxt-link>
               <nuxt-link @click="toggle"><Icon name='octicon:screen-full'/></nuxt-link>
-              <nuxt-link @click="openNavbar"><Icon name='octicon:three-bars-16'/></nuxt-link>
             </div>
 
           </div>
+
+          <div class="main-div-one">
+
+
+            <div class="conf">
+              <Icon name="fluent:target-arrow-16-filled" />
+              <h3>
+                {{ data.objetivo }}
+              </h3>
+
+            </div>
+            <div class="conf">
+              <Icon name='mdi:calendar-weekend' />
+              <h3>
+                {{ data.dias }}
+              </h3>
+
+            </div>
+            <div class="conf">
+              <Icon name="material-symbols:timer-rounded" />
+              <h3>
+              {{ data.tempo }}
+              </h3>
+
+            </div>
+            </div>
       </div>
 
       <div v-if="navbarOpen" class="nav-bar">
@@ -235,7 +260,6 @@ display: flex;
 .div-img-full {
   border-radius: 50%;
   z-index: 3;
-  
 }
 
 .div-img-full img{
@@ -280,6 +304,32 @@ display: flex;
 }
 
 
+.main-div-one {
+  overflow-x: auto;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  width: 100%;
+}
+.main-div-one .icon{
+   zoom: 1.2;
+  color: #fff;
+}
+
+.conf {  
+    color:#ffffff;
+  overflow-x: auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 32.5%;
+  margin: 0px auto 0px auto;
+  padding: 5px 0;
+  border-radius: 10px 10px 0 0;
+      background-color: #ffffff30;
+      font-size: .8em;
+}
 
 
 </style>
