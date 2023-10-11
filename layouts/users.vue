@@ -29,14 +29,13 @@ function openPhoto() {
       
         <div class='bar-top-top'>
           <div class="div-img">
-            <img :src="data.foto" @click="openPhoto"/>
+            <img :src="data.foto" @click="openNavbar"/>
           </div>
           <div class="mZero">
 
             <nuxt-link v-if="notification" ><Icon name='ic:baseline-notifications-active'/></nuxt-link>
             <nuxt-link v-else ><Icon name='ic:round-notifications-none'/></nuxt-link>
             <nuxt-link @click="toggle"><Icon name='octicon:screen-full'/></nuxt-link>
-            <nuxt-link @click="openNavbar"><Icon name='octicon:three-bars-16'/></nuxt-link>
           </div>
 
         </div>
@@ -59,6 +58,7 @@ function openPhoto() {
             
             <!-- Início do Nav-flow -->
             <div class="nav-flow">
+              
               <div  class="div-img">
                 <img :src="data.foto" @click="openPhoto"/>
               </div>
@@ -141,7 +141,7 @@ function openPhoto() {
   color: #ffffff;
   margin: 5px 15px 30px 10px;
 }
-.bar-top-top a:nth-child(1),.bar-top-top a:nth-child(2){
+.bar-top-top a:nth-child(1),.bar-top-top a:nth-child(3){
   margin: 5px 5px 30px 10px;
 }
 
@@ -149,7 +149,7 @@ function openPhoto() {
   cursor: pointer;
   zoom: 1.4;
   position: fixed;
-  right: 12px;
+  left: 12px;
   top: 12px;
   color: #fff;
 }
@@ -194,7 +194,7 @@ function openPhoto() {
   font-size: .8em;
   line-height: 1.4;
   font-weight: bold;
-  margin: 0 30px 0 0;
+  margin: 60px 30px 0 0;
 }
 .div-img {
   height: 50px;

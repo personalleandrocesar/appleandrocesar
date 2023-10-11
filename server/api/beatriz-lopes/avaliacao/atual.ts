@@ -1,10 +1,10 @@
 export default defineEventHandler((event) => {
   return {
-      "data": "15/09/1986",
+      "data": "15/09/2023",
       "idade": 27,
       "massa": 99.1,
       "altura": 1.65,
-      "nascimeto": "16/10/1996",
+      "nascimento": "16/10/1996",
       "sexo": "feminino",
       "pescoco": 33.5,
       "ombro": 113.5,
