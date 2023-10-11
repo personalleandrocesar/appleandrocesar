@@ -57,14 +57,9 @@ const percGHomens = (((4.95 / dcHomens) - 4.50) * 100).toFixed(1)
 const percGMulheres = (((4.95 / dcMulheres) - 4.50) * 100).toFixed(1)
 
 
-const percentualFat = computed(() => {
-    if (sexo === "feminino") {
-        return percGMulheres
-    } return percGHomens
-})
-    
-const classHomens = computed(() => {
 
+const classHomens = computed(() => {
+    
     if ( percGHomens >= 10 && percGHomens <= 24.9) {
         return 'Normal';
     } else if (percGHomens >= 25 && percGHomens <= 29.9) {
@@ -96,7 +91,13 @@ const classMulheres = computed(() => {
     } else {
         return 'Digite os valores certo para saber seu %G!!'
     }
+    
+})
 
+const percentualFat = computed(() => {
+    if (sexo === "feminino") {
+        return percGMulheres
+    } return percGHomens
 })
 
 const classify = computed(() => {
@@ -126,6 +127,7 @@ function openDivOne() {
     divAplicarTwo.value = false
     divAplicarTree.value = false
 }
+
 function openDivTwo() {
     divTwo.value = !divTwo.value;
     divOne.value = false;
@@ -134,6 +136,7 @@ function openDivTwo() {
     divAplicar.value = false
     divAplicarTree.value = false
 }
+
 function openDivTree() {
     divTree.value = !divTree.value;
     divOne.value = false;
