@@ -49,6 +49,8 @@ export default {
                 this.$router.replace('/user/camilla-figueiredo')
             } if (this.user === 'leandrocesar' & this.senha === '1234') {
                 this.$router.replace('/user/leandro-cesar')
+            } if (this.user === 'beatrizlopes' & this.senha === 'lopes@Be') {
+                this.$router.replace('/user/beatriz-lopes')
             } if (this.user === 'amandagoncalves@gmail.com' & this.senha === 'goncalves@amanda') {
                 this.$router.replace('/amanda-goncalves')
             } if (this.user === 'camilladimas@gmail.com' & this.senha === 'dimas@camilla') {

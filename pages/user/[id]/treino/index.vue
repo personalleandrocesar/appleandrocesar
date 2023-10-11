@@ -89,7 +89,7 @@ const nextExercise = () => {
                 <Icon name="game-icons:leg"/> 
               </h4> -->
               <h4>
-                Quadríceps
+                {{ dataConf.data.value.treinoA }}
               </h4>
 
             </div>
@@ -115,7 +115,7 @@ const nextExercise = () => {
                   <Icon name="solar:body-shape-bold"/> 
                 </h4> -->
                 <h4>
-                  Glúteo
+                  {{ dataConf.data.value.treinoB }}
                 </h4>
 
               </div>
@@ -140,7 +140,7 @@ const nextExercise = () => {
                   <Icon name="mingcute:fitness-fill"/> 
                 </h4> -->
                 <h4>
-                  Braço
+                  {{ dataConf.data.value.treinoC }}
                 </h4>
 
               </div>
