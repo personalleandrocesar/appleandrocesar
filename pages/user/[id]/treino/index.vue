@@ -297,14 +297,11 @@ display: flex;
   justify-content: center;
   align-items: center;
   width: 32.5%;
-  margin: 10px auto;
-  border-radius: 20px;  
-
-
+  margin: 0px auto 10px auto;
+  border-radius: 0 0 20px 20px;  
       background-color: #095D6210;
     border: 2px solid #05959c20;
     border-top: 3px solid #05959c40;
-    border-bottom: 3px solid #05959c40;
 }
 
 

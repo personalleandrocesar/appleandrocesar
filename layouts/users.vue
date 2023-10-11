@@ -213,7 +213,6 @@ function openPhoto() {
 }
 .nav-flow h2 { 
   color: #fadb41;
-  text-transform: capitalize;
   line-height: 1;
   margin-right: 10px;
 }

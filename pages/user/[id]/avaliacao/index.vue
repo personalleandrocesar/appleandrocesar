@@ -35,7 +35,7 @@ const percentualFat = computed(() => {
 <template>
     <NuxtLayout :name="layout">
         <div>
-
+<!-- 
             <div class="main-div-one">
 
                 <div class="conf">
@@ -61,7 +61,7 @@ const percentualFat = computed(() => {
                 </div>
 
 
-            </div>
+            </div> -->
 
             <div class="main-div-two">
                 <h3>
@@ -162,6 +162,7 @@ body {
 }
 
 .main-div-two {
+    margin-top: 100px;
     overflow-x: auto;
     display: flex;
     flex-direction: column;
@@ -183,7 +184,7 @@ body {
     justify-content: flex-start;
     align-items: center;
     width: 99%;
-    margin: 5px auto;
+    margin: 10px auto;
     border-radius: 20px;
     border: .1px solid #05959c20;
     border-right: 6px solid #05959c80;
@@ -264,19 +265,19 @@ body {
 }
 
 .conf {  
-  color:#555;
-  height: 80px;
+    color:#555;
+    height: 80px;
     backdrop-filter: blur(15px);
-  overflow-x: auto;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
+    overflow-x: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
   align-items: center;
   width: 32.5%;
   margin: 10px auto;
   border-radius: 20px;  
 
-
+  
       background-color: #095D6210;
     border: 2px solid #05959c20;
     border-top: 3px solid #05959c40;
