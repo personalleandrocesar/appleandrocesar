@@ -888,6 +888,7 @@ th, td {
     align-items: flex-end;
     text-align: left;
     margin: 0 0 10px 0;
+    margin-top: 170px;
 }
 .main-div-one:nth-child(2) {
     overflow-x: hidden;
