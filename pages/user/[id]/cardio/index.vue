@@ -343,6 +343,10 @@ justify-content: flex-start
 color: #095D62;
 }
 
+.main-div-two div {
+    text-align: center;
+}
+
 
 .square {
     color: #555;
