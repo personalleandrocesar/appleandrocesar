@@ -162,7 +162,7 @@ body {
 }
 
 .main-div-two {
-    margin-top: 100px;
+    margin-top: 170px;
     overflow-x: auto;
     display: flex;
     flex-direction: column;

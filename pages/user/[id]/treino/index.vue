@@ -175,7 +175,7 @@ body {
   display: flex;
   flex-direction: column;
   justify-content: space-around;
-  margin-top: 170px;
+  margin: 170px 0;
   align-items: left;
 }
 .main-div-two .icon {

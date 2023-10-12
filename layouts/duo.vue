@@ -25,17 +25,43 @@ function openPhoto() {
 
         <div class='bar-top-top'>
           <div class="div-img">
-            <img :src="data.foto" @click="openPhoto"/>
+            <img :src="data.foto" @click="openNavbar"/>
           </div>
                   <div class="mZero">
 
             <nuxt-link v-if="notification" ><Icon name='ic:baseline-notifications-active'/></nuxt-link>
             <nuxt-link v-else ><Icon name='ic:round-notifications-none'/></nuxt-link>
             <nuxt-link @click="toggle"><Icon name='octicon:screen-full'/></nuxt-link>
-            <nuxt-link @click="openNavbar"><Icon name='octicon:three-bars-16'/></nuxt-link>
           </div>
 
         </div>
+
+        <div class="main-div-one">
+
+
+              <div class="conf">
+                <Icon name="fluent:target-arrow-16-filled" />
+                <h3>
+                  {{ data.objetivo }}
+                </h3>
+
+              </div>
+              <div class="conf">
+                <Icon name='mdi:calendar-weekend' />
+                <h3>
+                  {{ data.dias }}
+                </h3>
+
+              </div>
+              <div class="conf">
+                <Icon name="material-symbols:timer-rounded" />
+                <h3>
+                {{ data.tempo }}
+                </h3>
+
+              </div>
+              </div>
+
       </div>
 
       <div v-if="navbarOpen" class="nav-bar">
@@ -132,15 +158,15 @@ function openPhoto() {
   color: #ffffff;
   margin: 5px 15px 30px 10px;
 }
-.bar-top-top a:nth-child(1),.bar-top-top a:nth-child(2){
-    margin: 5px 5px 30px 10px;
-  }
+.bar-top-top a:nth-child(1),.bar-top-top a:nth-child(3){
+  margin: 5px 5px 30px 10px;
+}
 
 .button .icon {
   cursor: pointer;
   zoom: 1.4;
   position: fixed;
-  right: 12px;
+  left: 12px;
   top: 12px;
   color: #fff;
 }
@@ -175,7 +201,7 @@ function openPhoto() {
   background-color: #095D62;
 }
 
-.nav-flow {
+.nav-flow { 
   display: flex;
   flex-direction: row;
   justify-content: flex-start;
@@ -185,7 +211,7 @@ function openPhoto() {
   font-size: .8em;
   line-height: 1.4;
   font-weight: bold;
-  margin: 0 30px 0 0;
+  margin: 60px 30px 0 0;
 }
 
 .div-img {
@@ -289,4 +315,34 @@ function openPhoto() {
   border-radius: 40%;
   color: #e1a918;
   background-color: #fadb4150;
-}</style>
+}
+
+.main-div-one {
+  overflow-x: auto;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  width: 100%;
+  
+}
+.main-div-one .icon{
+   zoom: 1.4;
+  color: #fff;
+  margin-top: 2px;
+}
+
+.conf {  
+    color:#ffffff;
+  overflow-x: auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 32.5%;
+  margin: 0px auto 0px auto;
+  padding: 5px 0;
+  border-radius: 10px 10px 0 0;
+      background-color: #ffffff30;
+}
+
+</style>
