@@ -4,7 +4,7 @@ const layout = "hello"
 const route = useRoute()
 
 const dataConf = await useFetch(`/api/${route.params.id}`)
-const { data, error, refresh } = await useFetch(`/api/${route.params.id}/avaliacao/atual`)
+const { data, error, refresh } = await useFetch(`/api/${route.params.id}/avaliacao`)
 
 const sexo = data.value.sexo
 const idade = data.value.idade

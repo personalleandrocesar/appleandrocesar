@@ -12,8 +12,6 @@ const enterClicked = () => {
         router.replace('/home')
     } else if (user.value === 'camillafigueiredo' && senha.value === 'figueiredo@Ca') {
         router.replace('/camilla-figueiredo')
-    } else if (user.value === 'juliobizzo@gmail.com' && senha.value === 'bizzo@julio') {
-        router.replace('/julio-bizzo')
     }
 }
 

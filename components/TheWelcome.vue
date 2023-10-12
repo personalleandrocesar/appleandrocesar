@@ -58,9 +58,6 @@ export default {
 
     scrollToTop() {
         window.scrollTo(0, 0);
-    },
-    created() {
-        console.log(`the component is now mounted.`)
     }
 }
 </script>
