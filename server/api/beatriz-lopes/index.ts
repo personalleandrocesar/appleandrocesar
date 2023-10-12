@@ -10,7 +10,7 @@ export default defineEventHandler((event) => {
     "tempo": "60 min.",
     "dias": "6 dias",
     "treinoA": "Perna",
-    "treinoB": "Braço",
+    "treinoB": "Braço + Abdominal",
     "treinoC": ""
 
     // Dados Menu Global

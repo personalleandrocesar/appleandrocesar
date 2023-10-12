@@ -47,53 +47,9 @@ export default {
                 this.$router.replace('/home')
             } if (this.user === 'camillafigueiredo' & this.senha === 'figueiredo@Ca') {
                 this.$router.replace('/user/camilla-figueiredo')
-            } if (this.user === 'leandrocesar' & this.senha === '1234') {
-                this.$router.replace('/user/leandro-cesar')
             } if (this.user === 'beatrizlopes' & this.senha === 'lopes@Be') {
                 this.$router.replace('/user/beatriz-lopes')
-            } if (this.user === 'amandagoncalves@gmail.com' & this.senha === 'goncalves@amanda') {
-                this.$router.replace('/amanda-goncalves')
-            } if (this.user === 'camilladimas@gmail.com' & this.senha === 'dimas@camilla') {
-                this.$router.replace('/camilla-dimas')
-            } if (this.user === 'rosanaassis@gmail.com' & this.senha === 'assis@rosana') {
-                this.$router.replace('/rosana-assis')
-            } if (this.user === 'isadorasantesso@gmail.com' & this.senha === 'santesso@isadora') {
-                this.$router.replace('/isadora-santesso')
-            } if (this.user === 'gustavorj@gmail.com' & this.senha === 'rj@gustavo') {
-                this.$router.replace('/gustavo-rj')
-            } if (this.user === 'haroldocabussu@gmail.com' & this.senha === 'cabussu@haroldo') {
-                this.$router.replace('/haroldo-cabussu')
-            } if (this.user === 'sergioluiz@gmail.com' & this.senha === 'luiz@sergio') {
-                this.$router.replace('/sergio-luiz')
-            } if (this.user === 'fabiocruz@gmail.com' & this.senha === 'cruz@fabio') {
-                this.$router.replace('/fabio-cruz')
-            } if (this.user === 'biabarcelos@gmail.com' & this.senha === 'barcelos@bia') {
-                this.$router.replace('/bianca-barcelos')
-            } if (this.user === 'lauriogarcia@gmail.com' & this.senha === 'garcia@laurio') {
-                this.$router.replace('/laurio-garcia')
-            } if (this.user === 'ygorpaixao@gmail.com' & this.senha === 'paixao@ygor') {
-                this.$router.replace('/ygor-paixao')
-            } if (this.user === 'root@gmail.com' & this.senha === '12345') {
-                this.$router.replace('/home')
-            } if (this.user === 'priscillamello@gmail.com' & this.senha === 'mello@priscilla') {
-                this.$router.replace('/priscilla-mello')
-            } if (this.user === 'karolaraujo@gmail.com' & this.senha === 'araujo@karol') {
-                this.$router.replace('/karolline-araujo')
-            } if (this.user === 'kiviatenorio@gmail.com' & this.senha === 'tenorio@kivia') {
-                this.$router.replace('/kivia-tenorio')
-            } if (this.user === 'joaocesar@gmail.com' & this.senha === 'cesar@joao') {
-                this.$router.replace('/joao-cesar')
-            } if (this.user === 'vivianemarques@gmail.com' & this.senha === 'marques@viviane') {
-                this.$router.replace('/viviane-marques')
-            } if (this.user === 'manuelaalbertino@gmail.com' & this.senha === 'albertino@manuela') {
-                this.$router.replace('/manuela-albertino')
-            } if (this.user === 'blendagruber@gmail.com' & this.senha === 'gruber@blenda') {
-                this.$router.replace('/blenda-gruber')
             }
-
-
-
-
         },
         trigger() {
             this.$refs.sendReply.click()
