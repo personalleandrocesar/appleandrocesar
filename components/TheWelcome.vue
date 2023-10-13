@@ -27,34 +27,34 @@ const trigger = () => {
 </script>
 
 <template>
-    <div id="login">
-            <div>
-                <div class='logo'>
-                    <LCLogoTree />
-                    <h1>m.leandrocesar.com</h1>
-                    <h3>Acesse sua conta</h3> 
-                    <div>
-                        <div>
-                            <h4>Usuário</h4>
-                            <input type="email" name="" id="usuario" placeholder="Digite seu usuário" autofocus v-model="user">
-                            <br>
-                            <h4>Senha</h4>
-                            <input type="password" @keyup.enter="trigger" name="" id="senha" placeholder="Digite sua senha"
-                                v-model="senha">
-                            <br>
-                            <div>
-                                <input class='button-call' type="submit" value="ENTRAR" id="btn" @click="enterClicked"
-                                    ref="sendReply">
-                                <a href="https://api.whatsapp.com/send?phone=5521936184024%20&text=Ol%C3%A1%20professor!%20Esqueci%20o%20meu%20email%20e%20minha%20senha!"
-                                    target="_blank">
-                                    <h5>Esqueci minha senha</h5>
-                                </a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
+<div id="login">
+  <div>
+    <div class='logo'>
+      <LCLogoTree />
+      <h1>m.leandrocesar.com</h1>
+      <h3>Acesse sua conta</h3> 
+      <div>
+        <div>
+          <h4>Usuário</h4>
+          <input type="email" name="" id="usuario" placeholder="Digite seu usuário" autofocus v-model="user">
+          <br>
+          <h4>Senha</h4>
+          <input type="password" @keyup.enter="trigger" name="" id="senha" placeholder="Digite sua senha"
+              v-model="senha">
+          <br>
+          <div>
+          <input class='button-call' type="submit" value="ENTRAR" id="btn" @click="enterClicked"
+              ref="sendReply">
+          <a href="https://api.whatsapp.com/send?phone=5521936184024%20&text=Ol%C3%A1%20professor!%20Esqueci%20o%20meu%20email%20e%20minha%20senha!"
+              target="_blank">
+          <h5>Esqueci minha senha</h5>
+          </a>
+          </div>
         </div>
+      </div>
+    </div>
+  </div>
+    </div>
 </template>
 <style scoped>
 #login {

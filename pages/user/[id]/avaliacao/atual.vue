@@ -61,15 +61,15 @@ const percGMulheres = (((4.95 / dcMulheres) - 4.50) * 100).toFixed(1)
 
 const classHomens = computed(() => {
     
-    if ( percGHomens >= 10 && percGHomens <= 24.9) {
+    if ( percGHomens >= 5 && percGHomens <= 14.9) {
         return 'Normal';
-    } else if (percGHomens >= 25 && percGHomens <= 29.9) {
+    } else if (percGHomens >= 15 && percGHomens <= 19.9) {
         return 'Sobrepeso';
-    } else if (percGHomens >= 30 && percGHomens <= 34.9) {
+    } else if (percGHomens >= 20 && percGHomens <= 24.9) {
         return 'Obesidade Moderada';
-    } else if (percGHomens >= 35 && percGHomens <= 39.9) {
+    } else if (percGHomens >= 25 && percGHomens <= 29.9) {
         return 'Obesidade Elevada';
-    } else if (percGHomens > 39.9) {
+    } else if (percGHomens > 29.9) {
         return 'Obesidade Mórbida';
     } else {
         return 'Digite os valores certo para saber seu %G!!'
