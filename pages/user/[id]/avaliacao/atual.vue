@@ -12,7 +12,8 @@ const altura = data.value.altura.toFixed(2)
 const calcIMC = computed(() => {
     return (peso / ( altura * altura )).toFixed(1)
 })
-1
+
+
 const classIMC = computed(() => {
 
     if (calcIMC.value < 18.5) {

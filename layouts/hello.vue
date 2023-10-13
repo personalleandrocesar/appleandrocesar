@@ -3,9 +3,8 @@ import { ref } from 'vue';
 const route = useRoute()
 const { data, error, refresh } = await useFetch(`/api/${route.params.id}`)
 
+const notification = ref(false)
 
-const el = ref(null)
-const { toggle } = useFullscreen(el)
 
 const navbarOpen = ref(false);
 function openNavbar() {
@@ -32,7 +31,6 @@ function openPhoto() {
 
               <nuxt-link v-if="notification" ><Icon name='ic:baseline-notifications-active'/></nuxt-link>
               <nuxt-link v-else ><Icon name='ic:round-notifications-none'/></nuxt-link>
-              <nuxt-link @click="toggle"><Icon name='octicon:screen-full'/></nuxt-link>
             </div>
 
           </div>
@@ -152,9 +150,6 @@ display: flex;
   margin: 5px 15px 30px 10px;
 }
 
-.bar-top-top a:nth-child(1),.bar-top-top a:nth-child(3){
-  margin: 5px 5px 30px 10px;
-}
 .button .icon {
   cursor: pointer;
   zoom: 1.4;
