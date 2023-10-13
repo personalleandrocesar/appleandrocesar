@@ -1,22 +1,21 @@
 <script setup>
-import { ref } from 'vue'
-import { useRouter } from 'vue-router'
+import { ref } from 'vue';
+const router = useRouter()
 
 const user = ref('')
 const senha = ref('')
 const sendReply = ref('')
-const router = useRouter()
 
-const enterClicked = () => {
+const enterClicked = computed(() => {
     if (user.value === 'admin' && senha.value === '1234') {
-        router.replace('/home')
+        router.redirectedFrom(`/user/${router.params.id}/avaliacao`)
     } else if (user.value === 'camillafigueiredo' && senha.value === 'figueiredo@Ca') {
         router.replace('/camilla-figueiredo')
     }
-}
+})
 
 const trigger = () => {
-    sendReply.value.click()
+    re
 }
 
 const scrollToTop = () => {
@@ -37,15 +36,15 @@ const created = () => {
                     <h3>Acesse sua conta</h3>
                     <div>
                         <div>
-                            <h4>E-mail</h4>
-                            <input type="email" name="" id="usuario" placeholder="Digite seu e-mail" autofocus v-model="nome">
+                            <h4>Usuário</h4>
+                            <input type="email" name="" id="usuario" placeholder="Digite seu e-mail" autofocus v-model="user">
                             <br>
                             <h4>Senha</h4>
                             <input type="password" @keyup.enter="trigger" name="" id="senha" placeholder="Digite sua senha"
                                 v-model="senha">
                             <br>
                             <div>
-                                <input class='button-call' type="submit" value="ENTRAR" id="btn" @click="enterClicked"
+                                <input class='button-call' type="submit" value="ENTRAR" id="btn" :click="enterClicked"
                                     ref="sendReply">
                                 <a href="https://api.whatsapp.com/send?phone=5521936184024%20&text=Ol%C3%A1%20professor!%20Esqueci%20o%20meu%20email%20e%20minha%20senha!"
                                     target="_blank">
@@ -60,7 +59,8 @@ const created = () => {
 </template>
 <style scoped>
 #login {
-    font-family: "Philosopher";
+    background-color: #095d62;
+    min-height: 100vh;
 }
 
 
@@ -71,7 +71,6 @@ const created = () => {
     flex-direction: column;
     align-items: center;
     flex-wrap: wrap;
-    margin: 20px 0 0px 0;
 }
 
 .logo h1 {
@@ -212,4 +211,5 @@ style {
 }
 
 
-@media only screen and (max-width: 369px) {}</style>
+@media only screen and (max-width: 369px) {}
+</style>

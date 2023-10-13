@@ -1,8 +1,3 @@
-<script setup>
-import LCLogoTree from '../components/LCLogoTree.vue'
-</script>
-
-
 <template>
     <div id="login">
         <div>
@@ -44,7 +39,7 @@ export default {
     methods: {
         enterClicked() {
             if (this.user === 'admin' & this.senha === '1234') {
-                this.$router.replace('/home')
+                this.$router.replace('/admin')
             } if (this.user === 'camillafigueiredo' & this.senha === 'figueiredo@Ca') {
                 this.$router.replace('/user/camilla-figueiredo')
             } if (this.user === 'beatrizlopes' & this.senha === 'lopes@Be') {
@@ -63,7 +58,6 @@ export default {
 </script>
 <style scoped>
 #login {
-    font-family: "Philosopher";
     background-color: #095d62;
     min-height: 100vh;
 }
