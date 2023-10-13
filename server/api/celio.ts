@@ -3,7 +3,6 @@ export default defineEventHandler((event) => {
       "nome": "Célio ",
       "nomeCompleto": "Jucélio Carmo de Oliveira",
       "email": "celiacarmo76@gmail.com",
-      "senha": "1234",
       "numade": 47,
       "avaliação": {
         "massa": 74,

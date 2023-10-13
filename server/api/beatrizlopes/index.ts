@@ -4,7 +4,7 @@ export default defineEventHandler((event) => {
     "nomeCompleto": "Beatriz Rocha Lopes",
     "email": "beabentos2@gmail.com",
     "senha": "lopes@Be",
-    "foto": "https://m.leandrocesar.com/img/beatriz-lopes.png",
+    "foto": "https://m.leandrocesar.com/img/beatrizlopes.png",
 
     "objetivo": "Diminuir %G.",
     "tempo": "60 min.",
