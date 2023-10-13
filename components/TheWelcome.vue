@@ -1,61 +1,61 @@
+<script setup>
+import { identity } from '@vueuse/core';
+import { ref } from 'vue';
+const route = useRoute()
+
+const user = ref('')
+const senha = ref('')
+const sendReply = ref('')
+
+const client = await useFetch('/api/users')
+
+
+
+const enterClicked = () => {
+    if (user.value === client.data.value[user.value].usuario && senha.value === client.data.value[user.value].sennha ) {
+        return navigateTo(`/user/${client.data.value[user.value].usuario}`)
+    } return navigateTo("/")
+    
+}
+
+
+
+const trigger = () => {
+    sendReply.value.click()
+}
+
+</script>
+
 <template>
     <div id="login">
-        <div>
-            <div class='logo'>
-                <LCLogoTree />
-                <h1>m.leandrocesar.com</h1>
-                <h3>Acesse sua conta</h3>
-                <div>
+            <div>
+                <div class='logo'>
+                    <LCLogoTree />
+                    <h1>m.leandrocesar.com</h1>
+                    <h3>Acesse sua conta</h3> 
                     <div>
-                        <h4>Usuário</h4>
-                        <input type="user" name="" id="usuario" placeholder="Digite seu usuário" autofocus v-model="user">
-                        <br>
-                        <h4>Senha</h4>
-                        <input type="password" @keyup.enter="trigger" name="" id="senha" placeholder="Digite sua senha"
-                            v-model="senha">
-                        <br>
                         <div>
-                            <input class='button-call' type="submit" value="ENTRAR" id="btn" @click="enterClicked"
-                                ref="sendReply">
-                            <a href="https://api.whatsapp.com/send?phone=5521936184024%20&text=Ol%C3%A1%20professor!%20Esqueci%20o%20meu%20user%20e%20minha%20senha!"
-                                target="_blank">
-                                <h5>Esqueci minha senha</h5>
-                            </a>
+                            <h4>Usuário</h4>
+                            <input type="email" name="" id="usuario" placeholder="Digite seu usuário" autofocus v-model="user">
+                            <br>
+                            <h4>Senha</h4>
+                            <input type="password" @keyup.enter="trigger" name="" id="senha" placeholder="Digite sua senha"
+                                v-model="senha">
+                            <br>
+                            <div>
+                                <input class='button-call' type="submit" value="ENTRAR" id="btn" @click="enterClicked"
+                                    ref="sendReply">
+                                <a href="https://api.whatsapp.com/send?phone=5521936184024%20&text=Ol%C3%A1%20professor!%20Esqueci%20o%20meu%20email%20e%20minha%20senha!"
+                                    target="_blank">
+                                    <h5>Esqueci minha senha</h5>
+                                </a>
+                            </div>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
-    </div>
 </template>
-<script>
-export default {
-    data() {
-        return {
-            user: '',
-            senha: '',
-        }
-    },
-    methods: {
-        enterClicked() {
-            if (this.user === 'admin' & this.senha === '1234') {
-                this.$router.replace('/admin')
-            } if (this.user === 'camillafigueiredo' & this.senha === 'figueiredo@Ca') {
-                this.$router.replace('/user/camilla-figueiredo')
-            } if (this.user === 'beatrizlopes' & this.senha === 'lopes@Be') {
-                this.$router.replace('/user/beatriz-lopes')
-            }
-        },
-        trigger() {
-            this.$refs.sendReply.click()
-        }
-    },
-
-    scrollToTop() {
-        window.scrollTo(0, 0);
-    }
-}
-</script>
 <style scoped>
 #login {
     background-color: #095d62;
@@ -210,4 +210,5 @@ style {
 }
 
 
-@media only screen and (max-width: 369px) {}</style>
+@media only screen and (max-width: 369px) {}
+</style>

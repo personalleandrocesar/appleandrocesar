@@ -1,62 +1,61 @@
-<script setup>
-import { ref } from 'vue';
-const router = useRouter()
-
-const user = ref('')
-const senha = ref('')
-const sendReply = ref('')
-
-const enterClicked = computed(() => {
-    if (user.value === 'admin' && senha.value === '1234') {
-        router.redirectedFrom(`/user/${router.params.id}/avaliacao`)
-    } else if (user.value === 'camillafigueiredo' && senha.value === 'figueiredo@Ca') {
-        router.replace('/camilla-figueiredo')
-    }
-})
-
-const trigger = () => {
-    re
-}
-
-const scrollToTop = () => {
-    window.scrollTo(0, 0)
-}
-
-const created = () => {
-    console.log('the component is now mounted.')
-}
-</script>
-
 <template>
     <div id="login">
-            <div>
-                <div class='logo'>
-                    <LCLogoTree />
-                    <h1>app.leandrocesar.com</h1>
-                    <h3>Acesse sua conta</h3>
+        <div>
+            <div class='logo'>
+                <LCLogoTree />
+                <h1>m.leandrocesar.com</h1>
+                <h3>Acesse sua conta</h3>
+                <div>
                     <div>
+                        <h4>Usuário</h4>
+                        <input type="user" name="" id="usuario" placeholder="Digite seu usuário" autofocus v-model="user">
+                        <br>
+                        <h4>Senha</h4>
+                        <input type="password" @keyup.enter="trigger" name="" id="senha" placeholder="Digite sua senha"
+                            v-model="senha">
+                        <br>
                         <div>
-                            <h4>Usuário</h4>
-                            <input type="email" name="" id="usuario" placeholder="Digite seu e-mail" autofocus v-model="user">
-                            <br>
-                            <h4>Senha</h4>
-                            <input type="password" @keyup.enter="trigger" name="" id="senha" placeholder="Digite sua senha"
-                                v-model="senha">
-                            <br>
-                            <div>
-                                <input class='button-call' type="submit" value="ENTRAR" id="btn" :click="enterClicked"
-                                    ref="sendReply">
-                                <a href="https://api.whatsapp.com/send?phone=5521936184024%20&text=Ol%C3%A1%20professor!%20Esqueci%20o%20meu%20email%20e%20minha%20senha!"
-                                    target="_blank">
-                                    <h5>Esqueci minha senha</h5>
-                                </a>
-                            </div>
+                            <input class='button-call' type="submit" value="ENTRAR" id="btn" @click="enterClicked"
+                                ref="sendReply">
+                            <a href="https://api.whatsapp.com/send?phone=5521936184024%20&text=Ol%C3%A1%20professor!%20Esqueci%20o%20meu%20user%20e%20minha%20senha!"
+                                target="_blank">
+                                <h5>Esqueci minha senha</h5>
+                            </a>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
+    </div>
 </template>
+<script>
+export default {
+    data() {
+        return {
+            user: '',
+            senha: '',
+        }
+    },
+    methods: {
+        enterClicked() {
+            if (this.user === 'admin' & this.senha === '1234') {
+                this.$router.replace('/admin')
+            } if (this.user === 'camillafigueiredo' & this.senha === 'figueiredo@Ca') {
+                this.$router.replace('/user/camilla-figueiredo')
+            } if (this.user === 'beatrizlopes' & this.senha === 'lopes@Be') {
+                this.$router.replace('/user/beatriz-lopes')
+            }
+        },
+        trigger() {
+            this.$refs.sendReply.click()
+        }
+    },
+
+    scrollToTop() {
+        window.scrollTo(0, 0);
+    }
+}
+</script>
 <style scoped>
 #login {
     background-color: #095d62;
@@ -211,5 +210,4 @@ style {
 }
 
 
-@media only screen and (max-width: 369px) {}
-</style>
+@media only screen and (max-width: 369px) {}</style>
