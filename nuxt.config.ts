@@ -3,7 +3,7 @@ export default defineNuxtConfig({
   devtools: { enabled: true },
   routeRules: {
     // Homepage pre-rendered at build time
-    '/': { redirect: '/https://app.leandrocesar.com' },
+    '/': { redirect: 'https://app.leandrocesar.com' },
     // Blog post generated on-demand once until next deploy
     '/user/**': { isr: true },
     // Admin dashboard renders only on client-side
