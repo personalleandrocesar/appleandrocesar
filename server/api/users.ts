@@ -4,5 +4,6 @@ export default defineEventHandler((event) => {
     "camillafigueiredo": {"usuario": "camillafigueiredo", "sennha": "figueiredo@Ca"},
     "beatrizlopes": {"usuario": "beatrizlopes", "sennha": "lopes@Be"},
     "celiooliveira": {"usuario": "celiooliveira", "sennha": "oliveira@Ce"},
+    "rosanaassis": {"usuario": "rosanaassis", "sennha": "assis@Ro"},
   }    
 })
