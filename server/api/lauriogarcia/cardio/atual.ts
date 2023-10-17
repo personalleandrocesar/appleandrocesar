@@ -1,7 +1,7 @@
 export default defineEventHandler((event) => {
     return {
         // Treino A
-        "cardioA": "Escada",
+        "cardioA": "Esteira",
         "cardioATime": "15 minutos",
         "cardioADescription": "Esteira: 15' de forma constante, que não fique com falta de ar, no ritmo que dê para conversar com alguém, naõ ficar ofegante.",
         // Treino B
