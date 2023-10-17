@@ -1,14 +1,13 @@
-<script setup>
-useHead({
-  titleTemplate: 'Home',
-})
-definePageMeta({
-  layout: "home",
-});
-</script>
-
 <template>
-  <NuxtLayout :name="layout">
-    <Admin/>
+  <NuxtLayout>
+
+    <Admin />
   </NuxtLayout>
 </template>
+
+<style>
+body {
+  background: #fff;
+  color: #616161;
+}
+</style>
