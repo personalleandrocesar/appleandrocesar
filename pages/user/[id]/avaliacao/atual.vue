@@ -1,6 +1,6 @@
 <script setup>
 import { ref, computed } from 'vue'
-const layout = "hello"
+const layout = "valuation"
 const route = useRoute()
 
 const { data, error, refresh } = await useFetch(`/api/${route.params.id}/avaliacao/atual`)
@@ -869,7 +869,7 @@ th, td {
 
 .conf {
     text-align: left;
-    margin-top: 110px;
+    margin-top: 100px
 }
 
 .main-div-one {
@@ -889,7 +889,7 @@ th, td {
     align-items: flex-end;
     text-align: left;
     margin: 0 0 10px 0;
-    margin-top: 170px;
+    margin-top: 50px;
 }
 .main-div-one:nth-child(2) {
     overflow-x: hidden;

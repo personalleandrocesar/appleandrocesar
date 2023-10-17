@@ -1,6 +1,6 @@
 <script setup>
 import { ref, computed } from 'vue'
-const layout = "hello"
+const layout = "valuation"
 const route = useRoute()
 
 const { data, error, refresh } = await useFetch(`/api/${route.params.id}/avaliacao/atual`)
@@ -161,7 +161,7 @@ body {
 }
 
 .main-div-two {
-    margin-top: 170px;
+    margin-top: 100px;
     overflow-x: auto;
     display: flex;
     flex-direction: column;

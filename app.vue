@@ -1,7 +1,7 @@
 <script setup>
 
 useHead({
-  titleTemplate: 'App Leandro Cesar',  
+  titleTemplate: 'app leandro cesar',  
 })
 
 const counter = useCookie('counter')
