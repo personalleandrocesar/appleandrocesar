@@ -81,7 +81,7 @@ function openPhoto() {
                 <h2>
                   {{ data.nomeCompleto }}
                 </h2>
-                <p>
+                <p v-if="data.email">
                   {{ data.email }}
                 </p>
             </div>

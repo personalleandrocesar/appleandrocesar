@@ -2,9 +2,8 @@ export default defineEventHandler((event) => {
   return {
     "nome": "Roberta",
     "nomeCompleto": "Roberta moura",
-    "email": "seu@email.com",
+    "email": "",
     "foto": "https://m.leandrocesar.com/img/robertamoura.png",
-
     "objetivo": "Hipertrofia",
     "tempo": "60 min.",
     "dias": "4-5 dias",
