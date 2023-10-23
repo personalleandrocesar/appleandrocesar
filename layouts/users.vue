@@ -74,6 +74,12 @@ function openPhoto() {
             <nuxt-link to="/home">Home</nuxt-link>
             <nuxt-link to="/home">Home</nuxt-link>
           </div>
+          <!-- Botão Logout -->
+          <NuxtLink to="/" class="logout">
+            <Icon name="solar:logout-3-bold"/>
+            LOUGOUT
+          </NuxtLink>
+          <!--  -->
         </div>
 
 
@@ -94,7 +100,6 @@ function openPhoto() {
 
 
 
-        
       </div>
       <slot />
       <navBottom/>
@@ -321,6 +326,28 @@ function openPhoto() {
     border-top: 3px solid #05959c40;
 }
 
+.logout{
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  font-weight: 800;
+  position: fixed;
+  bottom: 15px;
+  left: 50%;
+  width: 120px;
+  margin-left: -60px;
+  border: solid .2px #fadb4150;
+  border-radius: 15px;
+  padding: 5px;
+}
 
+.logout .icon {
+  margin: 1px 3px 0 0;
+}
+
+.logout:hover{
+  background-color: #05959c40;
+  color: white;
+}
 
 </style>
