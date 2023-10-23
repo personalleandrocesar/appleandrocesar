@@ -4,7 +4,6 @@ const layout = "users"
 
 <template>
     <NuxtLayout :name="layout">
-        
         <TimeLine/>
         <NuxtPage />
     </NuxtLayout>

@@ -143,7 +143,7 @@ function openPhoto() {
   cursor: pointer;
   zoom: 1.4;
   position: fixed;
-  left: 12px;
+  left: 15px;
   top: 12px;
   color: #fff;
 }
