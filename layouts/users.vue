@@ -76,8 +76,7 @@ function openPhoto() {
           </div>
           <!-- Botão Logout -->
           <NuxtLink to="/" class="logout">
-            <Icon name="solar:logout-3-bold"/>
-            LOUGOUT
+            LOUGOUT <Icon name="solar:logout-3-bold"/>
           </NuxtLink>
           <!--  -->
         </div>
@@ -342,7 +341,7 @@ function openPhoto() {
 }
 
 .logout .icon {
-  margin: 1px 3px 0 0;
+  margin: 1px 0px 0 3px;
 }
 
 .logout:hover{

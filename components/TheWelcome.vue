@@ -17,9 +17,8 @@ const enterClicked = () => {
 }
 
 
-
 const trigger = () => {
-    sendReply.value.click()
+    enterClicked()
 }
 
 </script>
@@ -41,8 +40,9 @@ const trigger = () => {
               v-model="senha">
           <br>
           <div>
-          <input class='button-call' type="submit" value="ENTRAR" id="btn" @click="enterClicked"
-              ref="sendReply">
+          <NuxtLink class='login' @click="enterClicked">
+                LOGIN <Icon name="solar:login-3-bold"/>
+            </NuxtLink>
           <a href="https://api.whatsapp.com/send?phone=5521936184024%20&text=Ol%C3%A1%20professor!%20Esqueci%20o%20meu%20email%20e%20minha%20senha!"
               target="_blank">
           <h5>Esqueci minha senha</h5>
@@ -207,6 +207,28 @@ style {
     background-color: black;
 }
 
+.login{
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  font-weight: 800;
+  margin-top: 0px;
+  width: 140px;
+  margin: auto;
+  border: solid .2px #fadb4150;
+  border-radius: 15px;
+  padding: 3px;
+  color:#fadb41
+}
+
+.login .icon {
+  margin: 1px 3px 0 0;
+}
+
+.login:hover{
+  background-color: #05959c40;
+  color: white;
+}
 
 @media only screen and (max-width: 369px) {}
 </style>
