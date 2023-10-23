@@ -70,9 +70,18 @@ function openPhoto() {
           </div>
 
           </div>
-            <nuxt-link to="/home">Home</nuxt-link>
-            <nuxt-link to="/home">Home</nuxt-link>
-            <nuxt-link to="/home">Home</nuxt-link>
+          <NuxtLink to="/" class="menu-button">
+            <Icon name="solar:logout-3-bold"/>
+            LOUGOUT 
+          </NuxtLink>
+          <NuxtLink to="/" class="menu-button">
+            <Icon name="solar:logout-3-bold"/>
+            LOUGOUT 
+          </NuxtLink>
+          <NuxtLink to="/" class="menu-button">
+            <Icon name="solar:logout-3-bold"/>
+            LOUGOUT 
+          </NuxtLink>
           </div>
           <!-- Botão Logout -->
           <NuxtLink to="/" class="logout">
@@ -333,8 +342,8 @@ function openPhoto() {
   position: fixed;
   bottom: 15px;
   left: 50%;
-  width: 120px;
-  margin-left: -60px;
+  width: 250px;
+  margin-left: -125px;
   border: solid .2px #fadb4150;
   border-radius: 15px;
   background-color: #05959c40;
@@ -357,5 +366,34 @@ function openPhoto() {
 .logout:hover .icon{
     margin: 1px 0px 0px 6px;
     transform:translateX(0px);
+}
+.menu-button{
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  font-weight: 800;
+  width: 85%;
+  padding: 5px;
+  margin: 2px auto;
+  color: white;
+  border-radius: 15px;
+  background-color: #05959c10;
+}
+
+.menu-button .icon {
+    margin: 7px 0px 0px 6px;
+    transition: transform .3s linear;
+    transform:translateX(-15px);
+}
+
+.menu-button:hover{
+    color:#fadb41;
+    background-color: #05959c60;
+    cursor: pointer;
+    width: 85%;
+}
+
+.menu-button:hover .icon{
+    transform:translateX(-8px);
 }
 </style>

@@ -33,7 +33,7 @@ const trigger = () => {
       <div>
         <div>
           <h4>Usuário</h4>
-          <input type="email" name="" id="usuario" placeholder="Digite seu usuário" autofocus v-model="user">
+          <input type="email" @keyup.enter="trigger" name="" id="usuario" placeholder="Digite seu usuário" autofocus v-model="user">
           <br>
           <h4>Senha</h4>
           <input type="password" @keyup.enter="trigger" name="" id="senha" placeholder="Digite sua senha"
