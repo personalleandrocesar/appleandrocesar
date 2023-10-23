@@ -337,16 +337,25 @@ function openPhoto() {
   margin-left: -60px;
   border: solid .2px #fadb4150;
   border-radius: 15px;
-  padding: 5px;
-}
-
-.logout .icon {
-  margin: 1px 0px 0 3px;
-}
-
-.logout:hover{
   background-color: #05959c40;
+  padding: 5px;
   color: white;
 }
 
+.logout .icon {
+    margin: 1px 0px 0px 6px;
+    transition: transform .3s linear;
+    transform:translateX(3px);
+}
+
+.logout:hover{
+    color:#fadb41;
+    background-color: #05959c60;
+    cursor: pointer;
+}
+
+.logout:hover .icon{
+    margin: 1px 0px 0px 6px;
+    transform:translateX(0px);
+}
 </style>

@@ -88,7 +88,7 @@ input {
     text-indent: 0;
     background: #fff;
     width: 100%;
-    border-radius: 8px 8px 8px 8px;
+    border-radius: 15px;
     display: flex;
     justify-content: center;
     flex-direction: column;
@@ -218,16 +218,24 @@ style {
   border: solid .2px #fadb4150;
   border-radius: 15px;
   padding: 3px;
-  color:#fadb41
+  background-color: #05959c40;
+  color: white;
 }
 
 .login .icon {
-  margin: 1px 3px 0 0;
+    margin: 1px 0px 0px 6px;
+    transition: transform .3s linear;
 }
 
 .login:hover{
-  background-color: #05959c40;
-  color: white;
+    color:#fadb41;
+    background-color: #05959c60;
+    cursor: pointer;
+}
+
+.login:hover .icon{
+    margin: 1px 0px 0px 6px;
+    transform:translateX(4px);
 }
 
 @media only screen and (max-width: 369px) {}
