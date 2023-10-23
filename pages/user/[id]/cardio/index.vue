@@ -57,10 +57,7 @@ function openDivTree() {
                 </h3>
             </div>
             <div class="main-div-two"  >
-                <nuxt-link @click="openDivOne" class="square" :class="{ squared: divAplicar }" >
-
-
-
+                <nuxt-link v-if="dataTreino.data.value.cardioA" @click="openDivOne" class="square" :class="{ squared: divAplicar }" >
                     <div>
                         <h4>
                             TREINO
@@ -79,7 +76,7 @@ function openDivTree() {
 
                     </div>
                 </nuxt-link>
-                <nuxt-link @click="openDivTwo" class="square" :class="{ squared: divAplicarTwo }">
+                <nuxt-link v-if="dataTreino.data.value.cardioB" @click="openDivTwo" class="square" :class="{ squared: divAplicarTwo }">
                     <div>
                         <h4>
                             TREINO
@@ -99,7 +96,7 @@ function openDivTree() {
                     </div>
                 </nuxt-link>
 
-                <nuxt-link @click="openDivTree" class="square" :class="{ squared: divAplicarTree }">
+                <nuxt-link v-if="dataTreino.data.value.cardioC" @click="openDivTree" class="square" :class="{ squared: divAplicarTree }">
                     <div>
                         <h4>
                             TREINO
@@ -175,9 +172,9 @@ function openDivTree() {
                 </div>
                 <div v-else class="info" >
                     <div class="arrowUp">
-                        <Icon name="ic:round-arrow-drop-up" />
-                        <Icon name="ic:round-arrow-drop-up" />
-                        <Icon name="ic:round-arrow-drop-up" />
+                        <Icon v-if="dataTreino.data.value.cardioA" name="ic:round-arrow-drop-up" />
+                        <Icon v-if="dataTreino.data.value.cardioB" name="ic:round-arrow-drop-up" />
+                        <Icon v-if="dataTreino.data.value.cardioC" name="ic:round-arrow-drop-up" />
                     </div>
                         <h5>Clique acima e veja detalhes do Cardio do dia!</h5>
                 </div>
