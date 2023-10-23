@@ -4,7 +4,7 @@
 
 <style scoped>
 svg {
-  margin: 50px auto -70px auto;
+  margin: 80px auto -70px auto;
 }
 .canva path {
   fill: #aaa;

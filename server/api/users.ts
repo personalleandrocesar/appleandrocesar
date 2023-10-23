@@ -6,5 +6,6 @@ export default defineEventHandler((event) => {
     "celiooliveira": {"usuario": "celiooliveira", "sennha": "oliveira@Ce"},
     "rosanaassis": {"usuario": "rosanaassis", "sennha": "assis@Ro"},
     "lauriogarcia": {"usuario": "lauriogarcia", "sennha": "garcia@La"},
+    "camilladimas": {"usuario": "camilladimas", "sennha": "dimas@Ca"},
   }    
 })
