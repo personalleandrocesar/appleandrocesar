@@ -15,6 +15,8 @@ function scrollToTop() {
     window.scrollTo(0, 0);
 }
 
+const dataConf = await useFetch(`/api/${route.params.id}`)
+
 </script>
 
 <template>
@@ -25,13 +27,13 @@ function scrollToTop() {
             <nuxt-link :to="`/user/${route.params.id}/treino`" @click.native="scrollToTop()">
                 <Icon name='material-symbols:exercise' />
             </nuxt-link>
-            <nuxt-link :to="`/user/${route.params.id}/treino/a`" @click.native="scrollToTop()">
+            <nuxt-link v-if="dataConf.data.value.treinoA" :to="`/user/${route.params.id}/treino/a`" @click.native="scrollToTop()">
                 <Icon name='mdi:alpha-a' />
             </nuxt-link>
-            <nuxt-link :to="`/user/${route.params.id}/treino/b`" @click.native="scrollToTop()">
+            <nuxt-link v-if="dataConf.data.value.treinoB" :to="`/user/${route.params.id}/treino/b`" @click.native="scrollToTop()">
                 <Icon name='mdi:alpha-b' />
             </nuxt-link>
-            <nuxt-link :to="`/user/${route.params.id}/treino/c`" @click.native="scrollToTop()">
+            <nuxt-link v-if="dataConf.data.value.treinoC" :to="`/user/${route.params.id}/treino/c`" @click.native="scrollToTop()">
                 <Icon name='mdi:alpha-c' />
             </nuxt-link>
             <nuxt-link :to="`/user/${route.params.id}/cardio`" @click.native="scrollToTop()">
@@ -212,6 +214,7 @@ function scrollToTop() {
 .nav-bottom {
     display: flex;
     flex-direction: row;
+    justify-content: space-around;
     position: fixed;
     bottom: 10px;
     left: 18%;

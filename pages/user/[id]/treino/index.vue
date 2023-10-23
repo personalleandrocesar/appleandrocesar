@@ -10,27 +10,6 @@ function openPhoto() {
 
 
 const dataConf = await useFetch(`/api/${route.params.id}`)
-const dataTreino = await useFetch(`/api/${route.params.id}/treino/atual/a`)
-
-const treino = ref(0)
-
-const currentExercise = computed(() => {
-  return dataTreino.data.value[treino.value]
-})
-
-const pending = ref(false)
-
-const previousExercise = () => {
-  if (treino.value > 0) {
-    treino.value--
-  }
-}
-
-const nextExercise = () => {
-  if (treino.value < dataTreino.data.value.length - 1) {
-    treino.value++
-  }
-}
 </script>
 
 <template>
@@ -43,10 +22,7 @@ const nextExercise = () => {
         <h3>
               <Icon name='material-symbols:exercise' /> TREINOS 
             </h3>
-        <nuxt-link class="square" :to="`/user/${route.params.id}/treino/a`">
-
-      
-
+        <nuxt-link v-if="dataConf.data.value.treinoA" class="square" :to="`/user/${route.params.id}/treino/a`">
             <div>
               <h4>
                 <Icon name='material-symbols:exercise' /> 
@@ -72,7 +48,7 @@ const nextExercise = () => {
           </nuxt-link>
 
           
-        <nuxt-link class="square" :to="`/user/${route.params.id}/treino/b`">
+        <nuxt-link v-if="dataConf.data.value.treinoB" class="square" :to="`/user/${route.params.id}/treino/b`">
         <div>
                 <h4>
                   <Icon name='material-symbols:exercise' /> 
@@ -97,7 +73,7 @@ const nextExercise = () => {
               </div>
         </nuxt-link>
             
-        <nuxt-link class="square" :to="`/user/${route.params.id}/treino/c`">
+        <nuxt-link v-if="dataConf.data.value.treinoC" class="square" :to="`/user/${route.params.id}/treino/c`">
           <div>
                 <h4>
                   <Icon name='material-symbols:exercise' /> 

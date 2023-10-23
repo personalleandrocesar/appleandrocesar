@@ -1,7 +1,5 @@
 <script setup>
-import { identity } from '@vueuse/core';
 import { ref } from 'vue';
-const route = useRoute()
 
 const user = ref('')
 const senha = ref('')
