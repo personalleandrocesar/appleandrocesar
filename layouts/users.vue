@@ -371,7 +371,7 @@ function openPhoto() {
 .logout .icon {
     margin: 1px 0px 0px 6px;
     transition: transform .3s linear;
-    transform:translateX(3px);
+    transform:translateX(8px);
 }
 
 .logout:hover{
@@ -414,6 +414,11 @@ function openPhoto() {
     transition: transform .3s linear;
     transform:translateX(-15px);
 }
+.menu-button .icon:nth-child(2) {
+    margin: 7px 0px 0px 26px;
+    transition: transform .3s linear;
+    transform:translateX(-25px);
+}
 
 .menu-button:hover{
     color:#fadb41;
@@ -422,7 +427,7 @@ function openPhoto() {
     border-bottom: solid .2px #fadb4160;
 }
 
-.menu-button:hover .icon{
-
+.menu-button:hover .icon:nth-child(2){
+ transform:translateX(-15px);
 }
 </style>

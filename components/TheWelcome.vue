@@ -235,7 +235,7 @@ style {
 
 .login:hover .icon{
     margin: 1px 0px 0px 6px;
-    transform:translateX(4px);
+    transform:translateX(6px);
 }
 
 @media only screen and (max-width: 369px) {}
