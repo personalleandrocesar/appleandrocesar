@@ -73,9 +73,9 @@ function openPhoto() {
           <br>
           <NuxtLink class="menu-button">
             <div>
-              <Icon name="solar:logout-3-bold"/>
+              <Icon name="solar:documents-line-duotone"/>
               <p>
-                LOUGOUT 
+                Atividades
               </p>
             </div>
             <Icon name="ic:baseline-keyboard-arrow-right"/>
