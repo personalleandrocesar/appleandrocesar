@@ -70,17 +70,34 @@ function openPhoto() {
           </div>
 
           </div>
-          <NuxtLink to="/" class="menu-button">
-            <Icon name="solar:logout-3-bold"/>
-            LOUGOUT 
+          <br>
+          <NuxtLink class="menu-button">
+            <div>
+              <Icon name="solar:logout-3-bold"/>
+              <p>
+                LOUGOUT 
+              </p>
+            </div>
+            <Icon name="ic:baseline-keyboard-arrow-right"/>
           </NuxtLink>
-          <NuxtLink to="/" class="menu-button">
-            <Icon name="solar:logout-3-bold"/>
-            LOUGOUT 
+          <p class="section-title">Documentos</p>
+          <NuxtLink class="menu-button">
+            <div>
+              <Icon name="solar:document-add-linear"/>
+              <p>
+                Contrato
+              </p>
+            </div>
+            <Icon name="ic:baseline-keyboard-arrow-right"/>
           </NuxtLink>
-          <NuxtLink to="/" class="menu-button">
-            <Icon name="solar:logout-3-bold"/>
-            LOUGOUT 
+          <NuxtLink class="menu-button">
+            <div>
+              <Icon name="solar:document-text-linear"/>
+              <p>
+                Termos de uso
+              </p>
+            </div>
+            <Icon name="ic:baseline-keyboard-arrow-right"/>
           </NuxtLink>
           </div>
           <!-- Botão Logout -->
@@ -367,21 +384,33 @@ function openPhoto() {
     margin: 1px 0px 0px 6px;
     transform:translateX(0px);
 }
+
+.section-title {
+  color: #ccc;
+  text-align: left;
+  margin: 10px 16px;
+}
 .menu-button{
   display: flex;
   flex-direction: row;
-  justify-content: center;
+  justify-content: space-between;
   font-weight: 800;
-  width: 85%;
+  width: 100%;
   padding: 5px;
-  margin: 2px auto;
+  margin: 1px auto;
   color: white;
-  border-radius: 15px;
   background-color: #05959c10;
+  border-bottom: solid .2px #fadb4110;
+}
+.menu-button div{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  
 }
 
 .menu-button .icon {
-    margin: 7px 0px 0px 6px;
+    margin: 7px 0px 0px 26px;
     transition: transform .3s linear;
     transform:translateX(-15px);
 }
@@ -390,10 +419,10 @@ function openPhoto() {
     color:#fadb41;
     background-color: #05959c60;
     cursor: pointer;
-    width: 85%;
+    border-bottom: solid .2px #fadb4160;
 }
 
 .menu-button:hover .icon{
-    transform:translateX(-8px);
+
 }
 </style>
