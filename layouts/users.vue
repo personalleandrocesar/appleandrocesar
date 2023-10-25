@@ -46,9 +46,9 @@ function openPhoto() {
 
       <div v-if="navbarOpen" class="nav-bar">
         <div>
-          <nuxt-link @click="openNavbar" class="button"><Icon name='material-symbols:cancel-rounded'/></nuxt-link>
+          <nuxt-link @click="openNavbar" class="button-cancel"><Icon name='material-symbols:cancel-rounded'/></nuxt-link>
+          <nuxt-link class="old-msg"><Icon name='mdi:email-open-multiple-outline'/></nuxt-link>
         </div>
-
         
         <div class="nav-top">
           
@@ -84,7 +84,6 @@ function openPhoto() {
                 </p>
                 <div>
                   <div>
-                  fhb
                   </div>
                 </div>
               </div>
@@ -100,6 +99,7 @@ function openPhoto() {
           </div>
           </div>
           <br>
+          <!-- Hístórico -->
           <NuxtLink class="menu-button">
             <div>
               <Icon name="solar:history-outline"/>
@@ -109,6 +109,9 @@ function openPhoto() {
             </div>
             <Icon name="ic:baseline-keyboard-arrow-right"/>
           </NuxtLink>
+          <!-- Histórico fim -->
+
+          <!-- Documentos -->
           <p class="section-title">Documentos</p>
           <NuxtLink class="menu-button">
             <div>
@@ -128,7 +131,35 @@ function openPhoto() {
             </div>
             <Icon name="ic:baseline-keyboard-arrow-right"/>
           </NuxtLink>
+          <!-- Documentos fim -->
           </div>
+          <!-- ícones de rede sociais -->
+          <div class="icons">
+
+            <NuxtLink to="https://personal.leandrocesar.com" target="_blank">
+              <div>
+                <Icon name="mdi:web"/>
+              </div>
+            </NuxtLink>     
+            <NuxtLink to="https://instagram.com/personalleandrocesar" target="_blank">
+              <div>
+                <Icon name="fa6-brands:instagram"/>
+              </div>
+            </NuxtLink>     
+            <NuxtLink to="https://threads.net/personalleandrocesar" target="_blank">
+              <div>
+                <Icon name="fa6-brands:threads"/>
+              </div>
+            </NuxtLink>     
+            <NuxtLink to="https://personal.leandrocesar.com/blog" target="_blank">
+              <div>
+                <Icon name="fa6-solid:blog"/>
+              </div>
+            </NuxtLink>     
+            
+          </div>
+          <!--  -->
+
           <!-- Botão Logout -->
           <NuxtLink to="/" class="logout">
             LOUGOUT <Icon name="solar:logout-3-bold"/>
@@ -198,19 +229,37 @@ function openPhoto() {
   margin: 5px 15px 30px 10px;
 }
 
-.button .icon {
+.button-cancel .icon {
   cursor: pointer;
   zoom: 1.4;
   position: fixed;
   left: 15px;
   top: 12px;
   color: #fff;
+  border-radius: 50%;  
+  transition: all .4s linear;
 }
 
-.button .icon:hover {
+.button-cancel .icon:hover {
   cursor: pointer;
   border-radius: 50%;  
-  background-color: #ffffff50;
+  background-color: #fadb4190;
+}
+
+.old-msg .icon {
+  cursor: pointer;
+  zoom: 1.4;
+  position: fixed;
+  right: 20px;
+  top: 15px;
+  color: #ddd;
+  transition: all .4s linear;
+  zoom: 1.2
+}
+
+.old-msg .icon:hover {
+  cursor: pointer;
+  color: #fff;
 }
 
 .nav-top{
@@ -378,6 +427,29 @@ function openPhoto() {
       background-color: #095D6210;
     border: 2px solid #05959c20;
     border-top: 3px solid #05959c40;
+}
+
+.icons {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  font-weight: 800;
+  position: fixed;
+  bottom: 70px;
+  width: 100%;
+  padding: 5px;
+  color: #fadb41;
+}
+.icons a{
+  zoom: 1.2;
+  display: flex;
+  flex-direction: row;
+}
+.icons a:hover{
+  zoom: 1.2;
+  display: flex;
+  flex-direction: row;
+  color: #fff;
 }
 
 .logout{
