@@ -88,12 +88,16 @@ input {
     text-indent: 0;
     background: #fff;
     width: 100%;
-    border-radius: 15px;
+    border-radius: 20px;
     display: flex;
     justify-content: center;
     flex-direction: column;
     border: solid 2px #eee;
+    padding: 3px;
     padding-left: 20px;
+
+    height: 2.4em;
+    
 }
 
 input:focus {
@@ -216,7 +220,7 @@ style {
   width: 140px;
   margin: auto;
   border: solid .2px #fadb4150;
-  border-radius: 15px;
+  border-radius: 20px;
   padding: 3px;
   background-color: #05959c40;
   color: white;

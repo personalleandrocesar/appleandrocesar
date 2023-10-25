@@ -68,7 +68,25 @@ function openPhoto() {
                 </p>
             </div>
           </div>
-
+          <div class="menu-div-one">
+            <p class="section-title">Documentos</p>
+            <NuxtLink class="menu-square">
+              <div>
+                <Icon name="fluent:person-running-20-regular"/>
+                <p>
+                  Atividades
+                </p>
+              </div>
+            </NuxtLink>
+            <NuxtLink class="menu-square">
+              <div>
+                <Icon name="fluent:person-running-20-regular"/>
+                <p>
+                  Atividades
+                </p>
+              </div>
+            </NuxtLink>
+          </div>
           </div>
           <br>
           <NuxtLink class="menu-button">
@@ -362,7 +380,7 @@ function openPhoto() {
   width: 250px;
   margin-left: -125px;
   border: solid .2px #fadb4150;
-  border-radius: 15px;
+  border-radius: 20px;
   background-color: #05959c40;
   padding: 5px;
   color: white;
@@ -416,8 +434,9 @@ function openPhoto() {
     transition: transform .3s linear;
     transform:translateX(-15px);
 }
+
 .menu-button .icon:nth-child(2) {
-    margin: 7px 0px 0px 26px;
+    margin: 5px 0px 0px 26px;
     transition: transform .3s linear;
     transform:translateX(-25px);
 }
@@ -429,7 +448,49 @@ function openPhoto() {
     border-bottom: solid .2px #fadb4160;
 }
 
+
 .menu-button:hover .icon:nth-child(2){
  transform:translateX(-15px);
 }
+
+.menu-div-one {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+
+}
+.menu-square{
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  font-weight: 800;
+  width: 100%;
+  padding: 5px;
+  margin: 1px auto;
+  color: white;
+  background-color: #05959c10;
+  /* border: solid .2px #fadb4130; */
+}
+.menu-square div{
+  display: flex;
+  flex-direction: row;
+  font-size: .8em;
+  justify-content: space-between;
+  margin: 2px 0 0 5px;
+}
+
+.menu-square .icon {
+    margin: 2px 0px;
+    transition: transform .3s linear;
+    transform:translateX(-10px);
+}
+
+.menu-square:hover{
+    color:#fadb41;
+    background-color: #05959c60;
+    cursor: pointer;
+    border-bottom: solid .2px #fadb4160;
+}
+
+
 </style>
