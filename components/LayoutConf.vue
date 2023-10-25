@@ -1,13 +1,9 @@
 <script setup>
 import { ref } from 'vue';
 const route = useRoute()
-
-
 const { data, error, refresh } = await useFetch(`/api/${route.params.id}`)
-// const { data, pending, error, refresh } = await useFetch(`https://professorleandrocesar.com/usuarios/`, {})
 
 const notification = ref(false)
-const status = data.value.status
 
 const navbarOpen = ref(false);
 function openNavbar() {
@@ -21,186 +17,208 @@ function openPhoto() {
 </script>
 
 <template>
-    <NuxtLoadingIndicator color='repeating-linear-gradient(to right,#00dc82 0%,#34cdfe 50%,#fadb41 100%)'/> <!-- here -->
+    <NuxtLoadingIndicator color='repeating-linear-gradient(to right,#00dc82 0%,#34cdfe 50%,#fadb41 100%)' /> <!-- here -->
 
-                <div class="bar-top">
-      <div >
-      
+    <div class="bar-top">
+        <div>
+
             <div class='bar-top-top'>
-              <div class="div-img">
-                <img :src="data.foto" @click="openNavbar"/>
-              </div>
-              <div class="mZero">
+                <div class="div-img">
+                    <img :src="data.foto" @click="openNavbar" />
+                </div>
+                <div class="mZero">
 
-                <nuxt-link v-if="notification" ><Icon name='ic:baseline-notifications-active'/></nuxt-link>
-                <nuxt-link v-else ><Icon name='ic:round-notifications-none'/></nuxt-link>
-              </div>
+                    <nuxt-link v-if="notification" ><Icon name='ic:baseline-notifications-active'/></nuxt-link>
+                    <nuxt-link v-else ><Icon name='ic:round-notifications-none'/></nuxt-link>
+                  </div>
 
             </div>
-    
-          </div>
 
-          <div v-if="navbarOpen" class="nav-bar">
-            <div>
-              <nuxt-link @click="openNavbar" class="button-cancel"><Icon name='material-symbols:cancel-rounded'/></nuxt-link>
-              <nuxt-link class="old-msg"><Icon name='mdi:email-multiple-outline'/></nuxt-link>
+            <div class="main-div-one">
+
+
+                <div class="conf">
+                    <Icon name="fluent:target-arrow-16-filled" />
+                    <h3>
+                        {{ data.objetivo }}
+                    </h3>
+
+                </div>
+                <div class="conf">
+                    <Icon name='mdi:calendar-weekend' />
+                    <h3>
+                        {{ data.dias }}
+                    </h3>
+
+                </div>
+                <div class="conf">
+                    <Icon name="material-symbols:timer-rounded" />
+                    <h3>
+                        {{ data.tempo }}
+                    </h3>
+
+                </div>
             </div>
+
+        </div>
+    <div v-if="navbarOpen" class="nav-bar">
+                <div>
+                  <nuxt-link @click="openNavbar" class="button-cancel"><Icon name='material-symbols:cancel-rounded'/></nuxt-link>
+                  <nuxt-link class="old-msg"><Icon name='mdi:email-multiple-outline'/></nuxt-link>
+                </div>
         
-            <div class="nav-top">
+                <div class="nav-top">
           
-              <div>
+                  <div>
             
-                <!-- Início do Nav-flow -->
-                <div class="nav-flow">
+                    <!-- Início do Nav-flow -->
+                    <div class="nav-flow">
               
-                  <div  class="div-img">
-                    <img :src="data.foto" @click="openPhoto"/>
+                      <div  class="div-img">
+                        <img :src="data.foto" @click="openPhoto"/>
+                      </div>
+                      <div>
+                        <h2>
+                          {{ data.nomeCompleto }}
+                        </h2>
+                        <p v-if="data.email">
+                          {{ data.email }}
+                        </p>
+                    </div>
                   </div>
-                  <div>
-                    <h2>
-                      {{ data.nomeCompleto }}
-                    </h2>
-                    <p v-if="data.email">
-                      {{ data.email }}
-                    </p>
-                </div>
-              </div>
-              <p class="section-title">Ciclos</p>
-              <p class="section-subtitle">Contrato atual: {{ data.periodo }}</p>
+                  <p class="section-title">Ciclos</p>
+                  <p class="section-subtitle">Contrato atual: {{ data.periodo }}</p>
 
-              <p v-if="status === 1" class="section-option pending"><Icon name="solar:danger-square-outline"/> Pendente!</p>
-              <p v-else-if="status === 0" class="section-option bloqued"><Icon name="solar:close-square-outline"/> Bloqueado!</p>
-              <p v-else class="section-option verified"><Icon name="solar:check-square-outline"/> Verificado!</p>
-              <div class="menu-div-one">
-                <NuxtLink class="menu-square">
-                  <div>
+                  <p v-if="status === 1" class="section-option pending"><Icon name="solar:danger-square-outline"/> Pendente!</p>
+                  <p v-else-if="status === 0" class="section-option bloqued"><Icon name="solar:close-square-outline"/> Bloqueado!</p>
+                  <p v-else class="section-option verified"><Icon name="solar:check-square-outline"/> Verificado!</p>
+                  <div class="menu-div-one">
+                    <NuxtLink class="menu-square">
+                      <div>
                
-                    <div>
+                        <div>
 
+                          <p>
+                          <Icon name="material-symbols:exercise"/>
+                            Treino
+                          </p>
+                        </div>
+                        <div>
+                          Atual: 10/10/23 - 10/11/23
+                        </div>
+                        <div>
+                          Próximo: 10/10/23 - 10/11/23
+                        </div>
+
+                      <div>
+                    </div>
+                      </div>
+                    </NuxtLink>
+                    <NuxtLink class="menu-square">
+                      <div>
+               
+                        <div>
+
+                          <p>
+                          <Icon name="jam:medical"/>
+                            Avaliação
+                          </p>
+                        </div>
+                        <div>
+                          Atual: 10/10/23
+                        </div>
+                        <div>
+                          Próxima: 10/12/23
+                        </div>
+
+                      <div>
+                    </div>
+                      </div>
+                    </NuxtLink>
+                  </div>
+                  </div>
+                  <br>
+                  <!-- Hístórico -->
+                  <NuxtLink class="menu-button">
+                    <div>
+                      <Icon name="solar:history-outline"/>
                       <p>
-                      <Icon name="material-symbols:exercise"/>
-                        Treino
+                        Histórico
                       </p>
                     </div>
-                    <div>
-                      Atual: 10/10/23 - 10/11/23
-                    </div>
-                    <div>
-                      Próximo: 10/10/23 - 10/11/23
-                    </div>
+                    <Icon name="ic:baseline-keyboard-arrow-right"/>
+                  </NuxtLink>
+                  <!-- Histórico fim -->
 
-                  <div>
-                </div>
-                  </div>
-                </NuxtLink>
-                <NuxtLink class="menu-square">
-                  <div>
-               
+                  <!-- Documentos -->
+                  <p class="section-title">Documentos</p>
+                  <NuxtLink class="menu-button">
                     <div>
-
+                      <Icon name="solar:document-add-linear"/>
                       <p>
-                      <Icon name="jam:medical"/>
-                        Avaliação
+                        Contratos
                       </p>
                     </div>
+                    <Icon name="ic:baseline-keyboard-arrow-right"/>
+                  </NuxtLink>
+                  <NuxtLink class="menu-button">
                     <div>
-                      Atual: 10/10/23
+                      <Icon name="solar:document-text-linear"/>
+                      <p>
+                        Termos de uso
+                      </p>
                     </div>
-                    <div>
-                      Próxima: 10/12/23
-                    </div>
-
-                  <div>
-                </div>
+                    <Icon name="ic:baseline-keyboard-arrow-right"/>
+                  </NuxtLink>
+                  <!-- Documentos fim -->
                   </div>
-                </NuxtLink>
-              </div>
-              </div>
-              <br>
-              <!-- Hístórico -->
-              <NuxtLink class="menu-button">
-                <div>
-                  <Icon name="solar:history-outline"/>
-                  <p>
-                    Histórico
-                  </p>
-                </div>
-                <Icon name="ic:baseline-keyboard-arrow-right"/>
-              </NuxtLink>
-              <!-- Histórico fim -->
-
-              <!-- Documentos -->
-              <p class="section-title">Documentos</p>
-              <NuxtLink class="menu-button">
-                <div>
-                  <Icon name="solar:document-add-linear"/>
-                  <p>
-                    Contratos
-                  </p>
-                </div>
-                <Icon name="ic:baseline-keyboard-arrow-right"/>
-              </NuxtLink>
-              <NuxtLink class="menu-button">
-                <div>
-                  <Icon name="solar:document-text-linear"/>
-                  <p>
-                    Termos de uso
-                  </p>
-                </div>
-                <Icon name="ic:baseline-keyboard-arrow-right"/>
-              </NuxtLink>
-              <!-- Documentos fim -->
-              </div>
-              <!-- ícones de rede sociais -->
-              <div class="icons">
+                  <!-- ícones de rede sociais -->
+                  <div class="icons">
     
-                <NuxtLink to="https://personal.leandrocesar.com/blog" target="_blank">
-                  <div>
-                    <Icon name="solar:documents-line-duotone"/>
-                  </div>
-                </NuxtLink>     
-                <NuxtLink to="https://instagram.com/personalleandrocesar" target="_blank">
-                  <div>
-                    <Icon name="fa6-brands:instagram"/>
-                  </div>
-                </NuxtLink>     
-                <NuxtLink to="https://threads.net/personalleandrocesar" target="_blank">
-                  <div>
-                    <Icon name="fa6-brands:threads"/>
-                  </div>
-                </NuxtLink>    
+                    <NuxtLink to="https://personal.leandrocesar.com/blog" target="_blank">
+                      <div>
+                        <Icon name="solar:documents-line-duotone"/>
+                      </div>
+                    </NuxtLink>     
+                    <NuxtLink to="https://instagram.com/personalleandrocesar" target="_blank">
+                      <div>
+                        <Icon name="fa6-brands:instagram"/>
+                      </div>
+                    </NuxtLink>     
+                    <NuxtLink to="https://threads.net/personalleandrocesar" target="_blank">
+                      <div>
+                        <Icon name="fa6-brands:threads"/>
+                      </div>
+                    </NuxtLink>    
             
-              </div>
-              <!--  -->
-
-              <!-- Botão Logout -->
-              <NuxtLink to="/" class="logout">
-                LOUGOUT <Icon name="solar:logout-3-bold"/>
-              </NuxtLink>
-              <!--  -->
-            </div>
-
-
-          <div v-if="photoOpen" class="nav-bar-photo" @click="openPhoto">
-            <div class="nav-top">
-          
-                <!-- Início do Nav-flow -->
-                <div class="nav-flow-photo">
-                  <div  class="div-img-full">
-                    <img :src="data.foto"/>
                   </div>
-              </div>
+                  <!--  -->
 
-              </div>
-            </div>
-            <!-- Fim do Nav-flow -->
-
-
-
-
-          </div>
+                  <!-- Botão Logout -->
+                  <NuxtLink to="/" class="logout">
+                    LOUGOUT <Icon name="solar:logout-3-bold"/>
+                  </NuxtLink>
+                  <!--  -->
+                </div>
 
 
+              <div v-if="photoOpen" class="nav-bar-photo" @click="openPhoto">
+                <div class="nav-top">
+          
+                    <!-- Início do Nav-flow -->
+                    <div class="nav-flow-photo">
+                      <div  class="div-img-full">
+                        <img :src="data.foto"/>
+                      </div>
+                  </div>
+
+                  </div>
+                </div>
+                <!-- Fim do Nav-flow -->
+
+
+
+</div>
 </template>
 <style scoped>
 .name-user {
@@ -211,22 +229,22 @@ function openPhoto() {
     font-weight: bold;
 }
 
-/* Estilos da barra de navegação (exemplo) */
 .bar-top {
-    height: 90px;
     background-color: #095d62;
     position: fixed;
     top: 0px;
     width: 100%;
-    margin-bottom: 140px;
-    z-index: 1006;
+    z-index: 1400;
 
 }
+
 
 .mZero {
     margin-top: -30px;
     padding: 0;
 }
+
+
 
 .bar-top-top {
     background-color: #095d62;
@@ -243,6 +261,7 @@ function openPhoto() {
     color: #ffffff;
     margin: 5px 15px 30px 10px;
 }
+
 
 .button-cancel .icon {
     cursor: pointer;
@@ -332,6 +351,7 @@ function openPhoto() {
 
 .nav-flow h2 {
     color: #fadb41;
+    text-transform: capitalize;
     line-height: 1;
     margin-right: 10px;
 }
@@ -380,7 +400,6 @@ function openPhoto() {
     border-radius: 50%;
 }
 
-
 .nav-bottom {
     display: flex;
     flex-direction: row;
@@ -389,70 +408,62 @@ function openPhoto() {
     left: 18%;
     background-color: #095D6220;
     backdrop-filter: blur(15px);
+    padding: 3px;
     font-size: 12px;
     position: fixed;
     text-align: center;
-    z-index: 8;
+    z-index: 800;
     border-radius: 30px;
 }
 
 .nav-bottom a {
-    transition: all .3s linear;
     zoom: 1.2;
     padding: 15px;
-    border-radius: 50%;
+    border-radius: 20%;
     color: #095D6260;
 }
 
 .nav-bottom a:hover {
     padding: 15px;
-    border-radius: 30px;
+    border-radius: 40%;
     background-color: #095D6220;
 }
 
 .nav-bottom a.router-link-exact-active {
-    z-index: 8;
     padding: 15px;
-    border-radius: 30px;
+    border-radius: 40%;
     color: #e1a918;
     background-color: #fadb4150;
 }
-
 
 .main-div-one {
     overflow-x: auto;
     display: flex;
     flex-direction: row;
     justify-content: space-around;
-    margin-top: 90px;
     width: 100%;
+    color: #fadb41;
+
 }
 
 .main-div-one .icon {
     zoom: 1.4;
-    color: #095D62;
-    margin-top: -2.5px;
-}
-
-.main-div-one {
-  margin-bottom: -50px;
+    color: #fff;
+    margin-top: 2px;
 }
 
 .conf {
-    color: #555;
-    height: 80px;
-    backdrop-filter: blur(15px);
+    color: #ffffff;
     overflow-x: auto;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     width: 32.5%;
-    margin: 0px auto 20px auto;
-    border-radius: 0 0 20px 20px;
-    background-color: #095D6210;
-    border: 2px solid #05959c20;
-    border-top: 3px solid #05959c40;
+    margin: 0px auto 0px auto;
+    padding: 5px 0;
+    border-radius: 10px 10px 0 0;
+    background-color: #ffffff50;
 }
 
 .icons {
@@ -652,10 +663,4 @@ function openPhoto() {
     color: #00f2ff;
 }
 
-
-/* .menu-square:hover{
-    color:#fadb41;
-    background-color: #05959c60;
-    cursor: pointer;
-    border-bottom: solid .2px #fadb4160;
-} */</style>
+</style>

@@ -187,6 +187,7 @@ function openDivTree() {
 
 
     </NuxtLayout>
+    <NavBottomTwo/>
 </template>
 
     

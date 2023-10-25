@@ -269,8 +269,8 @@ function openPhoto() {
     cursor: pointer;
     zoom: 1.4;
     position: fixed;
-    right: 20px;
-    top: 15px;
+    right: 15px;
+    top: 16px;
     color: #ddd;
     transition: all .4s linear;
     zoom: 1.2

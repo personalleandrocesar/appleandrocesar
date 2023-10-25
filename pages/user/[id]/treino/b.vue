@@ -103,8 +103,9 @@ const nextExercise = () => {
 
     <div>
     </div>
-
+    
   </NuxtLayout>
+  <NavBottomTwo/>
 </template>
 
     

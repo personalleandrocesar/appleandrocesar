@@ -1,7 +1,5 @@
 <template>
-  <LayoutPages/>
+  <LayoutConf/>
   <slot />
-  <navBottom />
-  <Conf/>
 
 </template>
