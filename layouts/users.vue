@@ -400,17 +400,19 @@ function openPhoto() {
   margin: 1px auto;
   color: white;
   background-color: #05959c10;
-  border-bottom: solid .2px #fadb4110;
+  border-bottom: solid .2px #fadb4130;
+  border-top: solid .2px transparent;
 }
 .menu-button div{
   display: flex;
   flex-direction: row;
+  font-size: .8em;
   justify-content: space-between;
-  
+  margin-top: 2px;
 }
 
 .menu-button .icon {
-    margin: 7px 0px 0px 26px;
+    margin: 2px 0px 0px 26px;
     transition: transform .3s linear;
     transform:translateX(-15px);
 }
