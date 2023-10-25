@@ -68,21 +68,28 @@ function openPhoto() {
                 </p>
             </div>
           </div>
+          <p class="section-title">Status</p>
           <div class="menu-div-one">
-            <p class="section-title">Documentos</p>
             <NuxtLink class="menu-square">
               <div>
-                <Icon name="fluent:person-running-20-regular"/>
+                <Icon name="material-symbols:exercise"/>
                 <p>
-                  Atividades
+                  Treino
                 </p>
+                <br>
+                <br>
+                <div>
+                  <div>
+                  
+                  </div>
+                </div>
               </div>
             </NuxtLink>
             <NuxtLink class="menu-square">
               <div>
-                <Icon name="fluent:person-running-20-regular"/>
+                <Icon name="jam:medical"/>
                 <p>
-                  Atividades
+                  Avaliação
                 </p>
               </div>
             </NuxtLink>
@@ -455,7 +462,7 @@ function openPhoto() {
 
 .menu-div-one {
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
   justify-content: center;
 
 }
@@ -464,12 +471,13 @@ function openPhoto() {
   flex-direction: row;
   justify-content: center;
   font-weight: 800;
-  width: 100%;
+  width: 49%;
   padding: 5px;
+  border-radius: 20px;
   margin: 1px auto;
   color: white;
   background-color: #05959c10;
-  /* border: solid .2px #fadb4130; */
+  border: solid .2px #fadb4130;
 }
 .menu-square div{
   display: flex;
@@ -485,12 +493,12 @@ function openPhoto() {
     transform:translateX(-10px);
 }
 
-.menu-square:hover{
+/* .menu-square:hover{
     color:#fadb41;
     background-color: #05959c60;
     cursor: pointer;
     border-bottom: solid .2px #fadb4160;
-}
+} */
 
 
 </style>
