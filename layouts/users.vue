@@ -135,10 +135,10 @@ function openPhoto() {
           </div>
           <!-- ícones de rede sociais -->
           <div class="icons">
-
-            <NuxtLink to="https://personal.leandrocesar.com" target="_blank">
+    
+            <NuxtLink to="https://personal.leandrocesar.com/blog" target="_blank">
               <div>
-                <Icon name="mdi:web"/>
+                <Icon name="solar:documents-line-duotone"/>
               </div>
             </NuxtLink>     
             <NuxtLink to="https://instagram.com/personalleandrocesar" target="_blank">
@@ -150,12 +150,7 @@ function openPhoto() {
               <div>
                 <Icon name="fa6-brands:threads"/>
               </div>
-            </NuxtLink>     
-            <NuxtLink to="https://personal.leandrocesar.com/blog" target="_blank">
-              <div>
-                <Icon name="fa6-solid:blog"/>
-              </div>
-            </NuxtLink>     
+            </NuxtLink>    
             
           </div>
           <!--  -->
