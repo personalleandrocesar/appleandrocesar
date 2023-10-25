@@ -95,7 +95,6 @@ input {
     border: solid 2px #eee;
     padding: 3px;
     padding-left: 20px;
-
     height: 2.4em;
     
 }

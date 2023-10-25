@@ -2,11 +2,12 @@
 import { ref } from 'vue';
 const route = useRoute()
 
-const notification = ref(false)
-
 
 const { data, error, refresh } = await useFetch(`/api/${route.params.id}`)
 // const { data, pending, error, refresh } = await useFetch(`https://professorleandrocesar.com/usuarios/`, {})
+
+const notification = ref(false)
+const status = data.value.status
 
 const navbarOpen = ref(false);
 function openNavbar() {
@@ -69,6 +70,11 @@ function openPhoto() {
             </div>
           </div>
           <p class="section-title">Status</p>
+          <p class="section-subtitle">Ciclo: {{ data.periodo  }}</p>
+
+          <p v-if="status === 1" class="section-option pending"><Icon name="solar:danger-square-outline"/> Pendente!</p>
+          <p v-else-if="status === 0" class="section-option bloqued"><Icon name="solar:close-square-outline"/> Bloqueado!</p>
+          <p v-else class="section-option verified"><Icon name="solar:check-square-outline"/> Verificado!</p>
           <div class="menu-div-one">
             <NuxtLink class="menu-square">
               <div>
@@ -76,11 +82,9 @@ function openPhoto() {
                 <p>
                   Treino
                 </p>
-                <br>
-                <br>
                 <div>
                   <div>
-                  
+                  fhb
                   </div>
                 </div>
               </div>
@@ -98,9 +102,9 @@ function openPhoto() {
           <br>
           <NuxtLink class="menu-button">
             <div>
-              <Icon name="solar:documents-line-duotone"/>
+              <Icon name="solar:history-outline"/>
               <p>
-                Atividades
+                Histórico
               </p>
             </div>
             <Icon name="ic:baseline-keyboard-arrow-right"/>
@@ -414,7 +418,39 @@ function openPhoto() {
   color: #ccc;
   text-align: left;
   margin: 10px 16px;
+  font-weight: 800;
 }
+.section-subtitle {
+  color: #fadb41;
+  text-align: left;
+  margin: -10px 16px 15px;
+  font-weight: 800;
+  font-size: .9em;
+}
+.section-option {
+  text-align: left;
+  margin: -10px 16px 15px;
+  font-size: .8em;
+  font-weight: 800;
+}
+
+.section-option .icon {
+  zoom: .8;
+  margin-top:-3px ;
+}
+
+.verified {
+  color: rgb(0, 255, 0);
+}
+
+.pending {
+  color: yellow;
+}
+
+.bloqued {
+  color: rgb(250, 96, 96);
+}
+
 .menu-button{
   display: flex;
   flex-direction: row;
