@@ -69,8 +69,8 @@ function openPhoto() {
                 </p>
             </div>
           </div>
-          <p class="section-title">Status</p>
-          <p class="section-subtitle">Ciclo: {{ data.periodo  }}</p>
+          <p class="section-title">Ciclos</p>
+          <p class="section-subtitle">Contrato atual: {{ data.periodo  }}</p>
 
           <p v-if="status === 1" class="section-option pending"><Icon name="solar:danger-square-outline"/> Pendente!</p>
           <p v-else-if="status === 0" class="section-option bloqued"><Icon name="solar:close-square-outline"/> Bloqueado!</p>
@@ -78,22 +78,44 @@ function openPhoto() {
           <div class="menu-div-one">
             <NuxtLink class="menu-square">
               <div>
-                <Icon name="material-symbols:exercise"/>
-                <p>
-                  Treino
-                </p>
+               
                 <div>
-                  <div>
-                  </div>
+
+                  <p>
+                  <Icon name="material-symbols:exercise"/>
+                    Treino
+                  </p>
                 </div>
+                <div>
+                  Atual: 10/10/23 - 10/11/23
+                </div>
+                <div>
+                  Proximo: 10/10/23 - 10/11/23
+                </div>
+
+              <div>
+            </div>
               </div>
             </NuxtLink>
             <NuxtLink class="menu-square">
               <div>
-                <Icon name="jam:medical"/>
-                <p>
-                  Avaliação
-                </p>
+               
+                <div>
+
+                  <p>
+                  <Icon name="jam:medical"/>
+                    Avaliação
+                  </p>
+                </div>
+                <div>
+                  Atual: 10/10/23
+                </div>
+                <div>
+                  Proxima: 10/12/23
+                </div>
+
+              <div>
+            </div>
               </div>
             </NuxtLink>
           </div>
@@ -117,7 +139,7 @@ function openPhoto() {
             <div>
               <Icon name="solar:document-add-linear"/>
               <p>
-                Contrato
+                Contratos
               </p>
             </div>
             <Icon name="ic:baseline-keyboard-arrow-right"/>
@@ -582,19 +604,35 @@ function openPhoto() {
   background-color: #05959c10;
   border: solid .2px #fadb4130;
 }
-.menu-square div{
-  display: flex;
-  flex-direction: row;
-  font-size: .8em;
-  justify-content: space-between;
-  margin: 2px 0 0 5px;
-}
-
-.menu-square .icon {
-    margin: 2px 0px;
+.menu-square div .icon {
+    margin: 3px 0px;
     transition: transform .3s linear;
     transform:translateX(-10px);
 }
+.menu-square div{
+  display: flex;
+  flex-direction: column;
+  font-size: .9em;
+  justify-content: space-between;
+  margin: 2px 0 0 5px;
+}
+.menu-square div:nth-child(2){
+  display: flex;
+  flex-direction: column;
+  font-size: .6em;
+  justify-content: space-between;
+  margin: 2px 0 0 5px;
+ color: #ddd;
+}
+.menu-square div:nth-child(3){
+  display: flex;
+  flex-direction: column;
+  font-size: .6em;
+  justify-content: space-between;
+  margin: 2px 0 0 5px;
+ color: rgb(0, 255, 0);
+}
+
 
 /* .menu-square:hover{
     color:#fadb41;
