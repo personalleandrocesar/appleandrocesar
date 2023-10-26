@@ -1,17 +1,21 @@
 <script setup>
 import { ref } from 'vue';
 const route = useRoute()
+
+
 const { data, error, refresh } = await useFetch(`/api/${route.params.id}`)
+// const { data, pending, error, refresh } = await useFetch(`https://professorleandrocesar.com/usuarios/`, {})
 
 const notification = ref(false)
+const status = data.value.status
 
 const navbarOpen = ref(false);
 function openNavbar() {
-    navbarOpen.value = !navbarOpen.value;
+  navbarOpen.value = !navbarOpen.value;
 }
 const photoOpen = ref(false);
 function openPhoto() {
-    photoOpen.value = !photoOpen.value;
+  photoOpen.value = !photoOpen.value;
 }
 
 </script>
@@ -93,49 +97,49 @@ function openPhoto() {
                   <p v-else-if="status === 0" class="section-option bloqued"><Icon name="solar:close-square-outline"/> Bloqueado!</p>
                   <p v-else class="section-option verified"><Icon name="solar:check-square-outline"/> Verificado!</p>
                   <div class="menu-div-one">
-                    <NuxtLink class="menu-square">
-                      <div>
+                  <NuxtLink class="menu-square">
+                    <div>
                
-                        <div>
-
-                          <p>
-                          <Icon name="material-symbols:exercise"/>
-                            Treino
-                          </p>
-                        </div>
-                        <div>
-                          Atual: 10/10/23 - 10/11/23
-                        </div>
-                        <div>
-                          Próximo: 10/10/23 - 10/11/23
-                        </div>
-
                       <div>
-                    </div>
+
+                        <p>
+                        <Icon name="material-symbols:exercise"/>
+                          Treino
+                        </p>
                       </div>
-                    </NuxtLink>
-                    <NuxtLink class="menu-square">
                       <div>
-               
-                        <div>
-
-                          <p>
-                          <Icon name="jam:medical"/>
-                            Avaliação
-                          </p>
-                        </div>
-                        <div>
-                          Atual: 10/10/23
-                        </div>
-                        <div>
-                          Próxima: 10/12/23
-                        </div>
-
-                      <div>
-                    </div>
+                        Atual: {{ data.treinoActual }}
                       </div>
-                    </NuxtLink>
+                      <div>
+                        Próximo: {{ data.treinoNext }}
+                      </div>
+
+                    <div>
                   </div>
+                    </div>
+                  </NuxtLink>
+                  <NuxtLink class="menu-square">
+                    <div>
+               
+                      <div>
+
+                        <p>
+                        <Icon name="jam:medical"/>
+                          Avaliação
+                        </p>
+                      </div>
+                      <div>
+                        Atual: {{ data.valuationActual }}
+                      </div>
+                      <div>
+                        Próxima: {{ data.valuationNext }}
+                      </div>
+
+                    <div>
+                  </div>
+                    </div>
+                  </NuxtLink>
+                </div>
                   </div>
                   <br>
                   <!-- Hístórico -->

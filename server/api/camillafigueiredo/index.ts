@@ -11,6 +11,7 @@ export default defineEventHandler((event) => {
     "treinoA": "Quadriceps",
     "treinoB": "Gluteo",
     "treinoC": "Braço",
+    
     // Dados Menu Global
     "periodo": "10/10/23 - 10/11/23",
     "status": 2

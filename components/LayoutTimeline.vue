@@ -87,10 +87,10 @@ function openPhoto() {
                       </p>
                     </div>
                     <div>
-                      Atual: 10/10/23 - 10/11/23
+                      Atual: {{ data.treinoActual }}
                     </div>
                     <div>
-                      Próximo: 10/10/23 - 10/11/23
+                      Próximo: {{ data.treinoNext }}
                     </div>
 
                   <div>
@@ -108,10 +108,10 @@ function openPhoto() {
                       </p>
                     </div>
                     <div>
-                      Atual: 10/10/23
+                      Atual: {{ data.valuationActual }}
                     </div>
                     <div>
-                      Próxima: 10/12/23
+                      Próxima: {{ data.valuationNext }}
                     </div>
 
                   <div>
@@ -119,7 +119,7 @@ function openPhoto() {
                   </div>
                 </NuxtLink>
               </div>
-              </div>
+            </div>
               <br>
               <!-- Hístórico -->
               <NuxtLink class="menu-button">

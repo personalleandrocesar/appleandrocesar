@@ -72,49 +72,49 @@ function openPhoto() {
               <p v-else-if="status === 0" class="section-option bloqued"><Icon name="solar:close-square-outline"/> Bloqueado!</p>
               <p v-else class="section-option verified"><Icon name="solar:check-square-outline"/> Verificado!</p>
               <div class="menu-div-one">
-                <NuxtLink class="menu-square">
-                  <div>
+                  <NuxtLink class="menu-square">
+                    <div>
                
-                    <div>
+                      <div>
 
-                      <p>
-                      <Icon name="material-symbols:exercise"/>
-                        Treino
-                      </p>
-                    </div>
-                    <div>
-                      Atual: 10/10/23 - 10/11/23
-                    </div>
-                    <div>
-                      Próximo: 10/10/23 - 10/11/23
-                    </div>
+                        <p>
+                        <Icon name="material-symbols:exercise"/>
+                          Treino
+                        </p>
+                      </div>
+                      <div>
+                        Atual: {{ data.treinoActual }}
+                      </div>
+                      <div>
+                        Próximo: {{ data.treinoNext }}
+                      </div>
 
-                  <div>
-                </div>
+                    <div>
                   </div>
-                </NuxtLink>
-                <NuxtLink class="menu-square">
-                  <div>
+                    </div>
+                  </NuxtLink>
+                  <NuxtLink class="menu-square">
+                    <div>
                
-                    <div>
+                      <div>
 
-                      <p>
-                      <Icon name="jam:medical"/>
-                        Avaliação
-                      </p>
-                    </div>
-                    <div>
-                      Atual: 10/10/23
-                    </div>
-                    <div>
-                      Próxima: 10/12/23
-                    </div>
+                        <p>
+                        <Icon name="jam:medical"/>
+                          Avaliação
+                        </p>
+                      </div>
+                      <div>
+                        Atual: {{ data.valuationActual }}
+                      </div>
+                      <div>
+                        Próxima: {{ data.valuationNext }}
+                      </div>
 
-                  <div>
-                </div>
+                    <div>
                   </div>
-                </NuxtLink>
-              </div>
+                    </div>
+                  </NuxtLink>
+                </div>
               </div>
               <br>
               <!-- Hístórico -->
