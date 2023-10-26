@@ -4,7 +4,7 @@ export default defineEventHandler((event) => {
     "nomeCompleto": "Luiz Felipe Souza",
     "email": "",
     "senha": "mello@Lu",
-    "foto": "https://m.leandrocesar.com/img/luizsouza.jpeg",
+    "foto": "https://m.leandrocesar.com/img/luizsouza.png",
     "objetivo": "Perder %G.",
     "tempo": "60 min.",
     "dias": "5-6 dias",
