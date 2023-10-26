@@ -10,9 +10,19 @@ export default defineEventHandler((event) => {
     "dias": "6 dias",
     "treinoA": "Perna",
     "treinoB": "Braço + Abdominal",
-    "treinoC": ""
+    "treinoC": "",
 
     // Dados Menu Global
-    
+    "periodo": "06/10/23 - 06/11/23", // Dia do pagamento Mensal
+    // 0 = bloqueado; 1 = pendente; 2 = Verificado
+    "status": 2,
+    // Treino atual
+    "treinoActual": "18/10/23 - 18/11/23",
+    // Próxima Treino 
+    "treinoNext": "19/11/23",
+    // Avaliação atual
+    "valuationActual": "15/09/2023",
+    // Próxima avaliação 
+    "valuationNext": "15/12/2023"
   }
 })
