@@ -285,7 +285,7 @@ border: 2px solid #2cd3db;
 }
 
 .square {
-  height: 250px;
+  height: 170px;
   width: auto;
   max-width: 370px;
   color:#555;

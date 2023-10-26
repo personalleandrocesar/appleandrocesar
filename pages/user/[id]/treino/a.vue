@@ -279,8 +279,10 @@ border: 2px solid #2cd3db;
 
 
 
-.square {  
-  height: 144px;
+.square {
+  height: 170px;
+  width: auto;
+  max-width: 370px;
   color:#555;
   background-color: #fff;
   backdrop-filter: blur(5px);
@@ -289,7 +291,6 @@ border: 2px solid #2cd3db;
   flex-direction: row;
   justify-content: center;
   align-items: center;
-  min-width: 340px ;
   margin: 20px auto;
   border: 2px solid #05959c10; 
 }
