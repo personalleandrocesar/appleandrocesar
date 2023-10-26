@@ -1,11 +1,11 @@
 export default defineEventHandler((event) => {
     return {
         // Treino A
-        "cardioA": "Esteira + Escada",
-        "cardioATime": "45 minutos",
-        "cardioADescription": "Esteira: 30'(caminhar forte entre 6.2 km/h a 7.0 km/h); Escada: 15'(intervalado).",
+        "cardioA": "Escada",
+        "cardioATime": "25 minutos",
+        "cardioADescription": "Fazer intervalado: 1:30/3:30 (1 minuto e meio muito rápido e mais lento em 3 minutos e meio) - repetir até dar o tempo.",
         // Treino B
-        "cardioB": "Esteira",
+        "cardioB": "",
         "cardioBTime": "40 minutos",
         "cardioBDescription": "Fazer 40 minutos de forma constante, que não fique com falta de ar, no ritmo que dê para conversar com alguém, naõ ficar ofegante.",
         // Treino C

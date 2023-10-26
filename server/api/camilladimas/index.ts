@@ -13,7 +13,7 @@ export default defineEventHandler((event) => {
     "treinoC": "",
 
     // Dados Menu Global
-    "periodo": "09/10/23 - 09/11/23", // Dia do pagamento Mensal
+    "periodo": "04/10/23 - 04/11/23", // Dia do pagamento Mensal
     // 0 = bloqueado; 1 = pendente; 2 = Verificado
     "status": 2,
     // Treino atual
@@ -21,8 +21,8 @@ export default defineEventHandler((event) => {
     // Próxima Treino 
     "treinoNext": "27/11/23",
     // Avaliação atual
-    "valuationActual": "?",
+    "valuationActual": "20/10/2023",
     // Próxima avaliação 
-    "valuationNext": "?"
+    "valuationNext": "20/12/2023"
   }
 })
