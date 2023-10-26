@@ -276,17 +276,15 @@ border: 2px solid #2cd3db;
   width: 32.5%;
   margin: 10px auto;
   border-radius: 20px;  
-
-
-      background-color: #095D6210;
-    border: 2px solid #05959c20;
-    border-top: 3px solid #05959c40;
-    border-bottom: 3px solid #05959c40;
+  background-color: #095D6210;
+  border: 2px solid #05959c20;
+  border-top: 3px solid #05959c40;
+  border-bottom: 3px solid #05959c40;
 }
 
 
 .square {
-  height: 170px;
+  height: 140px;
   width: auto;
   max-width: 370px;
   color:#555;
