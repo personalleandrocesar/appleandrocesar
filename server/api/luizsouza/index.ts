@@ -24,6 +24,5 @@ export default defineEventHandler((event) => {
     "valuationActual": "?",
     // Próxima avaliação 
     "valuationNext": "?"
-    
   }
 })

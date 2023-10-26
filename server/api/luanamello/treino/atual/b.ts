@@ -10,6 +10,7 @@ export default defineEventHandler((event) => {
     { num: 'Exercício 7', nome: 'Remada alta na polia baixa', sets: 3, reps: '15', rest: '40"', grupo: '', obs: '', img: 'https://m.leandrocesar.com/img/preImagem.png'},
     { num: 'Exercício 8', nome: 'Bíceps em pé na polia baixa', sets: 3, reps: '10', rest: '40"', grupo: '', obs: '', img: 'https://m.leandrocesar.com/img/preImagem.png'},
     { num: 'Exercício 9', nome: 'Tríceps corda na polia alta', sets: 3, reps: '12 + 12', rest: '40"', grupo: '', obs: 'Rest-pause: fazer 12 repetições, descansa 10" + 12 repetições.', img: 'https://m.leandrocesar.com/img/preImagem.png'},
+    { num: 'Exercício 9', nome: 'Remada Curvada', sets: 3, reps: '15', rest: '40"', grupo: '', obs: 'Peg. Neutra.', img: 'https://m.leandrocesar.com/exe/remadacurvada.gif'},
     { num: 'Exercício 10', nome: 'Abdominal infra na paralela', sets: 3, reps: 'falha', rest: '40"', grupo: '', obs: '', img: 'https://m.leandrocesar.com/img/preImagem.png'},
     
     
