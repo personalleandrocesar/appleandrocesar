@@ -25,9 +25,6 @@ const dataConf = await useFetch(`/api/${route.params.id}`)
         <nuxt-link v-if="dataConf.data.value.treinoA" class="square" :to="`/user/${route.params.id}/treino/a`">
             <div>
               <h4>
-                <Icon name='material-symbols:exercise' /> 
-              </h4>
-              <h4>
                 TREINO
                 <Icon name='mdi:alpha-a' />
               </h4>
@@ -50,9 +47,6 @@ const dataConf = await useFetch(`/api/${route.params.id}`)
           
         <nuxt-link v-if="dataConf.data.value.treinoB" class="square" :to="`/user/${route.params.id}/treino/b`">
         <div>
-                <h4>
-                  <Icon name='material-symbols:exercise' /> 
-                </h4>
                 <h4>
                   TREINO
                   <Icon name='mdi:alpha-b' />
