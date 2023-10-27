@@ -3,7 +3,7 @@ import { ref } from 'vue';
 const route = useRoute()
 
 
-const { data, error, refresh } = await useFetch(`/api/${route.params.id}`)
+const { data, error, refresh } = await useFetch(`/api/${route.params.id}`) 
 // const { data, pending, error, refresh } = await useFetch(`https://professorleandrocesar.com/usuarios/`, {})
 
 const notification = ref(false)

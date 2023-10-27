@@ -1,6 +1,12 @@
+<script setup>
+definePageMeta({
+  middleware: 'm'
+})
+
+</script>
+
 <template>
   <NuxtLayout>
-
     <Admin />
   </NuxtLayout>
 </template>

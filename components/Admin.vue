@@ -4,9 +4,6 @@ const layout = "admin"
 const route = useRoute()
 
 const { data, error, refresh } = await useFetch(`/api/users`)
-
-console.log(data.id);
-
 </script>
 
 <template>

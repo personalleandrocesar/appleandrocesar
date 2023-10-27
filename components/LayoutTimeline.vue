@@ -2,7 +2,6 @@
 import { ref } from 'vue';
 const route = useRoute()
 
-
 const { data, error, refresh } = await useFetch(`/api/${route.params.id}`)
 // const { data, pending, error, refresh } = await useFetch(`https://professorleandrocesar.com/usuarios/`, {})
 
@@ -178,7 +177,7 @@ function openPhoto() {
               <!--  -->
 
               <!-- Botão Logout -->
-              <NuxtLink to="/" class="logout">
+              <NuxtLink to="/" class="logout" @click="logout">
                 LOUGOUT <Icon name="solar:logout-3-bold"/>
               </NuxtLink>
               <!--  -->

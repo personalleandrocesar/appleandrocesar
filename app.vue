@@ -1,17 +1,19 @@
 <script setup>
-
+const route = useRoute()
 useHead({
   titleTemplate: 'app leandro cesar',  
 })
 
-const counter = useCookie('counter')
-counter.value = counter.value || Math.round(Math.random() * 1000)
+// Cookie
 
-const ste =  useState( 'se', () => 2)
+const estado = useState('se', () => 2)
+console.log(estado.value);
 
+const local = route.params.id
 
-console.log(counter.value);
-console.log(ste.value);
+const user = useCookie(local)
+console.log(user.value);
+
 
 </script>
 
