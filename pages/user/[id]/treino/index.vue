@@ -69,9 +69,7 @@ const dataConf = await useFetch(`/api/${route.params.id}`)
             
         <nuxt-link v-if="dataConf.data.value.treinoC" class="square" :to="`/user/${route.params.id}/treino/c`">
           <div>
-                <h4>
-                  <Icon name='material-symbols:exercise' /> 
-                </h4>
+                
                 <h4>
                   TREINO
                   <Icon name='mdi:alpha-c' />
