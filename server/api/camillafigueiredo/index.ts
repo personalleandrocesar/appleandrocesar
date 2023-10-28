@@ -1,4 +1,7 @@
 export default defineEventHandler((event) => {
+
+
+  // Send JSON response
   return {
     "nome": "Camilla",
     "nomeCompleto": "Camilla Figueiredo",
@@ -13,8 +16,16 @@ export default defineEventHandler((event) => {
     "treinoC": "Braço",
     
     // Dados Menu Global
-    "periodo": "10/10/23 - 10/11/23",
-    "status": 2
-    
+    "periodo": "04/10/23 - 04/11/23", // Dia do pagamento Mensal
+    // 0 = bloqueado; 1 = pendente; 2 = Verificado
+    "status": '2',
+    // Treino atual
+    "treinoActual": "26/10/23 - 26/11/23",
+    // Próxima Treino 
+    "treinoNext": "27/11/23",
+    // Avaliação atual
+    "valuationActual": "20/10/2023",
+    // Próxima avaliação 
+    "valuationNext": "20/12/2023"
   }
 })

@@ -1,12 +1,11 @@
 <script setup>
 import { ref } from 'vue';
 const route = useRoute()
-
+const notification = ref(false)
 
 const { data, error, refresh } = await useFetch(`/api/${route.params.id}`) 
 // const { data, pending, error, refresh } = await useFetch(`https://professorleandrocesar.com/usuarios/`, {})
 
-const notification = ref(false)
 const status = data.value.status
 
 const navbarOpen = ref(false);
@@ -44,7 +43,7 @@ function openPhoto() {
                 <div class="conf">
                     <Icon name="fluent:target-arrow-16-filled" />
                     <h3>
-                        {{ data.objetivo }}
+                        {{ data.objetivo }} {{ status }}
                     </h3>
 
                 </div>
@@ -93,13 +92,14 @@ function openPhoto() {
                   <p class="section-title">Ciclos</p>
                   <p class="section-subtitle">Contrato atual: {{ data.periodo }}</p>
 
-                  <p v-if="status === 1" class="section-option pending"><Icon name="solar:danger-square-outline"/> Pendente!</p>
-                  <p v-else-if="status === 0" class="section-option bloqued"><Icon name="solar:close-square-outline"/> Bloqueado!</p>
-                  <p v-else class="section-option verified"><Icon name="solar:check-square-outline"/> Verificado!</p>
+                  <p v-if="status == 2" class="section-option pending"><Icon name="solar:danger-square-outline"/> Pendente!</p>
+                  <p v-if="status == 1" class="section-option bloqued"><Icon name="solar:close-square-outline"/> Bloqueado!</p>
+                  <!-- 2 é bloqueado-->
+                  <p v-if="status == 3" class="section-option verified"><Icon name="solar:check-square-outline"/> Verificado!</p>
                   <div class="menu-div-one">
                   <NuxtLink class="menu-square">
                     <div>
-               
+              
                       <div>
 
                         <p>

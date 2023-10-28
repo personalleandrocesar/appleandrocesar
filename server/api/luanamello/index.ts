@@ -15,7 +15,7 @@ export default defineEventHandler((event) => {
     // Dados Menu Global
     "periodo": "09/10/23 - 09/11/23", // Dia do pagamento Mensal
     // 0 = bloqueado; 1 = pendente; 2 = Verificado
-    "status": 2,
+    "status": '2',
     // Treino atual
     "treinoActual": "26/10/23 - 26/11/23",
     // Próxima Treino 

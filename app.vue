@@ -4,27 +4,20 @@ useHead({
   titleTemplate: 'app leandro cesar',  
 })
 
-// Cookie
-
-const estado = useState('se', () => 2)
-console.log(estado.value);
-
-const local = route.params.id
-
-const user = useCookie(local)
-console.log(user.value);
-
-
 </script>
 
 <template>
           <NuxtLoadingIndicator color='repeating-linear-gradient(to right,#00dc82 0%,#34cdfe 50%,#fadb41 100%)'/> <!-- here -->
-          
+         <div class="d">
+         </div>
           <NuxtPage />
 </template>
 
 <style scoped>
-
+.d{
+  position: fixed;
+  left:100px;
+}
 .count {
   position: fixed;
   top: 20px;
