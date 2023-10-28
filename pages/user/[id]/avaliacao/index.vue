@@ -3,15 +3,18 @@ import { ref, computed } from 'vue'
 const layout = "valuation"
 const route = useRoute()
 
+
+
+
 const data = await useFetch(`/api/${route.params.id}/avaliacao/atual`)
 
-const sexo = data.value.sexo
-const idade = data.value.idade
-const dTorax = data.value.dtorax
-const abdominal = data.value.abdominal
-const coxa = data.value.coxa
-const triceps = data.value.tricipital
-const supraespinhal = data.value.supraEspinhal
+const sexo = data.data.value.sexo
+const idade = data.data.value.idade
+const dTorax = data.data.value.dtorax
+const abdominal = data.data.value.abdominal
+const coxa = data.data.value.coxa
+const triceps = data.data.value.tricipital
+const supraespinhal = data.data.value.supraEspinhal
 
 const homens = dTorax + abdominal + coxa
 const mulheres = triceps + supraespinhal + coxa
@@ -75,7 +78,7 @@ const percentualFat = computed(() => {
                             <Icon name='material-symbols:event' />
                         </h4>
                         <h4>
-                            {{ data.data }}
+                            {{ data.data.value.data }}
                         </h4>
                     </div>
 
@@ -87,7 +90,7 @@ const percentualFat = computed(() => {
                             <Icon name="fa6-solid:weight-scale" />
                         </h4>
                         <h4>
-                               {{ data.massa }} kg
+                               {{ data.data.value.massa }} kg
                             </h4>
 
                     </div>

@@ -1,10 +1,6 @@
 <script setup>
 const layout = "users"
-const route = useRoute()
 
-const local = route.params.id
-
-const ck = useCookie(local)
 
 </script>
 
