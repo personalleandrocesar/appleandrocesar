@@ -3,12 +3,12 @@ import { ref } from 'vue';
 const route = useRoute()
 
 
-const { data, error, refresh } = await useFetch(`/api/${route.params.id}`)
+const data = await useFetch(`/api/${route.params.id}`)
 // const { data, pending, error, refresh } = await useFetch(`https://professorleandrocesar.com/usuarios/`, {})
 
 const notification = ref(false)
 
-const status = data.value.status
+const status = data.data.value.status
 
 const navbarOpen = ref(false);
 function openNavbar() {
@@ -29,7 +29,7 @@ function openPhoto() {
 
       <div class='bar-top-top'>
         <div class="div-img">
-          <img :src="data.foto" @click="openNavbar" />
+          <img :src="data.data.value.foto" @click="openNavbar" />
         </div>
         <div class="mZero">
 
@@ -49,21 +49,21 @@ function openPhoto() {
         <div class="conf">
           <Icon name="fluent:target-arrow-16-filled" />
           <h3>
-            {{ data.objetivo }}
+            {{ data.data.value.objetivo }}
           </h3>
 
         </div>
         <div class="conf">
           <Icon name='mdi:calendar-weekend' />
           <h3>
-            {{ data.dias }}
+            {{ data.data.value.dias }}
           </h3>
 
         </div>
         <div class="conf">
           <Icon name="material-symbols:timer-rounded" />
           <h3>
-            {{ data.tempo }}
+            {{ data.data.value.tempo }}
           </h3>
 
         </div>
@@ -88,19 +88,19 @@ function openPhoto() {
           <div class="nav-flow">
 
             <div class="div-img">
-              <img :src="data.foto" @click="openPhoto" />
+              <img :src="data.data.value.foto" @click="openPhoto" />
             </div>
             <div>
               <h2>
-                {{ data.nomeCompleto }}
+                {{ data.data.value.nomeCompleto }}
               </h2>
-              <p v-if="data.email">
-                {{ data.email }}
+              <p v-if="data.data.value.email">
+                {{ data.data.value.email }}
               </p>
             </div>
           </div>
           <p class="section-title">Ciclos</p>
-          <p class="section-subtitle">Contrato atual: {{ data.periodo }}</p>
+          <p class="section-subtitle">Contrato atual: {{ data.data.value.periodo }}</p>
 
           <p v-if="status === 1" class="section-option pending">
             <Icon name="solar:danger-square-outline" /> Pendente!
@@ -123,10 +123,10 @@ function openPhoto() {
                   </p>
                 </div>
                 <div>
-                  Atual: {{ data.treinoActual }}
+                  Atual: {{ data.data.value.treinoActual }}
                 </div>
                 <div>
-                  Próximo: {{ data.treinoNext }}
+                  Próximo: {{ data.data.value.treinoNext }}
                 </div>
 
                 <div>
@@ -144,10 +144,10 @@ function openPhoto() {
                   </p>
                 </div>
                 <div>
-                  Atual: {{ data.valuationActual }}
+                  Atual: {{ data.data.value.valuationActual }}
                 </div>
                 <div>
-                  Próxima: {{ data.valuationNext }}
+                  Próxima: {{ data.data.value.valuationNext }}
                 </div>
 
                 <div>
@@ -228,7 +228,7 @@ function openPhoto() {
         <!-- Início do Nav-flow -->
         <div class="nav-flow-photo">
           <div class="div-img-full">
-            <img :src="data.foto" />
+            <img :src="data.data.value.foto" />
           </div>
         </div>
 

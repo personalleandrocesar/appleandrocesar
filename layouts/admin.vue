@@ -1,7 +1,7 @@
 <script setup>
 import { ref } from 'vue';
 const route = useRoute()
-const { data, error, refresh } = await useFetch(`/api/${route.params.id}`)
+const data = await useFetch(`/api/${route.params.id}`)
 
 const notification = ref(false)
 
