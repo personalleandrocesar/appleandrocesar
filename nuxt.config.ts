@@ -1,15 +1,6 @@
 // https://nuxt.com/docs/api/configuration/nuxt-config
 export default defineNuxtConfig({
   devtools: { enabled: true },
-  routeRules: {
-    // Blog post generated on-demand once until next deploy
-    '/user/**': { isr: true },
-    '/layouts/**': { isr: true },
-    // Admin dashboard renders only on client-side
-    '/admin/**': { ssr: false },
-    // Add cors headers on API routes
-    '/api/**': { cors: true, headers: { 'access-control-allow-methods': 'GET' } },
-  },
   app: {
     head: {
       charset: 'utf-8',

@@ -4,6 +4,7 @@ useHead({
   titleTemplate: 'app leandro cesar',  
 })
 
+
 </script>
 
 <template>

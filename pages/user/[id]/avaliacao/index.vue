@@ -3,7 +3,7 @@ import { ref, computed } from 'vue'
 const layout = "valuation"
 const route = useRoute()
 
-const { data, error, refresh } = await useFetch(`/api/${route.params.id}/avaliacao/atual`)
+const data = await useFetch(`/api/${route.params.id}/avaliacao/atual`)
 
 const sexo = data.value.sexo
 const idade = data.value.idade
