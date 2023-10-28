@@ -71,9 +71,10 @@ function openPhoto() {
               <p class="section-title">Ciclos</p>
               <p class="section-subtitle">Contrato atual: {{ data.periodo }}</p>
 
-              <p v-if="status === 1" class="section-option pending"><Icon name="solar:danger-square-outline"/> Pendente!</p>
-              <p v-else-if="status === 0" class="section-option bloqued"><Icon name="solar:close-square-outline"/> Bloqueado!</p>
-              <p v-else class="section-option verified"><Icon name="solar:check-square-outline"/> Verificado!</p>
+              <p v-if="status == 2" class="section-option pending"><Icon name="solar:danger-square-outline"/> Pendente!</p>
+              <p v-if="status == 1" class="section-option bloqued"><Icon name="solar:close-square-outline"/> Bloqueado!</p>
+              <!-- 2 é bloqueado-->
+              <p v-if="status == 3" class="section-option verified"><Icon name="solar:check-square-outline"/> Verificado!</p>
               <div class="menu-div-one">
                 <NuxtLink class="menu-square">
                   <div>
@@ -177,7 +178,7 @@ function openPhoto() {
               <!--  -->
 
               <!-- Botão Logout -->
-              <NuxtLink to="/" class="logout" @click="logout">
+              <NuxtLink to="/" class="logout" >
                 LOUGOUT <Icon name="solar:logout-3-bold"/>
               </NuxtLink>
               <!--  -->
