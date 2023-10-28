@@ -7,7 +7,6 @@ export default defineEventHandler((event) => {
             "usuario": "leandrocesar",
             "senha": "cesar@Le",
             "peso": 87,
-            "img": "https://i.dummyjson.com/data/products/1/thumbnail.jpg",
         },
         {
             "id": 2,
@@ -15,7 +14,6 @@ export default defineEventHandler((event) => {
             "usuario": "beatrizlopes",
             "senha": "lopes@Be",
             "peso": 87,
-            "img": "https://i.dummyjson.com/data/products/1/thumbnail.jpg",
         },
     ]}
 })
