@@ -95,7 +95,6 @@ const dataConf = await useFetch(`/api/${route.params.id}`)
 
 
 </NuxtLayout>
-  <NavBottom/>
 </template>
 
     
