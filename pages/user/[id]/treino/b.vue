@@ -8,6 +8,14 @@ function openPhoto() {
   photoOpen.value = !photoOpen.value;
 }
 
+const exerciseImg = ref(false);
+function openExercise() {
+  exerciseImg.value = !exerciseImg.value;
+}
+
+// var a = "Meu nome é ";
+// var b = "Tiago!";
+// var c = a.concat(b);
 
 const dataConf = await useFetch(`/api/${route.params.id}`)
 const dataTreino = await useFetch(`/api/${route.params.id}/treino/atual/b`)
@@ -35,16 +43,29 @@ const nextExercise = () => {
 
 <template>
   <NuxtLayout :name="layout">
-    
+
     <div class="main-div-two">
 
       <h3>
         {{ currentExercise.num }}
       </h3>
-      <img :src="currentExercise.img" class="square"/>
+      <img :src="currentExercise.img" class="square" @click="openExercise" />
       <h2>
         {{ currentExercise.nome }}
       </h2>
+
+      <div v-if="exerciseImg" class="nav-bar-photo" @click="openExercise">
+        <div class="nav-top">
+
+          <!-- Início do Nav-flow -->
+          <div class="nav-flow-photo">
+            <div class="div-img-full">
+              <img :src="currentExercise.img" />
+            </div>
+          </div>
+
+        </div>
+      </div>
 
       <p v-if="pending">Carregando...</p>
       <div v-else>
@@ -103,16 +124,14 @@ const nextExercise = () => {
 
     <div>
     </div>
-    
+
   </NuxtLayout>
-  <NavBottomTwo/>
+  <NavBottomTwo />
 </template>
 
     
 
 
-
-    
 
 <style scoped>
 body {
@@ -136,6 +155,7 @@ body {
 }
 
 .main-div-two {
+  position: relative;
   overflow-x: auto;
   display: flex;
   flex-direction: column;
@@ -258,16 +278,17 @@ border: 2px solid #2cd3db;
   margin-top: 90px;
   width: 100%;
 }
-.main-div-one .icon{
-   zoom: 1.4;
+
+.main-div-one .icon {
+  zoom: 1.4;
   color: #095D62;
   margin-top: -2.5px;
 }
 
-.conf {  
-  color:#555;
+.conf {
+  color: #555;
   height: 80px;
-    backdrop-filter: blur(15px);
+  backdrop-filter: blur(15px);
   overflow-x: auto;
   display: flex;
   flex-direction: column;
@@ -275,20 +296,20 @@ border: 2px solid #2cd3db;
   align-items: center;
   width: 32.5%;
   margin: 10px auto;
-  border-radius: 20px;  
+  border-radius: 20px;
 
 
-      background-color: #095D6210;
-    border: 2px solid #05959c20;
-    border-top: 3px solid #05959c40;
-    border-bottom: 3px solid #05959c40;
+  background-color: #095D6210;
+  border: 2px solid #05959c20;
+  border-top: 3px solid #05959c40;
+  border-bottom: 3px solid #05959c40;
 }
 
 .square {
   height: 140px;
   width: auto;
   max-width: 370px;
-  color:#555;
+  color: #555;
   background-color: #fff;
   backdrop-filter: blur(5px);
   overflow-x: auto;
@@ -297,6 +318,57 @@ border: 2px solid #2cd3db;
   justify-content: center;
   align-items: center;
   margin: 20px auto;
-  border: 2px solid #05959c10; 
+  border: 2px solid #05959c10;
 }
-</style>
+
+.photo-detail {
+  bottom: 0px;
+  z-index: 1004;
+  transform: translateX(0%);
+  position: fixed;
+  height: calc(100% - 0px);
+  bottom: 0px;
+  width: 100%;
+  background-color: #095D62;
+}
+
+.nav-top {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-self: center;
+  text-align: center;
+}
+
+.nav-bar-photo {
+  z-index: 1004;
+  transform: translateX(0%);
+  position: fixed;
+  height: calc(100% - 0px);
+  bottom: 0px;
+  width: 100%;
+  -webkit-backdrop-filter: blur(5px);
+  backdrop-filter: blur(5px);
+  background-color: #ffffff50;
+}
+
+.nav-flow-photo {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: left;
+  margin-top: 50%;
+  color: var(--color-text);
+  font-size: .8em;
+  font-weight: bold;
+}
+
+.div-img-full img {
+  border: solid 1px #095D62;
+  background-color: #fff;
+
+  height: auto;
+  bottom: 40px;
+  width: 100%;
+}</style>

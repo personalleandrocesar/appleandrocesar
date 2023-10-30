@@ -8,6 +8,11 @@ function openPhoto() {
   photoOpen.value = !photoOpen.value;
 }
 
+const exerciseImg = ref(false);
+function openExercise() {
+  exerciseImg.value = !exerciseImg.value;
+}
+
 // var a = "Meu nome é ";
 // var b = "Tiago!";
 // var c = a.concat(b);
@@ -44,10 +49,23 @@ const nextExercise = () => {
           <h3>
             {{ currentExercise.num }}
           </h3>
-          <img :src="currentExercise.img" class="square"/>
+          <img :src="currentExercise.img" class="square" @click="openExercise"/>
           <h2>
             {{ currentExercise.nome }}
           </h2>
+
+          <div v-if="exerciseImg" class="nav-bar-photo" @click="openExercise">
+        <div class="nav-top">
+
+          <!-- Início do Nav-flow -->
+          <div class="nav-flow-photo">
+            <div class="div-img-full">
+              <img :src="currentExercise.img" />
+            </div>
+          </div>
+
+        </div>
+      </div>
           
           <p v-if="pending">Carregando...</p>
           <div v-else>
@@ -277,8 +295,6 @@ border: 2px solid #2cd3db;
     border-bottom: 3px solid #05959c40;
 }
 
-
-
 .square {
   height: 140px;
   width: auto;
@@ -295,4 +311,55 @@ border: 2px solid #2cd3db;
   border: 2px solid #05959c10; 
 }
 
+.photo-detail {
+  bottom: 0px;
+  z-index: 1004;
+  transform: translateX(0%);
+  position: fixed;
+  height: calc(100% - 0px);
+  bottom: 0px;
+  width: 100%;
+  background-color: #095D62;
+}
+
+.nav-top {
+  display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-self: center;
+    text-align: center;
+}
+
+.nav-bar-photo{
+  z-index: 1004;
+    transform: translateX(0%);
+    position: fixed;
+    height: calc(100% - 0px);
+    bottom: 0px;
+    width: 100%;
+    -webkit-backdrop-filter: blur(5px);
+    backdrop-filter: blur(5px);
+    background-color: #ffffff50;
+}
+
+.nav-flow-photo {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: left;
+    margin-top: 50%;
+    color: var(--color-text);
+    font-size: .8em;
+    font-weight: bold;
+}
+
+.div-img-full img {
+  border: solid 1px #090909;
+  background-color: #fff;
+  
+    height: auto;
+    bottom:40px;
+    width: 100%;
+}
 </style>
