@@ -309,6 +309,7 @@ border: 2px solid #2cd3db;
   align-items: center;
   margin: 20px auto;
   border: 2px solid #05959c10; 
+  cursor: zoom-in;
 }
 
 .photo-detail {
@@ -357,9 +358,9 @@ border: 2px solid #2cd3db;
 .div-img-full img {
   border: solid 1px #090909;
   background-color: #fff;
-  
     height: auto;
     bottom:40px;
     width: 100%;
+    cursor: zoom-out;
 }
 </style>
