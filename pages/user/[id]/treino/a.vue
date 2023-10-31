@@ -47,10 +47,9 @@ const nextExercise = () => {
 }
 
 const Exercise = () => {
-  return dataTreino.data.value[treino.value].id
+  return dataTreino.data.value[1]
 }
 
-  //  return item.value
 console.log(itemExercise());
 console.log(Exercise());
   //  return item.value
@@ -67,9 +66,9 @@ console.log(Exercise());
           
 
             <ul>
-              <li v-for="value in itemExercise()" >
-                <span @click="nextExercise">
-                   {{value}}
+              <li v-for="id in itemExercise()">
+                <span @click="treino()">
+                   {{id}}
                 </span>
               </li>
             </ul>
