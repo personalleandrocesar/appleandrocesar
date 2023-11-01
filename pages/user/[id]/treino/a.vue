@@ -46,6 +46,10 @@ const nextExercise = () => {
   }
 }
 
+const exerciseActive = true
+
+
+
   //  return item.value
 </script>
 
@@ -56,7 +60,7 @@ const nextExercise = () => {
           
           <ul>
             <li v-for="id in itemExercise()">
-              <span @click='itemExercise(treino = id -1)'>
+              <span @click='itemExercise(treino = id -1)' :class="exerciseActive= exerciseActive">
                  {{id}}
               </span>
             </li>
@@ -169,6 +173,11 @@ ul {
     border: solid .1px #05959c80;
     padding: 0px 8px;
 
+  }
+
+  .exerciseActive {
+    background-color: #05959c;
+    color: #fff;
   }
   
 .main {
