@@ -46,12 +46,6 @@ const nextExercise = () => {
   }
 }
 
-const Exercise = () => {
-  return dataTreino.data.value[1]
-}
-
-console.log(itemExercise());
-console.log(Exercise());
   //  return item.value
 </script>
 
@@ -60,19 +54,16 @@ console.log(Exercise());
     
         <div class="main-div-two">
           
+          <ul>
+            <li v-for="id in itemExercise()">
+              <span @click='itemExercise(treino = id -1)'>
+                 {{id}}
+              </span>
+            </li>
+          </ul>
           <h3>
             {{ currentExercise.num }}
           </h3>
-          
-
-            <ul>
-              <li v-for="id in itemExercise()">
-                <span @click="treino()">
-                   {{id}}
-                </span>
-              </li>
-            </ul>
-         
           <img :src="currentExercise.img" class="square" @click="openExercise"/>
           <h2>
             {{ currentExercise.nome }}
@@ -170,11 +161,16 @@ ul {
     padding: 0;
     margin-top: 10px;
     color: #05959c;
+    margin: 10px 0 ;
+    font-weight: bold;
   }
   
-  span {
-  margin: 0;
-}
+  ul li {
+    border: solid .1px #05959c80;
+    padding: 0px 8px;
+
+  }
+  
 .main {
   display: flex;
   margin-top: 140px;

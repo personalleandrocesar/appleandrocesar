@@ -26,6 +26,11 @@ const currentExercise = computed(() => {
   return dataTreino.data.value[treino.value]
 })
 
+
+const itemExercise = () => {
+  return dataTreino.data.value.length
+}
+
 const pending = ref(false)
 
 const previousExercise = () => {
@@ -45,7 +50,13 @@ const nextExercise = () => {
   <NuxtLayout :name="layout">
 
     <div class="main-div-two">
-
+      <ul>
+                <li v-for="id in itemExercise()">
+                  <span @click='itemExercise(treino = id - 1)'>
+                     {{ id }}
+                  </span>
+                </li>
+              </ul>
       <h3>
         {{ currentExercise.num }}
       </h3>
@@ -138,7 +149,23 @@ body {
   background: #fff;
   color: #616161;
 }
+ul {
+    list-style-type: none;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    padding: 0;
+    margin-top: 10px;
+    color: #05959c;
+    margin: 10px 0 ;
+    font-weight: bold;
+  }
+  
+  ul li {
+    border: solid .1px #05959c80;
+    padding: 0px 8px;
 
+  }
 .main {
   display: flex;
   margin-top: 140px;
