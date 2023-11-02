@@ -13,10 +13,6 @@ function openExercise() {
   exerciseImg.value = !exerciseImg.value;
 }
 
-// var a = "Meu nome é ";
-// var b = "Tiago!";
-// var c = a.concat(b);
-
 const dataConf = await useFetch(`/api/${route.params.id}`)
 const dataTreino = await useFetch(`/api/${route.params.id}/treino/atual/a`)
 
@@ -46,14 +42,7 @@ const nextExercise = () => {
   }
 }
 
-const aplicar = () => {
-  if (itemExercise(treino = 9)) {
-    return true
-  }
-}
-
-
-  //  return item.value
+//  return item.value
 </script>
 
 <template>
@@ -62,9 +51,9 @@ const aplicar = () => {
         <div class="main-div-two">
           
           <ul>
-            <li v-for="id in itemExercise()">
-              <span @click='itemExercise(treino = id -1)' >
-                 {{id}}
+            <li v-for="id in itemExercise()" @click='itemExercise(treino = id - 1)'>
+              <span>
+                {{ id }} 
               </span>
             </li>
           </ul>
@@ -160,6 +149,7 @@ body {
   color: #616161;
 }
 
+
 ul {
     list-style-type: none;
     display: flex;
@@ -178,13 +168,11 @@ ul {
 
   }
 
-  .exercise {
-    background-color: #fff;
-    color: #05959c;
+  .itemex{
+  color: #05959c;
   }
-  .exerciseActive {
-    background-color: #05959c;
-    color: #fff;
+  .iteme{
+  color: #fff;
   }
   
 .main {

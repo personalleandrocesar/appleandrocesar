@@ -51,8 +51,8 @@ const nextExercise = () => {
 
     <div class="main-div-two">
       <ul>
-                <li v-for="id in itemExercise()">
-                  <span @click='itemExercise(treino = id - 1)'>
+                <li v-for="id in itemExercise()" @click='itemExercise(treino = id - 1)'>
+                  <span>
                      {{ id }}
                   </span>
                 </li>
