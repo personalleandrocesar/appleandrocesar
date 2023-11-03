@@ -36,36 +36,9 @@ const percentualFat = computed(() => {
 
 <template>
     <NuxtLayout :name="layout">
-        <div>
-<!-- 
-            <div class="main-div-one">
+            <div v-if="data.data.value.data">
 
-                <div class="conf">
-                    <Icon name="fluent:target-arrow-16-filled" />
-                    <h3>
-                        {{ dataConf.data.value.objetivo }}
-                    </h3>
-
-                </div>
-                <div class="conf">
-                    <Icon name="mdi:calendar-weekend" />
-                    <h3>
-                        {{ dataConf.data.value.dias }}
-                    </h3>
-
-                </div>
-                <div class="conf">
-                    <Icon name="material-symbols:timer-rounded" />
-                    <h3>
-                        {{ dataConf.data.value.tempo }}
-                    </h3>
-
-                </div>
-
-
-            </div> -->
-
-            <div class="main-div-two">
+            <div  class="main-div-two">
                 <h3>
                     <Icon name='jam:medical' /> AVALIAÇÕES
                 </h3>
@@ -107,12 +80,35 @@ const percentualFat = computed(() => {
 
                     </div>
                 </nuxt-link>
+            </div>
+                        </div>
+
+            <div v-else>
+            <div class="main-div-tree">
+                <h3>
+                        <Icon name='jam:medical' /> AVALIAÇÕES
+                    </h3>
                 
+                <nuxt-link  class="square">
+    
+    
+    
+                    <div>
+                        <h4>
+                            <Icon name='material-symbols:event' />
+                        </h4>
+                        <h4>
+                            Agende sua Avaliação!!
+                        </h4>
+                    </div>
+    
+                </nuxt-link>
+            </div>
             </div>
             <br>
             <br>
             <br>
-        </div>
+      
         
         
         
@@ -286,6 +282,57 @@ body {
     border-bottom: 3px solid #05959c40;
 }
 
+.main-div-tree {
+    margin-top: 100px;
+    overflow-x: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: left;
+}
+
+.main-div-tree H3 {
+    margin-left: 20px;
+
+}
+
+.main-div-tree .icon {
+    color: #095D62;
+}
+
+.main-div-tree h4 {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+.main-div-tree a div {
+    margin: auto;
+    height: 100px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.main-div-tree h4 .icon {
+    margin-left: 1px;
+}
+
+.main-div-tree div .icon {
+    margin-top: 0px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+.main-div-tree .square:hover {
+    background-color: #095D6220;
+    border-right: 6px solid #05959c80;
+
+}
 
 
 </style>

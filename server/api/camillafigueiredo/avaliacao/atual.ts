@@ -1,6 +1,6 @@
 export default defineEventHandler((event) => {
   return {
-      "data": "06/10/1986",
+      "data": "",
       "idade": 36,
       "massa": 78,
       "altura": 1.80,
