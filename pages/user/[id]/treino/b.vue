@@ -58,7 +58,7 @@ const nextExercise = () => {
                 </li>
               </ul>
       <h3>
-        {{ currentExercise.num }}
+        {{ currentExercise.num }} - {{ itemExercise() }}
       </h3>
       <img :src="currentExercise.img" class="square" @click="openExercise" />
       <h2>

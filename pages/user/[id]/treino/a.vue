@@ -25,8 +25,8 @@ const currentExercise = computed(() => {
 
 const itemExercise = () => {
   return dataTreino.data.value.length
+  
 }
-
 
 const pending = ref(false)
 
@@ -42,6 +42,7 @@ const nextExercise = () => {
   }
 }
 
+
 //  return item.value
 </script>
 
@@ -51,14 +52,14 @@ const nextExercise = () => {
         <div class="main-div-two">
           
           <ul>
-            <li v-for="id in itemExercise()" @click='itemExercise(treino = id - 1)'>
-              <span>
-                {{ id }} 
+            <li v-for="id in itemExercise()" @click='itemExercise((treino = id - 1))'>
+              <span >
+                {{ id }}
               </span>
             </li>
           </ul>
           <h3>
-            {{ currentExercise.num }}
+            {{ currentExercise.num }} - {{ itemExercise() }}
           </h3>
           <img :src="currentExercise.img" class="square" @click="openExercise"/>
           <h2>
@@ -155,9 +156,9 @@ ul {
     display: flex;
     flex-direction: row;
     justify-content: space-evenly;
+    color: #05959c;
     padding: 0;
     margin-top: 10px;
-    color: #05959c;
     margin: 10px 0 ;
     font-weight: bold;
   }
@@ -168,13 +169,6 @@ ul {
 
   }
 
-  .itemex{
-  color: #05959c;
-  }
-  .iteme{
-  color: #fff;
-  }
-  
 .main {
   display: flex;
   margin-top: 140px;
