@@ -3,14 +3,21 @@ import { ref } from 'vue';
 const route = useRoute()
 
 const data = await useFetch(`/api/${route.params.id}`)
+const notify = await useFetch(`/api/notifications`)
 // const { data, pending, error, refresh } = await useFetch(`https://professorleandrocesar.com/usuarios/`, {})
 
-const notification = ref(false)
 const status = data.data.value.status
 
 const navbarOpen = ref(false);
 function openNavbar() {
   navbarOpen.value = !navbarOpen.value;
+}
+
+const notification = notify.data.value.status
+const notifyOpen = ref(false);
+function openNotify() {
+  notifyOpen.value = !notifyOpen.value;
+
 }
 const photoOpen = ref(false);
 function openPhoto() {
@@ -21,32 +28,41 @@ function openPhoto() {
 
 <template>
   <NuxtLoadingIndicator color='repeating-linear-gradient(to right,#00dc82 0%,#34cdfe 50%,#fadb41 100%)' /> <!-- here -->
-
+  
   <div class="bar-top">
     <div>
-
+      
       <div class='bar-top-top'>
         <div class="div-img">
           <img :src="data.data.value.foto" @click="openNavbar" />
         </div>
         <div class="mZero">
-
-          <nuxt-link v-if="notification">
+          
+          <nuxt-link v-if="notification === 1" @click="openNotify">
             <Icon name='ic:baseline-notifications-active' />
           </nuxt-link>
           <nuxt-link v-else>
             <Icon name='ic:round-notifications-none' />
           </nuxt-link>
         </div>
-
+        
       </div>
 
-      <span class="name-user">
+      <div v-if="notifyOpen" class="notify-bar">
+       <div>
+          <nuxt-link class="old-msg" @click="openNotify">
+            <Icon name='material-symbols:cancel-rounded' />
+          </nuxt-link>
+          <p class="msg-notify">Não há mensagens!<br>
+          </p>
+          </div>
+      </div>
+      <span v-else class="name-user">
         Olá, {{ data.data.value.nome }}
       </span>
-
+      
     </div>
-
+    
     <div v-if="navbarOpen" class="nav-bar">
       <div>
         <nuxt-link @click="openNavbar" class="button-cancel">
@@ -56,14 +72,20 @@ function openPhoto() {
           <Icon name='mdi:email-multiple-outline' />
         </nuxt-link>
       </div>
-
+      
       <div class="nav-top">
-
+        
         <div>
 
+
+
+          
+
+
+          
           <!-- Início do Nav-flow -->
           <div class="nav-flow">
-
+            
             <div class="div-img">
               <img :src="data.data.value.foto" @click="openPhoto" />
             </div>
@@ -78,7 +100,7 @@ function openPhoto() {
           </div>
           <p class="section-title">Ciclos</p>
           <p class="section-subtitle">Contrato atual: {{ data.data.value.periodo }}</p>
-
+          
           <p v-if="status === 1" class="section-option pending">
             <Icon name="solar:danger-square-outline" /> Pendente!
           </p>
@@ -310,7 +332,6 @@ function openPhoto() {
 
 
 .nav-bar {
-  bottom: 0px;
   z-index: 1004;
   transform: translateX(0%);
   position: fixed;
@@ -318,6 +339,25 @@ function openPhoto() {
   bottom: 0px;
   width: 100%;
   background-color: #095D62;
+}
+.notify-bar {
+  z-index: 1004;
+  transform: translateX(0%);
+  position: fixed;
+  top: 0px;
+  width: 100%;
+   height: calc(60% - 0px);
+  background-color: #095D6290;
+  backdrop-filter: blur(5px);
+  border-radius: 20px;
+}
+.msg-notify {
+  color: #fadb41;
+  font-size: 1.4em;
+  text-transform: capitalize;
+  margin: 60px 10px;
+  font-weight: bold;
+  text-align: center;
 }
 
 .nav-flow {

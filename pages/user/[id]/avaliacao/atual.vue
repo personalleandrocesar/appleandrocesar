@@ -879,6 +879,7 @@ th, td {
     justify-content: space-around;
     align-items: center;
     text-align: center;
+    flex-wrap: wrap;
 }
 
 .main-div-one:nth-child(1) {
@@ -898,14 +899,6 @@ th, td {
     justify-content: flex-start;
     align-items: flex-end;
     text-align: left;
-}
-
-.main-div-one {
-    overflow-x: hidden;
-    display: flex;
-    flex-direction: row;
-    justify-content: space-around;
-    align-items: left;
 }
 
 .main-div-tree div {
@@ -1063,7 +1056,7 @@ text-align: center;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    width: 32.5%;
+    width: 25%;
     height: 80px;
     margin: 5px auto;
     border-radius: 20px;
