@@ -1,9 +1,7 @@
 export default defineEventHandler((event) => {
   return {
     "admin": {"usuario": "admin", "sennha": "1234"},
-    "camillafigueiredo": {
-      "usuario": "camillafigueiredo", "sennha": "figueiredo@Ca"
-    },
+    "camillafigueiredo": {"usuario": "camillafigueiredo", "sennha": "figueiredo@Ca"},
     "beatrizlopes": {"usuario": "beatrizlopes", "sennha": "lopes@Be"},
     "celiooliveira": {"usuario": "celiooliveira", "sennha": "oliveira@Ce"},
     "rosanaassis": {"usuario": "rosanaassis", "sennha": "assis@Ro"},
@@ -13,5 +11,6 @@ export default defineEventHandler((event) => {
     "luizsouza": {"usuario": "luizsouza", "sennha": "souza@Lu"},
     "daniellenovaes": {"usuario": "daniellenovaes", "sennha": "novaes@Da"},
     "robertamoura": {"usuario": "robertamoura", "sennha": "moura@Ro"},
+    "isadorapecanha": {"usuario": "isadorapecanha", "sennha": "pecanha@Is"},
   }    
 })
