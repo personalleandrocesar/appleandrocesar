@@ -1,16 +1,16 @@
 export default defineEventHandler((event) => {
   return [
     // Série Atual
-   { num: 'Exercício 1', nome: 'Supino reto', sets: 5, reps: '15 a 20', rest: '50"', grupo: '', obs: '', img: 'https://m.leandrocesar.com/img/preImagem.png'},
-   { num: 'Exercício 2', nome: 'Remada cavalo', sets: 3, reps: '8 +10" +8', rest: '40"', grupo: '', obs: 'Pegada Neutra.', img: 'https://m.leandrocesar.com/img/preImagem.png'},
-   { num: 'Exercício 3', nome: 'Supino inclinado (HBC)', sets: 3, reps: '8 c/1"', rest: '60"', grupo: '', obs: 'Segurar 1 segundo embaixo a cada repetição.', img: 'https://m.leandrocesar.com/img/preImagem.png'},
-   { num: 'Exercício 4', nome: 'Puxada aberta pronada', sets: 3, reps: '8 a 10', rest: '60"', grupo: '', obs: 'Pegada neutra média.', img: 'https://m.leandrocesar.com/img/preImagem.png'},
-   { num: 'Exercício 5', nome: 'Remada na polia baixa', sets: 3, reps: '8 +10"', rest: '50"', grupo: '', obs: 'Fazer 8 repetições e segurar 10 segundos no final do movimento na fase excêntrica.', img: 'https://m.leandrocesar.com/img/preImagem.png'},
-   { num: 'Exercício 6', nome: 'Fly', sets: 3, reps: '5 / 8', rest: '60"', grupo: '', obs: 'Drop-set: fazer 5 falhando, diminui 2 ou 3 placas: +8.', img: 'https://m.leandrocesar.com/img/preImagem.png'},
-   { num: 'Exercício 7', nome: 'Supino no cross-over', sets: 3, reps: '12', rest: '60"', grupo: '', obs: 'Peg. pronada.', img: 'https://m.leandrocesar.com/img/preImagem.png'},
-   { num: 'Exercício 8', nome: 'Remada Máquina', sets: 3, reps: '10 2T', rest: '50"', grupo: '', obs: 'Fazer com a pegada pronada, com 2 tempos.', img: 'https://m.leandrocesar.com/img/preImagem.png'},
-   { num: 'Exercício 9', nome: 'Puxada aparelho', sets: 3, reps: '15', rest: '40"', grupo: '', obs: '', img: 'https://m.leandrocesar.com/img/preImagem.png'},
-   { num: 'Exercício 10', nome: 'Abdominal infra na paralela', sets: 3, reps: 'falha', rest: '40"', grupo: '', obs: 'Colocar caneleira de 2 kg e fazer até a falha.', img: 'https://m.leandrocesar.com/img/preImagem.png'},
+    { num: 'Exercício 1', nome: 'Leg press 45°', sets: 3, reps: '15', rest: '40"', grupo: '', obs: 'Pés e bancos no alto.', img: 'https://m.leandrocesar.com/img/leg45.gif'},
+    { num: 'Exercício 2', nome: 'Extensora', sets: 3, reps: '8 +8" +4', rest: '40"', grupo: '', obs: 'Fazer 8 repetições, segurar 8 segundos em cima + 4 repetições.', img: 'https://m.leandrocesar.com/img/extensora.gif' },
+    { num: 'Exercício 3', nome: 'Mesa Flexora', sets: 3, reps: '10 c/ 1"', rest: '40"', grupo: '', obs: 'Fazer 10 repetições, segurando 1 segundo em cima a cada repetição.', img: 'https://m.leandrocesar.com/img/mesaFlexora.gif' },
+    { num: 'Exercício 4', nome: 'Stiff', sets: 3, reps: '10', rest: '40"', grupo: '', obs: 'Fazer com o HBM (barra média).', img: 'https://m.leandrocesar.com/img/stiffHBL.gif' },
+    { num: 'Exercício 5', nome: 'Agachamento Sumô', sets: 3, reps: '15 +10"', rest: '40"', grupo: '', obs: '', img: 'https://m.leandrocesar.com/img/sumo.gif' },
+    { num: 'Exercício 6', nome: 'Extensão de quadril na polia baixa', sets: 3, reps: '15', rest: '40"', grupo: '', obs: 'Fazer Coice.', img: 'https://m.leandrocesar.com/img/extensaoQuadril.png' },
+    { num: 'Exercício 7', nome: 'Abdutora', sets: 3, reps: '12/10/8', rest: '40"', grupo: '', obs: 'Fazer pirâmide crescente (aumenta o peso, diminui as repetições).', img: 'https://m.leandrocesar.com/img/abdutora.png' },
+    { num: 'Exercício 8', nome: 'Agachamento no smith', sets: 3, reps: '10', rest: '40"', grupo: '', obs: '', img: 'https://m.leandrocesar.com/img/squatSmith.png' },
+    { num: 'Exercício 9', nome: 'Perdigueiro dinâmico no solo', sets: 3, reps: '10', rest: '40"', grupo: '', obs: '', img: 'https://m.leandrocesar.com/img/perdigueiro.gif' },
+    { num: 'Exercício 10', nome: 'Panturrilhas no aparelho em pé', sets: 3, reps: '20 2t + curtas', rest: '40"', grupo: '', obs: 'Fazer 20 com 2 tempos em cima, + curtas até a falha.', img: 'https://m.leandrocesar.com/img/panturrilhaAparelho.gif' },
 
     // Modelo
     // { num: 'Exercício 1', nome: '', sets: 3, reps: '', rest: '40"', grupo: '', obs: '', img: 'https://m.leandrocesar.com/img/preImagem.png'},
