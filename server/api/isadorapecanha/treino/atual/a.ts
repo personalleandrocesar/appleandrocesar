@@ -8,9 +8,9 @@ export default defineEventHandler((event) => {
     { num: 'Exercício 5', nome: 'Agachamento Sumô', sets: 3, reps: '15 +10"', rest: '40"', grupo: '', obs: '', img: 'https://m.leandrocesar.com/exe/sumo.gif' },
     { num: 'Exercício 6', nome: 'Extensão de quadril na polia baixa', sets: 3, reps: '15', rest: '40"', grupo: '', obs: 'Fazer Coice.', img: 'https://m.leandrocesar.com/exe/extensaoQuadril.png' },
     { num: 'Exercício 7', nome: 'Abdutora', sets: 3, reps: '12/10/8', rest: '40"', grupo: '', obs: 'Fazer pirâmide crescente (aumenta o peso, diminui as repetições).', img: 'https://m.leandrocesar.com/exe/abdutora.png' },
-    { num: 'Exercício 8', nome: 'Agachamento no smith', sets: 3, reps: '10', rest: '40"', grupo: '', obs: '', img: 'https://m.leandrocesar.com/exe/squatSmith.png' },
+    { num: 'Exercício 8', nome: 'Agachamento no smith', sets: 3, reps: '10', rest: '40"', grupo: '', obs: '', img: 'https://m.leandrocesar.com/exe/smithSquat.png' },
     { num: 'Exercício 9', nome: 'Perdigueiro dinâmico no solo', sets: 3, reps: '10', rest: '40"', grupo: '', obs: '', img: 'https://m.leandrocesar.com/exe/perdigueiro.gif' },
-    { num: 'Exercício 10', nome: 'Panturrilhas no aparelho em pé', sets: 3, reps: '20 2t + curtas', rest: '40"', grupo: '', obs: 'Fazer 20 com 2 tempos em cima, + curtas até a falha.', img: 'https://m.leandrocesar.com/exe/panturrilhaAparelho.gif' },
+    { num: 'Exercício 10', nome: 'Panturrilhas no aparelho em pé', sets: 3, reps: '20 2t + curtas', rest: '40"', grupo: '', obs: 'Fazer 20 com 2 tempos em cima, + curtas até a falha.', img: 'https://m.leandrocesar.com/exe/panturrilhaAparelho.png' },
 
     // Modelo
     // { num: 'Exercício 1', nome: '', sets: 3, reps: '', rest: '40"', grupo: '', obs: '', img: 'https://m.leandrocesar.com/img/preImagem.png'},

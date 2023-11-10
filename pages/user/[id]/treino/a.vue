@@ -166,7 +166,7 @@ ul {
   ul li {
     border: solid .1px #05959c80;
     padding: 0px 8px;
-
+    border-radius: 6px;
   }
 
 .main {
