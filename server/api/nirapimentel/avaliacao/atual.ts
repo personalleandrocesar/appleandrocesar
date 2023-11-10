@@ -15,14 +15,14 @@ export default defineEventHandler((event) => {
       "quadril": 112,
       // Lado direito
       "bracoDireitoRelaxado": 34,
-      "bracoDireitoContranumo": 35,
+      "bracoDireitoContraido": 35,
       "antebracoDireito": 27,
       "coxaMedialDireita": 57.5,
       "coxaDistalDireita": 51.5,
       "pernaDireita": 40,
       // Lado esquerdo
       "bracoEsquerdoRelaxado": 32.5,
-      "bracoEsquerdoContranumo": 36,
+      "bracoEsquerdoContraido": 36,
       "antebracoEsquerdo": 26.5,
       "coxaMedialEsquerda": 58.5,
       "coxaDistalEsquerda": 53,
