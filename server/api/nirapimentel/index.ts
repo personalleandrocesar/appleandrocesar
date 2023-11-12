@@ -7,7 +7,7 @@ export default defineEventHandler((event) => {
     "nomeCompleto": "Alcenira Pimentel",
     "email": "alceniralucas@gmailcom",
     "senha": "1234",
-    "foto": "https://m.leandrocesar.com/img/nirapimentel.jpeg",
+    "foto": "https://m.leandrocesar.com/img/nirapimentel.png",
     "objetivo": "Hiṕetrofia",
     "tempo": "60 min.",
     "dias": "3-4 dias",
@@ -16,15 +16,15 @@ export default defineEventHandler((event) => {
     "treinoC": "",
     
     // Dados Menu Global
-    "periodo": "10/10/23 - 10/11/23",
+    "periodo": "13/10/23 - 13/11/23",
     "status": 2,
     // Treino atual
-    "treinoActual": "10/10/23 - 10/11/23",
+    "treinoActual": "13/10/23 - 13/11/23",
     // Próxima Treino 
-    "treinoNext": "11/11/23",
+    "treinoNext": "14/11/23",
     // Avaliação atual
-    "valuationActual": "",
+    "valuationActual": "10/10/23",
     // Próxima avaliação 
-    "valuationNext": ""
+    "valuationNext": "10/01/24"
   }
 })
