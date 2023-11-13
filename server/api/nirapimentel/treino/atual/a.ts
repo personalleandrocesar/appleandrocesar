@@ -7,8 +7,8 @@ export default defineEventHandler((event) => {
     { id: 4, num: 'Exercício 4', nome: 'Agachamento Sumô', sets: 3, reps: '12', rest: '40"', grupo: '', obs: '', img: 'https://m.leandrocesar.com/exe/sumo.gif'},
     { id: 5, num: 'Exercício 5', nome: 'Stiff', sets: 3, reps: '12', rest: '40"', grupo: '', obs: '', img: 'https://m.leandrocesar.com/exe/stiffHBL.gif'},
     { id: 6, num: 'Exercício 6', nome: 'Abdutora', sets: 3, reps: '10 / 15 2t', rest: '40"', grupo: '', obs: 'Fazer 10 repetições, diminuir 1 placa: fazer 15 repetições com 2 tempos.', img: 'https://m.leandrocesar.com/exe/abdutora.png'},
-    { id: 7, num: 'Exercício 7', nome: 'Elevação Pélvica no solo', sets: 3, reps: '20', rest: '40"', grupo: '', obs: 'Colocar peso no quadril.', img: 'https://m.leandrocesar.com/exe/preImagem.png'},
-    { id: 8, num: 'Exercício 8', nome: 'Agachamento aparelho', sets: 3, reps: '10', rest: '40"', grupo: '', obs: '', img: 'https://m.leandrocesar.com/exe/preImagem.png'},
+    { id: 7, num: 'Exercício 7', nome: 'Elevação Pélvica no solo', sets: 3, reps: '20', rest: '40"', grupo: '', obs: 'Colocar peso no quadril.', img: 'https://m.leandrocesar.com/exe/elevacaopelvica.png'},
+    { id: 8, num: 'Exercício 8', nome: 'Agachamento aparelho', sets: 3, reps: '10', rest: '40"', grupo: '', obs: '', img: 'https://m.leandrocesar.com/exe/hacksquat.gif'},
     { id: 9, num: 'Exercício 9', nome: 'Panturrilha aparelho em pé', sets: 3, reps: '20 + curtas', rest: '40"', grupo: '', obs: 'Fazer 20 repetições + curtas até a falha.', img: 'https://m.leandrocesar.com/exe/panturrilhaAparelho.png'},
     { id: 10, num: 'Exercício 10', nome: 'Abdominal infra no solo', sets: 3, reps: '25', rest: '40"', grupo: '', obs: '', img: 'https://m.leandrocesar.com/exe/abdominalInfra.gif'},
    
