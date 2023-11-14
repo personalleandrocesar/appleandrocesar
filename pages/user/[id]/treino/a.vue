@@ -68,6 +68,16 @@ const nextExercise = () => {
 
           </div>
         </div>
+        <!-- <div class="alternate">
+          <span v-if="list">
+            <Icon name="solar:slider-minimalistic-horizontal-bold" />
+
+          </span>
+          <span v-else>
+            <Icon name="mdi:format-list-text" />
+
+          </span>
+        </div> -->
     
         <div class="main-div-two">
           
