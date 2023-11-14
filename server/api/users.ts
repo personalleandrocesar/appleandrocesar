@@ -10,7 +10,6 @@ export default defineEventHandler((event) => {
     "luanamello": {"usuario": "luanamello", "sennha": "mello@Lu"},
     "luizsouza": {"usuario": "luizsouza", "sennha": "souza@Lu"},
     "daniellenovaes": {"usuario": "daniellenovaes", "sennha": "novaes@Da"},
-    "robertamoura": {"usuario": "robertamoura", "sennha": "moura@Ro"},
     "isadorapecanha": {"usuario": "isadorapecanha", "sennha": "pecanha@Is"},
     "nirapimentel": {"usuario": "nirapimentel", "sennha": "pimentel@Ni"},
     "thayanecarvalho": {"usuario": "thayanecarvalho", "sennha": "carvalho@Th"},
