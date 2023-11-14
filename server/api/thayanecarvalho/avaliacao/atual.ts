@@ -46,7 +46,7 @@ export default defineEventHandler((event) => {
       "flexaoBraco": "--",
       "flexaoAbdominal": 22
       // Postura
-      // Hiperlodose lombar; anteroversão de quadril; pés abdutos bem leve;
+      // retroversão de quadril; anteroversão de ombros; joelhos recurvados
       // 
     }
 })
