@@ -50,6 +50,31 @@ const nextExercise = () => {
 
 <template>
   <NuxtLayout :name="layout">
+    <div class="main-div-one">
+
+
+            <div class="conf">
+              <Icon name="fluent:target-arrow-16-filled" />
+              <h3>
+                {{ dataConf.data.value.objetivo }}
+              </h3>
+
+            </div>
+            <div class="conf">
+              <Icon name='mdi:calendar-weekend' />
+              <h3>
+                {{ dataConf.data.value.dias }}
+              </h3>
+
+            </div>
+            <div class="conf">
+              <Icon name="material-symbols:timer-rounded" />
+              <h3>
+                {{ dataConf.data.value.tempo }}
+              </h3>
+
+            </div>
+          </div>
 
     <div class="main-div-two">
       <ul>
@@ -190,7 +215,7 @@ ul {
   display: flex;
   flex-direction: column;
   justify-content: space-around;
-  margin-top: 170px;
+  margin-top: 0px;
 }
 
 .main-div-two .icon {
