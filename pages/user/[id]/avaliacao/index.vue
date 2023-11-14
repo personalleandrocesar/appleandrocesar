@@ -71,10 +71,16 @@ const percentualFat = computed(() => {
                         <h3>
                         </h3>
 
-                        <h4>
+                        <h4 style="font-weight: 900;color: #095D62; zoom: 1.8; margin-bottom: -5px;">
+                                %G
+                            </h4>
+                    <!--
+                      // antigo ícone!
+                         <h4>
                             <Icon name="material-symbols:body-fat-rounded" />
                         </h4>
-                        <h4>
+                    --> 
+                            <h4>
                                {{ percentualFat }} %
                             </h4>
 
