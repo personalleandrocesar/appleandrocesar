@@ -20,8 +20,13 @@ const currentExercise = computed(() => {
 
 const itemExercise = () => {
   return dataTreino.data.value.length
-  
 }
+
+const listExercise = () => {
+  return dataTreino.data.value
+}
+
+console.log(listExercise);
 
 const pending = ref(false)
 
@@ -37,6 +42,12 @@ const nextExercise = () => {
   }
 }
 
+const list = ref(false);
+const buttonList = ref(false);
+function alternate() {
+  buttonList.value = !buttonList.value;
+  list.value = !list.value;
+}
 
 //  return item.value
 </script>
@@ -69,17 +80,36 @@ const nextExercise = () => {
           </div>
         </div>
         <!-- <div class="alternate">
-          <span v-if="list">
+          <span v-if="buttonList" @click="alternate">
             <Icon name="solar:slider-minimalistic-horizontal-bold" />
 
           </span>
-          <span v-else>
+          <span v-else @click="alternate">
             <Icon name="mdi:format-list-text" />
 
           </span>
         </div> -->
     
-        <div class="main-div-two">
+        <div class="main-div-two" v-if="list">
+          
+          
+          <h3>
+            {{ itemExercise() }} Exercícios
+          </h3>
+          <ul>
+              <li v-for="name in listExercise()" >
+                <span >
+                  {{ name }}
+                </span>
+              </li>
+            </ul>
+          
+        
+
+          </div>
+
+          <!-- Série em lista -->
+        <div class="main-div-two" v-else >
           
           <ul>
             <li v-for="id in itemExercise()" @click='itemExercise((treino = id - 1))'>
@@ -205,6 +235,16 @@ ul {
   flex-direction: column;
   justify-content: space-around;
   justify-items: center;
+}
+.alternate {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+  margin: 5px 15px;
+}
+
+.alternate .icon {
+  color: #05959c;
 }
 
 .main-div-one {
