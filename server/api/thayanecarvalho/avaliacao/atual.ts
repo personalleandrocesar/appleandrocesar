@@ -23,7 +23,7 @@ export default defineEventHandler((event) => {
       "pernaDireita": 35.5,
       // Lado esquerdo
       "bracoEsquerdoRelaxado": 26,
-      "bracoEsquerdoContraido": 26,5,
+      "bracoEsquerdoContraido": 26.5,
       "antebracoEsquerdo": 22,
       "coxaMedialEsquerda": 54,
       "coxaDistalEsquerda": 51,
