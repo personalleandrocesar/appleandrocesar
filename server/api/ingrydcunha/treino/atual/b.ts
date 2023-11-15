@@ -1,16 +1,15 @@
 export default defineEventHandler((event) => {
   return [
     // Série Atual
-    { id: 1, num: 'Exercício 1', nome: 'Puxada aberta pronada', sets: 3, reps: '15', rest: '50"', grupo: '', obs: '', img: 'https://m.leandrocesar.com/exe/puxadaFrente.gif' },
-    { id: 2, num: 'Exercício 2', nome: 'Remada sentada (ap)', sets: 3, reps: '8 +10" +8', rest: '50"', grupo: '', obs: 'Fazer 8 repetições, segurar 10" + 8 repetições; Pegada neutra.', img: 'https://m.leandrocesar.com/exe/remadaAparelhoNeutra.gif' },
-    { id: 3, num: 'Exercício 3', nome: 'Crucifixo dorsal aparelho', sets: 3, reps: '12 c/1"', rest: '50"', grupo: '', obs: 'Pegada pronada.', img: 'https://m.leandrocesar.com/exe/crucifixoDorsal.gif' },
-    { id: 4, num: 'Exercício 4', nome: 'Remada alta na polia baixa', sets: 3, reps: '12', rest: '50"', grupo: '', obs: 'Segurar 1 segundo a cada repetição; Pegada fechada.', img: 'https://m.leandrocesar.com/exe/remadaAlta.gif' },
-    { id: 5, num: 'Exercício 5', nome: 'Bíceps em pé na polia baixa', sets: 3, reps: '10', rest: '50"', grupo: '', obs: 'Pegada supinada.', img: 'https://m.leandrocesar.com/exe/bicepsPolia.gif' },
+    { id: 8, num: 'Exercício 8', nome: 'Agachamento aparelho', sets: 3, reps: '10', rest: '40"', grupo: '', obs: '', img: 'https://m.leandrocesar.com/exe/hacksquat.gif' },
+    { id: 3, num: 'Exercício 3', nome: 'Extensora', sets: 4, reps: '10 c/ 2"', rest: '40"', grupo: '', obs: 'Segurar 2 segundos em cima a cada repetição.', img: 'https://m.leandrocesar.com/exe/extensora.gif' },
+    { id: 5, num: 'Exercício 5', nome: 'Agachamento Sumô', sets: 4, reps: '12', rest: '40"', grupo: '', obs: '', img: 'https://m.leandrocesar.com/exe/sumo.gif' },
+    { id: 5, num: 'Exercício 5', nome: 'Flexão de quadril (caneleira)', sets: 3, reps: '10 c/1"', rest: '40"', grupo: '', obs: 'Segurar 1 segundo em cima a cada repetição.', img: 'https://m.leandrocesar.com/exe/sumo.gif' },
     { id: 6, num: 'Exercício 6', nome: 'Supino inclinado com halteres', sets: 3, reps: '12', rest: '50"', grupo: '', obs: 'Pegada pronada.', img: 'https://m.leandrocesar.com/exe/supinoInclinado.gif' },
     { id: 7, num: 'Exercício 7', nome: 'Desenvolvimento de ombros (HBC)', sets: 3, reps: '12', rest: '50"', grupo: '', obs: '', img: 'https://m.leandrocesar.com/exe/desenvolvimentoHalteres.gif' },
     { id: 8, num: 'Exercício 8', nome: 'Tríceps corda na polia alta', sets: 3, reps: '12 +10" +6', rest: '50"', grupo: '', obs: 'Fazer 12 repetições, segurar 10 segundos embaixo e fazer + 6 repetiçẽos.', img: 'https://m.leandrocesar.com/exe/tricepsCorda.gif' },
     { id: 9, num: 'Exercício 9', nome: 'Tríceps máquina', sets: 3, reps: '20', rest: '50"', grupo: '', obs: '', img: 'https://m.leandrocesar.com/exe/tricepsMaquina.gif' },
-    { id: 10, num: 'Exercício 10', nome: 'Pull-Down', sets: 3, reps: '15', rest: '50"', grupo: '', obs: 'Fazer na polia alta com a ', img: 'https://m.leandrocesar.com/exe/pullDown.gif' },
+    { id: 10, num: 'Exercício 10', nome: 'Abdominal infra na paralela', sets: 3, reps: '25', rest: '40"', grupo: '', obs: '', img: 'https://m.leandrocesar.com/exe/abdominalInfra.gif' },
     { id: 11, num: 'Exercício 11', nome: 'Abdominal supra no solo', sets: 3, reps: '25 2T', rest: '50"', grupo: '', obs: 'Fazer 2 tempos em cima a cada repetição.', img: 'https://m.leandrocesar.com/exe/abdominalSupra.gif' },
 
     // Modelo:
