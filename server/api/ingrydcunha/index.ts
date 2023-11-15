@@ -11,7 +11,7 @@ export default defineEventHandler((event) => {
     "objetivo": "Hipertrofia",
     "tempo": "60 min.",
     "dias": "5-6 dias",
-    "treinoA": "Glúteo/posterior/costas/",
+    "treinoA": "Glúteo/posterior/costas",
     "treinoB": "Quadríceps/peito/tríceps/abdômen",
     "treinoC": "",
     
