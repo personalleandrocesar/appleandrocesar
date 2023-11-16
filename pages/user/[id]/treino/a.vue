@@ -8,11 +8,6 @@ function openExercise() {
   exerciseImg.value = !exerciseImg.value;
 }
 
-const nomeImg = ref(false);
-function openMiniExercise() {
-  nomeImg.value = !nomeImg.value;
-}
-
 const dataConf = await useFetch(`/api/${route.params.id}`)
 const dataTreino = await useFetch(`/api/${route.params.id}/treino/atual/a`)
 
@@ -29,8 +24,6 @@ const itemExercise = () => {
 const listExercise = () => {
   return dataTreino.data.value
 }
-
-console.log(listExercise());
 
 const pending = ref(false)
 
@@ -79,14 +72,34 @@ function alternate() {
           
           <ul>
               <li v-for="(nome) in listExercise()" >
-                <span>
+                <h3>
                   {{ nome.num }} - {{ nome.nome }}
-                </span>
-               <img :src="nome.img" class="miniSquare" @click="openMiniExercise"/>
+                </h3>
+                <div class="roww">
+
+                  <img :src="nome.img" class="miniSquare" @click="openExercise"/>
                   
-                <span>
-                  {{ nome.sets }} - {{ nome.reps }} 
-                </span>
+                  <span>
+                    <b> Séries:</b> {{ nome.sets }} <b>| Repetições:</b> {{ nome.reps }} 
+                    <br>
+                    <b>Intervalo:</b> {{ nome.rest }} 
+                    <br>
+                    {{ nome.obs }} 
+                    
+                  </span>
+                </div>
+                <div v-if="exerciseImg" class="nav-bar-photo" @click="openExercise">
+          <div class="nav-top">
+
+            <!-- Início do Nav-flow -->
+            <div class="nav-flow-photo">
+              <div class="div-img-full">
+                <img :src="nome.img" />
+              </div>
+            </div>
+
+          </div>
+        </div>
 
              </li>
             </ul>
@@ -118,17 +131,17 @@ function alternate() {
           </h2>
 
           <div v-if="exerciseImg" class="nav-bar-photo" @click="openExercise">
-        <div class="nav-top">
+          <div class="nav-top">
 
-          <!-- Início do Nav-flow -->
-          <div class="nav-flow-photo">
-            <div class="div-img-full">
-              <img :src="currentExercise.img" />
+            <!-- Início do Nav-flow -->
+            <div class="nav-flow-photo">
+              <div class="div-img-full">
+                <img :src="currentExercise.img" />
+              </div>
             </div>
-          </div>
 
+          </div>
         </div>
-      </div>
           
           <p v-if="pending">Carregando...</p>
           <div v-else>
@@ -209,7 +222,6 @@ ul {
     justify-content: space-around;
     color: #05959c;
     padding: 0;
-    margin-top: 10px;
     margin: 10px 0 ;
     font-weight: bold;
   }
@@ -218,6 +230,19 @@ ul {
     border: solid .1px #05959c80;
     padding: 0px 8px;
     border-radius: 6px;
+    color: #616161;
+    margin: 3px 0 ;
+  }
+  
+  .main-div-two ul li {
+    border-right: 6px solid #05959c80;
+    border-radius: 12px;
+    padding: 0px;
+    
+  }
+
+  ul li:nth-child(2n -1) {
+    background-color: #05959c20;
   }
 
 .main {
@@ -232,6 +257,24 @@ ul {
   flex-direction: row;
   justify-content: flex-end;
   margin: 100px 15px 0 15px;
+}
+
+.roww {
+  display: flex;
+  flex-direction: row;
+  align-content: normal;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+b {
+  color: #05959c;
+  font-weight: 900;
+}
+
+h2 {
+  color: #05959c;
+  font-weight: 900;
 }
 
 .alternate .icon {
@@ -271,6 +314,10 @@ text-transform: uppercase;
 }
 .main-div-two h3{
 margin-left: 10px;
+}
+
+h3{
+  color: #05959c;
 }
 
 .main-div-tree {
@@ -436,7 +483,7 @@ border: 2px solid #2cd3db;
 .miniSquare {
   height: 80px;
   width: auto;
-  max-width: 370px;
+  max-width: 80px;
   color:#555;
   background-color: #fff;
   backdrop-filter: blur(5px);
@@ -445,7 +492,7 @@ border: 2px solid #2cd3db;
   flex-direction: row;
   justify-content: center;
   align-items: center;
-  margin: 20px auto;
+  margin: 5px;
   border: 2px solid #05959c10; 
   cursor: zoom-in;
 }
@@ -479,9 +526,9 @@ border: 2px solid #2cd3db;
     -webkit-backdrop-filter: blur(5px);
     backdrop-filter: blur(5px);
     background-color: #ffffff50;
-}
-
-.nav-flow-photo {
+  }
+  
+  .nav-flow-photo {
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -491,10 +538,11 @@ border: 2px solid #2cd3db;
     color: var(--color-text);
     font-size: .8em;
     font-weight: bold;
-}
-
-.div-img-full img {
+  }
+  
+  .div-img-full img {
   border: solid 1px #090909;
+  backdrop-filter: blur(5px);
   background-color: #fff;
     height: auto;
     bottom:40px;
