@@ -17,7 +17,6 @@ const dataConf = await useFetch(`/api/${route.params.id}`)
 const dataTreino = await useFetch(`/api/${route.params.id}/treino/atual/a`)
 
 const treino = ref(0)
-
 const currentExercise = computed(() => {
   return dataTreino.data.value[treino.value]
   
@@ -109,16 +108,10 @@ function alternate() {
           <ul>
               <li v-for="(nome) in listExercise()" >
                 <span>
-                  {{ nome.num }} - 
+                  {{ nome.num }} - {{ nome.nome }}
                 </span>
                <img :src="nome.img" class="miniSquare" @click="openMiniExercise"/>
                   
-            <h2>
-              {{ currentExercise.nome }}
-            </h2>
-                <span>
-                  {{ nome.nome }} - 
-                </span>
                 <span>
                   {{ nome.sets }} - {{ nome.reps }} 
                 </span>
