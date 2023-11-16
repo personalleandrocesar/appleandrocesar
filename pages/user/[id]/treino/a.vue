@@ -8,6 +8,11 @@ function openExercise() {
   exerciseImg.value = !exerciseImg.value;
 }
 
+const nomeImg = ref(false);
+function openMiniExercise() {
+  nomeImg.value = !nomeImg.value;
+}
+
 const dataConf = await useFetch(`/api/${route.params.id}`)
 const dataTreino = await useFetch(`/api/${route.params.id}/treino/atual/a`)
 
@@ -26,7 +31,7 @@ const listExercise = () => {
   return dataTreino.data.value
 }
 
-console.log(listExercise);
+console.log(listExercise());
 
 const pending = ref(false)
 
@@ -79,7 +84,11 @@ function alternate() {
 
           </div>
         </div>
-        <!-- <div class="alternate">
+
+
+
+
+        <div class="alternate">
           <span v-if="buttonList" @click="alternate">
             <Icon name="solar:slider-minimalistic-horizontal-bold" />
 
@@ -88,28 +97,45 @@ function alternate() {
             <Icon name="mdi:format-list-text" />
 
           </span>
-        </div> -->
-    
+        </div>  
+        
+        <!-- Série em lista -->
         <div class="main-div-two" v-if="list">
-          
-          
           <h3>
             {{ itemExercise() }} Exercícios
           </h3>
+          
+          
           <ul>
-              <li v-for="name in listExercise()" >
-                <span >
-                  {{ name }}
+              <li v-for="(nome) in listExercise()" >
+                <span>
+                  {{ nome.num }} - 
                 </span>
-              </li>
+               <img :src="nome.img" class="miniSquare" @click="openMiniExercise"/>
+                  
+            <h2>
+              {{ currentExercise.nome }}
+            </h2>
+                <span>
+                  {{ nome.nome }} - 
+                </span>
+                <span>
+                  {{ nome.sets }} - {{ nome.reps }} 
+                </span>
+
+             </li>
             </ul>
           
         
 
           </div>
 
-          <!-- Série em lista -->
-        <div class="main-div-two" v-else >
+
+
+
+          <!-- Série em Bloco -->
+        <div class="main-div-tree" v-else >
+         
           
           <ul>
             <li v-for="id in itemExercise()" @click='itemExercise((treino = id - 1))'>
@@ -261,6 +287,15 @@ ul {
   justify-content: space-around;
   margin-top: 0px;
 }
+
+.main-div-two ul{
+    position: relative;
+  overflow-x: auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  margin-top: 0px;
+}
 .main-div-two .icon{
 zoom: 2;
 cursor: pointer;
@@ -270,6 +305,26 @@ margin-left: 10px;
 text-transform: uppercase;
 }
 .main-div-two h3{
+margin-left: 10px;
+}
+
+.main-div-tree {
+    position: relative;
+  overflow-x: auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  margin-top: 0px;
+}
+.main-div-tree .icon{
+zoom: 2;
+cursor: pointer;
+}
+ .main-div-tree h2{
+margin-left: 10px;
+text-transform: uppercase;
+}
+.main-div-tree h3{
 margin-left: 10px;
 }
 
@@ -398,6 +453,23 @@ border: 2px solid #2cd3db;
 
 .square {
   height: 140px;
+  width: auto;
+  max-width: 370px;
+  color:#555;
+  background-color: #fff;
+  backdrop-filter: blur(5px);
+  overflow-x: auto;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  margin: 20px auto;
+  border: 2px solid #05959c10; 
+  cursor: zoom-in;
+}
+
+.miniSquare {
+  height: 80px;
   width: auto;
   max-width: 370px;
   color:#555;
