@@ -78,7 +78,7 @@ function openDivTree() {
             <div class="main-div-two" >
 
                 <h3>
-                    <Icon name='material-symbols:cardiology' /> Cardio
+                    <Icon name='material-symbols:cardiology' /> CARDIO
                 </h3>
             </div>
             <div class="main-div-two"  >
