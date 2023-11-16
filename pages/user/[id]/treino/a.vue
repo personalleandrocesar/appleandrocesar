@@ -58,35 +58,7 @@ function alternate() {
 
 <template>
     <NuxtLayout :name="layout">
-      <div class="main-div-one">
-
-
-          <div class="conf">
-            <Icon name="fluent:target-arrow-16-filled" />
-            <h3>
-              {{ dataConf.data.value.objetivo }}
-            </h3>
-
-          </div>
-          <div class="conf">
-            <Icon name='mdi:calendar-weekend' />
-            <h3>
-              {{ dataConf.data.value.dias }}
-            </h3>
-
-          </div>
-          <div class="conf">
-            <Icon name="material-symbols:timer-rounded" />
-            <h3>
-              {{ dataConf.data.value.tempo }}
-            </h3>
-
-          </div>
-        </div>
-
-
-
-
+    
         <div class="alternate">
           <span v-if="buttonList" @click="alternate">
             <Icon name="solar:slider-minimalistic-horizontal-bold" />
@@ -259,7 +231,7 @@ ul {
   display: flex;
   flex-direction: row;
   justify-content: flex-end;
-  margin: 5px 15px;
+  margin: 100px 15px 0 15px;
 }
 
 .alternate .icon {

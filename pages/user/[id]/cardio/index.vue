@@ -48,6 +48,31 @@ function openDivTree() {
 
 <template>
     <NuxtLayout :name="layout">
+        <div class="main-div-one">
+
+
+                <div class="conf">
+                  <Icon name="fluent:target-arrow-16-filled" />
+                  <h3>
+                    {{ dataConf.data.value.objetivo }}
+                  </h3>
+
+                </div>
+                <div class="conf">
+                  <Icon name='mdi:calendar-weekend' />
+                  <h3>
+                    {{ dataConf.data.value.dias }}
+                  </h3>
+
+                </div>
+                <div class="conf">
+                  <Icon name="material-symbols:timer-rounded" />
+                  <h3>
+                    {{ dataConf.data.value.tempo }}
+                  </h3>
+
+                </div>
+              </div>
         <div>
 
             <div class="main-div-two" >
@@ -249,13 +274,19 @@ body {
     margin-top: 110px;
 }
 
+
 .main-div-one {
-overflow-x: hidden;
-    display: flex;
-    flex-direction: row;
-    justify-content: space-around;
-    align-items: center;
-    text-align: center;
+  overflow-x: auto;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  margin-top: 75px;
+  width: 100%;
+}
+.main-div-one .icon{
+   zoom: 1.4;
+  color: #095D62;
+  margin-top: -2.5px;
 }
 
 .main-div-two {
@@ -273,7 +304,7 @@ overflow-x: hidden;
     flex-direction: row;
     justify-content: space-around;
     align-items: left;
-    margin: 170px 0 5px 0;
+    margin: 10px 0 5px 0;
 
 
 
@@ -439,7 +470,7 @@ color: #095D62;
   justify-content: center;
   align-items: center;
   width: 32.5%;
-  margin: 10px auto;
+  margin: 25px auto 0 auto;
   border-radius: 20px;  
 
 

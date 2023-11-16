@@ -14,7 +14,31 @@ const dataConf = await useFetch(`/api/${route.params.id}`)
 
 <template>
       <NuxtLayout :name="layout">
-    
+    <div class="main-div-one">
+
+
+            <div class="conf">
+              <Icon name="fluent:target-arrow-16-filled" />
+              <h3>
+                {{ dataConf.data.value.objetivo }}
+              </h3>
+
+            </div>
+            <div class="conf">
+              <Icon name='mdi:calendar-weekend' />
+              <h3>
+                {{ dataConf.data.value.dias }}
+              </h3>
+
+            </div>
+            <div class="conf">
+              <Icon name="material-symbols:timer-rounded" />
+              <h3>
+                {{ dataConf.data.value.tempo }}
+              </h3>
+
+            </div>
+          </div>
         
 
 
@@ -116,20 +140,23 @@ body {
 }
 
 .conf {  
-    color:#fff;
   height: 80px;
-  background-color: #095D62;
+  width: 32.5%;
+  margin: 25px 2px 10px 2px;
+  border: 2px solid #44acb1; 
+  color:#555;
+  height: 80px;
     backdrop-filter: blur(15px);
   overflow-x: auto;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  backdrop-filter: blur(5px);
-  width: 100%;
-  margin: 20px 10px;
   border-radius: 20px;  
-  border: 2px solid #44acb1; 
+  background-color: #095D6210;
+  border: 2px solid #05959c20;
+  border-top: 3px solid #05959c40;
+  border-bottom: 3px solid #05959c40;
 }
 
 .main-div-one {
@@ -143,7 +170,7 @@ body {
   display: flex;
   flex-direction: column;
   justify-content: space-around;
-  margin: 170px 0;
+  margin: 0px 0 0 0;
   align-items: left;
 }
 .main-div-two .icon {
@@ -168,6 +195,10 @@ body {
     transition: all .4s;
 }
 
+.square:nth-child(2) {
+  margin-top: 10px;
+}
+
 .square:hover {
     background-color: #095D6230;
     border-right: 6px solid #05959c;
@@ -181,6 +212,19 @@ body {
 .square div:nth-child(2), .square div:nth-child(3){
   margin: auto;
   border: none;
+}
+.main-div-one {
+  overflow-x: auto;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  margin-top: 75px;
+  width: 100%;
+}
+.main-div-one .icon{
+   zoom: 1.4;
+  color: #095D62;
+  margin-top: -2.5px;
 }
 .main-div-two H3 {
 margin-left: 20px;

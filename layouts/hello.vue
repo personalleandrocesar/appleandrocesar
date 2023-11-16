@@ -43,31 +43,7 @@ function openPhoto() {
 
       </div>
 
-      <div class="main-div-one">
-
-
-        <div class="conf">
-          <Icon name="fluent:target-arrow-16-filled" />
-          <h3>
-            {{ data.data.value.objetivo }}
-          </h3>
-
-        </div>
-        <div class="conf">
-          <Icon name='mdi:calendar-weekend' />
-          <h3>
-            {{ data.data.value.dias }}
-          </h3>
-
-        </div>
-        <div class="conf">
-          <Icon name="material-symbols:timer-rounded" />
-          <h3>
-            {{ data.data.value.tempo }}
-          </h3>
-
-        </div>
-      </div>
+      
 
     </div>
     <div v-if="navbarOpen" class="nav-bar">
