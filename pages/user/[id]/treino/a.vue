@@ -8,7 +8,6 @@ function openExercise() {
   exerciseImg.value = !exerciseImg.value;
 }
 
-const dataConf = await useFetch(`/api/${route.params.id}`)
 const dataTreino = await useFetch(`/api/${route.params.id}/treino/atual/a`)
 
 const treino = ref(0)
@@ -73,7 +72,7 @@ function alternate() {
           <ul>
               <li v-for="(nome) in listExercise()" >
                 <h3>
-                  {{ nome.num }} - {{ nome.nome }}
+                  {{ nome.id }} - {{ nome.nome }}
                 </h3>
                 <div class="roww">
 
