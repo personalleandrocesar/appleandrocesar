@@ -154,7 +154,7 @@ ul {
     list-style-type: none;
     display: flex;
     flex-direction: row;
-    justify-content: space-evenly;
+    justify-content: space-around;
     padding: 0;
     margin-top: 10px;
     color: #05959c;

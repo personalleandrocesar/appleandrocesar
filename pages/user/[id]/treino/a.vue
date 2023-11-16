@@ -206,7 +206,7 @@ ul {
     list-style-type: none;
     display: flex;
     flex-direction: row;
-    justify-content: space-evenly;
+    justify-content: space-around;
     color: #05959c;
     padding: 0;
     margin-top: 10px;
