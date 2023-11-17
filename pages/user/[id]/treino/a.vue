@@ -87,10 +87,10 @@ function alternate() {
                     
                   </span>
                 </div>
-                <div v-if="exerciseImg" class="nav-bar-photo" @click="openExercise">
+                <!-- Início do Nav-flow -->
+                <!-- <div v-if="exerciseImg" class="nav-bar-photo" @click="openExercise">
           <div class="nav-top">
 
-            <!-- Início do Nav-flow -->
             <div class="nav-flow-photo">
               <div class="div-img-full">
                 <img :src="nome.img" />
@@ -98,7 +98,7 @@ function alternate() {
             </div>
 
           </div>
-        </div>
+        </div> -->
 
              </li>
             </ul>
