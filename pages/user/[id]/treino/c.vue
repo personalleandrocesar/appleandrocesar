@@ -73,7 +73,7 @@ function alternate() {
       <ul>
         <li v-for="(nome) in listExercise()">
           <h3>
-            {{ nome.num }} - {{ nome.nome }}
+            {{ nome.id }} - {{ nome.nome }}
           </h3>
           <div class="roww">
 
