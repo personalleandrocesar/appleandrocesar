@@ -23,6 +23,11 @@ const itemExercise = () => {
 const listExercise = () => {
   return dataTreino.data.value
 }
+const i = treino.value
+const listExercisee = () => {
+  return dataTreino.data.value[i].img
+}
+console.log(listExercisee());
 
 const pending = ref(false)
 
@@ -70,9 +75,9 @@ function alternate() {
           
           
           <ul>
-              <li v-for="(nome) in listExercise()" >
+              <li v-for="(nome, index) in listExercise()" >
                 <h3>
-                  {{ nome.id }} - {{ nome.nome }}
+                  {{ index + 1 }} - {{ nome.nome }}
                 </h3>
                 <div class="roww">
 
@@ -93,7 +98,7 @@ function alternate() {
 
             <div class="nav-flow-photo">
               <div class="div-img-full">
-                <img :src="nome.img" />
+                <img :src='nome.img' />
               </div>
             </div>
 
