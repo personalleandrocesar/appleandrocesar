@@ -95,7 +95,7 @@ const percentualFat = computed(() => {
                         <Icon name='jam:medical' /> AVALIAÇÕES
                     </h3>
                 
-                <nuxt-link  class="square">
+                <a href="https://cal.com/leandrocesar/personal" target="_blank" class="square">
     
     
     
@@ -104,11 +104,11 @@ const percentualFat = computed(() => {
                             <Icon name='material-symbols:event' />
                         </h4>
                         <h4>
-                            Agende sua Avaliação!!
+                            Clique aqui e agende sua Avaliação!!
                         </h4>
                     </div>
     
-                </nuxt-link>
+                </a>
             </div>
             </div>
             <br>
@@ -334,9 +334,9 @@ body {
     align-items: center;
 }
 
-.main-div-tree .square:hover {
-    background-color: #095D6220;
-    border-right: 6px solid #05959c80;
+.square:hover {
+    background-color: #095D6230;
+    border-right: 6px solid #05959c;
 
 }
 
