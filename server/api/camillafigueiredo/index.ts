@@ -11,8 +11,8 @@ export default defineEventHandler((event) => {
     "objetivo": "Definição",
     "tempo": "60 min.",
     "dias": "6 dias",
-    "treinoA": "Quadriceps",
-    "treinoB": "Gluteo",
+    "treinoA": "Quadriceps/adutores/peito/tríceps",
+    "treinoB": "Gluteo/panturrilha/costa/bíceps",
     "treinoC": "",
     
     // Dados Menu Global
