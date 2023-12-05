@@ -16,12 +16,12 @@ export default defineEventHandler((event) => {
     "treinoC": "Braço",
     
     // Dados Menu Global
-    "periodo": "10/10/23 - 10/11/23",
+    "periodo": "04/12/23 - 04/01/24",
     "status": 2,
     // Treino atual
-    "treinoActual": "10/10/23 - 10/11/23",
+    "treinoActual": "05/12/23 - 04/01/24",
     // Próxima Treino 
-    "treinoNext": "11/11/23",
+    "treinoNext": "05/01/24",
     // Avaliação atual
     "valuationActual": "",
     // Próxima avaliação 
