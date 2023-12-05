@@ -13,7 +13,7 @@ export default defineEventHandler((event) => {
     "dias": "6 dias",
     "treinoA": "Quadriceps",
     "treinoB": "Gluteo",
-    "treinoC": "Braço",
+    "treinoC": "",
     
     // Dados Menu Global
     "periodo": "04/12/23 - 04/01/24",
