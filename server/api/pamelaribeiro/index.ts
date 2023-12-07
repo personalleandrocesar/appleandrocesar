@@ -21,10 +21,10 @@ export default defineEventHandler((event) => {
     // Treino atual
     "treinoActual": "07/12/23 - 06/01/24",
     // Próxima Treino 
-    "treinoNext": "07/01/24",
+    "treinoNext": "07/01/2024",
     // Avaliação atual
-    "valuationActual": "",
+    "valuationActual": "07/12/2023",
     // Próxima avaliação 
-    "valuationNext": ""
+    "valuationNext": "07/02/2024"
   }
 })
