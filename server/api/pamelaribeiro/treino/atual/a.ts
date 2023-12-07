@@ -10,7 +10,6 @@ export default defineEventHandler((event) => {
     { id: 7, num: 'Exercício 7', nome: 'Leg press 45°', sets: 3, reps: '12', rest: '50"', grupo: '', obs: 'Colocar os bancos e pés bem mais alto; cuidado com a lombar.', img: 'https://m.leandrocesar.com/exe/leg45.gif'},
     { id: 8, num: 'Exercício 8', nome: 'Agachamento aparelho', sets: 3, reps: '10', rest: '50"', grupo: '', obs: '', img: 'https://m.leandrocesar.com/exe/hacksquat.gif'},
     { id: 9, num: 'Exercício 9', nome: 'Panturrilha aparelho em pé', sets: 3, reps: '20', rest: '50"', grupo: '', obs: 'Fazer 20 repetições + curtas até a falha.', img: 'https://m.leandrocesar.com/exe/panturrilhaAparelho.gif'},
-    { id: 10, num: 'Exercício 10', nome: 'Abdominal infra no solo', sets: 3, reps: '25', rest: '50"', grupo: '', obs: '', img: 'https://m.leandrocesar.com/exe/abdominalInfra.gif'},
    
    // Modelo:
    // { id: 1, num: 'Exercício 1', nome: '', sets: 3, reps: '', rest: '40"', grupo: '', obs: '', img: 'https://m.leandrocesar.com/img/preImagem.png' },

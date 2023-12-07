@@ -12,6 +12,8 @@ export default defineEventHandler((event) => {
     { id: 9, num: 'Exercício 9', nome: 'Tríceps barra reta na polia alta', sets: 3, reps: '15', rest: '50"', grupo: '', obs: 'Fazer na polia alta com a ', img: 'https://m.leandrocesar.com/exe/tricepsBarra.gif' },
     { id: 10, num: 'Exercício 10', nome: 'Tríceps máquina', sets: 3, reps: '20', rest: '50"', grupo: '', obs: '', img: 'https://m.leandrocesar.com/exe/tricepsMaquina.gif' },
     { id: 11, num: 'Exercício 11', nome: 'Abdominal supra no solo', sets: 3, reps: '25', rest: '50"', grupo: '', obs: '', img: 'https://m.leandrocesar.com/exe/abdominalSupra.gif' },
+    { id: 12, num: 'Exercício 12', nome: 'Abdominal infra no solo', sets: 3, reps: '25', rest: '50"', grupo: '', obs: '', img: 'https://m.leandrocesar.com/exe/abdominalInfra.gif' },
+
 
     // Modelo:
     // { id: 1, num: 'Exercício 1', nome: '', sets: 3, reps: '', rest: '40"', grupo: '', obs: '', img: 'https://m.leandrocesar.com/img/preImagem.png' },
