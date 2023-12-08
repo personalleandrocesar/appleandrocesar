@@ -1,15 +1,5 @@
 <script setup>
-import { ref } from 'vue';
 const route = useRoute()
-
-const navbarOpen = ref(false);
-function openNavbar() {
-    navbarOpen.value = !navbarOpen.value;
-}
-const photoOpen = ref(false);
-function openPhoto() {
-    photoOpen.value = !photoOpen.value;
-}
 
 function scrollToTop() {
     window.scrollTo(0, 0);

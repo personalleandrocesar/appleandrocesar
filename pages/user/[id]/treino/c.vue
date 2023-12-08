@@ -7,8 +7,6 @@ const exerciseImg = ref(false);
 function openExercise() {
   exerciseImg.value = !exerciseImg.value;
 }
-
-const dataConf = await useFetch(`/api/${route.params.id}`)
 const dataTreino = await useFetch(`/api/${route.params.id}/treino/atual/c`)
 
 const treino = ref(0)

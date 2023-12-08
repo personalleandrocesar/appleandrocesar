@@ -1,17 +1,10 @@
 <script setup>
-import { ref, computed } from 'vue'
+import { ref } from 'vue'
 const layout = "hello"
 const route = useRoute()
 
-const photoOpen = ref(false);
-function openPhoto() {
-    photoOpen.value = !photoOpen.value;
-}
-
-
 const dataConf = await useFetch(`/api/${route.params.id}`)
 const dataTreino = await useFetch(`/api/${route.params.id}/cardio/atual`)
-
 
 const divOne = ref(false);
 const divTwo = ref(false);

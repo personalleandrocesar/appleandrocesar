@@ -1,7 +1,5 @@
 <script setup>
 const layout = "users"
-
-
 </script>
 
 <template>

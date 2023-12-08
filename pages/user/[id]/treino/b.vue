@@ -8,7 +8,6 @@ function openExercise() {
   exerciseImg.value = !exerciseImg.value;
 }
 
-const dataConf = await useFetch(`/api/${route.params.id}`)
 const dataTreino = await useFetch(`/api/${route.params.id}/treino/atual/b`)
 
 const treino = ref(0)

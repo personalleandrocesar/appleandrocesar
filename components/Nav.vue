@@ -1,3 +1,17 @@
+<script>
+export default {
+  data() {
+    return {
+      navbarOpen: false // Inicialmente, a barra de navegação está fechada
+    };
+  },
+  methods: {
+    openNavbar() {
+      this.navbarOpen = !this.navbarOpen; // Define navbarOpen como true para abrir a barra de navegação
+    }
+  }
+};
+</script>
 
 <template>
     <div class='nav'>
@@ -19,20 +33,6 @@
     </div>
 
 </template>
-<script>
-export default {
-  data() {
-    return {
-      navbarOpen: false // Inicialmente, a barra de navegação está fechada
-    };
-  },
-  methods: {
-    openNavbar() {
-      this.navbarOpen = !this.navbarOpen; // Define navbarOpen como true para abrir a barra de navegação
-    }
-  }
-};
-</script>
 <style scoped>
 
 

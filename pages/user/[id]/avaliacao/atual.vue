@@ -13,9 +13,7 @@ const calcIMC = computed(() => {
     return (peso / ( altura * altura )).toFixed(1)
 })
 
-
 const classIMC = computed(() => {
-
     if (calcIMC.value < 18.5) {
         return 'Baixo Peso';
     } else if (calcIMC.value >= 18.5 && calcIMC.value <= 24.9) {
@@ -31,7 +29,6 @@ const classIMC = computed(() => {
     } else {
         return 'Digite os valores certo para saber seu IMC!!'
     }
-
 })
 
 const resClassIMC = classIMC.value
@@ -56,8 +53,6 @@ const dcMulheres = 1.0994921 - (0.0009929 * (mulheres)) + (0.0000023 * (mulheres
 
 const percGHomens = (((4.95 / dcHomens) - 4.50) * 100).toFixed(1)
 const percGMulheres = (((4.95 / dcMulheres) - 4.50) * 100).toFixed(1)
-
-
 
 const classHomens = computed(() => {
     
@@ -118,7 +113,6 @@ const divInfoPercentual = ref(false)
 function infoPercentual() {
     divInfoPercentual.value = !divInfoPercentual.value
 }
-
 
 function openDivOne() {
     divOne.value = !divOne.value;

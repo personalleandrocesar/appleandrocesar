@@ -1,10 +1,7 @@
 <script setup>
-import { ref, computed } from 'vue'
+import { computed } from 'vue'
 const layout = "valuation"
 const route = useRoute()
-
-
-
 
 const data = await useFetch(`/api/${route.params.id}/avaliacao/atual`)
 
@@ -24,7 +21,6 @@ const dcMulheres = 1.0994921 - (0.0009929 * (mulheres)) + (0.0000023 * (mulheres
 
 const percGHomens = (((4.95 / dcHomens) - 4.50) * 100).toFixed(1)
 const percGMulheres = (((4.95 / dcMulheres) - 4.50) * 100).toFixed(1)
-
 
 const percentualFat = computed(() => {
     if (sexo === "feminino") {
