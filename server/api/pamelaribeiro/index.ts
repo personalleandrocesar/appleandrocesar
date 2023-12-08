@@ -7,7 +7,7 @@ export default defineEventHandler((event) => {
     "nomeCompleto": "Pâmela Ribeiro",
     "email": "",
     "senha": "",
-    "foto": "https://m.leandrocesar.com/img/pamelaribeiro.png",
+    "foto": "https://m.leandrocesar.com/img/pamelaribeiro.jpeg",
     "objetivo": "Hipertrofia",
     "tempo": "60 min.",
     "dias": "5 dias",
