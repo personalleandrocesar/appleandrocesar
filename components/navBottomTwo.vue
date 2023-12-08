@@ -5,7 +5,9 @@ function scrollToTop() {
     window.scrollTo(0, 0);
 }
 
+
 const dataConf = await useFetch(`/api/${route.params.id}`)
+
 
 </script>
 
@@ -17,7 +19,7 @@ const dataConf = await useFetch(`/api/${route.params.id}`)
             <nuxt-link :to="`/user/${route.params.id}/treino`" @click.native="scrollToTop()">
                 <Icon name='material-symbols:exercise' />
             </nuxt-link>
-            <nuxt-link v-if="dataConf.data.value.treinoA" :to="`/user/${route.params.id}/treino/a`" @click.native="scrollToTop()">
+            <nuxt-link v-if="dataConf.data.value.treinoA" :to="`/user/${route.params.id}/treino/a`"  @click.native="scrollToTop()">
                 <Icon name='mdi:alpha-a' />
             </nuxt-link>
             <nuxt-link v-if="dataConf.data.value.treinoB" :to="`/user/${route.params.id}/treino/b`" @click.native="scrollToTop()">

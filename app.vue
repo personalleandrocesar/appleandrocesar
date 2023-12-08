@@ -4,6 +4,12 @@ useHead({
   titleTemplate: 'app leandro cesar',  
 })
 
+const state = useCookie('state')
+
+state.value = state.value || 0
+
+console.log(state.value);
+
 </script>
 
 <template>
