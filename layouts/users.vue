@@ -27,7 +27,7 @@ function openPhoto() {
 // talvez não precise do código abaixo
 const state = useCookie('state')
 
-const sState = () => {
+const logOff = () => {
   return state.value = 0
   
 }
@@ -222,7 +222,7 @@ const sState = () => {
       <!--  -->
 
       <!-- Botão Logout -->
-      <NuxtLink to="/" class="logout" @click="sState()">
+      <NuxtLink to="/" class="logout" @click="logOff()">
         LOUGOUT
         <Icon name="solar:logout-3-bold" />
       </NuxtLink>

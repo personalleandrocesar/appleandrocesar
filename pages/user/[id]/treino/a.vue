@@ -37,6 +37,8 @@ const previousExercise = () => {
   }
 }
 
+
+
 const nextExercise = () => {
   if (treino.value < dataTreino.data.value.length - 1) {
     treino.value++

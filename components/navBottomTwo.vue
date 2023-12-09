@@ -5,8 +5,19 @@ function scrollToTop() {
     window.scrollTo(0, 0);
 }
 
-
 const dataConf = await useFetch(`/api/${route.params.id}`)
+
+const state = useCookie('state')
+
+const useA = () => {
+    return state.value = 1
+}
+const useB = () => {
+    return state.value = 2
+}
+const useC = () => {
+    return state.value = 3
+}
 
 
 </script>
@@ -19,13 +30,13 @@ const dataConf = await useFetch(`/api/${route.params.id}`)
             <nuxt-link :to="`/user/${route.params.id}/treino`" @click.native="scrollToTop()">
                 <Icon name='material-symbols:exercise' />
             </nuxt-link>
-            <nuxt-link v-if="dataConf.data.value.treinoA" :to="`/user/${route.params.id}/treino/a`"  @click.native="scrollToTop()">
+            <nuxt-link v-if="dataConf.data.value.treinoA" :to="`/user/${route.params.id}/treino/a`" @click="useA()" @click.native="scrollToTop()">
                 <Icon name='mdi:alpha-a' />
             </nuxt-link>
-            <nuxt-link v-if="dataConf.data.value.treinoB" :to="`/user/${route.params.id}/treino/b`" @click.native="scrollToTop()">
+            <nuxt-link v-if="dataConf.data.value.treinoB" :to="`/user/${route.params.id}/treino/b`" @click="useB()" @click.native="scrollToTop()">
                 <Icon name='mdi:alpha-b' />
             </nuxt-link>
-            <nuxt-link v-if="dataConf.data.value.treinoC" :to="`/user/${route.params.id}/treino/c`" @click.native="scrollToTop()">
+            <nuxt-link v-if="dataConf.data.value.treinoC" :to="`/user/${route.params.id}/treino/c`" @click="useC()" @click.native="scrollToTop()">
                 <Icon name='mdi:alpha-c' />
             </nuxt-link>
             <nuxt-link :to="`/user/${route.params.id}/cardio`" @click.native="scrollToTop()">

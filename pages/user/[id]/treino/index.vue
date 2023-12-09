@@ -9,6 +9,20 @@ function openPhoto() {
 }
 
 const dataConf = await useFetch(`/api/${route.params.id}`)
+
+const state = useCookie('state')
+
+const useA = () => {
+  return state.value = 1
+}
+const useB = () => {
+  return state.value = 2
+}
+const useC = () => {
+  return state.value = 3
+}
+
+
 </script>
 
 <template>
@@ -45,7 +59,7 @@ const dataConf = await useFetch(`/api/${route.params.id}`)
         <h3>
               <Icon name='material-symbols:exercise' /> TREINOS 
             </h3>
-        <nuxt-link v-if="dataConf.data.value.treinoA" class="square" :to="`/user/${route.params.id}/treino/a`">
+        <nuxt-link v-if="dataConf.data.value.treinoA" @click="useA()" class="square" :to="`/user/${route.params.id}/treino/a`">
             <div>
               <h4>
                 TREINO
@@ -68,7 +82,7 @@ const dataConf = await useFetch(`/api/${route.params.id}`)
           </nuxt-link>
 
           
-        <nuxt-link v-if="dataConf.data.value.treinoB" class="square" :to="`/user/${route.params.id}/treino/b`">
+        <nuxt-link v-if="dataConf.data.value.treinoB" @click="useB()" class="square" :to="`/user/${route.params.id}/treino/b`">
         <div>
                 <h4>
                   TREINO
@@ -90,7 +104,7 @@ const dataConf = await useFetch(`/api/${route.params.id}`)
               </div>
         </nuxt-link>
             
-        <nuxt-link v-if="dataConf.data.value.treinoC" class="square" :to="`/user/${route.params.id}/treino/c`">
+        <nuxt-link v-if="dataConf.data.value.treinoC" @click="useC()" class="square" :to="`/user/${route.params.id}/treino/c`">
           <div>
                 
                 <h4>

@@ -5,6 +5,12 @@ function scrollToTop() {
     window.scrollTo(0, 0);
 }
 
+const state = useCookie('state')
+
+const use = () => {
+    return state.value = 1
+}
+
 
 </script>
 
