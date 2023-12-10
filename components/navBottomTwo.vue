@@ -1,4 +1,5 @@
 <script setup>
+import { ref } from 'vue';
 const route = useRoute()
 
 function scrollToTop() {
@@ -9,57 +10,65 @@ const dataConf = await useFetch(`/api/${route.params.id}`)
 
 const state = useCookie('state')
 
-const useA = () => {
-    return state.value = 1
-}
-const useB = () => {
-    return state.value = 2
-}
-const useC = () => {
-    return state.value = 3
-}
+
+const navA = ref(state.value == 1)
+const navB = ref(state.value == 2)
+
+
 
 
 </script>
 
 <template>
 
-    <div>
-
-        <div class="nav-bottom">
+    <div v-if="navA">
+        <div  class="nav-bottom">
+            <NuxtLink :to="`/user/${route.params.id}`" @click.native="scrollToTop()">
+                <Icon name='mdi:home' />
+            </NuxtLink>
             <nuxt-link :to="`/user/${route.params.id}/treino`" @click.native="scrollToTop()">
                 <Icon name='material-symbols:exercise' />
             </nuxt-link>
-            <nuxt-link v-if="dataConf.data.value.treinoA" :to="`/user/${route.params.id}/treino/a`" @click="useA()" @click.native="scrollToTop()">
+            <nuxt-link v-if="dataConf.data.value.treinoA" :to="`/user/${route.params.id}/treino/a`" @click.native="scrollToTop()">
                 <Icon name='mdi:alpha-a' />
             </nuxt-link>
-            <nuxt-link v-if="dataConf.data.value.treinoB" :to="`/user/${route.params.id}/treino/b`" @click="useB()" @click.native="scrollToTop()">
+            <nuxt-link :to="`/user/${route.params.id}/cardio`" @click.native="scrollToTop()">
+                <Icon name='material-symbols:cardiology' />
+            </nuxt-link>
+        </div>
+    </div>
+
+    <div v-else-if="navB">
+        <div class="nav-bottom">
+            <NuxtLink :to="`/user/${route.params.id}`" @click.native="scrollToTop()">
+                <Icon name='mdi:home' />
+            </NuxtLink>
+            <nuxt-link :to="`/user/${route.params.id}/treino`" @click.native="scrollToTop()">
+                <Icon name='material-symbols:exercise' />
+            </nuxt-link>
+            <nuxt-link v-if="dataConf.data.value.treinoB" :to="`/user/${route.params.id}/treino/b`" @click.native="scrollToTop()">
                 <Icon name='mdi:alpha-b' />
             </nuxt-link>
-            <nuxt-link v-if="dataConf.data.value.treinoC" :to="`/user/${route.params.id}/treino/c`" @click="useC()" @click.native="scrollToTop()">
+            <nuxt-link :to="`/user/${route.params.id}/cardio`" @click.native="scrollToTop()">
+                <Icon name='material-symbols:cardiology' />
+            </nuxt-link>
+        </div>
+    </div>
+    <div v-else>
+        <div class="nav-bottom">
+            <NuxtLink :to="`/user/${route.params.id}`" @click.native="scrollToTop()">
+                <Icon name='mdi:home' />
+            </NuxtLink>
+            <nuxt-link :to="`/user/${route.params.id}/treino`" @click.native="scrollToTop()">
+                <Icon name='material-symbols:exercise' />
+            </nuxt-link>
+            <nuxt-link v-if="dataConf.data.value.treinoC" :to="`/user/${route.params.id}/treino/c`" @click.native="scrollToTop()">
                 <Icon name='mdi:alpha-c' />
             </nuxt-link>
             <nuxt-link :to="`/user/${route.params.id}/cardio`" @click.native="scrollToTop()">
                 <Icon name='material-symbols:cardiology' />
             </nuxt-link>
-                        <!-- <nuxt-link to="/camilla-figueiredo/treino" @click.native="scrollToTop()">
-                    <Icon name='material-symbols:exercise' />
-                </nuxt-link>
-            <nuxt-link to="/camilla-figueiredo/treino/a" @click.native="scrollToTop()">
-                <Icon name='mdi:alpha-a' />
-            </nuxt-link>
-            <nuxt-link to="/camilla-figueiredo/treino/b" @click.native="scrollToTop()">
-                <Icon name='mdi:alpha-b' />
-            </nuxt-link>
-            <nuxt-link to="/camilla-figueiredo/treino/c" @click.native="scrollToTop()">
-                <Icon name='mdi:alpha-c' />
-            </nuxt-link>
-            <nuxt-link to="/camilla-figueiredo/cardio" @click.native="scrollToTop()">
-                <Icon name='material-symbols:cardiology' />
-            </nuxt-link> -->
-
         </div>
-
     </div>
 </template>
 <style scoped>

@@ -5,13 +5,14 @@ const route = useRoute()
 
 const dataConf = await useFetch(`/api/${route.params.id}`)
 const dataTreino = await useFetch(`/api/${route.params.id}/cardio/atual`)
+const state = useCookie('state')
 
-const divOne = ref(false);
-const divTwo = ref(false);
-const divTree = ref(false);
-const divAplicar = ref(false);
-const divAplicarTwo = ref(false);
-const divAplicarTree = ref(false);
+const divOne = state.value == 1 || ref(false);
+const divTwo = state.value == 2 || ref(false);
+const divTree = state.value == 3 || ref(false);
+const divAplicar = state.value == 1 || ref(false);
+const divAplicarTwo = state.value == 2 || ref(false);
+const divAplicarTree = state.value == 3 || ref(false);
 
 function openDivOne() {
     divOne.value = !divOne.value;
@@ -37,6 +38,7 @@ function openDivTree() {
     divAplicarTwo.value = false
     divAplicar.value = false
 }
+
 </script>
 
 <template>
