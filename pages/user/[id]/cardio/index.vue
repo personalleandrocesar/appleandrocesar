@@ -1,5 +1,5 @@
 <script setup>
-import { ref } from 'vue'
+import { computed, ref } from 'vue'
 const layout = "hello"
 const route = useRoute()
 
@@ -51,30 +51,30 @@ function openDivTree() {
                   <h3>
                     {{ dataConf.data.value.objetivo }}
                   </h3>
-
+                  
                 </div>
                 <div class="conf">
-                  <Icon name='mdi:calendar-weekend' />
-                  <h3>
-                    {{ dataConf.data.value.dias }}
-                  </h3>
-
+                    <Icon name='mdi:calendar-weekend' />
+                    <h3>
+                        {{ dataConf.data.value.dias }}
+                    </h3>
+                    
                 </div>
                 <div class="conf">
-                  <Icon name="material-symbols:timer-rounded" />
-                  <h3>
-                    {{ dataConf.data.value.tempo }}
-                  </h3>
-
+                    <Icon name="material-symbols:timer-rounded" />
+                    <h3>
+                        {{ dataConf.data.value.tempo }}
+                    </h3>
+                    
                 </div>
-              </div>
-        <div>
-
-            <div class="main-div-two" >
-
-                <h3>
-                    <Icon name='material-symbols:cardiology' /> CARDIO
-                </h3>
+            </div>
+            <div>
+                
+                <div class="main-div-two" >
+                    
+                    <h3>
+                        <Icon name='material-symbols:cardiology' /> CARDIO
+                    </h3>
             </div>
             <div class="main-div-two"  >
                 <nuxt-link v-if="dataTreino.data.value.cardioA" @click="openDivOne" class="square" :class="{ squared: divAplicar }" >
