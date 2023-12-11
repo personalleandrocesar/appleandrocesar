@@ -225,7 +225,7 @@ const logOff = () => {
 
   </div>
   <slot />
-    <NavBottom/>
+    <NavBottomTree/>
 </template>
 <style scoped>
 .name-user {
