@@ -3,8 +3,8 @@ export default defineEventHandler((event) => {
     // Série Atual
     { id: 1, num: 'Exercício 1', nome: 'Supino 45º (HBC)', sets: 3, reps: '12', rest: '50"', grupo: '', obs: 'Fazer com halteres, peg. neutra.', img: 'https://m.leandrocesar.com/exe/supinoInclinado.gif' },
     { id: 2, num: 'Exercício 2', nome: 'Supino 45º (HBL)', sets: 3, reps: '10 c/1"', rest: '50"', grupo: '', obs: 'Segurar 1 segundo embaixo.', img: 'https://m.leandrocesar.com/exe/supino45HBL.gif' },
-    { id: 3, num: 'Exercício 3', nome: 'Supino hammer', sets: 3, reps: '6 +10" +6', rest: '50"', grupo: '', obs: 'Fazer 6 repetições, segurar 10" embaixo + 6 reprtições no final.', img: 'https://m.leandrocesar.com/exe/preImagem.gif' },
-    { id: 4, num: 'Exercício 4', nome: 'Elevação lateral', sets: 3, reps: '12 | 12', rest: '50"', grupo: '', obs: 'Rest-pause: fazer 12 repetições, para 10", + 12 repetições.', img: 'https://m.leandrocesar.com/exe/preImagem.gif' },
+    { id: 3, num: 'Exercício 3', nome: 'Supino hammer', sets: 3, reps: '6 +10" +6', rest: '50"', grupo: '', obs: 'Fazer 6 repetições, segurar 10" embaixo + 6 reprtições no final.', img: 'https://m.leandrocesar.com/exe/supinoHammer.gif' },
+    { id: 4, num: 'Exercício 4', nome: 'Elevação lateral', sets: 3, reps: '12 | 12', rest: '50"', grupo: '', obs: 'Rest-pause: fazer 12 repetições, para 10", + 12 repetições.', img: 'https://m.leandrocesar.com/exe/elevacaoLateralHBC.gif' },
     { id: 5, num: 'Exercício 5', nome: 'Desenvolvimento de ombros Hammer', sets: 3, reps: '10 c/2"', rest: '50"', grupo: '', obs: '', img: 'https://m.leandrocesar.com/exe/preImagem.gif' },
     { id: 6, num: 'Exercício 6', nome: 'Tríceps testa Barra H', sets: 3, reps: '10', rest: '50"', grupo: '', obs: '', img: 'https://m.leandrocesar.com/exe/preImagem.gif' },
     { id: 7, num: 'Exercício 7', nome: 'Tríceps corda na polia alta', sets: 3, reps: '12 | 12', rest: '50"', grupo: '', obs: 'Rest-pause: fazer 12 repetições, para 10", + 12 repetições.', img: 'https://m.leandrocesar.com/exe/preImagem.gif' },
