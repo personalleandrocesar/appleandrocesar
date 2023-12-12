@@ -3,7 +3,7 @@ import { computed } from 'vue'
 const layout = "valuation"
 const route = useRoute()
 
-const data = await useFetch(`/api/${route.params.id}/avaliacao/atual`)
+const data = await useFetch(`https://m.leandrocesar.com/api/${route.params.id}/avaliacao/atual`)
 
 const sexo = data.data.value.sexo
 const idade = data.data.value.idade

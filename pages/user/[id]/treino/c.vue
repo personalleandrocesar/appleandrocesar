@@ -7,7 +7,7 @@ const exerciseImg = ref(false);
 function openExercise() {
   exerciseImg.value = !exerciseImg.value;
 }
-const dataTreino = await useFetch(`/api/${route.params.id}/treino/atual/c`)
+const dataTreino = await useFetch(`https://m.leandrocesar.com/api/${route.params.id}/treino/atual/c`)
 
 const treino = ref(0)
 const currentExercise = computed(() => {

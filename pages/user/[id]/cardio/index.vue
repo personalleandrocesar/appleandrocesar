@@ -3,8 +3,8 @@ import { computed, ref } from 'vue'
 const layout = "hello"
 const route = useRoute()
 
-const dataConf = await useFetch(`/api/${route.params.id}`)
-const dataTreino = await useFetch(`/api/${route.params.id}/cardio/atual`)
+const dataConf = await useFetch(`https://m.leandrocesar.com/api/${route.params.id}`)
+const dataTreino = await useFetch(`https://m.leandrocesar.com/api/${route.params.id}/cardio/atual`)
 const state = useCookie('state')
 
 const divOne = state.value == 1 || ref(false);

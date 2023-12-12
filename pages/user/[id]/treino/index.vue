@@ -8,7 +8,7 @@ function openPhoto() {
   photoOpen.value = !photoOpen.value;
 }
 
-const dataConf = await useFetch(`/api/${route.params.id}`)
+const dataConf = await useFetch(`https://m.leandrocesar.com/api/${route.params.id}`)
 
 const state = useCookie('state')
 

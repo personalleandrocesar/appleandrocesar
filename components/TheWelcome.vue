@@ -3,9 +3,8 @@ import { ref } from 'vue';
 
 const user = ref('')
 const senha = ref('')
-const sendReply = ref('')
 
-const client = await useFetch('/api/users')
+const client = await useFetch('https://m.leandrocesar.com/api/users')
 
 
 
@@ -27,7 +26,7 @@ const trigger = () => {
 <div id="login">
   <div>
     <div class='logo'>
-      <LCLogoTree />
+      <img src="~assets/logo.png" />
       <h1>app.leandrocesar.com</h1>
       <h3>Acesse sua conta</h3> 
       <div>
@@ -239,6 +238,12 @@ style {
 .login:hover .icon{
     margin: 1px 0px 0px 6px;
     transform:translateX(6px);
+}
+
+img {
+    height: 140px;
+    margin-top: 80px;
+    margin-bottom: -100px;
 }
 
 @media only screen and (max-width: 369px) {}
