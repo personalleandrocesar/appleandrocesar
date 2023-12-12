@@ -4,7 +4,7 @@ export default defineEventHandler((event) => {
   // Send JSON response
   return {
     "nome": "Rosa",
-    "nomeCompleto": "Rosa de Oliveira Rodrigues",
+    "nomeCompleto": "Rosa Maria Gomes Rodrigues",
     "email": "",
     "senha": "",
     "foto": "https://m.leandrocesar.com/img/rosarodrigues.png",
@@ -16,10 +16,10 @@ export default defineEventHandler((event) => {
     "treinoC": "",
     
     // Dados Menu Global
-    "periodo": "30/11/23 - 30/12/23",
+    "periodo": "17/11/23 - 17/12/23",
     "status": 2,
     // Treino atual
-    "treinoActual": "12/12/23 - 11/01/24",
+    "treinoActual": "13/12/23 - 12/01/24",
     // Próxima Treino 
     "treinoNext": "13/01/2024",
     // Avaliação atual
