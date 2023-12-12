@@ -36,7 +36,17 @@ function openDivTwo() {
     divAplicarTree.value = false
     divAplicarFour.value = false
 }
-function openDivfour() {
+function openDivTree() {
+    divTree.value = !divTree.value;
+    divOne.value = false;
+    divTwo.value = false;
+    divFour.value = false
+    divAplicarTree.value = !divAplicarTree.value
+    divAplicarTwo.value = false
+    divAplicar.value = false
+    divAplicarFour.value = false
+}
+function openDivFour() {
     divFour.value = !divFour.value;
     divOne.value = false;
     divTwo.value = false;
@@ -142,7 +152,7 @@ function openDivfour() {
 
                     </div>
                 </nuxt-link>
-                <nuxt-link v-if="dataTreino.data.value.cardioD" @click="openDivfour" class="square" :class="{ squared: divAplicarFour }">
+                <nuxt-link v-if="dataTreino.data.value.cardioD" @click="openDivFour" class="square" :class="{ squared: divAplicarFour }">
                     <div>
                         <h4>
                             TREINO

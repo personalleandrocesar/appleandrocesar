@@ -9,10 +9,10 @@ export default defineEventHandler((event) => {
         "cardioBTime": "15 minutos",
         "cardioBDescription": "Fazer 15 minutos de forma constante, que não fique com falta de ar, no ritmo que dê para conversar com alguém, naõ ficar ofegante.",
         // Treino C
-        "cardioC": "", 
+        "cardioC": "esteira", 
         "cardioCTime": "--",
         "cardioCDescription": "Não precisa fazer cardio neste dia!",
-        // Treino C
+        // Treino D
         "cardioD": "", 
         "cardioDTime": "--",
         "cardioDDescription": "Não precisa fazer cardio neste dia!"
