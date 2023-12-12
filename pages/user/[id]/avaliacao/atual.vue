@@ -3,7 +3,7 @@ import { ref, computed } from 'vue'
 const layout = "valuation"
 const route = useRoute()
 
-const data = await useFetch(`https://m.leandrocesar.com/api/${route.params.id}/avaliacao/atual`)
+const data = await useFetch(`/api/${route.params.id}/avaliacao/atual`)
 
 const divInfoIMC = ref(false)
 const peso = data.data.value.massa.toFixed(2)

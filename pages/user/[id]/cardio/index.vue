@@ -3,40 +3,48 @@ import { computed, ref } from 'vue'
 const layout = "hello"
 const route = useRoute()
 
-const dataConf = await useFetch(`https://m.leandrocesar.com/api/${route.params.id}`)
-const dataTreino = await useFetch(`https://m.leandrocesar.com/api/${route.params.id}/cardio/atual`)
+const dataConf = await useFetch(`/api/${route.params.id}`)
+const dataTreino = await useFetch(`/api/${route.params.id}/cardio/atual`)
 const state = useCookie('state')
 
 const divOne = state.value == 1 || ref(false);
 const divTwo = state.value == 2 || ref(false);
 const divTree = state.value == 3 || ref(false);
+const divFour = state.value == 4 || ref(false);
 const divAplicar = state.value == 1 || ref(false);
 const divAplicarTwo = state.value == 2 || ref(false);
 const divAplicarTree = state.value == 3 || ref(false);
+const divAplicarFour = state.value == 4 || ref(false);
 
 function openDivOne() {
     divOne.value = !divOne.value;
     divTwo.value = false
     divTree.value = false
+    divFour.value = false
     divAplicar.value = !divAplicar.value
     divAplicarTwo.value = false
     divAplicarTree.value = false
+    divAplicarFour.value = false
 }
 function openDivTwo() {
     divTwo.value = !divTwo.value;
     divOne.value = false;
     divTree.value = false;
+    divFour.value = false
     divAplicarTwo.value = !divAplicarTwo.value
     divAplicar.value = false
     divAplicarTree.value = false
+    divAplicarFour.value = false
 }
-function openDivTree() {
-    divTree.value = !divTree.value;
+function openDivfour() {
+    divFour.value = !divFour.value;
     divOne.value = false;
     divTwo.value = false;
-    divAplicarTree.value = !divAplicarTree.value
+    divTree.value = false
+    divAplicarFour.value = !divAplicarFour.value
     divAplicarTwo.value = false
     divAplicar.value = false
+    divAplicarTree.value = false
 }
 
 </script>
@@ -134,6 +142,24 @@ function openDivTree() {
 
                     </div>
                 </nuxt-link>
+                <nuxt-link v-if="dataTreino.data.value.cardioD" @click="openDivfour" class="square" :class="{ squared: divAplicarFour }">
+                    <div>
+                        <h4>
+                            TREINO
+                            <Icon name='mdi:alpha-d' />
+                        </h4>
+                    </div>
+
+                    <div>
+                        <!-- <h4>
+                            <Icon name="healthicons:exercise-bicycle" />
+                        </h4> -->
+                        <h4>
+                            {{ dataTreino.data.value.cardioD }}
+                        </h4>
+
+                    </div>
+                </nuxt-link>
             </div>
             <div v-if="divOne" class="squareRes" >
                     <div class="main-div-tree">
@@ -190,11 +216,31 @@ function openDivTree() {
                         
                         </div>
                 </div>
+              <div v-else-if="divFour" class="squareRes">
+                 <div class="main-div-tree">
+                        
+                            <div>
+                                <Icon name="ph:clock-countdown-fill" />
+                                <h4>
+                                    {{ dataTreino.data.value.cardioDTime }}
+                                </h4>
+                            </div>
+
+                            <div>
+                                <h4>
+                                    {{ dataTreino.data.value.cardioDDescription }}
+                                </h4>
+
+                            </div>
+                        
+                        </div>
+                </div>
                 <div v-else class="info" >
                     <div class="arrowUp">
                         <Icon v-if="dataTreino.data.value.cardioA" name="ic:round-arrow-drop-up" />
                         <Icon v-if="dataTreino.data.value.cardioB" name="ic:round-arrow-drop-up" />
                         <Icon v-if="dataTreino.data.value.cardioC" name="ic:round-arrow-drop-up" />
+                        <Icon v-if="dataTreino.data.value.cardioD" name="ic:round-arrow-drop-up" />
                     </div>
                         <h5>Clique acima e veja detalhes do Cardio do dia!</h5>
                 </div>

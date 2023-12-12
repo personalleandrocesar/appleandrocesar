@@ -14,6 +14,7 @@ const state = useCookie('state')
 const navA = ref(state.value == 1)
 const navB = ref(state.value == 2)
 const navC = ref(state.value == 3)
+const navD = ref(state.value == 4)
 
 
 
@@ -67,6 +68,23 @@ const navC = ref(state.value == 3)
             <nuxt-link v-if="dataConf.data.value.treinoC" :to="`/user/${route.params.id}/treino/c`"
                 @click.native="scrollToTop()">
                 <Icon name='mdi:alpha-c' />
+            </nuxt-link>
+            <nuxt-link :to="`/user/${route.params.id}/avaliacao`" @click.native="scrollToTop()">
+                    <Icon name='jam:medical' />
+                </nuxt-link>
+        </div>
+    </div>
+    <div v-else-if="navD">
+        <div class="nav-bottom">
+            <NuxtLink :to="`/user/${route.params.id}`" @click.native="scrollToTop()">
+                <Icon name='mdi:home' />
+            </NuxtLink>
+            <nuxt-link :to="`/user/${route.params.id}/treino`" @click.native="scrollToTop()">
+                <Icon name='material-symbols:exercise' />
+            </nuxt-link>
+            <nuxt-link v-if="dataConf.data.value.treinoD" :to="`/user/${route.params.id}/treino/d`"
+                @click.native="scrollToTop()">
+                <Icon name='mdi:alpha-d' />
             </nuxt-link>
             <nuxt-link :to="`/user/${route.params.id}/avaliacao`" @click.native="scrollToTop()">
                     <Icon name='jam:medical' />

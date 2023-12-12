@@ -4,7 +4,7 @@ import { ref } from 'vue';
 const user = ref('')
 const senha = ref('')
 
-const client = await useFetch('https://m.leandrocesar.com/api/users')
+const client = await useFetch('/api/users')
 
 
 

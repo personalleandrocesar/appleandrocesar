@@ -8,7 +8,7 @@ function openPhoto() {
   photoOpen.value = !photoOpen.value;
 }
 
-const dataConf = await useFetch(`https://m.leandrocesar.com/api/${route.params.id}`)
+const dataConf = await useFetch(`/api/${route.params.id}`)
 
 const state = useCookie('state')
 
@@ -20,6 +20,9 @@ const useB = () => {
 }
 const useC = () => {
   return state.value = 3
+}
+const useD = () => {
+  return state.value = 4
 }
 
 
@@ -122,6 +125,28 @@ const useC = () => {
                 </h4> -->
                 <h4>
                   {{ dataConf.data.value.treinoC }}
+                </h4>
+
+              </div>
+        </nuxt-link>
+        <nuxt-link v-if="dataConf.data.value.treinoD" @click="useD()" class="square" :to="`/user/${route.params.id}/treino/d`">
+          <div>
+                
+                <h4>
+                  TREINO
+                  <Icon name='mdi:alpha-d' />
+                </h4>
+              </div>
+            
+              <div>
+                <h3>
+                </h3>
+              
+                <!-- <h4>
+                  <Icon name="mingcute:fitness-fill"/> 
+                </h4> -->
+                <h4>
+                  {{ dataConf.data.value.treinoD }}
                 </h4>
 
               </div>
