@@ -235,11 +235,11 @@ const navB = ref(state.value == 2)
     font-size: 12px;
     z-index: 800;
     border-radius: 30px;
-     position: fixed;
-  bottom:10px;
-  width: 305px;
-  left:50%;
-  margin-left: -152.5px;
+    position: fixed;
+    bottom: 10px;
+    width: 250px;
+    left: 50%;
+    margin-left: -125px;
 }
 
 .nav-bottom a {

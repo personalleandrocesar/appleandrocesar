@@ -256,9 +256,9 @@ const navC = ref(state.value == 3)
     border-radius: 30px;
     position: fixed;
     bottom: 10px;
-    width: 305px;
+    width: 250px;
     left: 50%;
-    margin-left: -152.5px;
+    margin-left: -125px;
 }
 
 .nav-bottom a {
