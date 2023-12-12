@@ -11,7 +11,7 @@ export default defineEventHandler((event) => {
     { id: 8, num: 'Exercício 8', nome: 'Flexora vertical', sets: 3, reps: '10', rest: '10"', grupo: '', obs: '', img: 'https://m.leandrocesar.com/exe/flexoraVertical.png' },
     { id: 9, num: 'Exercício 9', nome: 'Abdutora', sets: 3, reps: '15 (2t)', rest: '50"', grupo: '', obs: 'Fazer com 2 tempos na parte aberta.', img: 'https://m.leandrocesar.com/exe/abdutora.gif' },
     { id: 10, num: 'Exercício 10', nome: 'Cadeira Flexora', sets: 3, reps: '20', rest: '50"', grupo: '', obs: '', img: 'https://m.leandrocesar.com/exe/flexora.gif' },
-    { id: 11, num: 'Exercício 11', nome: 'Leg press horizontal', sets: 3, reps: '25', rest: '50"', grupo: '', obs: '', img: 'https://m.leandrocesar.com/exe/legpress.gif' },
+    { id: 11, num: 'Exercício 11', nome: 'Leg press horizontal', sets: 3, reps: '15', rest: '50"', grupo: '', obs: '', img: 'https://m.leandrocesar.com/exe/legpress.gif' },
     
    
     
