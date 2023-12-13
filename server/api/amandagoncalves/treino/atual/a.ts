@@ -10,7 +10,7 @@ export default defineEventHandler((event) => {
     { id: 7, num: 'Exercício 7', nome: 'Tríceps Testa barra W', sets: 3, reps: '10', rest: '50"', grupo: '', obs: '', img: 'https://m.leandrocesar.com/exe/tricepsTesta.gif' },
     { id: 8, num: 'Exercício 8', nome: 'Tríceps corda na polia alta', sets: 3, reps: '12 | 12', rest: '50"', grupo: '', obs: 'Rest-pause: fazer 12 repetições, descansa 10" + 12 repetições.', img: 'https://m.leandrocesar.com/exe/tricepsCorda.gif' },
     { id: 9, num: 'Exercício 9', nome: 'Puxada pronada aberta', sets: 3, reps: '15', rest: '50"', grupo: '', obs: '', img: 'https://m.leandrocesar.com/exe/puxadaFrente.gif' },
-    { id: 10, num: 'Exercício 10', nome: 'Remada máquina', sets: 3, reps: '12 | 12', rest: '50"', grupo: '', obs: 'Pegada pronada | Pegada neutra.', img: 'https://m.leandrocesar.com/exe/remadaAaprelhoNeutra.gif' },
+    { id: 10, num: 'Exercício 10', nome: 'Remada máquina', sets: 3, reps: '12 | 12', rest: '50"', grupo: '', obs: 'Pegada pronada | Pegada neutra.', img: 'https://m.leandrocesar.com/exe/remadaMaquina.png' },
     { id: 11, num: 'Exercício 11', nome: 'Abdominal infra no solo', sets: 3, reps: '', rest: '50"', grupo: '', obs: 'Segurar a mão no espaldar e descer primeiro o quadril, depois a perna.', img: 'https://m.leandrocesar.com/exe/abdominalInfra.gif' },
    
   // Modelo:
