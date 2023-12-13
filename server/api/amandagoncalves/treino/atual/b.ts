@@ -6,7 +6,7 @@ export default defineEventHandler((event) => {
     { id: 3, num: 'Exercício 3', nome: 'Levantamento Terra', sets: 3, reps: '12', rest: '50"', grupo: '', obs: '', img: 'https://m.leandrocesar.com/exe/levantamentoTerra.gif' },
     { id: 4, num: 'Exercício 4', nome: 'Abdutora', sets: 3, reps: '15c +10 +iso', rest: '50"', grupo: '', obs: 'Fazer 15 curtas + 10 repetições e segurar o máximo que aguentar no final.', img: 'https://m.leandrocesar.com/exe/abdutora.gif' },
     { id: 5, num: 'Exercício 5', nome: 'Agachamento Búlgaro', sets: 3, reps: '10', rest: '50"', grupo: '', obs: 'Falhando', img: 'https://m.leandrocesar.com/exe/bulgaro.gif' },
-    { id: 6, num: 'Exercício 6', nome: 'Abdução de quadril na polia baixa', sets: 3, reps: '12', rest: '20"', grupo: 'Descansar 20" apenas!', obs: 'Coice.', img: 'https://m.leandrocesar.com/exe/abducaoPolia.gif' },
+    { id: 6, num: 'Exercício 6', nome: 'Abdução de quadril na polia baixa', sets: 3, reps: '12', rest: '20"', grupo: 'Descansar 20" apenas!', obs: '.', img: 'https://m.leandrocesar.com/exe/abducaoPolia.gif' },
     { id: 7, num: 'Exercício 7', nome: 'Agachamento livre(HBL)', sets: 3, reps: '10', rest: '50"', grupo: '', obs: '', img: 'https://m.leandrocesar.com/exe/backSquat.gif' },
     { id: 8, num: 'Exercício 8', nome: 'Stiff', sets: 3, reps: '10', rest: '50"', grupo: '', obs: 'Falhando.', img: 'https://m.leandrocesar.com/exe/stiffHBL.gif' },
     { id: 9, num: 'Exercício 9', nome: 'Elevação Pélvica', sets: 3, reps: '12', rest: '50"', grupo: '', obs: '', img: 'https://m.leandrocesar.com/exe/elevacaoPelvicaHBM.gif' },
