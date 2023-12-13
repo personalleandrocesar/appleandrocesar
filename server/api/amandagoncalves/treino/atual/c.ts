@@ -11,7 +11,7 @@ export default defineEventHandler((event) => {
     { id: 8, num: 'Exercício 8', nome: 'Bíceps Invertido', sets: 3, reps: '10', rest: '50"', grupo: '', obs: 'fazer com a barra W, pegada fechada.', img: 'https://m.leandrocesar.com/exe/bicepsInvertidoBarraW.gif' },
     { id: 9, num: 'Exercício 9', nome: 'Bíceps Sentada', sets: 3, reps: '8', rest: '50"', grupo: '', obs: 'Fazer alternado, falhando.', img: 'https://m.leandrocesar.com/exe/bícepsSentado.gif' },
     { id: 10, num: 'Exercício 10', nome: 'Bíceps corda na polia baixa', sets: 3, reps: '10 +10"', rest: '50"', grupo: '', obs: 'Fazer 10 repetições pesado e segurar 10 segundos em cima.', img: 'https://m.leandrocesar.com/exe/bicepsPolia.gif' },
-    { id: 11, num: 'Exercício 11', nome: 'Supino Reto', sets: 4, reps: '12', rest: '50"', grupo: '', obs: 'Pegada pronada aberta.', img: 'https://m.leandrocesar.com/exe/supinoReto.gif' },
+    { id: 11, num: 'Exercício 11', nome: 'Supino Reto (HBC)', sets: 4, reps: '12', rest: '50"', grupo: '', obs: 'Pegada pronada.', img: 'https://m.leandrocesar.com/exe/supinoReto.gif' },
 
     // Modelo:
     // { id: 1, num: 'Exercício 1', nome: '', sets: 3, reps: '', rest: '40"', grupo: '', obs: '', img: 'https://m.leandrocesar.com/exe/preImagem.png' },
