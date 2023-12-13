@@ -1,5 +1,11 @@
 <script setup>
+
+definePageMeta({
+    middleware: ["auth"]
+    // or middleware: 'auth'
+})
 import { ref } from 'vue';
+const route = useRoute()
 
 const user = ref('')
 const senha = ref('')
@@ -19,6 +25,9 @@ const enterClicked = () => {
 const trigger = () => {
     enterClicked()
 }
+
+
+
 
 </script>
 

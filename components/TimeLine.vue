@@ -1,3 +1,25 @@
+<script setup>
+const route = useRoute()
+
+const reg = route.params.id
+const logon = useCookie('logon')
+logon.value = reg
+console.log(logon.value);
+
+console.log(reg);
+
+definePageMeta({
+  middleware: [
+    function (to, from) {
+      // Custom inline middleware
+      if (logon.value !== to.params.id) {
+
+      }
+    }
+  ],
+})
+</script>
+
 <template>
   <div class="body-timeline">
       <img

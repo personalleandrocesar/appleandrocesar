@@ -1,6 +1,4 @@
 export default defineEventHandler((event) => {
-
-
   // Send JSON response
   return {
     "nome": "Amanda",
