@@ -8,16 +8,7 @@ console.log(logon.value);
 
 console.log(reg);
 
-definePageMeta({
-  middleware: [
-    function (to, from) {
-      // Custom inline middleware
-      if (logon.value !== to.params.id) {
 
-      }
-    }
-  ],
-})
 </script>
 
 <template>

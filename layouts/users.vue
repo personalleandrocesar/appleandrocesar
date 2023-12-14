@@ -26,20 +26,11 @@ function openPhoto() {
 
 // talvez não precise do código abaixo
 const state = useCookie('state')
-const logOff = () => {
-  return state.value = 0
-  
-}
-
-const reg = route.params.id
 const logon = useCookie('logon')
-logon.value = reg 
-console.log(logon.value);
-
-console.log(reg);
-
-
-
+const logOff = () => {
+    logon.value = null
+    state.value = null
+}
 
 
 </script>
