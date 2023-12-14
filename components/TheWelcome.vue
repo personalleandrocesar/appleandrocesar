@@ -1,6 +1,5 @@
 <script setup>
 import { ref } from 'vue';
-
 const user = ref('')
 const senha = ref('')
 
@@ -19,8 +18,6 @@ const enterClicked = () => {
 const trigger = () => {
     enterClicked()
 }
-
-
 </script>
 
 <template>
