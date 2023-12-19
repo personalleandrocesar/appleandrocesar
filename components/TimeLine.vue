@@ -4,6 +4,7 @@ const route = useRoute()
 const reg = route.params.id
 const logon = useCookie('logon', { maxAge: 4800 })
 logon.value = reg
+// logon.value = reg + route.params.id.length + (Math.round(Math.random() * 1000)) 
 console.log(logon.value);
 
 console.log(reg);

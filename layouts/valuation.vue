@@ -20,11 +20,9 @@ function openPhoto() {
 
 // talvez não precise do código abaixo
 
-const state = useCookie('state')
 const logon = useCookie('logon')
 const logOff = () => {
   logon.value = null
-  state.value = null
 }
 
 

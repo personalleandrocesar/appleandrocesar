@@ -18,7 +18,7 @@ const trigger = () => {
   enterClicked()
 }
 
-const pop = useCookie('pop')
+const pop = useCookie('pop', {maxAge: 7889400 })
 pop.value = pop.value
 
 const popOk = () => {
