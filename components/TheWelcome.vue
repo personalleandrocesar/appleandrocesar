@@ -6,18 +6,36 @@ const senha = ref('')
 const client = await useFetch('/api/users')
 
 
-
 const enterClicked = () => {
-    if (user.value === client.data.value[user.value].usuario && senha.value === client.data.value[user.value].sennha ) {
-        return navigateTo(`/user/${client.data.value[user.value].usuario}`)
+  if (user.value === client.data.value[user.value].usuario && senha.value === client.data.value[user.value].sennha ) {
+    return navigateTo(`/user/${client.data.value[user.value].usuario}`)
     } return navigateTo("/")
     
-}
+  }
 
 
 const trigger = () => {
-    enterClicked()
+  enterClicked()
 }
+
+const pop = useCookie('pop')
+pop.value = pop.value
+
+const popOk = () => {
+  return pop.value = "ok"
+}
+
+const popView = () => {
+  if (pop.value === 'ok') {
+    return false
+  } return true 
+}
+
+
+
+
+
+
 </script>
 
 <template>
@@ -37,19 +55,27 @@ const trigger = () => {
               v-model="senha">
           <br>
           <div>
-          <NuxtLink class='login' @click="enterClicked">
-                LOGIN <Icon name="solar:login-3-bold"/>
-            </NuxtLink>
-          <a href="https://api.whatsapp.com/send?phone=5521936184024%20&text=Ol%C3%A1%20professor!%20Esqueci%20o%20meu%20email%20e%20minha%20senha!"
-              target="_blank">
-          <h5>Esqueci minha senha</h5>
-          </a>
+            <NuxtLink class='login' @click="enterClicked">
+                  LOGIN <Icon name="solar:login-3-bold"/>
+              </NuxtLink>
+            <a href="https://api.whatsapp.com/send?phone=5521936184024%20&text=Ol%C3%A1%20professor!%20Esqueci%20o%20meu%20email%20e%20minha%20senha!"
+                target="_blank">
+            <h5>Esqueci minha senha</h5>
+            </a>
           </div>
         </div>
       </div>
     </div>
   </div>
-    </div>
+  <div v-if="popView()" class="pop-up">
+    <p>
+      Neste webapp, usamos cookies e outras técnologias semelhantes para melhorar sua
+      experiência de navegação e facilitar certos tipos de vantagens que só o app.leandrocesar.com
+      pode oferecer. Ao clicar no botão abaixo, você está ciente e concordando com esta funcionalidade. 
+    </p>
+    <div class="button-pop" @click="popOk()">PROSSEGUIR!</div>
+  </div>
+</div>
 </template>
 <style scoped>
 #login {
@@ -243,6 +269,44 @@ img {
     margin-top: 80px;
     margin-bottom: -100px;
 }
+
+.pop-up {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  position: fixed;
+  bottom: 10px;
+  margin: 10px 20px 20px 20px;
+  background-color: #05959c90;
+  color: #fff;
+  padding: 15px;
+  border-radius: 7px;
+}
+
+.pop-up p {
+  font-weight: 700;
+  font-size: 13px;
+  text-shadow: 1px 1px 3px #fadb41;
+}
+
+.button-pop {
+    margin: 7px auto 0 auto;
+    transition: all .4s linear;
+    background-color: var(--color-background);
+    border: solid 1px #fadb4170;
+    box-shadow: 0 0px 5px #fadb4170;
+    border-radius: 8px;
+    cursor: pointer;
+    width: 50%;
+    text-align: center;
+    color: var(--color-text);
+}
+
+.button-pop:hover {
+    background-color: #fadb4120;
+}
+
 
 @media only screen and (max-width: 369px) {}
 </style>
