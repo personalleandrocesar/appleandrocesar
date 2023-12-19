@@ -9,7 +9,6 @@ console.log(logon.value);
 
 console.log(reg);
 
-
 </script>
 
 <template>

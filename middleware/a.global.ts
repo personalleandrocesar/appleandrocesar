@@ -10,5 +10,12 @@ export default defineNuxtRouteMiddleware((to, from) => {
         return navigateTo('/') 
     }
 
-    
+    if (to.params.id !== logon.value ) {
+        logon.value = null
+        state.value = null
+    }    
+
+    if (to.fullPath === '/' && logon.value !== null) {
+        state.value = null
+    }    
 })
