@@ -283,6 +283,11 @@ img {
   color: #fff;
   padding: 15px;
   border-radius: 7px;
+  position: fixed;
+  bottom:10px;
+  width: 80%;
+    left: 50%;
+    margin-left: -40%;
 }
 
 .pop-up p {
