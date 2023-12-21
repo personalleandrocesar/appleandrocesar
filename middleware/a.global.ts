@@ -10,10 +10,14 @@ export default defineNuxtRouteMiddleware((to, from) => {
         //     return navigateTo('/') 
         // }
         // Se o próximo id de rota for diferente de logonCookie E ao mesmo tempo o id atual
-        if (logon.value && to.fullPath === '/') {
+    if ((from.params.id && to.params.id !== logon.value) || (logon.value && to.path === '/') )  {
             return navigateTo(`/user/${logon.value}`)
         }
-        // se o id da rota atual for diferente de logonCookie -> logonCookie será nulo!
+        
+        // if (from.params.id === '/user/undefined' && !logon.value) {
+        //     return navigateTo('/') 
+        // }
+        // se o id da rota atual for diferente de logonCookie ->    logonCookie será nulo!
     //     if (from.params !== logon.value ) {
     //         return navigateTo('/') 
     // }    
@@ -30,9 +34,6 @@ export default defineNuxtRouteMiddleware((to, from) => {
 
         
         // Se o próximo id de rota for diferente de logonCookie E ao mesmo tempo o id atual
-            // if (from.params.id !== logon.value && to.params.id ) {
-            //     return navigateTo('/') 
-            // }
         // se o id da rota atual for diferente de logonCookie -> logonCookie será nulo!
             // if (to.params.id !== logon.value ) {
             //     logon.value = null
