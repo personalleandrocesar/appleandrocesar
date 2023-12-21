@@ -37,33 +37,42 @@ const previousExercise = () => {
   }
 }
 
-
-
 const nextExercise = () => {
   if (treino.value < dataTreino.data.value.length - 1) {
     treino.value++
   }
 }
 
+const view = useCookie('view')
+view.value = view.value
+
 const list = ref(false);
 const buttonList = ref(false);
-function alternate() {
+function chooseList() {
   buttonList.value = !buttonList.value;
   list.value = !list.value;
+  view.value = 'listView'
+}
+function chooseGrid() {
+  buttonList.value = !buttonList.value;
+  list.value = !list.value;
+  view.value = 'gridView'
 }
 
-//  return item.value
+
+
+
 </script>
 
 <template>
     <NuxtLayout :name="layout">
     
         <div class="alternate">
-          <span v-if="buttonList" @click="alternate">
+          <span v-if="buttonList" @click="chooseGrid()">
             <Icon name="solar:slider-minimalistic-horizontal-bold" />
 
           </span>
-          <span v-else @click="alternate">
+          <span v-else @click="chooseList()">
             <Icon name="mdi:format-list-text" />
 
           </span>
