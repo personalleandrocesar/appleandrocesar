@@ -69,9 +69,9 @@ const popView = () => {
   </div>
   <div v-if="popView()" class="pop-up">
     <p>
-      Neste webapp, usamos cookies e outras técnologias semelhantes para melhorar sua
+      Neste webapp, usamos cookies e outras tecnológicas semelhantes para melhorar sua
       experiência de navegação e facilitar certos tipos de vantagens que só o app.leandrocesar.com
-      pode oferecer. Ao clicar no botão abaixo, você está ciente e concordando com esta funcionalidade. 
+      pode oferecer. Ao clicar no botão abaixo, você está ciente e concordando com estas funcionalidades. 
     </p>
     <div class="button-pop" @click="popOk()">PROSSEGUIR!</div>
   </div>
@@ -81,6 +81,9 @@ const popView = () => {
 #login {
     background-color: #095d62;
     min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between
 }
 
 
@@ -275,10 +278,8 @@ img {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  position: fixed;
-  bottom: 10px;
   margin: 10px 20px 20px 20px;
-  background-color: #05959c90;
+  background-color: #05959c40;
   color: #fff;
   padding: 15px;
   border-radius: 7px;
