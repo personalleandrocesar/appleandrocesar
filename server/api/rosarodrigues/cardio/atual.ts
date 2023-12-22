@@ -11,7 +11,7 @@ export default defineEventHandler((event) => {
         // Treino C
         "cardioC": "", 
         "cardioCTime": "--",
-        "cardioCDescription": "Não precisa fazer cardio neste dia!"
+        "cardioCDescription": "Não precisa fazer cardio neste dia!",
         // Treino D
         "cardioD": "", 
         "cardioDTime": "--",
