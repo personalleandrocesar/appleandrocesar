@@ -10,10 +10,11 @@ export default defineEventHandler((event) => {
     "foto": "https://m.leandrocesar.com/img/rosarodrigues.png",
     "objetivo": "Hipertrofia",
     "tempo": "60 min.",
-    "dias": "5 dias",
-    "treinoA": "Peito/ombro/tríceps/quadríceps",
-    "treinoB": "Costa/bíceps/posterior/abdômen",
-    "treinoC": "",
+    "dias": "6 dias",
+    "treinoA": "Peito/Tríceps",
+    "treinoB": "Gluteo/Posterior",
+    "treinoC": "Costa/Bíceps",
+    "treinoD": "Quadriceps",
     
     // Dados Menu Global
     "periodo": "18/12/23 - 18/12/23",
