@@ -8,7 +8,6 @@ const data = await useFetch(`/api/${route.params.id}`)
 
 const notification = ref(false)
 
-const status = data.data.value.status
 
 const navbarOpen = ref(false);
 function openNavbar() {

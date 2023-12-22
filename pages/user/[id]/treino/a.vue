@@ -46,20 +46,15 @@ const nextExercise = () => {
 const view = useCookie('view')
 view.value = view.value
 
-const list = ref(false);
 const buttonList = ref(false);
 function chooseList() {
   buttonList.value = !buttonList.value;
-  list.value = !list.value;
   view.value = 'listView'
 }
 function chooseGrid() {
   buttonList.value = !buttonList.value;
-  list.value = !list.value;
   view.value = 'gridView'
 }
-
-
 
 
 </script>
@@ -79,7 +74,7 @@ function chooseGrid() {
         </div>  
         
         <!-- Série em lista -->
-        <div class="main-div-two" v-if="list">
+        <div class="main-div-two" v-if="buttonList">
           <h3>
             {{ itemExercise() }} Exercícios
           </h3>
@@ -127,7 +122,7 @@ function chooseGrid() {
 
 
           <!-- Série em Bloco -->
-        <div class="main-div-tree" v-else >
+        <div class="main-div-tree" v-else>
          
           
           <ul>

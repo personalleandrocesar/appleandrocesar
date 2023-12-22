@@ -25,6 +25,11 @@ const useD = () => {
   return state.value = 4
 }
 
+const navA = ref(state.value == 1)
+const navB = ref(state.value == 2)
+const navC = ref(state.value == 3)
+const navD = ref(state.value == 4)
+
 
 </script>
 
@@ -55,6 +60,11 @@ const useD = () => {
 
             </div>
           </div>
+          <!-- <div v-if="navA">Ultima série feita: <Icon name='mdi:alpha-a' /></div>
+          <div v-else-if="navB">Ultima série feita: <Icon name='mdi:alpha-b' /></div>
+          <div v-else-if="navC">Ultima série feita: <Icon name='mdi:alpha-c' /></div>
+          <div v-else-if="navD">Ultima série feita: <Icon name='mdi:alpha-d' /></div>
+          <div v-else></div> -->
         
 
 
