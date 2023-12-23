@@ -60,10 +60,10 @@ const navD = ref(state.value == 4)
 
             </div>
           </div>
-            <div class="story" v-if="navA">Ultimo treino: <b>TREINO</b><Icon name='mdi:alpha-a' /></div>
-            <div class="story" v-else-if="navB">Ultimo treino: <b>TREINO</b><Icon name='mdi:alpha-b' /></div>
-            <div class="story" v-else-if="navC">Ultimo treino: <b>TREINO</b><Icon name='mdi:alpha-c' /></div>
-            <div class="story" v-else-if="navD">Ultimo treino: <b>TREINO</b><Icon name='mdi:alpha-d' /></div>
+            <div class="story" v-if="navA">Último treino: <b>TREINO</b><Icon name='mdi:alpha-a' /></div>
+            <div class="story" v-else-if="navB">Último treino: <b>TREINO</b><Icon name='mdi:alpha-b' /></div>
+            <div class="story" v-else-if="navC">Último treino: <b>TREINO</b><Icon name='mdi:alpha-c' /></div>
+            <div class="story" v-else-if="navD">Último treino: <b>TREINO</b><Icon name='mdi:alpha-d' /></div>
             <div v-else></div>
         
 
@@ -182,6 +182,9 @@ body {
   color: #616161;
 
 }
+b {
+  margin-left: 7px;
+}
 
 .main {
   display: flex;
@@ -277,7 +280,7 @@ body {
   flex-direction: row;
   justify-content:center;
   align-items: center;
-  width: 60%;
+  width: 65%;
   margin: 8px auto;
   padding-top: 3px;
     border-radius: 20px;
@@ -286,6 +289,7 @@ body {
     border-left: 6px solid #05959c;
     line-height: 1.4;
     transition: all .4s;
+    font-weight: 700;
 }
 
 .story .icon {
