@@ -23,6 +23,11 @@ const itemExercise = () => {
 const listExercise = () => {
   return dataTreino.data.value
 }
+const i = treino.value
+const listExercisee = () => {
+  return dataTreino.data.value[i].img
+}
+console.log(listExercisee());
 
 const pending = ref(false)
 
@@ -38,41 +43,59 @@ const nextExercise = () => {
   }
 }
 
-const list = ref(false);
+const view = useCookie('view')
+view.value = view.value
+
 const buttonList = ref(false);
-function alternate() {
+function chooseList() {
   buttonList.value = !buttonList.value;
-  list.value = !list.value;
+  view.value = 'listView'
+}
+function chooseGrid() {
+  buttonList.value = !buttonList.value;
+  view.value = 'gridView'
 }
 
-//  return item.value
+const selectL = () => {
+  if (view.value === 'listView') {
+    return true,
+      buttonList.value = !buttonList.value;
+  }
+}
+const selectG = () => {
+  if (view.value === 'gridView') {
+    return true,
+      buttonList.value = !buttonList.value;
+  }
+}
+
 </script>
 
 <template>
   <NuxtLayout :name="layout">
 
     <div class="alternate">
-      <span v-if="buttonList" @click="alternate">
+      <span v-if="buttonList" @click="chooseGrid()">
         <Icon name="solar:slider-minimalistic-horizontal-bold" />
 
       </span>
-      <span v-else @click="alternate">
+      <span v-else @click="chooseList()">
         <Icon name="mdi:format-list-text" />
 
       </span>
     </div>
 
     <!-- Série em lista -->
-    <div class="main-div-two" v-if="list">
+    <div class="main-div-two" v-if="buttonList || selectL()">
       <h3>
         {{ itemExercise() }} Exercícios
       </h3>
 
 
       <ul>
-        <li v-for="(nome) in listExercise()">
+        <li v-for="(nome, index) in listExercise()">
           <h3>
-            {{ nome.id }} - {{ nome.nome }}
+            {{ index + 1 }} - {{ nome.nome }}
           </h3>
           <div class="roww">
 
@@ -87,18 +110,6 @@ function alternate() {
 
             </span>
           </div>
-          <!-- Início do Nav-flow -->
-          <!-- <div v-if="exerciseImg" class="nav-bar-photo" @click="openExercise">
-            <div class="nav-top">
-
-              <div class="nav-flow-photo">
-                <div class="div-img-full">
-                  <img :src="nome.img" />
-                </div>
-              </div>
-
-            </div>
-          </div> -->
 
         </li>
       </ul>
@@ -111,7 +122,7 @@ function alternate() {
 
 
     <!-- Série em Bloco -->
-    <div class="main-div-tree" v-else>
+    <div class="main-div-tree" v-else="buttonList || selectG()">
 
 
       <ul>
