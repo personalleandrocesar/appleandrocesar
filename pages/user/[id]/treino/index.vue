@@ -60,11 +60,11 @@ const navD = ref(state.value == 4)
 
             </div>
           </div>
-          <!-- <div v-if="navA">Ultima série feita: <Icon name='mdi:alpha-a' /></div>
+          <div v-if="navA">Ultima série feita: <Icon name='mdi:alpha-a' /></div>
           <div v-else-if="navB">Ultima série feita: <Icon name='mdi:alpha-b' /></div>
           <div v-else-if="navC">Ultima série feita: <Icon name='mdi:alpha-c' /></div>
           <div v-else-if="navD">Ultima série feita: <Icon name='mdi:alpha-d' /></div>
-          <div v-else></div> -->
+          <div v-else></div>
         
 
 

@@ -56,6 +56,7 @@ function chooseGrid() {
   view.value = 'gridView'
 }
 
+const vv = ref(view.value === 'listView')
 
 </script>
 
@@ -74,7 +75,7 @@ function chooseGrid() {
         </div>  
         
         <!-- Série em lista -->
-        <div class="main-div-two" v-if="buttonList">
+        <div class="main-div-two" v-if="vv === true || buttonList">
           <h3>
             {{ itemExercise() }} Exercícios
           </h3>
@@ -122,7 +123,7 @@ function chooseGrid() {
 
 
           <!-- Série em Bloco -->
-        <div class="main-div-tree" v-else>
+        <div class="main-div-tree" v-if="vv !== true">
          
           
           <ul>
