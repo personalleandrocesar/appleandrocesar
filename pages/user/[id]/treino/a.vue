@@ -56,6 +56,18 @@ function chooseGrid() {
   view.value = 'gridView'
 }
 
+const selectL = () => {
+  if (view.value === 'listView') {
+    return true,
+    buttonList.value = !buttonList.value;
+  } 
+}
+const selectG = () => {
+  if (view.value === 'gridView') {
+    return true,
+    buttonList.value = !buttonList.value;
+  } 
+}
 
 </script>
 
@@ -74,7 +86,7 @@ function chooseGrid() {
         </div>  
         
         <!-- Série em lista -->
-        <div class="main-div-two" v-if="buttonList">
+        <div class="main-div-two" v-if="buttonList || selectL()">
           <h3>
             {{ itemExercise() }} Exercícios
           </h3>
@@ -98,18 +110,6 @@ function chooseGrid() {
                     
                   </span>
                 </div>
-                <!-- Início do Nav-flow -->
-                <!-- <div v-if="exerciseImg" class="nav-bar-photo" @click="openExercise">
-          <div class="nav-top">
-
-            <div class="nav-flow-photo">
-              <div class="div-img-full">
-                <img :src='nome.img' />
-              </div>
-            </div>
-
-          </div>
-        </div> -->
 
              </li>
             </ul>
@@ -119,10 +119,10 @@ function chooseGrid() {
           </div>
 
 
-
+          
 
           <!-- Série em Bloco -->
-        <div class="main-div-tree" v-else>
+        <div class="main-div-tree" v-else="buttonList || selectG()">
          
           
           <ul>
