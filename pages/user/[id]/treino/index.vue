@@ -60,11 +60,13 @@ const navD = ref(state.value == 4)
 
             </div>
           </div>
-          <div v-if="navA">Ultima série feita: <Icon name='mdi:alpha-a' /></div>
-          <div v-else-if="navB">Ultima série feita: <Icon name='mdi:alpha-b' /></div>
-          <div v-else-if="navC">Ultima série feita: <Icon name='mdi:alpha-c' /></div>
-          <div v-else-if="navD">Ultima série feita: <Icon name='mdi:alpha-d' /></div>
-          <div v-else></div>
+          <div class="story">
+            <div v-if="navA">Ultimo treino: <b>TREINO</b><Icon name='mdi:alpha-a' /></div>
+            <div v-else-if="navB">Ultima série feita: <Icon name='mdi:alpha-b' /></div>
+            <div v-else-if="navC">Ultima série feita: <Icon name='mdi:alpha-c' /></div>
+            <div v-else-if="navD">Ultima série feita: <Icon name='mdi:alpha-d' /></div>
+            <div v-else></div>
+          </div>
         
 
 
@@ -246,6 +248,10 @@ body {
     transition: all .4s;
 }
 
+.square div h4 .icon {
+  margin-top: -1px;
+}
+
 .square:nth-child(2) {
   margin-top: 10px;
 }
@@ -253,16 +259,40 @@ body {
 .square:hover {
     background-color: #095D6230;
     border-right: 6px solid #05959c;
-
+    
 }
 .square div:nth-child(1) {
   padding-right: 12px;
-
+  
 }
 
 .square div:nth-child(2), .square div:nth-child(3){
   margin: auto;
   border: none;
+}
+.story {  
+  color:#555;
+  background-color: #095D6220;
+  backdrop-filter: blur(5px);
+  overflow-x: auto;
+  display: flex;
+  flex-direction: row;
+  justify-content:center;
+  align-items: center;
+  width: 60%;
+  margin: 8px auto;
+  padding-top: 3px;
+    border-radius: 20px;
+    border: .1px solid #05959c20;
+    border-right: 6px solid #05959c;
+    border-left: 6px solid #05959c;
+    line-height: 1.4;
+    transition: all .4s;
+}
+
+.story .icon {
+  color: #095D62;
+  margin-top: -2px;
 }
 .main-div-one {
   overflow-x: auto;
