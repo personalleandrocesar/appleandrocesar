@@ -9,12 +9,13 @@ function scrollToTop() {
 const dataConf = await useFetch(`/api/${route.params.id}`)
 
 const state = useCookie('state')
+state.value = state.value
 
 
-const navA = ref(state.value == 1)
-const navB = ref(state.value == 2)
-const navC = ref(state.value == 3)
-const navD = ref(state.value == 4)
+const navA = ref(state.value === 1)
+const navB = ref(state.value === 2)
+const navC = ref(state.value === 3)
+const navD = ref(state.value === 4)
 
 
 

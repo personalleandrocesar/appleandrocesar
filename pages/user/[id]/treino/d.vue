@@ -212,7 +212,7 @@ const selectG = () => {
     </div>
 
   </NuxtLayout>
-  <NavBottomTwo />
+  <NavBottomTree />
 </template>
 
     
