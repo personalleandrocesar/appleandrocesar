@@ -273,6 +273,16 @@ input:focus {
     border-color: #095D6280;
     color: #718096;
 }
+input:focus-visible{
+    background-color: #095D6210;
+    border: solid 1px transparent;
+    color: #718096;
+}
+input:active {
+    background-color: #095D6210;
+    border-color: #095D6280;
+    color: #718096;
+}
 
 input:hover {
     background-color: #095D6210;
@@ -361,6 +371,7 @@ a:hover {
   margin-left: -40%;
   font-weight: 900;
   border: solid 1px #095D6210;
+  z-index: 10000;
 }
 
 .pop-up p {
