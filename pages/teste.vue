@@ -9,6 +9,6 @@ definePageMeta({
 
 <template>
   <NuxtLayout :name="layout">
-    <TheWelcomeTeste/>
+    <TheWelcomeTest/>
   </NuxtLayout>
 </template>

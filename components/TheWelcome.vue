@@ -44,7 +44,7 @@ const popView = () => {
     <div class='logo'>
       <img src="~assets/logo.png" />
       <h1>app.leandrocesar.com</h1>
-      <h3>Acesse sua conta</h3> 
+      <h3>Área do cliente</h3> 
       <div>
         <div>
           <h4>Usuário</h4>

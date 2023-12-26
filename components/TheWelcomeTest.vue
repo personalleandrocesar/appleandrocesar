@@ -1,70 +1,172 @@
+<script setup>
+import { ref } from 'vue';
+const user = ref('')
+const senha = ref('')
+
+const client = await useFetch('/api/users')
+
+
+const enterClicked = () => {
+    if (user.value === client.data.value[user.value].usuario && senha.value === client.data.value[user.value].sennha) {
+        return navigateTo(`/user/${client.data.value[user.value].usuario}`)
+    } return navigateTo("/")
+
+}
+
+
+const trigger = () => {
+    enterClicked()
+}
+
+const pop = useCookie('pop', { maxAge: 7889400 })
+pop.value = pop.value
+
+const popOk = () => {
+    return pop.value = "ok"
+}
+
+const popView = () => {
+    if (pop.value === 'ok') {
+        return false
+    } return true
+}
+
+
+
+
+const photoOpen = ref(false);
+function openPhoto() {
+    photoOpen.value = !photoOpen.value;
+}
+
+
+</script>
 <template>
-    <div id="login">
-        <div>
-            <div class='logo'>
-                <LCLogoTree />
-                <h1>m.leandrocesar.com</h1>
-                <h3>Acesse sua conta</h3>
-                <div>
-                    <div>
-                        <h4>Usuário</h4>
-                        <input type="user" name="" id="usuario" placeholder="Digite seu usuário" autofocus v-model="user">
-                        <br>
-                        <h4>Senha</h4>
-                        <input type="password" @keyup.enter="trigger" name="" id="senha" placeholder="Digite sua senha"
-                            v-model="senha">
-                        <br>
-                        <div>
-                            <input class='button-call' type="submit" value="ENTRAR" id="btn" @click="enterClicked"
-                                ref="sendReply">
-                            <a href="https://api.whatsapp.com/send?phone=5521936184024%20&text=Ol%C3%A1%20professor!%20Esqueci%20o%20meu%20user%20e%20minha%20senha!"
-                                target="_blank">
-                                <h5>Esqueci minha senha</h5>
-                            </a>
-                        </div>
-                    </div>
-                </div>
+    <header>
+        <div class="head-logo" id="sobre">
+            <div class='logo' >
+                <img @click="openPhoto()" src="~/assets/logo.png" alt="Foto de perfil do Personal Leandro Cesar.">
             </div>
         </div>
-    </div>
+        <div class="head-name">
+            <div class="name">
+                app.leandrocesar.com
+            </div>
+            <h3>Área do cliente</h3> 
+        </div>
+        <div class="inputs">
+            <div>
+                <h4>Usuário</h4>
+                <input type="email" @keyup.enter="trigger" name="" id="usuario" placeholder="Digite seu usuário" autofocus v-model="user">
+            </div>
+              <div>
+                  <h4>Senha</h4>
+                  <input type="password" @keyup.enter="trigger" name="" id="senha" placeholder="Digite sua senha"
+                  v-model="senha">
+                </div>
+                <div>
+                    <NuxtLink class='login' @click="enterClicked">
+                        LOGIN <Icon name="solar:login-3-bold"/>
+                    </NuxtLink>
+                </div>
+                <div class="lost">
+                    <a href="https://api.whatsapp.com/send?phone=5521936184024%20&text=Ol%C3%A1%20professor!%20Esqueci%20o%20meu%20email%20e%20minha%20senha!"
+                    target="_blank">
+                    <h5>Esqueci minha senha</h5>
+                    </a>
+                </div>
+            </div>
+        
+        
+    </header>
+    <footer>
+        <a class="whats" href="https://api.whatsapp.com/send?phone=5521936184024%20&text=Ol%C3%A1%20Leandro%20Cesar,%20fiquei%20interessado(a)%20nos%20seus%20Servi%C3%A7os,%20me%20chamo%20">
+            <Icon name="ic:outline-whatsapp"/>
+        </a>
+    </footer>
+    
 </template>
 <script>
 export default {
-    data() {
-        return {
-            user: '',
-            senha: '',
-        }
-    },
     methods: {
-        enterClicked() {
-            if (this.user === 'admin' & this.senha === '1234') {
-                this.$router.replace('/admin')
-            } if (this.user === 'camillafigueiredo' & this.senha === 'figueiredo@Ca') {
-                this.$router.replace('/user/camilla-figueiredo')
-            } if (this.user === 'beatrizlopes' & this.senha === 'lopes@Be') {
-                this.$router.replace('/user/beatriz-lopes')
-            }
-        },
-        trigger() {
-            this.$refs.sendReply.click()
+        scrollToTop() {
+            window.scrollTo(0, 0);
         }
     },
-
-    scrollToTop() {
-        window.scrollTo(0, 0);
-    }
 }
+
 </script>
+
 <style scoped>
-#login {
-    background-color: #095d62;
-    min-height: 100vh;
+.head-logo {
+    display: flex;
+    justify-content: center;
+    flex-direction: row-reverse;
+    align-items: center;
+    z-index: 1;
+    flex-wrap: wrap;
+}
+.logo {
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+    align-items: center;
+    flex-wrap: wrap;
+    background-color: #edf2f7;
+    height: 100px;
+    width: 100px;
+    color: #718096;
+    box-shadow: 1px 7px 20px #095D62;
+    margin: 6.5rem 0 1.5rem 0;
+    border-radius: 7px;
+    z-index: 10;
+}
+
+.logo img {
+    height: 100px;
+    width: 100px;
+    border-radius: 7px;
+    border: #095D62 2px solid;
+    z-index: 100;
+    opacity: 1;
+    
 }
 
 
-
-.logo {
+.button-client {
+    margin: 2rem 1.5rem;
+    transition: all .4s linear;
+    border: solid 1px #095D6210;
+    box-shadow: 0 0px 5px #095D6210;
+    border-radius: 8px;
+    cursor: pointer;
+    width: 160px;
+    text-align: center;
+    color: var(--color-text);
+    line-height: 18px;
+    border-radius: 8px;
+    font-weight: 600;
+    transition: all 0.2s ease-in-out 0s;
+    height: 34px;
+    font-size: 14px;
+    padding-inline: 16px;
+    padding-top: 8px;
+    padding-bottom: 8px;
+}
+.button-client:hover {
+    background-color: #095D6210;
+    color: #095D6280;
+}
+.button-client .icon{
+    margin-top: -5px;
+    margin-right: 5px;
+    color: var(--color-text);
+    transition: all 0.2s ease-in-out 0s;
+}
+.button-client:hover .icon{
+    color: #095D6280;
+}
+.head-name {
     display: flex;
     justify-content: center;
     flex-direction: column;
@@ -72,68 +174,104 @@ export default {
     flex-wrap: wrap;
 }
 
-.logo h1 {
-    margin: 80px 0 0px 0;
-    color: #fadb41;
+.head-name h3 {
+    color: #718096;    
 }
 
-.logo h5 {
-    margin-top: 20px;
-    text-align: center;
+
+.name {
+    font-size: 1.6rem;
+    line-height: 1.5rem;
+    margin: .2rem 1.5rem;
+    font-weight: 700;
+    color: #095D62;    
 }
 
-input {
-    height: 2em;
-    text-decoration: none;
-    transition: all .4s linear;
-    color: #777;
-    text-indent: 0;
-    background: #fff;
-    width: 100%;
-    border-radius: 8px 8px 8px 8px;
+
+.whats {
     display: flex;
     justify-content: center;
     flex-direction: column;
-    border: solid 2px #eee;
-    padding-left: 20px;
+    align-items: center;
+    flex-wrap: wrap;
+    position: fixed;
+    background-color: #edf2f7;
+    height: 40px;
+    width: 40px;
+    color: #718096;
+    box-shadow: 1px 1px 15px #095D6250;
+    transition: all 0.2s ease-in-out 0s;
+    bottom: 3.5rem;
+    right: 1.5rem;
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+.whats:hover {
+    background-color: #095D6210;
+    color: #095D6280;
+    box-shadow: 1px 1px 15px #095D6280;
+}
+
+.inputs {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    flex-wrap: wrap;
+    align-items: center;
+}
+.inputs div {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    flex-wrap: wrap;
+    align-items: flex-start;
+}
+
+
+input {
+    margin: .5rem auto;
+    transition: all .4s linear;
+    border: solid 1px #095D6210;
+    box-shadow: 0 0px 5px #095D6210;
+    border-radius: 8px;
+    text-align: left;
+    color: var(--color-text);
+    line-height: 18px;
+    border-radius: 8px;
+    font-weight: 600;
+    transition: all 0.2s ease-in-out 0s;
+    height: 34px;
+    font-size: 14px;
+    padding-inline: 16px;
+    padding-top: 8px;
+    padding-bottom: 8px;
+    
+}
+
+input::placeholder {
+    color: #71809690;
+}
+
+.inputs div h4 {
+    text-align: left;
 }
 
 input:focus {
-    background-color: #fffde1;
-    border-color: #fadb41;
+    background-color: #095D6210;
+    border-color: #095D6280;
+    color: #718096;
 }
 
 input:hover {
-    background-color: #fffde1;
-}
-
-
-body {
-    font-family: 'Philosopher', sans-serif;
-    color: var(--color-text);
-    line-height: 1.6;
-}
-
-iframe {
-    margin-left: 10px;
-}
-
-h1 {
-    color: var(--color-text);
-    transition: all .3s linear;
-    cursor: pointer;
-    font-size: 1.5em;
-}
-
-h3 {
-    color: var(--color-text);
-    transition: all .3s linear;
+    background-color: #095D6210;
 }
 
 h4 {
     color: var(--color-text);
     transition: all .3s linear;
     margin: 0 0 0 10px;
+    text-align: left;
 }
 
 h4:nth-child(1) {
@@ -142,53 +280,84 @@ h4:nth-child(1) {
     margin: 20px 0 0 10px;
 }
 
-h1:hover {
-    color: #fadb41;
-
-}
-
 a {
     text-decoration: none;
     color: var(--color-text);
     transition: all .4s linear;
+    margin-top: -5px;
 }
 
 a:hover {
-    color: #fadb41;
+    color: #095D62;
 }
 
-svg a {
-    text-decoration: none;
-    color: var(--color-text);
+.login{
     transition: all .4s linear;
-}
-
-svg a:hover {
-    color: #fadb41;
-}
-
-i {
+    border: solid 1px #095D6210;
+    box-shadow: 0 0px 5px #095D6210;
+    border-radius: 8px;
+    cursor: pointer;
+    width: 160px;
+    text-align: center;
     color: var(--color-text);
-    font-size: .9em;
-    margin: auto;
+    line-height: 18px;
+    border-radius: 8px;
+    font-weight: 600;
+    transition: all 0.2s ease-in-out 0s;
+    height: 34px;
+    font-size: 14px;
+    padding-inline: 16px;
+    padding-top: 7px;
+    padding-bottom: 8px;
+    margin: 1rem 1.5rem;
 }
 
-code {
-    font-size: 0.6em;
-    margin-left: 15px;
-    padding-left: 10px;
-    border-left: solid 5px #eee;
-    color: #888;
+.login .icon {
+    margin: -2px 0px 2px 4px;
+    transition: transform .3s linear;
 }
 
-.divider {
-    height: 15px;
-    background-color: #dddddd54;
+.login:hover{
+    cursor: pointer;
+    background-color: #095D6210;
+    color: #095D6280;
+
+    padding-inline: 16px;
+    padding-top: 7px;
+    padding-bottom: 8px;
+    margin: 1rem 1.5rem;
 }
 
+.login:hover .icon{
+    margin: -2px 0px 2px 4px;
+    transform:translateX(6px);
+}
 
-.button-call {
-    margin: auto;
+.pop-up {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: 10px 20px 20px 20px;
+  background-color: #05959c40;
+  color: #fff;
+  padding: 15px;
+  border-radius: 7px;
+  position: fixed;
+  bottom:10px;
+  width: 80%;
+  left: 50%;
+  margin-left: -40%;
+}
+
+.pop-up p {
+  font-weight: 700;
+  font-size: 13px;
+  text-shadow: 1px 1px 3px #fadb41;
+}
+
+.button-pop {
+    margin: 7px auto 0 auto;
     transition: all .4s linear;
     background-color: var(--color-background);
     border: solid 1px #fadb4170;
@@ -197,17 +366,12 @@ code {
     cursor: pointer;
     width: 50%;
     text-align: center;
-    padding-left: 10.5%;
     color: var(--color-text);
 }
 
-.button-call:hover {
+.button-pop:hover {
     background-color: #fadb4120;
 }
 
-style {
-    background-color: black;
-}
 
-
-@media only screen and (max-width: 369px) {}</style>
+</style>
