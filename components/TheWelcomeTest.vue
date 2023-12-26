@@ -80,6 +80,15 @@ function openPhoto() {
         
     </header>
     <footer>
+
+      <div v-if="popView()" class="pop-up">
+        <p>
+          Neste webapp, usamos cookies e outras tecnológicas semelhantes para melhorar sua
+          experiência de navegação e facilitar certos tipos de vantagens que só o app.leandrocesar.com
+          pode oferecer. Ao clicar no botão abaixo, você está ciente e concordando com estas funcionalidades. 
+        </p>
+        <div class="button-pop" @click="popOk()">PROSSEGUIR!</div>
+      </div>
         <a class="whats" href="https://api.whatsapp.com/send?phone=5521936184024%20&text=Ol%C3%A1%20Leandro%20Cesar,%20fiquei%20interessado(a)%20nos%20seus%20Servi%C3%A7os,%20me%20chamo%20">
             <Icon name="ic:outline-whatsapp"/>
         </a>
@@ -205,12 +214,14 @@ export default {
     right: 1.5rem;
     border-radius: 50%;
     cursor: pointer;
+    z-index: 100;
 }
 
 .whats:hover {
     background-color: #095D6210;
     color: #095D6280;
     box-shadow: 1px 1px 15px #095D6280;
+    z-index: 100;
 }
 
 .inputs {
@@ -339,38 +350,43 @@ a:hover {
   justify-content: center;
   align-items: center;
   margin: 10px 20px 20px 20px;
-  background-color: #05959c40;
+  background-color: #095D62;
   color: #fff;
   padding: 15px;
-  border-radius: 7px;
+  border-radius: 8px;
   position: fixed;
   bottom:10px;
   width: 80%;
   left: 50%;
   margin-left: -40%;
+  font-weight: 900;
+  border: solid 1px #095D6210;
 }
 
 .pop-up p {
-  font-weight: 700;
+    font-weight: 700;
+    font-weight: 900;
   font-size: 13px;
-  text-shadow: 1px 1px 3px #fadb41;
 }
 
 .button-pop {
     margin: 7px auto 0 auto;
     transition: all .4s linear;
-    background-color: var(--color-background);
-    border: solid 1px #fadb4170;
-    box-shadow: 0 0px 5px #fadb4170;
+    border: solid 1px #095D62;
+    box-shadow: 0 0px 5px #095D6210;
     border-radius: 8px;
     cursor: pointer;
     width: 50%;
     text-align: center;
-    color: #718096;
+    background-color: #095D62;
+    color: #fff;
+    border: solid 1px #fff;
 }
 
 .button-pop:hover {
-    background-color: #fadb4120;
+    background-color: #fff;
+    border: solid 1px #095D6210;
+    color: #095D62;
 }
 
 
