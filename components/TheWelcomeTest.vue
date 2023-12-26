@@ -142,7 +142,7 @@ export default {
     cursor: pointer;
     width: 160px;
     text-align: center;
-    color: var(--color-text);
+    color: #718096;
     line-height: 18px;
     border-radius: 8px;
     font-weight: 600;
@@ -160,7 +160,7 @@ export default {
 .button-client .icon{
     margin-top: -5px;
     margin-right: 5px;
-    color: var(--color-text);
+    color: #718096;
     transition: all 0.2s ease-in-out 0s;
 }
 .button-client:hover .icon{
@@ -236,7 +236,7 @@ input {
     box-shadow: 0 0px 5px #095D6210;
     border-radius: 8px;
     text-align: left;
-    color: var(--color-text);
+    color: #718096;
     line-height: 18px;
     border-radius: 8px;
     font-weight: 600;
@@ -268,21 +268,21 @@ input:hover {
 }
 
 h4 {
-    color: var(--color-text);
+    color: #718096;
     transition: all .3s linear;
     margin: 0 0 0 10px;
     text-align: left;
 }
 
 h4:nth-child(1) {
-    color: var(--color-text);
+    color: #718096;
     transition: all .3s linear;
     margin: 20px 0 0 10px;
 }
 
 a {
     text-decoration: none;
-    color: var(--color-text);
+    color: #718096;
     transition: all .4s linear;
     margin-top: -5px;
 }
@@ -299,7 +299,7 @@ a:hover {
     cursor: pointer;
     width: 160px;
     text-align: center;
-    color: var(--color-text);
+    color: #718096;
     line-height: 18px;
     border-radius: 8px;
     font-weight: 600;
@@ -366,7 +366,7 @@ a:hover {
     cursor: pointer;
     width: 50%;
     text-align: center;
-    color: var(--color-text);
+    color: #718096;
 }
 
 .button-pop:hover {
