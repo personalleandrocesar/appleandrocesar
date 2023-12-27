@@ -17,7 +17,7 @@ export default defineEventHandler((event) => {
     "treinoD": "Quadriceps",
     
     // Dados Menu Global
-    "periodo": "18/12/23 - 18/12/23",
+    "periodo": "18/12/23 - 18/01/24",
     "status": 2,
     // Treino atual
     "treinoActual": "22/12/23 - 21/01/24",
