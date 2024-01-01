@@ -75,7 +75,7 @@
   align-items: center;
   flex-wrap: wrap;
   text-align: left;
-  margin: 0rem 1.5rem 5rem 1.5rem;
+  margin: 0rem 1.5rem -.5rem 1.5rem;
   border: #095D6220 2px solid;
   border-radius: 8px;
 }
