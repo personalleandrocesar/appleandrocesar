@@ -20,7 +20,7 @@ export default defineEventHandler((event) => {
     // Próxima Treino 
     "treinoNext": "28/12/23",
     // Avaliação atual
-    "valuationActual": "--/--/--",
+    "valuationActual": "",
     // Próxima avaliação 
     "valuationNext": "--/--/--"
   }

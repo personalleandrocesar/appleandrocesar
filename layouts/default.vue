@@ -115,7 +115,7 @@ function menu() {
                         </div>
                     </div>
                 </NuxtLink>
-                <NuxtLink class="menu-square">
+                <NuxtLink v-if="dataConf.data.value?.valuationActual" class="menu-square">
                     <div>
                         <div>
                             <p>

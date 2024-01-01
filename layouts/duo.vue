@@ -116,7 +116,7 @@ function menu() {
             </div>
           </div>
         </NuxtLink>
-        <NuxtLink class="menu-square">
+        <NuxtLink v-if="dataConf.data.value?.valuationActual" class="menu-square">
           <div>
             <div>
               <p>
@@ -403,6 +403,14 @@ background-color: #edf2f7;
   margin: -10px 1.5rem 15px;
   font-weight: 800;
   font-size: .9em;
+}
+
+.section-subtitle-two {
+    color: #095D62;
+    text-align: left;
+    margin: -23px 1.5rem 15px;
+    font-weight: 800;
+    font-size: .9em;
 }
 
 .section-option {
