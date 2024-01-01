@@ -49,7 +49,7 @@ function buttonPartner () {
    position: sticky;
    top:0px;
    backdrop-filter: blur(5px);
-background-color: #ffffff80;
+   background-color: #ffffff80;
 }
 
 a {

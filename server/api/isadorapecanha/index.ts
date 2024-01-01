@@ -4,6 +4,7 @@ export default defineEventHandler((event) => {
     "nomeCompleto": "Isadora Peçanha",
     "email": "contato@isadoraarq.com",
     "foto": "https://m.leandrocesar.com/img/isadorapecanha.png",
+    "servico": "Personal Trainer",
     "objetivo": "Hipertrofia",
     "tempo": "60 min.",
     "dias": "6 dias",

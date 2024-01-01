@@ -87,6 +87,7 @@ function menu() {
         <div>
             <p class="section-title">Ciclos</p>
             <p class="section-subtitle">Contrato atual: {{ dataConf.data.value?.periodo }}</p>
+            <p v-if="dataConf.data.value?.servico" class="section-subtitle-two">Serviço: {{ dataConf.data.value?.servico }}</p>
 
             <p v-if="status === 1" class="section-option pending">
                 <Icon name="solar:danger-square-outline" /> Pendente!
@@ -399,6 +400,13 @@ function menu() {
     color: #095D62;
     text-align: left;
     margin: -10px 1.5rem 15px;
+    font-weight: 800;
+    font-size: .9em;
+}
+.section-subtitle-two {
+    color: #095D62;
+    text-align: left;
+    margin: -23px 1.5rem 15px;
     font-weight: 800;
     font-size: .9em;
 }
