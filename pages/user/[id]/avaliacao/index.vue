@@ -1,5 +1,6 @@
 <script setup>
 import { computed } from 'vue'
+// import './cal'
 const route = useRoute()
 
 const data = await useFetch(`/api/${route.params.id}/avaliacao/atual`)
@@ -161,11 +162,11 @@ function menu() {
                                 Clique aqui e agende sua Avaliação!!
                               </h4>
                             </div>
-                            
                           </a>
-                    </div>
-                  </div>
-                <br>
+                        </div>
+                      </div>
+                      <br>
+                      <!-- <div style="width:100%;height:100%;overflow:scroll" id="my-cal-inline"></div> -->
                 <br>
                 <br>
                 
