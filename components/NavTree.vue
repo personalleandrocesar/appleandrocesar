@@ -1,55 +1,57 @@
 <template>
-  <div class='nav logoAnimationNav'>
-    <div>
-      <div>
-        <a @click="$router.go(-1)">
-          <Icon name="tabler:arrow-big-left-line-filled" />
-        </a>
-      </div>
+    <div class='nav logoAnimationNav'>
+        <div>
+            <a @click="$router.go(-1)">
+                <Icon name="ic:baseline-keyboard-arrow-left" /> Voltar
+            </a>
+        </div>
     </div>
-  </div>
 </template>
 <style scoped>
 .nav {
-  height: 35px;
-  position: sticky;
-  top: -1px;
-  background-color: var(--color-background);
-  border-radius: 0% 0% 10% 10%;
-  z-index: 10;
-  box-shadow: 0px .5px 5px #fadb4140;
-}
-
-.nav div {
-  display: flex;
-  justify-content: space-between;
-  flex-direction: row;
-
+    position: sticky;
+    top: 1.5rem;
+    margin: 1.5rem;
 }
 
 .nav a {
-  cursor: pointer;
-  text-decoration: none;
-  margin: 0 14px 0 6px;
-  font-size: 1.4em;
+    transition: all .4s linear;
+    border: solid 1px #095D6210;
+    box-shadow: 0 0px 5px #095D6210;
+    border-radius: 8px;
+    cursor: pointer;
+    width: 100px;
+    text-align: center;
+    color: var(--color-text);
+    line-height: 4px;
+    border-radius: 8px;
+    font-weight: 600;
+    transition: all 0.2s ease-in-out 0s;
+    height: 34px;
+    font-size: 16px;
+    padding-inline: 8px;
+    padding-top: 7px;
+    padding-bottom: 8px;
+    backdrop-filter: blur(15px);
+    background-color: #ffffff90;
+}
+
+.nav a .icon {
+    margin-top: -1px;
+    margin-left: -4px;
+    margin-right: -2px;
 }
 
 .nav a:hover {
-  background-color: transparent;
-  color: #fadb41;
+    background-color: #095D6210;
 }
 
-.nav .svg-inline--fa {
-  color: #aaa;
-  margin-top: 8px;
-  display: flex;
-  justify-content: flex-end;
+.nav:hover a {
+    color: #095D6280;
 }
 
-.nav .svg-inline--fa:hover {
-  color: #fadb41;
-  margin-top: 8px;
-  display: flex;
-  justify-content: flex-end;
-}
-</style>
+.nav div {
+    display: flex;
+    justify-content: space-between;
+    flex-direction: row;
+}</style>

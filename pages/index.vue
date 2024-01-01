@@ -6,8 +6,6 @@ useHead({
 
 <template>
     <div>
-
-        <TheWelcome />
-
+        <Login />
     </div>
 </template>

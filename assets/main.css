@@ -10,7 +10,7 @@
 }
 
 .code {
-  border-left: 6px solid #fadb41;
+  border-left: 6px solid #718096;
   margin: 0 0 0 0px;
 }
 .code p {
@@ -91,7 +91,7 @@ caption {
 a,
 .green {
   text-decoration: none;
-  color: #fadb41;
+  color: #718096;
   transition: 0.4s;
 }
 

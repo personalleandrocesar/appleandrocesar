@@ -5,7 +5,7 @@ export default defineEventHandler((event) => {
     "massa": 74,
     "altura": 1.80,
     "nascimento": "20/01/1976",
-    "sexo": "masculino",
+    "sexo": "fd",
     "pescoco": 36.5,
     "ombro": 107.5,
     "torax": 98,

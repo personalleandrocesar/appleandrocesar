@@ -13,9 +13,7 @@ useHead({
 </script>
 
 <template>
-          <NuxtLoadingIndicator color='repeating-linear-gradient(to right,#00dc82 0%,#34cdfe 50%,#fadb41 100%)'/> <!-- here -->
-         <div class="d">
-         </div>
+          <NuxtLoadingIndicator height="4" color='repeating-linear-gradient(to right,#00dc82 0%,#fadb41 50%,#00dc82 100%)'/> <!-- here -->
           <NuxtPage />
 </template>
 

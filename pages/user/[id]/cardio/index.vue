@@ -1,6 +1,6 @@
 <script setup>
 import { computed, ref } from 'vue'
-const layout = "hello"
+const layout = "duo"
 const route = useRoute()
 
 const dataConf = await useFetch(`/api/${route.params.id}`)
@@ -67,21 +67,21 @@ function openDivFour() {
                 <div class="conf">
                   <Icon name="fluent:target-arrow-16-filled" />
                   <h3>
-                    {{ dataConf.data.value.objetivo }}
+                    {{ dataConf.data.value?.objetivo }}
                   </h3>
                   
                 </div>
                 <div class="conf">
                     <Icon name='mdi:calendar-weekend' />
                     <h3>
-                        {{ dataConf.data.value.dias }}
+                        {{ dataConf.data.value?.dias }}
                     </h3>
                     
                 </div>
                 <div class="conf">
                     <Icon name="material-symbols:timer-rounded" />
                     <h3>
-                        {{ dataConf.data.value.tempo }}
+                        {{ dataConf.data.value?.tempo }}
                     </h3>
                     
                 </div>
@@ -95,7 +95,7 @@ function openDivFour() {
                     </h3>
             </div>
             <div class="main-div-two"  >
-                <nuxt-link v-if="dataTreino.data.value.cardioA" @click="openDivOne" class="square" :class="{ squared: divAplicar }" >
+                <nuxt-link v-if="dataTreino.data.value?.cardioA" @click="openDivOne" class="square" :class="{ squared: divAplicar }" >
                     <div>
                         <h4>
                             TREINO
@@ -109,12 +109,12 @@ function openDivFour() {
                             <Icon name="healthicons:exercise-running" />
                         </h4> -->
                         <h4>
-                            {{ dataTreino.data.value.cardioA }}
+                            {{ dataTreino.data.value?.cardioA }}
                         </h4>
 
                     </div>
                 </nuxt-link>
-                <nuxt-link v-if="dataTreino.data.value.cardioB" @click="openDivTwo" class="square" :class="{ squared: divAplicarTwo }">
+                <nuxt-link v-if="dataTreino.data.value?.cardioB" @click="openDivTwo" class="square" :class="{ squared: divAplicarTwo }">
                     <div>
                         <h4>
                             TREINO
@@ -128,13 +128,13 @@ function openDivFour() {
                             <Icon name="mdi:escalator" />
                         </h4> -->
                         <h4>
-                            {{ dataTreino.data.value.cardioB }}
+                            {{ dataTreino.data.value?.cardioB }}
                         </h4>
 
                     </div>
                 </nuxt-link>
 
-                <nuxt-link v-if="dataTreino.data.value.cardioC" @click="openDivTree" class="square" :class="{ squared: divAplicarTree }">
+                <nuxt-link v-if="dataTreino.data.value?.cardioC" @click="openDivTree" class="square" :class="{ squared: divAplicarTree }">
                     <div>
                         <h4>
                             TREINO
@@ -147,12 +147,12 @@ function openDivFour() {
                             <Icon name="healthicons:exercise-bicycle" />
                         </h4> -->
                         <h4>
-                            {{ dataTreino.data.value.cardioC }}
+                            {{ dataTreino.data.value?.cardioC }}
                         </h4>
 
                     </div>
                 </nuxt-link>
-                <nuxt-link v-if="dataTreino.data.value.cardioD" @click="openDivFour" class="square" :class="{ squared: divAplicarFour }">
+                <nuxt-link v-if="dataTreino.data.value?.cardioD" @click="openDivFour" class="square" :class="{ squared: divAplicarFour }">
                     <div>
                         <h4>
                             TREINO
@@ -165,7 +165,7 @@ function openDivFour() {
                             <Icon name="healthicons:exercise-bicycle" />
                         </h4> -->
                         <h4>
-                            {{ dataTreino.data.value.cardioD }}
+                            {{ dataTreino.data.value?.cardioD }}
                         </h4>
 
                     </div>
@@ -177,12 +177,12 @@ function openDivFour() {
                         <div>
                             <Icon name="ph:clock-countdown-fill" />
                             <h4>
-                                {{ dataTreino.data.value.cardioATime }}
+                                {{ dataTreino.data.value?.cardioATime }}
                             </h4>
                         </div>
 
                         <div>
-                            <h4>{{ dataTreino.data.value.cardioADescription }}</h4>
+                            <h4>{{ dataTreino.data.value?.cardioADescription }}</h4>
 
                         </div>
                         
@@ -194,13 +194,13 @@ function openDivFour() {
                             <div>
                                 <Icon name="ph:clock-countdown-fill" />
                                 <h4>
-                                    {{ dataTreino.data.value.cardioBTime }}
+                                    {{ dataTreino.data.value?.cardioBTime }}
                                 </h4>
                             </div>
 
                             <div>
                                 <h4>
-                                    {{ dataTreino.data.value.cardioBDescription }}
+                                    {{ dataTreino.data.value?.cardioBDescription }}
                                 </h4>
 
                             </div>
@@ -213,13 +213,13 @@ function openDivFour() {
                             <div>
                                 <Icon name="ph:clock-countdown-fill" />
                                 <h4>
-                                    {{ dataTreino.data.value.cardioCTime }}
+                                    {{ dataTreino.data.value?.cardioCTime }}
                                 </h4>
                             </div>
 
                             <div>
                                 <h4>
-                                    {{ dataTreino.data.value.cardioCDescription }}
+                                    {{ dataTreino.data.value?.cardioCDescription }}
                                 </h4>
 
                             </div>
@@ -232,13 +232,13 @@ function openDivFour() {
                             <div>
                                 <Icon name="ph:clock-countdown-fill" />
                                 <h4>
-                                    {{ dataTreino.data.value.cardioDTime }}
+                                    {{ dataTreino.data.value?.cardioDTime }}
                                 </h4>
                             </div>
 
                             <div>
                                 <h4>
-                                    {{ dataTreino.data.value.cardioDDescription }}
+                                    {{ dataTreino.data.value?.cardioDDescription }}
                                 </h4>
 
                             </div>
@@ -247,12 +247,12 @@ function openDivFour() {
                 </div>
                 <div v-else class="info" >
                     <div class="arrowUp">
-                        <Icon v-if="dataTreino.data.value.cardioA" name="ic:round-arrow-drop-up" />
-                        <Icon v-if="dataTreino.data.value.cardioB" name="ic:round-arrow-drop-up" />
-                        <Icon v-if="dataTreino.data.value.cardioC" name="ic:round-arrow-drop-up" />
-                        <Icon v-if="dataTreino.data.value.cardioD" name="ic:round-arrow-drop-up" />
+                        <Icon v-if="dataTreino.data.value?.cardioA" name="ic:round-arrow-drop-up" />
+                        <Icon v-if="dataTreino.data.value?.cardioB" name="ic:round-arrow-drop-up" />
+                        <Icon v-if="dataTreino.data.value?.cardioC" name="ic:round-arrow-drop-up" />
+                        <Icon v-if="dataTreino.data.value?.cardioD" name="ic:round-arrow-drop-up" />
                     </div>
-                        <h5>Clique acima e veja detalhes do Cardio do dia!</h5>
+                        <h5>Clique acima e veja detalhes!</h5>
                 </div>
               <br>
               <br>
@@ -290,13 +290,13 @@ body {
   align-items: center;
 }
 .arrowUp .icon {
-    color: #095D6280;
+    color: #05959c80;
 }
 
 .info h5{
     text-align: center;
     margin-top: -5px;
-    color: #555;
+    color: var(--color-text);
     font-weight: 700;
 }
 
@@ -310,7 +310,7 @@ body {
 .conf {
     color: #fff;
     height: 80px;
-    background-color: #095D62;
+    background-color: #05959c;
     backdrop-filter: blur(15px);
     display: flex;
     flex-direction: column;
@@ -319,10 +319,9 @@ body {
     flex-wrap: nowrap;
     backdrop-filter: blur(5px);
     width: 100%;
-    margin: 20px 10px;
-    border-radius: 20px;
+    margin: 0px 10px;
+    border-radius: 8px;
     border: 2px solid #44acb1;
-    margin-top: 110px;
 }
 
 
@@ -331,13 +330,11 @@ body {
   display: flex;
   flex-direction: row;
   justify-content: space-around;
-  margin-top: 75px;
   width: 100%;
 }
 .main-div-one .icon{
    zoom: 1.4;
-  color: #095D62;
-  margin-top: -2.5px;
+  color: #05959c;
 }
 
 .main-div-two {
@@ -368,25 +365,24 @@ justify-content: flex-start
 }
 
 .main-div-two .icon {
-    color: #095D62;
+    color: #05959c;
 }
 
 
 .squareRes {
   
-    color: #555;
+    color: var(--color-text);
     backdrop-filter: blur(5px);
     overflow-x: auto;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: flex-start;
-    width: 99.5%;
     height: 140px;
-    margin: 5px auto;
-    border-radius: 10px;
+    margin: 1.5rem;
+    border-radius: 8px;
     overflow-x: hidden;
-    background-color: #095D6230;
+    background-color: #05959c30;
     line-height: 1.2;
 }
 .main-div-tree {
@@ -394,7 +390,7 @@ justify-content: flex-start
     display: flex;
     flex-direction: row;
     justify-content: center;
-    color: #095D62;
+    color: #05959c;
     margin: 0 3px 0 1px;
     align-items: center;
 }
@@ -404,7 +400,7 @@ justify-content: flex-start
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    color: #095D62;
+    color: #05959c;
     margin: 0 3px 0 1px;
     width: 30%;
 }
@@ -415,12 +411,12 @@ justify-content: flex-start
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    color: #095D62;
+    color: #05959c;
     width: 60%;
 }
 
 .main-div-tree .icon {
-color: #095D62;
+color: #05959c;
 }
 
 .main-div-two div {
@@ -429,8 +425,8 @@ color: #095D62;
 
 
 .square {
-    color: #555;
-    background-color: #095D6210;
+    color: var(--color-text);
+    background-color: #05959c10;
     backdrop-filter: blur(5px);
     overflow-x: auto;
     display: flex;
@@ -440,15 +436,15 @@ color: #095D62;
     width: 32.5%;
     height: 180px;
     margin: 5px auto;
-    border-radius: 20px;
-    border: 2px solid #05959c20;
+    border-radius: 8px;
+    border: 2px solid #05959c10;
     overflow-x: hidden;
 }
 .squared {
-    background-color: #095D6230;
+    background-color: #05959c30;
     border: 2px solid #05959c20;
-    border-top: 3px solid #05959c40;
-    border-bottom: 3px solid #05959c40;
+    border-top: 2px solid #05959c40;
+    border-bottom: 2px solid #05959c40;
 }
 
 
@@ -460,7 +456,7 @@ color: #095D62;
 
 .main-div-two H3 {
     margin-left: 20px;
-
+    color: var(--color-text);
 }
 
 .main-div-two h4 {
@@ -468,6 +464,7 @@ color: #095D62;
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    color: var(--color-text);
 }
 
 .main-div-two a div {
@@ -505,14 +502,18 @@ color: #095D62;
   justify-content: space-around;
   width: 100%;
 }
+
+.main-div-one h3{
+    color: var(--color-text);
+}
 .main-div-one .icon{
    zoom: 1.4;
-  color: #095D62;
+  color: #05959c;
   margin-top: -2.5px;
 }
 
 .conf {  
-  color:#555;
+  color:var(--color-text);
   height: 80px;
     backdrop-filter: blur(15px);
   overflow-x: auto;
@@ -521,14 +522,10 @@ color: #095D62;
   justify-content: center;
   align-items: center;
   width: 32.5%;
-  margin: 25px auto 0 auto;
-  border-radius: 20px;  
-
-
-      background-color: #095D6210;
-    border: 2px solid #05959c20;
-    border-top: 3px solid #05959c40;
-    border-bottom: 3px solid #05959c40;
+  margin: 1rem auto 0 auto;
+  border-radius: 8px;  
+      background-color: #05959c10;
+    border: .1px solid #05959c10;
 }
 
 

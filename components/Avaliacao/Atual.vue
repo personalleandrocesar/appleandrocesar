@@ -1,13 +1,13 @@
 <script setup>
 import { ref, computed } from 'vue'
-
+const layout = "valuation"
 const route = useRoute()
 
 const data = await useFetch(`/api/${route.params.id}/avaliacao/atual`)
 
 const divInfoIMC = ref(false)
-const peso = data.data.value?.massa.toFixed(2)
-const altura = data.data.value?.altura.toFixed(2)
+const peso = data.data.value.massa.toFixed(2)
+const altura = data.data.value.altura.toFixed(2)
 
 const calcIMC = computed(() => {
     return (peso / (altura * altura)).toFixed(1)
@@ -37,13 +37,13 @@ function infoIMC() {
     divInfoIMC.value = !divInfoIMC.value
 }
 
-const sexo = data.data.value?.sexo
-const idade = data.data.value?.idade
-const dTorax = data.data.value?.dtorax
-const abdominal = data.data.value?.abdominal
-const coxa = data.data.value?.coxa
-const triceps = data.data.value?.tricipital
-const supraespinhal = data.data.value?.supraEspinhal
+const sexo = data.data.value.sexo
+const idade = data.data.value.idade
+const dTorax = data.data.value.dtorax
+const abdominal = data.data.value.abdominal
+const coxa = data.data.value.coxa
+const triceps = data.data.value.tricipital
+const supraespinhal = data.data.value.supraEspinhal
 
 const homens = dTorax + abdominal + coxa
 const mulheres = triceps + supraespinhal + coxa
@@ -143,7 +143,7 @@ function openDivTree() {
 </script>
 
 <template>
-    <NuxtLayout>
+    <NuxtLayout :name="layout">
         <div class="conf">
 
             <div class="main-div-one">
@@ -332,7 +332,7 @@ function openDivTree() {
                     <div>
                         <h3>Ombro:</h3>
                         <h4>
-                            {{ data.data.value?.ombro }} cm
+                            {{ data.data.value.ombro }} cm
                         </h4>
                     </div>
 
@@ -343,7 +343,7 @@ function openDivTree() {
                     <div>
                         <h3>Pescoço:</h3>
                         <h4>
-                            {{ data.data.value?.pescoco }} cm
+                            {{ data.data.value.pescoco }} cm
                         </h4>
                     </div>
 
@@ -353,7 +353,7 @@ function openDivTree() {
                     <div>
                         <h3>Tórax:</h3>
                         <h4>
-                            {{ data.data.value?.torax }} cm
+                            {{ data.data.value.torax }} cm
                         </h4>
                     </div>
 
@@ -364,7 +364,7 @@ function openDivTree() {
                     <div>
                         <h3>Tórax Contraído:</h3>
                         <h4>
-                            {{ data.data.value?.toraxContraido }} cm
+                            {{ data.data.value.toraxContraido }} cm
                         </h4>
                     </div>
 
@@ -375,7 +375,7 @@ function openDivTree() {
                     <div>
                         <h3>Tórax expirado:</h3>
                         <h4>
-                            {{ data.data.value?.toraxRelaxado }} cm
+                            {{ data.data.value.toraxRelaxado }} cm
                         </h4>
                     </div>
 
@@ -386,7 +386,7 @@ function openDivTree() {
                     <div>
                         <h3>Cintura:</h3>
                         <h4>
-                            {{ data.data.value?.cintura }} cm
+                            {{ data.data.value.cintura }} cm
                         </h4>
                     </div>
 
@@ -397,7 +397,7 @@ function openDivTree() {
                     <div>
                         <h3>Quadril:</h3>
                         <h4>
-                            {{ data.data.value?.quadril }} cm
+                            {{ data.data.value.quadril }} cm
                         </h4>
                     </div>
 
@@ -422,10 +422,10 @@ function openDivTree() {
                     </div>
                     <div>
                         <h4>
-                            {{ data.data.value?.bracoEsquerdoRelaxado }} cm
+                            {{ data.data.value.bracoEsquerdoRelaxado }} cm
                         </h4>
                         <h4>
-                            {{ data.data.value?.bracoDireitoRelaxado }} cm
+                            {{ data.data.value.bracoDireitoRelaxado }} cm
                         </h4>
                     </div>
 
@@ -439,10 +439,10 @@ function openDivTree() {
                     </div>
                     <div>
                         <h4>
-                            {{ data.data.value?.bracoEsquerdoContraido }} cm
+                            {{ data.data.value.bracoEsquerdoContraido }} cm
                         </h4>
                         <h4>
-                            {{ data.data.value?.bracoDireitoContraido }} cm
+                            {{ data.data.value.bracoDireitoContraido }} cm
                         </h4>
                     </div>
 
@@ -456,10 +456,10 @@ function openDivTree() {
                     </div>
                     <div>
                         <h4>
-                            {{ data.data.value?.antebracoEsquerdo }} cm
+                            {{ data.data.value.antebracoEsquerdo }} cm
                         </h4>
                         <h4>
-                            {{ data.data.value?.antebracoDireito }} cm
+                            {{ data.data.value.antebracoDireito }} cm
                         </h4>
                     </div>
 
@@ -473,10 +473,10 @@ function openDivTree() {
                     </div>
                     <div>
                         <h4>
-                            {{ data.data.value?.coxaMedialEsquerda }} cm
+                            {{ data.data.value.coxaMedialEsquerda }} cm
                         </h4>
                         <h4>
-                            {{ data.data.value?.coxaMedialDireita }} cm
+                            {{ data.data.value.coxaMedialDireita }} cm
                         </h4>
                     </div>
 
@@ -490,10 +490,10 @@ function openDivTree() {
                     </div>
                     <div>
                         <h4>
-                            {{ data.data.value?.coxaDistalEsquerda }} cm
+                            {{ data.data.value.coxaDistalEsquerda }} cm
                         </h4>
                         <h4>
-                            {{ data.data.value?.coxaDistalDireita }} cm
+                            {{ data.data.value.coxaDistalDireita }} cm
                         </h4>
                     </div>
 
@@ -507,10 +507,10 @@ function openDivTree() {
                     </div>
                     <div>
                         <h4>
-                            {{ data.data.value?.pernaEsquerda }} cm
+                            {{ data.data.value.pernaEsquerda }} cm
                         </h4>
                         <h4>
-                            {{ data.data.value?.pernaDireita }} cm
+                            {{ data.data.value.pernaDireita }} cm
                         </h4>
                     </div>
                     <br>
@@ -630,7 +630,7 @@ function openDivTree() {
                     <div>
                         <h3>Tórax:</h3>
                         <h4>
-                            {{ data.data.value?.dtorax }} mm
+                            {{ data.data.value.dtorax }} mm
                         </h4>
                     </div>
 
@@ -641,7 +641,7 @@ function openDivTree() {
                     <div>
                         <h3>Tricipital:</h3>
                         <h4>
-                            {{ data.data.value?.tricipital }} mm
+                            {{ data.data.value.tricipital }} mm
                         </h4>
                     </div>
 
@@ -652,7 +652,7 @@ function openDivTree() {
                     <div>
                         <h3>Subescapular:</h3>
                         <h4>
-                            {{ data.data.value?.subEscapular }} mm
+                            {{ data.data.value.subEscapular }} mm
                         </h4>
                     </div>
 
@@ -662,7 +662,7 @@ function openDivTree() {
                     <div>
                         <h3>Axilar Média:</h3>
                         <h4>
-                            {{ data.data.value?.axilarMedia }} mm
+                            {{ data.data.value.axilarMedia }} mm
                         </h4>
                     </div>
 
@@ -673,7 +673,7 @@ function openDivTree() {
                     <div>
                         <h3>Abdominal:</h3>
                         <h4>
-                            {{ data.data.value?.abdominal }} mm
+                            {{ data.data.value.abdominal }} mm
                         </h4>
                     </div>
 
@@ -684,7 +684,7 @@ function openDivTree() {
                     <div>
                         <h3>Supra-espinhal:</h3>
                         <h4>
-                            {{ data.data.value?.supraEspinhal }} mm
+                            {{ data.data.value.supraEspinhal }} mm
                         </h4>
                     </div>
 
@@ -695,7 +695,7 @@ function openDivTree() {
                     <div>
                         <h3>Coxa medial:</h3>
                         <h4>
-                            {{ data.data.value?.coxa }} mm
+                            {{ data.data.value.coxa }} mm
                         </h4>
                     </div>
 
@@ -706,7 +706,7 @@ function openDivTree() {
                     <div>
                         <h3>Perna:</h3>
                         <h4>
-                            {{ data.data.value?.perna }} mm
+                            {{ data.data.value.perna }} mm
                         </h4>
                     </div>
 
@@ -725,7 +725,7 @@ function openDivTree() {
                     <div>
                         <h3>Úmero:</h3>
                         <h4>
-                            {{ data.data.value?.umero }} mm
+                            {{ data.data.value.umero }} mm
                         </h4>
                     </div>
 
@@ -736,7 +736,7 @@ function openDivTree() {
                     <div>
                         <h3>Punho:</h3>
                         <h4>
-                            {{ data.data.value?.punho }} mm
+                            {{ data.data.value.punho }} mm
                         </h4>
                     </div>
 
@@ -747,7 +747,7 @@ function openDivTree() {
                     <div>
                         <h3>Fêmur:</h3>
                         <h4>
-                            {{ data.data.value?.femur }} mm
+                            {{ data.data.value.femur }} mm
                         </h4>
                     </div>
 
@@ -758,7 +758,7 @@ function openDivTree() {
                     <div>
                         <h3>Tornozelo:</h3>
                         <h4>
-                            {{ data.data.value?.tornozelo }} mm
+                            {{ data.data.value.tornozelo }} mm
                         </h4>
                     </div>
 
@@ -773,13 +773,13 @@ function openDivTree() {
                     <div>
                         <h2>Flexões de braços</h2>
                         <h3>
-                            {{ data.data.value?.flexaoBraco }}
+                            {{ data.data.value.flexaoBraco }}
                         </h3>
                     </div>
                     <div>
                         <h2>Abdominais</h2>
                         <h3>
-                            {{ data.data.value?.flexaoAbdominal }}
+                            {{ data.data.value.flexaoAbdominal }}
                         </h3>
                     </div>
 
@@ -802,7 +802,6 @@ function openDivTree() {
 
 
 
-            
     </NuxtLayout>
 </template>
 
@@ -830,13 +829,13 @@ td {
 
 .left {
     text-align: left;
-    color: #05959c;
+    color: #095D62;
     margin-left: 10px;
     margin-top: 20px;
 }
 
 .left .icon {
-    color: #05959c;
+    color: #095D62;
 }
 
 
@@ -848,13 +847,13 @@ td {
 }
 
 .arrowUp .icon {
-    color: #05959c80;
+    color: #095D6280;
 }
 
 .info h5 {
     text-align: center;
     margin-top: -5px;
-    color: var(--color-text);
+    color: #555;
     font-weight: 700;
 }
 
@@ -867,7 +866,7 @@ td {
 
 .conf {
     text-align: left;
-    margin-top: -30px
+    margin-top: 100px
 }
 
 .main-div-one {
@@ -904,29 +903,24 @@ td {
     height: max-content;
 }
 
-.main-div-one {
-    color: var(--color-text);
-    
-}
 .main-div-one .icon {
-    color: #05959c;
-    zoom: 1.2;
-    
+    color: #095D62;
 }
 
 
 .squareRes {
 
-    color: var(--color-text);
+    color: #555;
     backdrop-filter: blur(5px);
     overflow-x: auto;
     display: flex;
     flex-direction: column;
     justify-content: space-around;
-    margin: .5rem 1.5rem;
+    width: 99.5%;
+    margin: 5px auto;
     border-radius: 10px;
     overflow-x: hidden;
-    background-color: #05959c20;
+    background-color: #095D6220;
 }
 
 .main-div-tree {
@@ -934,7 +928,7 @@ td {
     display: flex;
     flex-direction: row;
     justify-content: space-around;
-    color: #05959c;
+    color: #095D62;
     margin: 20px 3px 20px 1px;
     align-items: center;
 }
@@ -949,7 +943,7 @@ td {
     flex-direction: row;
     align-items: flex-start;
     justify-content: flex-start;
-    color: #05959c;
+    color: #095D62;
     margin: 0px 3px 0px 30px;
 }
 
@@ -973,7 +967,7 @@ td {
     flex-direction: column;
     align-items: space-around;
     justify-content: space-around;
-    color: #05959c;
+    color: #095D62;
     margin: 20px 3px 0px 10px;
 }
 
@@ -987,7 +981,7 @@ td {
 
 .main-div-six h3 {
     font-size: 1.3em;
-    color: #05959c;
+    color: #095D62;
     text-transform: uppercase;
     margin-left: 4px;
 }
@@ -998,7 +992,7 @@ td {
     flex-direction: column;
     align-items: space-around;
     justify-content: space-around;
-    color: #05959c;
+    color: #095D62;
     margin: 0px 3px 0px 10px;
 }
 
@@ -1022,7 +1016,7 @@ td {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    color: #05959c;
+    color: #095D62;
     margin: 0 3px 0 1px;
 }
 
@@ -1032,7 +1026,7 @@ td {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    color: #05959c;
+    color: #095D62;
 }
 
 .main-div-tree:nth-child(2) {
@@ -1040,7 +1034,7 @@ td {
 }
 
 .main-div-tree .icon {
-    color: #05959c;
+    color: #095D62;
 }
 
 .main-div-tree h2 {
@@ -1058,8 +1052,8 @@ td {
 
 
 .square {
-    color: var(--color-text);
-    background-color: #05959c10;
+    color: #555;
+    background-color: #095D6210;
     backdrop-filter: blur(5px);
     overflow-x: auto;
     display: flex;
@@ -1069,17 +1063,17 @@ td {
     width: 25%;
     height: 80px;
     margin: 5px auto;
-    border-radius: 8px;
+    border-radius: 20px;
     border: 2px solid #05959c20;
     overflow-x: hidden;
 }
 
 .squared {
-    background-color: #05959c30;
+    background-color: #095D6230;
     border: 2px solid #05959c20;
-    border-top: 2px solid #05959c40;
-    border-bottom: 2px solid #05959c40;
-    color: #05959c;
+    border-top: 3px solid #05959c40;
+    border-bottom: 3px solid #05959c40;
+    color: #095D62;
 }
 
 
@@ -1118,5 +1112,4 @@ td {
 .icon {
     zoom: 1.4;
     color: #fadb41;
-}
-</style>
+}</style>

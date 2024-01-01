@@ -18,11 +18,11 @@ export default defineComponent({
         },
         height: {
             type: Number,
-            default: 3
+            default: 6
         },
         color: {
             type: [String, Boolean],
-            default: 'repeating-linear-gradient(to right,#00dc82 0%,#34cdfe 50%,#0047e1 100%)'
+            default: 'repeating-linear-gradient(to right,#00dc82 0%,#00dc82 50%,#00dc82 100%)'
         }
     },
     setup(props, { slots }) {

@@ -2,7 +2,7 @@ export default defineEventHandler((event) => {
   return {
     "nome": "Isadora",
     "nomeCompleto": "Isadora Peçanha",
-    "email": "",
+    "email": "contato@isadoraarq.com",
     "foto": "https://m.leandrocesar.com/img/isadorapecanha.png",
     "objetivo": "Hipertrofia",
     "tempo": "60 min.",
@@ -19,9 +19,9 @@ export default defineEventHandler((event) => {
     // Próxima Treino 
     "treinoNext": "28/12/23",
     // Avaliação atual
-    "valuationActual": "",
+    "valuationActual": "--/--/--",
     // Próxima avaliação 
-    "valuationNext": ""
+    "valuationNext": "--/--/--"
   }
 })
 

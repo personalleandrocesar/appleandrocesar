@@ -31,7 +31,7 @@ const navD = ref(state.value === 4)
             <nuxt-link :to="`/user/${route.params.id}/treino`" @click.native="scrollToTop()">
                 <Icon name='material-symbols:exercise' />
             </nuxt-link>
-            <nuxt-link v-if="dataConf.data.value.treinoA" :to="`/user/${route.params.id}/treino/a`"
+            <nuxt-link v-if="dataConf.data.value?.treinoA" :to="`/user/${route.params.id}/treino/a`"
                 @click.native="scrollToTop()">
                 <Icon name='mdi:alpha-a' />
             </nuxt-link>
@@ -49,7 +49,7 @@ const navD = ref(state.value === 4)
             <nuxt-link :to="`/user/${route.params.id}/treino`" @click.native="scrollToTop()">
                 <Icon name='material-symbols:exercise' />
             </nuxt-link>
-            <nuxt-link v-if="dataConf.data.value.treinoB" :to="`/user/${route.params.id}/treino/b`"
+            <nuxt-link v-if="dataConf.data.value?.treinoB" :to="`/user/${route.params.id}/treino/b`"
                 @click.native="scrollToTop()">
                 <Icon name='mdi:alpha-b' />
             </nuxt-link>
@@ -66,7 +66,7 @@ const navD = ref(state.value === 4)
             <nuxt-link :to="`/user/${route.params.id}/treino`" @click.native="scrollToTop()">
                 <Icon name='material-symbols:exercise' />
             </nuxt-link>
-            <nuxt-link v-if="dataConf.data.value.treinoC" :to="`/user/${route.params.id}/treino/c`"
+            <nuxt-link v-if="dataConf.data.value?.treinoC" :to="`/user/${route.params.id}/treino/c`"
                 @click.native="scrollToTop()">
                 <Icon name='mdi:alpha-c' />
             </nuxt-link>
@@ -83,7 +83,7 @@ const navD = ref(state.value === 4)
             <nuxt-link :to="`/user/${route.params.id}/treino`" @click.native="scrollToTop()">
                 <Icon name='material-symbols:exercise' />
             </nuxt-link>
-            <nuxt-link v-if="dataConf.data.value.treinoD" :to="`/user/${route.params.id}/treino/d`"
+            <nuxt-link v-if="dataConf.data.value?.treinoD" :to="`/user/${route.params.id}/treino/d`"
                 @click.native="scrollToTop()">
                 <Icon name='mdi:alpha-d' />
             </nuxt-link>
@@ -111,7 +111,7 @@ const navD = ref(state.value === 4)
 </template>
 <style scoped>
 .name-user {
-    color: #fadb41;
+    color: #095D62;
     font-size: 1.4em;
     text-transform: capitalize;
     margin: 10px 10px;
@@ -151,7 +151,7 @@ const navD = ref(state.value === 4)
 
 .button .icon:hover {
     cursor: pointer;
-    border-radius: 50%;
+    border-radius: 18px;
     background-color: #ffffff50;
 }
 
@@ -170,7 +170,7 @@ const navD = ref(state.value === 4)
 
 .nav-bar {
     bottom: 0px;
-    z-index: 1004;
+    z-index: 50;
     transform: translateX(0%);
     position: fixed;
     height: calc(100% - 0px);
@@ -195,21 +195,21 @@ const navD = ref(state.value === 4)
 .div-img {
     height: 50px;
     width: 50px;
-    border-radius: 50%;
+    border-radius: 18px;
     margin: 10px 10px 30px 10px;
-    border: solid 2px #fadb41;
-    background-color: #fadb41;
+    border: solid 2px #095D62;
+    background-color: #095D62;
     z-index: 3;
 
 }
 
 .div-img img {
     height: 46px;
-    border-radius: 50%;
+    border-radius: 18px;
 }
 
 .nav-flow h2 {
-    color: #fadb41;
+    color: #095D62;
     text-transform: capitalize;
     line-height: 1;
     margin-right: 10px;
@@ -225,7 +225,7 @@ const navD = ref(state.value === 4)
 }
 
 .nav-bar-photo {
-    z-index: 1004;
+    z-index: 200;
     transform: translateX(0%);
     position: fixed;
     height: calc(100% - 0px);
@@ -248,17 +248,17 @@ const navD = ref(state.value === 4)
 }
 
 .div-img-full {
-    border-radius: 50%;
+    border-radius: 18px;
     margin: 10px 10px 30px 10px;
-    border: solid 2px #fadb41;
-    background-color: #fadb41;
-    z-index: 3;
+    border: solid 2px #095D62;
+    background-color: #095D62;
+    z-index: 100;
 
 }
 
 .div-img-full img {
     height: 180px;
-    border-radius: 50%;
+    border-radius: 18px;
 }
 
 .nav-bottom {
@@ -268,36 +268,47 @@ const navD = ref(state.value === 4)
     position: fixed;
     bottom: 10px;
     left: 18%;
-    background-color: #095D6220;
-    backdrop-filter: blur(15px);
+     background-color: #edf2f7;
+  border-bottom: solid .2px #095D6230;
     font-size: 12px;
-    z-index: 800;
-    border-radius: 30px;
+    z-index: 170;
+    border-radius: 20px;
     position: fixed;
     bottom: 10px;
-    width: 250px;
+    width: 244px;
     left: 50%;
-    margin-left: -125px;
+    margin-left: -121px;
+    box-shadow: 1px 1px 15px #095D6250;
 }
 
 .nav-bottom a {
     transition: all .3s linear;
-    zoom: 1.2;
-    padding: 15px;
-    border-radius: 50%;
+    zoom: 1.1;
+    padding: 15px 18px;
+    border-radius: 18px;
     color: #095D6260;
 }
 
 .nav-bottom a:hover {
-    padding: 15px;
-    border-radius: 30px;
+    border-radius: 18px;
     background-color: #095D6220;
 }
 
 .nav-bottom a.router-link-exact-active {
     padding: 15px;
-    border-radius: 30px;
-    color: #e1a918;
-    background-color: #fadb4150;
+    border-radius: 18px;
+    color: #095D62;
+    background-color: #05959c20;
+}
+
+.active {
+    border-radius: 18px;
+    padding: 15px;
+    color: #095D62;
+    background-color: #095D6220;
+}
+
+.active .icon {
+    color: #095D62;
 }
 </style>

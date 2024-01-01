@@ -1,6 +1,6 @@
 <script setup>
 import { ref } from 'vue'
-const layout = "hello"
+const layout = "duo"
 const route = useRoute()
 
 const photoOpen = ref(false);
@@ -41,21 +41,21 @@ const navD = ref(state.value == 4)
             <div class="conf">
               <Icon name="fluent:target-arrow-16-filled" />
               <h3>
-                {{ dataConf.data.value.objetivo }}
+                {{ dataConf.data.value?.objetivo }}
               </h3>
 
             </div>
             <div class="conf">
               <Icon name='mdi:calendar-weekend' />
               <h3>
-                {{ dataConf.data.value.dias }}
+                {{ dataConf.data.value?.dias }}
               </h3>
 
             </div>
             <div class="conf">
               <Icon name="material-symbols:timer-rounded" />
               <h3>
-                {{ dataConf.data.value.tempo }}
+                {{ dataConf.data.value?.tempo }}
               </h3>
 
             </div>
@@ -72,7 +72,7 @@ const navD = ref(state.value == 4)
         <h3>
               <Icon name='material-symbols:exercise' /> TREINOS 
             </h3>
-        <nuxt-link v-if="dataConf.data.value.treinoA" @click="useA()" class="square" :to="`/user/${route.params.id}/treino/a`">
+        <nuxt-link v-if="dataConf.data.value?.treinoA" @click="useA()" class="square" :to="`/user/${route.params.id}/treino/a`">
             <div>
               <h4>
                 TREINO
@@ -87,15 +87,15 @@ const navD = ref(state.value == 4)
               <!-- <h4>
                 <Icon name="game-icons:leg"/> 
               </h4> -->
-              <h4>
-                {{ dataConf.data.value.treinoA }}
-              </h4>
+              <h5>
+                {{ dataConf.data.value?.treinoA }}
+              </h5>
 
             </div>
           </nuxt-link>
 
           
-        <nuxt-link v-if="dataConf.data.value.treinoB" @click="useB()" class="square" :to="`/user/${route.params.id}/treino/b`">
+        <nuxt-link v-if="dataConf.data.value?.treinoB" @click="useB()" class="square" :to="`/user/${route.params.id}/treino/b`">
         <div>
                 <h4>
                   TREINO
@@ -110,14 +110,14 @@ const navD = ref(state.value == 4)
                 <!-- <h4>
                   <Icon name="solar:body-shape-bold"/> 
                 </h4> -->
-                <h4>
-                  {{ dataConf.data.value.treinoB }}
-                </h4>
+                <h5>
+                  {{ dataConf.data.value?.treinoB }}
+                </h5>
 
               </div>
         </nuxt-link>
             
-        <nuxt-link v-if="dataConf.data.value.treinoC" @click="useC()" class="square" :to="`/user/${route.params.id}/treino/c`">
+        <nuxt-link v-if="dataConf.data.value?.treinoC" @click="useC()" class="square" :to="`/user/${route.params.id}/treino/c`">
           <div>
                 
                 <h4>
@@ -133,13 +133,13 @@ const navD = ref(state.value == 4)
                 <!-- <h4>
                   <Icon name="mingcute:fitness-fill"/> 
                 </h4> -->
-                <h4>
-                  {{ dataConf.data.value.treinoC }}
-                </h4>
+                <h5>
+                  {{ dataConf.data.value?.treinoC }}
+                </h5>
 
               </div>
         </nuxt-link>
-        <nuxt-link v-if="dataConf.data.value.treinoD" @click="useD()" class="square" :to="`/user/${route.params.id}/treino/d`">
+        <nuxt-link v-if="dataConf.data.value?.treinoD" @click="useD()" class="square" :to="`/user/${route.params.id}/treino/d`">
           <div>
                 
                 <h4>
@@ -155,9 +155,9 @@ const navD = ref(state.value == 4)
                 <!-- <h4>
                   <Icon name="mingcute:fitness-fill"/> 
                 </h4> -->
-                <h4>
-                  {{ dataConf.data.value.treinoD }}
-                </h4>
+                <h5>
+                  {{ dataConf.data.value?.treinoD }}
+                </h5>
 
               </div>
         </nuxt-link>
@@ -167,7 +167,6 @@ const navD = ref(state.value == 4)
 <br>
 <br>
 <br>
-
 
 </NuxtLayout>
 </template>
@@ -197,20 +196,18 @@ b {
   height: 80px;
   width: 32.5%;
   margin: 25px 2px 10px 2px;
-  border: 2px solid #44acb1; 
   color:#555;
   height: 80px;
-    backdrop-filter: blur(15px);
+  backdrop-filter: blur(15px);
   overflow-x: auto;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  border-radius: 20px;  
+  border-radius: 8px;  
   background-color: #095D6210;
-  border: 2px solid #05959c20;
-  border-top: 3px solid #05959c40;
-  border-bottom: 3px solid #05959c40;
+  border: .1px solid #095D6210; 
+  margin-top: 1rem;
 }
 
 .main-div-one {
@@ -228,25 +225,24 @@ b {
   align-items: left;
 }
 .main-div-two .icon {
-  color: #095D62;
+  color: #05959c;
 }
 
 .square {  
-  color:#555;
-  background-color: #095D6220;
+  color:var(--color-text);
+  background-color: #095D6210;
   backdrop-filter: blur(5px);
   overflow-x: auto;
   display: flex;
   flex-direction: row;
   justify-content: flex-start;
   align-items: center;
-  width: 99%;
-  margin: 3px auto;
-    border-radius: 20px;
+  margin: 3px 1.5rem;
+    border-radius: 8px;
     border: .1px solid #05959c20;
-    border-right: 6px solid #05959c80;
     line-height: 1.4;
     transition: all .4s;
+    border: 2px solid #05959c10;
 }
 
 .square div h4 .icon {
@@ -259,7 +255,9 @@ b {
 
 .square:hover {
     background-color: #095D6230;
-    border-right: 6px solid #05959c;
+
+    border-top: 2px solid #05959c40;
+    border-bottom: 2px solid #05959c40;
     
 }
 .square div:nth-child(1) {
@@ -272,8 +270,8 @@ b {
   border: none;
 }
 .story {  
-  color:#555;
-  background-color: #095D6220;
+  color:var(--color-text);
+  background-color: #095D6210;
   backdrop-filter: blur(5px);
   overflow-x: auto;
   display: flex;
@@ -283,17 +281,15 @@ b {
   width: 65%;
   margin: 8px auto;
   padding-top: 3px;
-    border-radius: 20px;
-    border: .1px solid #05959c20;
-    border-right: 6px solid #05959c;
-    border-left: 6px solid #05959c;
+    border-radius: 8px;
+    border: .1px solid #095D6210;
     line-height: 1.4;
     transition: all .4s;
     font-weight: 700;
 }
 
 .story .icon {
-  color: #095D62;
+  color: #05959c;
   margin-top: -2px;
 }
 .main-div-one {
@@ -301,23 +297,31 @@ b {
   display: flex;
   flex-direction: row;
   justify-content: space-around;
-  margin-top: 75px;
   width: 100%;
 }
+.main-div-one h3 {
+  color: var(--color-text);
+}
 .main-div-one .icon{
-   zoom: 1.4;
-  color: #095D62;
+  zoom: 1.4;
+  color: #05959c;
   margin-top: -2.5px;
 }
 .main-div-two H3 {
-margin-left: 20px;
-
+  margin-left: 20px;
+  color: var(--color-text);
+  
 }
 .main-div-two h4 {
 display: flex;
   flex-direction: row;
   justify-content: center;
   align-items: center;
+  color: #05959c;
+}
+.main-div-two h5 {
+  font-size: .9rem;
+  color: var(--color-text);
 }
 .main-div-two a div {
   border-right: 2px solid #05959c20;

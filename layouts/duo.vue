@@ -1,199 +1,172 @@
 <script setup>
-import { ref } from 'vue';
 const route = useRoute()
 
+const reg = route.params.id
+const logon = useCookie('logon')
+// const logon = useCookie('logon', { maxAge: 4800})
+logon.value = reg
 
-const data = await useFetch(`/api/${route.params.id}`)
-// const { data, pending, error, refresh } = await useFetch(`https://professorleandrocesar.com/usuarios/`, {})
-
-const notification = ref(false)
-
-const status = data.data.value.status
-
-const navbarOpen = ref(false);
-function openNavbar() {
-  navbarOpen.value = !navbarOpen.value;
-}
+const dataConf = await useFetch(`/api/${route.params.id}`)
+const status = dataConf.data.value?.status
 const photoOpen = ref(false);
 function openPhoto() {
   photoOpen.value = !photoOpen.value;
 }
 
 // talvez não precise do código abaixo
-const logon = useCookie('logon')
 const logOff = () => {
   logon.value = null
 }
 
+const tag = useCookie('tag')
+tag.value = tag.value
+
+
+const bodyOne = ref(true)
+function menu() {
+  bodyOne.value = !bodyOne.value
+
+}
 
 </script>
-
 <template>
-  <NuxtLoadingIndicator color='repeating-linear-gradient(to right,#00dc82 0%,#34cdfe 50%,#fadb41 100%)' /> <!-- here -->
+  <NuxtLoadingIndicator height="4" color='repeating-linear-gradient(to right,#00dc82 0%,#fadb41 50%,#00dc82 100%)' /> <!-- here -->
 
-  <div class="bar-top">
-    <div>
+  <div v-if="bodyOne">
 
-      <div class='bar-top-top'>
-        <div class="div-img">
-          <img :src="data.data.value.foto" @click="openNavbar" />
-        </div>
-        <div class="mZero">
-
-          <nuxt-link v-if="notification">
-            <Icon name='ic:baseline-notifications-active' />
-          </nuxt-link>
-          <nuxt-link v-else>
-            <Icon name='ic:round-notifications-none' />
-          </nuxt-link>
-        </div>
-
+    <div class="head-logo" id="sobre">
+      <NuxtLink @click="menu()" class="button-client">
+        <Icon name="heroicons:bars-3-16-solid" />
+      </NuxtLink>
+      <div class='logo'>
+        <img @click="openPhoto()" :src="dataConf.data.value?.foto" >
       </div>
-
-      
-
     </div>
-    <div v-if="navbarOpen" class="nav-bar">
-      <div>
-        <nuxt-link @click="openNavbar" class="button-cancel">
-          <Icon name='material-symbols:cancel-rounded' />
-        </nuxt-link>
-        <nuxt-link class="old-msg">
-          <Icon name='mdi:email-multiple-outline' />
-        </nuxt-link>
+    <div v-if="photoOpen" class="nav-bar">
+      <div class='logo-nav-bar'>
+        <img @click="openPhoto" :src="dataConf.data.value?.foto">
       </div>
+    </div>
+    <div v-if="route.path === `/user/${logon}`" class="head-name">
+      <div class="name">
+        Olá, {{ dataConf.data.value?.nome }}
+      </div>
+    </div>
 
-      <div class="nav-top">
 
-        <div>
+    <a class="whats"
+      href="https://api.whatsapp.com/send?phone=5521936184024%20&text=Ol%C3%A1%20Leandro%20Cesar,%20fiquei%20interessado(a)%20nos%20seus%20Servi%C3%A7os,%20me%20chamo%20">
+      <Icon name="ic:outline-whatsapp" />
+    </a>
+    <NavBottomTwo />
+    <slot />
+  </div>
 
-          <!-- Início do Nav-flow -->
-          <div class="nav-flow">
 
-            <div class="div-img">
-              <img :src="data.data.value.foto" @click="openPhoto" />
-            </div>
+
+  <div v-else>
+    <div class="head-logo" id="sobre">
+      <NuxtLink @click="menu()" class="button-client">
+        <Icon name="heroicons:bars-3-bottom-right-16-solid" />
+      </NuxtLink>
+      <div class='logo'>
+        <img @click="openPhoto()" :src="dataConf.data.value?.foto" >
+      </div>
+      <div v-if="photoOpen" class="nav-bar">
+        <div class='logo-nav-bar'>
+          <img @click="openPhoto" :src="dataConf.data.value?.foto" >
+        </div>
+      </div>
+    </div>
+    <div class="head-name">
+      <div class="name">
+        {{ dataConf.data.value?.nomeCompleto }}
+      </div>
+      <div class="email">{{ dataConf.data.value?.email }}</div>
+    </div>
+    <div>
+      <p class="section-title">Ciclos</p>
+      <p class="section-subtitle">Contrato atual: {{ dataConf.data.value?.periodo }}</p>
+
+      <p v-if="status === 1" class="section-option pending">
+        <Icon name="solar:danger-square-outline" /> Pendente!
+      </p>
+      <p v-else-if="status === 0" class="section-option bloqued">
+        <Icon name="solar:close-square-outline" /> Bloqueado!
+      </p>
+      <p v-else class="section-option verified">
+        <Icon name="solar:check-square-outline" /> Verificado!
+      </p>
+      <div class="conf">
+        <NuxtLink class="menu-square">
+          <div>
             <div>
-              <h2>
-                {{ data.data.value.nomeCompleto }}
-              </h2>
-              <p v-if="data.data.value.email">
-                {{ data.data.value.email }}
+              <p>
+                <Icon name="material-symbols:exercise" />
+                Treino
               </p>
             </div>
+            <div>
+              Atual: {{ dataConf.data.value?.treinoActual }}
+            </div>
+            <div>
+              Próximo: {{ dataConf.data.value?.treinoNext }}
+            </div>
           </div>
-          <p class="section-title">Ciclos</p>
-          <p class="section-subtitle">Contrato atual: {{ data.data.value.periodo }}</p>
-
-          <p v-if="status === 1" class="section-option pending">
-            <Icon name="solar:danger-square-outline" /> Pendente!
-          </p>
-          <p v-else-if="status === 0" class="section-option bloqued">
-            <Icon name="solar:close-square-outline" /> Bloqueado!
-          </p>
-          <p v-else class="section-option verified">
-            <Icon name="solar:check-square-outline" /> Verificado!
-          </p>
-          <div class="menu-div-one">
-            <NuxtLink class="menu-square">
-              <div>
-
-                <div>
-
-                  <p>
-                    <Icon name="material-symbols:exercise" />
-                    Treino
-                  </p>
-                </div>
-                <div>
-                  Atual: {{ data.data.value.treinoActual }}
-                </div>
-                <div>
-                  Próximo: {{ data.data.value.treinoNext }}
-                </div>
-
-                <div>
-                </div>
-              </div>
-            </NuxtLink>
-            <NuxtLink class="menu-square">
-              <div>
-
-                <div>
-
-                  <p>
-                    <Icon name="jam:medical" />
-                    Avaliação
-                  </p>
-                </div>
-                <div>
-                  Atual: {{ data.data.value.valuationActual }}
-                </div>
-                <div>
-                  Próxima: {{ data.data.value.valuationNext }}
-                </div>
-
-                <div>
-                </div>
-              </div>
-            </NuxtLink>
+        </NuxtLink>
+        <NuxtLink class="menu-square">
+          <div>
+            <div>
+              <p>
+                <Icon name="jam:medical" />
+                Avaliação
+              </p>
+            </div>
+            <div>
+              Atual: {{ dataConf.data.value?.valuationActual }}
+            </div>
+            <div>
+              Próxima: {{ dataConf.data.value?.valuationNext }}
+            </div>
           </div>
+        </NuxtLink>
+      </div>
+      <!-- Hístórico -->
+      <NuxtLink class="menu-button">
+        <div>
+          <Icon name="solar:history-outline" />
+          <p>
+            Histórico
+          </p>
         </div>
-        <br>
-        <!-- Hístórico -->
-        <NuxtLink class="menu-button">
-          <div>
-            <Icon name="solar:history-outline" />
-            <p>
-              Histórico
-            </p>
-          </div>
-          <Icon name="ic:baseline-keyboard-arrow-right" />
-        </NuxtLink>
-        <!-- Histórico fim -->
+        <Icon name="ic:baseline-keyboard-arrow-right" />
+      </NuxtLink>
+      <!-- Histórico fim -->
 
-        <!-- Documentos -->
-        <p class="section-title">Documentos</p>
-        <NuxtLink class="menu-button">
-          <div>
-            <Icon name="solar:document-add-linear" />
-            <p>
-              Contratos
-            </p>
-          </div>
-          <Icon name="ic:baseline-keyboard-arrow-right" />
-        </NuxtLink>
-        <NuxtLink class="menu-button">
-          <div>
-            <Icon name="solar:document-text-linear" />
-            <p>
-              Termos de uso
-            </p>
-          </div>
-          <Icon name="ic:baseline-keyboard-arrow-right" />
-        </NuxtLink>
-        <!-- Documentos fim -->
-      </div>
+      <!-- Documentos -->
+      <p class="section-title">Documentos</p>
+      <NuxtLink :to="`/user/${route.params.id}/contratos`" class="menu-button">
+        <div>
+          <Icon name="solar:document-add-linear" />
+          <p>
+            Contratos
+          </p>
+        </div>
+        <Icon name="ic:baseline-keyboard-arrow-right" />
+      </NuxtLink>
+      <NuxtLink :to="`/user/${route.params.id}/termos-de-uso`" class="menu-button">
+        <div>
+          <Icon name="solar:document-text-linear" />
+          <p>
+            Termos de uso
+          </p>
+        </div>
+        <Icon name="ic:baseline-keyboard-arrow-right" />
+      </NuxtLink>
+      <!-- Documentos fim -->
+
       <!-- ícones de rede sociais -->
-      <div class="icons">
 
-        <NuxtLink to="https://personal.leandrocesar.com/blog" target="_blank">
-          <div>
-            <Icon name="solar:documents-line-duotone" />
-          </div>
-        </NuxtLink>
-        <NuxtLink to="https://instagram.com/personalleandrocesar" target="_blank">
-          <div>
-            <Icon name="fa6-brands:instagram" />
-          </div>
-        </NuxtLink>
-        <NuxtLink to="https://threads.net/personalleandrocesar" target="_blank">
-          <div>
-            <Icon name="fa6-brands:threads" />
-          </div>
-        </NuxtLink>
-
-      </div>
       <!--  -->
 
       <!-- Botão Logout -->
@@ -201,176 +174,67 @@ const logOff = () => {
         LOUGOUT
         <Icon name="solar:logout-3-bold" />
       </NuxtLink>
-      <!--  -->
     </div>
-
-
-    <div v-if="photoOpen" class="nav-bar-photo" @click="openPhoto">
-      <div class="nav-top">
-
-        <!-- Início do Nav-flow -->
-        <div class="nav-flow-photo">
-          <div class="div-img-full">
-            <img :src="data.data.value.foto" />
-          </div>
-        </div>
-
-      </div>
-    </div>
-    <!-- Fim do Nav-flow -->
-
-
-
   </div>
-  <slot />
 </template>
 <style scoped>
-.name-user {
-  color: #fadb41;
-  font-size: 1.4em;
-  text-transform: capitalize;
-  margin: 10px 10px;
-  font-weight: bold;
-}
-
-.bar-top {
-  background-color: #095d62;
-  position: fixed;
-  top: 0px;
-  width: 100%;
-  z-index: 1400;
-
-}
-
-
-.mZero {
-  margin-top: -30px;
-  padding: 0;
-}
-
-
-
-.bar-top-top {
-  background-color: #095d62;
+.head-logo {
   display: flex;
-  flex-direction: row;
   justify-content: space-between;
-  align-items: center;
-  text-align: left;
+  flex-direction: row-reverse;
+  align-items: flex-start;
+  z-index: 1;
+  flex-wrap: wrap;
+
 }
 
-.bar-top-top a {
-  cursor: pointer;
-  zoom: 1.2;
-  color: #ffffff;
-  margin: 5px 15px 30px 10px;
-}
-
-
-.button-cancel .icon {
-  cursor: pointer;
-  zoom: 1.4;
-  position: fixed;
-  left: 15px;
-  top: 12px;
-  color: #fff;
-  border-radius: 50%;
-  transition: all .4s linear;
-}
-
-.button-cancel .icon:hover {
-  cursor: pointer;
-  border-radius: 50%;
-  background-color: #fadb4190;
-}
-
-.old-msg .icon {
-  cursor: pointer;
-  zoom: 1.4;
-  position: fixed;
-  right: 15px;
-  top: 16px;
-  color: #ddd;
-  transition: all .4s linear;
-  zoom: 1.2
-}
-
-.old-msg .icon:hover {
-  cursor: pointer;
-  color: #fff;
-}
-
-.nav-top {
+.logo {
   display: flex;
-  flex-direction: column;
   justify-content: center;
-  align-self: center;
-  text-align: center;
+  flex-direction: column;
+  align-items: center;
+  flex-wrap: wrap;
+  background-color: #edf2f7;
+  height: 60px;
+  width: 60px;
+  color: #718096;
+  box-shadow: 1px 7px 20px #095D62;
+  margin: 1.5rem;
+  border-radius: 7px;
+  z-index: 10;
 }
 
-.nav-top a {
-  font-size: 1.4em;
-}
+.logo img {
+  height: 60px;
+  width: 60px;
+  border-radius: 7px;
+  border: #095D62 2px solid;
+  z-index: 100;
+  opacity: 1;
 
+}
 
 .nav-bar {
-  bottom: 0px;
-  z-index: 1004;
+  z-index: 200;
   transform: translateX(0%);
   position: fixed;
   height: calc(100% - 0px);
   bottom: 0px;
   width: 100%;
-  background-color: #095D62;
-}
-
-.nav-flow {
   display: flex;
-  flex-direction: row;
-  justify-content: flex-start;
-  align-items: center;
-  text-align: left;
-  color: var(--color-text);
-  font-size: .8em;
-  line-height: 1.4;
-  font-weight: bold;
-  margin: 60px 30px 0 0;
-}
-
-.div-img {
-  height: 50px;
-  border-radius: 50%;
-  margin: 10px 10px 30px 10px;
-  border: solid 2px #fadb41;
-  background-color: #fadb41;
-  z-index: 3;
-  width: 50px;
-}
-
-.div-img img {
-  height: 46px;
-  width: 46px;
-  border-radius: 50%;
-}
-
-.nav-flow h2 {
-  color: #fadb41;
-  text-transform: capitalize;
-  line-height: 1;
-  margin-right: 10px;
-}
-
-.nav-flow div {
-  display: flex;
+  justify-content: center;
   flex-direction: column;
-  justify-content: flex-start;
-  align-items: left;
-  text-align: left;
-  margin: 10px;
+  align-items: center;
+  flex-wrap: wrap;
 }
 
-.nav-bar-photo {
-  z-index: 1004;
+.logo-nav-bar {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  flex-wrap: wrap;
+  z-index: 100;
   transform: translateX(0%);
   position: fixed;
   height: calc(100% - 0px);
@@ -378,175 +242,170 @@ const logOff = () => {
   width: 100%;
   backdrop-filter: blur(5px);
   background-color: #ffffff50;
-}
-
-.nav-flow-photo {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  text-align: left;
-  margin-top: 50%;
-  color: var(--color-text);
-  font-size: .8em;
-  font-weight: bold;
-}
-
-.div-img-full {
-  border-radius: 50%;
-  z-index: 3;
 
 }
 
-.div-img-full img {
-  height: 180px;
-  border: solid 5px #fadb41;
-  border-radius: 50%;
-}
-
-.nav-bottom {
-  display: flex;
-  flex-direction: row;
-  position: fixed;
-  bottom: 10px;
-  left: 18%;
-  background-color: #095D6220;
-  backdrop-filter: blur(15px);
-  padding: 3px;
-  font-size: 12px;
-  position: fixed;
-  text-align: center;
-  z-index: 800;
-  border-radius: 30px;
-}
-
-.nav-bottom a {
-  zoom: 1.2;
-  padding: 15px;
-  border-radius: 20%;
-  color: #095D6260;
-}
-
-.nav-bottom a:hover {
-  padding: 15px;
-  border-radius: 40%;
-  background-color: #095D6220;
-}
-
-.nav-bottom a.router-link-exact-active {
-  padding: 15px;
-  border-radius: 40%;
-  color: #e1a918;
-  background-color: #fadb4150;
-}
-
-.main-div-one {
-  overflow-x: auto;
-  display: flex;
-  flex-direction: row;
-  justify-content: space-around;
-  width: 100%;
-  color: #fadb41;
+.logo-nav-bar img {
+  box-shadow: 1px 7px 20px #095D62;
+  height: 300px;
+  width: 300px;
+  border-radius: 7px;
+  border: #095D62 2px solid;
+  z-index: 100;
+  opacity: 1;
 
 }
 
-.main-div-one .icon {
-  zoom: 1.4;
-  color: #fff;
-  margin-top: 2px;
-}
-
-.conf {
-  color: #ffffff;
-  overflow-x: auto;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  width: 32.5%;
-  margin: 0px auto 0px auto;
-  padding: 5px 0;
-  border-radius: 10px 10px 0 0;
-  background-color: #ffffff50;
-}
-
-.icons {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-around;
-  font-weight: 800;
-  position: fixed;
-  bottom: 70px;
-  width: 100%;
-  padding: 5px;
-  color: #fadb41;
-}
-
-.icons a {
-  zoom: 1.2;
-  display: flex;
-  flex-direction: row;
-}
-
-.icons a:hover {
-  zoom: 1.2;
-  display: flex;
-  flex-direction: row;
-  color: #fff;
-}
-
-.logout {
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-  font-weight: 800;
-  position: fixed;
-  bottom: 15px;
-  left: 50%;
-  width: 250px;
-  margin-left: -125px;
-  border: solid .2px #fadb4150;
-  border-radius: 20px;
-  background-color: #05959c40;
-  padding: 5px;
-  color: white;
-}
-
-.logout .icon {
-  margin: 1px 0px 0px 6px;
-  transition: transform .3s linear;
-  transform: translateX(8px);
-}
-
-.logout:hover {
-  color: #fadb41;
-  background-color: #05959c60;
+.button-client {
+  margin: 1.2rem 1.5rem;
+  transition: all .4s linear;
+  border-radius: 8px;
   cursor: pointer;
+  color: var(--color-text);
+  font-weight: 600;
+  transition: all 0.2s ease-in-out 0s;
+  zoom: 1.3;
 }
 
-.logout:hover .icon {
-  margin: 1px 0px 0px 6px;
-  transform: translateX(0px);
+.button-client:hover {
+  color: #095D6280;
+}
+
+.button-client .icon {
+  margin-top: -5px;
+  margin-right: 5px;
+  color: var(--color-text);
+  transition: all 0.2s ease-in-out 0s;
+}
+
+.button-client:hover .icon {
+  color: #095D6280;
+}
+
+.head-name {
+  display: flex;
+  justify-content: space-between;
+  flex-direction: row;
+  align-items: flex-start;
+  flex-wrap: wrap;
+}
+
+
+.name {
+  font-size: 1.6rem;
+  line-height: 1.5rem;
+  margin: .2rem 1.5rem;
+  font-weight: 700;
+  letter-spacing: 1.5px;
+  color: #095D62;
+
+}
+
+.email {
+  font-size: .8rem;
+  line-height: 1.5rem;
+  margin: .2rem 1.6rem;
+  font-weight: 700;
+  letter-spacing: 1.1px;
+  color: var(--color-text);
+
+}
+
+.whats {
+  position: fixed;
+  bottom: 4.5rem;
+  right: .1rem;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  flex-wrap: wrap;
+  /* background-color: #edf2f7; */
+  height: 40px;
+  width: 40px;
+  color: #718096;
+  box-shadow: 1px 1px 15px #095D6250;
+  transition: all 0.2s ease-in-out 0s;
+  margin: 0rem 1.5rem;
+  border-radius: 50%;
+  cursor: pointer;
+  z-index: 100;
+background-color: #edf2f7;
+   backdrop-filter: blur(15px);
+}
+
+.whats:hover {
+  color: #095D6280;
+  box-shadow: 1px 1px 15px #095D6280;
+  z-index: 100;
+}
+
+.body-timeline {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  flex-wrap: wrap;
+  text-align: left;
+  margin: 2rem 10px 120px 10px;
+}
+
+.main-logo {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  flex-wrap: wrap;
+  background-color: #edf2f7;
+  height: 100px;
+  width: 100px;
+  color: #718096;
+  box-shadow: 1px 7px 20px #095D62;
+  margin: 1.5rem;
+  border-radius: 7px;
+}
+
+.main-logo img {
+  height: 100px;
+  width: 100px;
+  border-radius: 7px;
+  border: #095D62 2px solid;
+  opacity: 1;
+
+}
+
+.body-timeline p {
+  text-align: left;
+  margin: 0 10px 20px 20px;
+  color: var(--color-text);
+}
+
+.link {
+  text-decoration: underline;
+}
+
+.link:hover {
+  color: #095D62;
 }
 
 .section-title {
-  color: #ccc;
+  color: var(--color-text);
   text-align: left;
-  margin: 10px 16px;
+  margin: 10px 1.5rem;
   font-weight: 800;
 }
 
 .section-subtitle {
-  color: #fadb41;
+  color: #095D62;
   text-align: left;
-  margin: -10px 16px 15px;
+  margin: -10px 1.5rem 15px;
   font-weight: 800;
   font-size: .9em;
 }
 
 .section-option {
   text-align: left;
-  margin: -10px 16px 15px;
+  margin: -10px 1.5rem 15px;
   font-size: .8em;
   font-weight: 800;
 }
@@ -557,15 +416,69 @@ const logOff = () => {
 }
 
 .verified {
-  color: rgb(0, 255, 0);
+  color: green;
 }
 
 .pending {
-  color: yellow;
+  color: #e1a918;
 }
 
 .bloqued {
-  color: rgb(250, 96, 96);
+  color: #b30000;
+}
+
+
+.conf {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+
+}
+
+.menu-square {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  font-weight: 800;
+  width: 49.6%;
+  padding: 5px;
+  border-radius: 8px;
+  margin: 1px auto;
+  color: #095D62;
+  background-color: #095D6210;
+  border: solid .2px #095D6210;
+}
+
+.menu-square div .icon {
+  margin: 3px 0px;
+  transition: transform .3s linear;
+  transform: translateX(-10px);
+}
+
+.menu-square div {
+  display: flex;
+  flex-direction: column;
+  font-size: 1em;
+  justify-content: center;
+  margin: 2px auto;
+}
+
+.menu-square div:nth-child(2) {
+  display: flex;
+  flex-direction: column;
+  font-size: .7em;
+  justify-content: center;
+  margin: 2px auto;
+  color: var(--color-text);
+}
+
+.menu-square div:nth-child(3) {
+  display: flex;
+  flex-direction: column;
+  font-size: .7em;
+  justify-content: center;
+  margin: 2px auto;
+  color: #002aff;
 }
 
 .menu-button {
@@ -576,9 +489,10 @@ const logOff = () => {
   width: 100%;
   padding: 5px;
   margin: 1px auto;
-  color: white;
-  background-color: #05959c10;
-  border-bottom: solid .2px #fadb4130;
+  border: solid 1px #095D6210;
+  color: var(--color-text);
+  background-color: #fff;
+  border-bottom: solid .2px #095D6230;
   border-top: solid .2px transparent;
 }
 
@@ -603,10 +517,10 @@ const logOff = () => {
 }
 
 .menu-button:hover {
-  color: #fadb41;
-  background-color: #05959c60;
+  background-color: #095D6210;
+  color: #095D6280;
   cursor: pointer;
-  border-bottom: solid .2px #fadb4160;
+  border-bottom: solid .2px #095D6250;
 }
 
 
@@ -614,55 +528,150 @@ const logOff = () => {
   transform: translateX(-15px);
 }
 
-.menu-div-one {
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-
+.logout {
+  position: fixed;
+  bottom: 15px;
+  left: 50%;
+  width: 250px;
+  margin-left: -125px;
+  transition: all .4s linear;
+  border: solid 1px #095D6210;
+  color: var(--color-text);
+  box-shadow: 0 0px 5px #095D6210;
+  border-radius: 8px;
+  cursor: pointer;
+  text-align: center;
+  line-height: 18px;
+  border-radius: 8px;
+  font-weight: 600;
+  transition: all 0.2s ease-in-out 0s;
+  height: 34px;
+  font-size: 14px;
+  padding-inline: 16px;
+  padding-top: 6px;
+  padding-bottom: 8px;
 }
 
-.menu-square {
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-  font-weight: 800;
-  width: 49%;
-  padding: 5px;
-  border-radius: 20px;
-  margin: 1px auto;
-  color: white;
-  background-color: #05959c10;
-  border: solid .2px #fadb4130;
-}
-
-.menu-square div .icon {
-  margin: 3px 0px;
+.logout .icon {
+  margin: 1px 0px 0px 6px;
   transition: transform .3s linear;
-  transform: translateX(-10px);
+  transform: translateX(8px);
 }
 
-.menu-square div {
-  display: flex;
-  flex-direction: column;
-  font-size: .9em;
-  justify-content: space-between;
-  margin: 2px 0 0 5px;
+.logout:hover {
+  background-color: #095D6210;
+  color: #095D6280;
+  cursor: pointer;
 }
 
-.menu-square div:nth-child(2) {
-  display: flex;
-  flex-direction: column;
-  font-size: .6em;
-  justify-content: space-between;
-  margin: 2px 0 0 5px;
-  color: #ddd;
+.logout:hover .icon {
+  margin: 1px 0px 0px 6px;
+  transform: translateX(0px);
 }
 
-.menu-square div:nth-child(3) {
-  display: flex;
-  flex-direction: column;
-  font-size: .6em;
-  justify-content: space-between;
-  margin: 2px 0 0 5px;
-  color: #00f2ff;
-}</style>
+
+
+
+@media only screen and (max-width: 370px) {
+  .head-logo {
+    display: flex;
+    justify-content: center;
+    flex-direction: row-reverse;
+    align-items: center;
+    flex-wrap: wrap;
+  }
+
+  .logo {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .logo img {
+    height: 100px;
+    width: 100px;
+    border-radius: 7px;
+    border: #095D62 2px solid;
+
+  }
+
+  .button-client {
+    margin: 2rem 1.5rem 1rem 1.5rem;
+  }
+
+  .head-name {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+  }
+
+
+  .name {
+    font-size: 1.6rem;
+    line-height: 1.5rem;
+    margin: .2rem 1.5rem;
+    font-weight: 700;
+    letter-spacing: 1.5px;
+    text-align: center;
+  }
+
+  .whats {
+    margin: 1rem 1.5rem;
+  }
+
+  .category {
+    display: flex;
+    justify-content: space-around;
+    align-items: flex-start;
+  }
+
+  .category-plus {
+    display: flex;
+    flex-direction: column-reverse;
+  }
+
+  .button-plus a {
+    margin: 1.5rem auto;
+    cursor: pointer;
+    transition: all .4s linear;
+    border: solid 1px #095D6210;
+    box-shadow: 0 0px 5px #095D6210;
+    background-color: #fff;
+    cursor: pointer;
+    text-align: center;
+    color: var(--color-text);
+    line-height: 18px;
+    border-radius: 8px;
+    font-weight: 600;
+    transition: all 0.2s ease-in-out 0s;
+    font-size: 14px;
+    padding: 8px 20px;
+    text-align: center;
+  }
+
+  .button-plus a .icon {
+    margin: 0 -8px 0 -5px;
+  }
+
+  .button-plus a:hover {
+    margin: 0rem auto;
+    transition: all .4s linear;
+    border: solid 1px #095D6210;
+    box-shadow: 0 0px 5px #095D6210;
+    background-color: #edf2f7;
+    cursor: pointer;
+    width: 100px;
+    text-align: center;
+    color: #095D6280;
+    line-height: 18px;
+    border-radius: 8px;
+    transition: all 0.2s ease-in-out 0s;
+    height: 34px;
+    padding-top: 8px;
+    padding-bottom: 8px;
+  }
+
+}
+</style>
