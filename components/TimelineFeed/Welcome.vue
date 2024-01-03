@@ -15,7 +15,7 @@
             <p>🎉 Feliz 2024!! 🍾</p>
             <p>
                 
-                Que este novo ano seja de muita saúde, foco, força e muito treino pesado pra você meu/minha querido(a) cliente/aluno(a)!!
+                Que este novo ano seja de muita saúde, foco, força e muito treino pesado pra você!!
                 <br>
                 <br>
                 Estamos de visual novo! 🤩 
