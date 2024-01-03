@@ -3,57 +3,39 @@
   <div class="body-date">
     <Icon name="material-symbols:event-rounded" />
     <span>
-      01/01/2024
+      03/01/2024
     </span>
   </div>
-    <div class="body">
-        <div class='main-logo ' >
-            <img src="~/assets/logo.png" alt="Foto da logo do Personal Leandro Cesar.">
-        </div>
-        <div>
+  <div class="body">
+      <div class='main-logo ' >
+          <img src="~/assets/feedTwo.jpg" alt="Foto da logo do Personal Leandro Cesar.">
+      </div>
+        <div class="main-text">
             
-            <p>🎉 Feliz 2024!! 🍾</p>
             <p>
-                
-                Que este novo ano seja de muita saúde, foco, força e muito treino pesado pra você meu/minha querido(a) cliente/aluno(a)!!
-                <br>
-                <br>
-                Estamos de visual novo! 🤩 
-                <br>
-                Mais clean e mais simples! Direto ao ponto! 💪
-                <br>
-                <br>
-                Sobre o capô estou deixando os códigos de programação, tudo mais automatizados e com menos bugs nas atualizações de páginas!
-
-                <br>
-                Em breve mais novidades e dicas!
-                
-                <br>
-                <br>
-                Dúvidas? Entre em contato comigo!! 
-                <br>
-                <br>
-                
+              Bora fazer uma avaliação?
             </p>
             <p>
-                BOM TREINO! 😉💪
-                
-            </p>
-            
-            <p>        
-                Atenciosamente, 
+                A avaliação física é importante pra ver como está sua composição
+                corporal atual (percentual de gordura, massa magra).
                 <br>
-                Personal Leandro Cesar 
                 <br>
-                CREF1: 029260-G/RJ 
+                O ideal é fazer de 3 em 3 meses, para ver se você está
+                progredindo nos treinos!
+                <br>
+                <br>
+                Marque agora mesmo, clicando no botão abaixo!
+                <br>
                 <br>
             </p>
-            <p>
-                <a class="link" href="https://personal.leandrocesar.com" target="_blank">personal.leandrocesar.com</a>
-            </p>
-        </div>
-        
+            <a href="https://cal.com/leandrocesar/personal" target="_blank">
+                 Agendar <Icon name="ic:baseline-keyboard-arrow-right" />
+            </a>
+          <div>
+      </div>
     </div>
+        
+  </div>
     
 </template>
 <style scoped>
@@ -88,20 +70,18 @@
   flex-wrap: wrap;
   background-color: #edf2f7;
   height: 100px;
-  width: 100px;
   color: #718096;
   box-shadow: 1px 7px 20px #095D62;
-  margin: 3rem 1.5rem;
+  margin: 3rem 0rem;
   border-radius: 7px;
 }
 
 .main-logo img {
   height: 100px;
-  width: 100px;
   border-radius: 7px;
   border: #095D62 2px solid;
   opacity: 1;
-
+  
 }
 .body p{
   text-align: left;
@@ -109,11 +89,55 @@
   color: var(--color-text);
 }
 
-.link {
-  text-decoration: underline;
-}
-.link:hover {
-  color: #095D62;
+.main-text {
+  display: flex;
+  justify-content: flex-start;
+  flex-direction: column;
+  align-items: flex-start;
+  flex-wrap: wrap;
 }
 
+
+
+a {
+    transition: all .4s linear;
+    border: solid 1px #095D6210;
+    box-shadow: 0 0px 5px #095D6210;
+    border-radius: 8px;
+    cursor: pointer;
+    width: 120px;
+    text-align: center;
+    color: var(--color-text);
+    line-height: 4px;
+    border-radius: 8px;
+    font-weight: 600;
+    transition: all 0.2s ease-in-out 0s;
+    height: 34px;
+    font-size: 16px;
+    padding-inline: 8px;
+    padding-top: 7px;
+    padding-bottom: 8px;
+    backdrop-filter: blur(15px);
+    background-color: #ffffff90;
+    margin: -2rem auto 1rem auto;
+  }
+
+  a .icon {
+    margin-top: -1px;
+    margin-left: -4px;
+    transition: all 0.2s ease-in-out 0s;
+    margin-right: -2px;
+  }
+  
+  a:hover {
+    background-color: #095D6210;
+}
+  a:hover .icon {
+  transform:translateX(4px)
+}
+
+.nav:hover a {
+    color: #095D6280;
+
+}
 </style>
