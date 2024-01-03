@@ -20,10 +20,12 @@
                 <br>
                 Estamos de visual novo! 🤩 
                 <br>
-                Mais clean e mais simples! Direto ao ponto! 💪
+                Mais clean e mais simples! 
+                <br>
+                Direto ao ponto! 💪
                 <br>
                 <br>
-                Sobre o capô estou deixando os códigos de programação, tudo mais automatizados e com menos bugs nas atualizações de páginas!
+                Sobre o capô estou deixando os códigos mais automatizados e com menos bugs!
 
                 <br>
                 Em breve mais novidades e dicas!
@@ -75,7 +77,7 @@
   align-items: center;
   flex-wrap: wrap;
   text-align: left;
-  margin: 0rem 1.5rem 5rem 1.5rem;
+  margin: 0rem 1.5rem 7rem 1.5rem;
   border: #095D6220 2px solid;
   border-radius: 8px;
 }
