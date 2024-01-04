@@ -5,6 +5,7 @@ export default defineEventHandler((event) => {
     "email": "camilla.dimas@hotmail.com",
     "senha": "dimas@Ca",
     "foto": "https://m.leandrocesar.com/img/camilladimas.jpeg",
+    "servico": "Personal Trainer",
     "objetivo": "Hipertrofia",
     "tempo": "60 min.",
     "dias": "5-6 dias",

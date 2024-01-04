@@ -8,6 +8,7 @@ export default defineEventHandler((event) => {
     "email": "",
     "senha": "1234",
     "foto": "https://m.leandrocesar.com/img/camillafigueiredo.jpeg",
+    "servico": "Consultoria on-line",
     "objetivo": "Definição",
     "tempo": "60 min.",
     "dias": "6 dias",

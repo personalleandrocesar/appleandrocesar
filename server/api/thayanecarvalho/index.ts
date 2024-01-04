@@ -8,6 +8,7 @@ export default defineEventHandler((event) => {
     "email": "thayane.carvalhoo@gmailcom",
     "senha": "1234",
     "foto": "https://m.leandrocesar.com/img/thayanecarvalho.jpeg",
+    "servico": "Consultoria on-line",
     "objetivo": "Hipertrofia",
     "tempo": "60 min.",
     "dias": "5 dias",

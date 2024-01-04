@@ -8,6 +8,7 @@ export default defineEventHandler((event) => {
     "email": "alceniralucas@gmailcom",
     "senha": "1234",
     "foto": "https://m.leandrocesar.com/img/nirapimentel.png",
+    "servico": "Consultoria on-line",
     "objetivo": "Hipertrofia",
     "tempo": "60 min.",
     "dias": "3-4 dias",

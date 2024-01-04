@@ -8,6 +8,7 @@ export default defineEventHandler((event) => {
     "email": "",
     "senha": "1234",
     "foto": "https://m.leandrocesar.com/img/dionefirmino.jpeg",
+    "servico": "Personal Trainer",
     "objetivo": "Hipertrofia",
     "tempo": "60 min.",
     "dias": "5 dias",
@@ -19,9 +20,9 @@ export default defineEventHandler((event) => {
     "periodo": "11/12/23 - 11/01/24",
     "status": 2,
     // Treino atual
-    "treinoActual": "03/01/24 - 02/02/24",
+    "treinoActual": "04/01/24 - 03/02/24",
     // Próxima Treino 
-    "treinoNext": "03/02/24",
+    "treinoNext": "04/02/24",
     // Avaliação atual
     "valuationActual": "",
     // Próxima avaliação 

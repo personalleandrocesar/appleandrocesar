@@ -4,6 +4,7 @@ export default defineEventHandler((event) => {
     "nomeCompleto": "Rosana Assis",
     "email": "",
     "foto": "https://m.leandrocesar.com/img/rosanaassis.png",
+    "servico": "Personal Trainer",
     "objetivo": "Hipertrofia",
     "tempo": "60 min.",
     "dias": "5 dias",
