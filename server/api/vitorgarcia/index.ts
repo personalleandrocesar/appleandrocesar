@@ -9,7 +9,7 @@ export default defineEventHandler((event) => {
     "objetivo": "Hipertrofia",
     "tempo": "60 min.",
     "dias": "5 dias",
-    "treinoA": "Peito/Ombro/Tríceps/Quadríceps",
+    "treinoA": "Peito/Ombro/Quadríceps",
     "treinoB": "Costa/Bíceps/Abdominal",
     "treinoC": "",
 
