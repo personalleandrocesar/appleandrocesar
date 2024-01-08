@@ -658,7 +658,7 @@ border: 2px solid #2cd3db;
   
   .div-img-full img {
     box-shadow: 0px 7px 20px #095D62;
-    height: 300px;
+    height: auto;
     width: 300px;
     border-radius: 7px;
     border: #05959c 2px solid;

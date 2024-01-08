@@ -9,7 +9,7 @@ export default defineEventHandler((event) => {
     { num: 'Exercício 6', nome: 'Abdutora', sets: 3, reps: '15 c/ 1"', rest: '50"', grupo: '', obs: '', img: 'https://m.leandrocesar.com/exe/abdutora.gif'},
     { num: 'Exercício 7', nome: 'Abdominal Máquina', sets: 3, reps: '10', rest: '50"', grupo: '', obs: '', img: 'https://m.leandrocesar.com/exe/abdominalMaquina.gif'},
     { num: 'Exercício 8', nome: 'Martelo', sets: 3, reps: '12', rest: '50"', grupo: '', obs: '', img: 'https://m.leandrocesar.com/exe/bicepsMartelo.gif'},
-    { num: 'Exercício 9', nome: 'Abdominal supra', sets: 3, reps: '12', rest: '50"', grupo: '', obs: '', img: 'https://m.leandrocesar.com/exe/abdomialSupra.gif'},
+    { num: 'Exercício 9', nome: 'Abdominal supra', sets: 3, reps: '12', rest: '50"', grupo: '', obs: '', img: 'https://m.leandrocesar.com/exe/abdominalSupra.gif'},
 
 
     // Modelo:
