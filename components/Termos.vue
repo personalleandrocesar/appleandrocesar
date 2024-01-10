@@ -29,12 +29,12 @@ function menu() {
 
     <div class="head-logo">
       <div class='logo'>
-        <img @click="openPhoto()" :src="data.data.value.foto" alt="Foto de perfil do Personal Leandro Cesar.">
+        <img @click="openPhoto()" :src="data.data.value?.foto" alt="Foto de perfil do Personal Leandro Cesar.">
       </div>
     </div>
     <div v-if="photoOpen" class="nav-bar">
       <div class='logo-nav-bar'>
-        <img @click="openPhoto" :src="data.data.value.foto" alt="Foto de perfil do perfil do usuário.">
+        <img @click="openPhoto" :src="data.data.value?.foto" alt="Foto de perfil do perfil do usuário.">
       </div>
     </div>
     <div class="head-name">

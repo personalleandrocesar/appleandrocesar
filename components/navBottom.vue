@@ -32,7 +32,7 @@ const navD = ref(state.value === 4)
             <NuxtLink :to="`/user/${route.params.id}/treino`" @click.native="scrollToTop()">
                 <Icon name='material-symbols:exercise' />
             </NuxtLink>
-            <NuxtLink v-if="dataConf.data.value.treinoA" :to="`/user/${route.params.id}/treino/a`"
+            <NuxtLink v-if="dataConf.data.value?.treinoA" :to="`/user/${route.params.id}/treino/a`"
                 @click.native="scrollToTop()">
                 <Icon name='mdi:alpha-a' />
             </NuxtLink>
@@ -50,7 +50,7 @@ const navD = ref(state.value === 4)
             <NuxtLink :to="`/user/${route.params.id}/treino`" @click.native="scrollToTop()">
                 <Icon name='material-symbols:exercise' />
             </NuxtLink>
-            <NuxtLink v-if="dataConf.data.value.treinoB" :to="`/user/${route.params.id}/treino/b`"
+            <NuxtLink v-if="dataConf.data.value?.treinoB" :to="`/user/${route.params.id}/treino/b`"
                 @click.native="scrollToTop()">
                 <Icon name='mdi:alpha-b' />
             </NuxtLink>
@@ -67,7 +67,7 @@ const navD = ref(state.value === 4)
             <NuxtLink :to="`/user/${route.params.id}/treino`" @click.native="scrollToTop()">
                 <Icon name='material-symbols:exercise' />
             </NuxtLink>
-            <NuxtLink v-if="dataConf.data.value.treinoC" :to="`/user/${route.params.id}/treino/c`"
+            <NuxtLink v-if="dataConf.data.value?.treinoC" :to="`/user/${route.params.id}/treino/c`"
                 @click.native="scrollToTop()">
                 <Icon name='mdi:alpha-c' />
             </NuxtLink>
@@ -84,7 +84,7 @@ const navD = ref(state.value === 4)
             <NuxtLink :to="`/user/${route.params.id}/treino`" @click.native="scrollToTop()">
                 <Icon name='material-symbols:exercise' />
             </NuxtLink>
-            <NuxtLink v-if="dataConf.data.value.treinoD" :to="`/user/${route.params.id}/treino/d`"
+            <NuxtLink v-if="dataConf.data.value?.treinoD" :to="`/user/${route.params.id}/treino/d`"
                 @click.native="scrollToTop()">
                 <Icon name='mdi:alpha-d' />
             </NuxtLink>
