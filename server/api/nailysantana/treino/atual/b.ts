@@ -9,7 +9,7 @@ export default defineEventHandler((event) => {
     { num: 'Exercício 5', nome: 'Panturrilha em pé no aparelho', sets: 3, reps: '12', rest: '50"', grupo: '', obs: '', img: 'https://m.leandrocesar.com/exe/panturrilhaAparelho.gif'},
     { num: 'Exercício 6', nome: 'Abdutora', sets: 3, reps: '', rest: '50"', grupo: '15', obs: '', img: 'https://m.leandrocesar.com/exe/abdutora.gif'},
     { num: 'Exercício 7', nome: 'Cadeira flexora', sets: 3, reps: '12', rest: '50"', grupo: '', obs: '', img: 'https://m.leandrocesar.com/exe/flexora.gif'},
-    { num: 'Exercício 8', nome: 'Stiff', sets: 3, reps: '', rest: '50"', grupo: '12', obs: '', img: 'https://m.leandrocesar.com/exe/stiff.gif'},
+    { num: 'Exercício 8', nome: 'Stiff', sets: 3, reps: '', rest: '50"', grupo: '12', obs: '', img: 'https://m.leandrocesar.com/exe/stiffHBL.gif'},
     { num: 'Exercício 9', nome: 'Bíceps martelo', sets: 3, reps: '15', rest: '50"', grupo: '', obs: '', img: 'https://m.leandrocesar.com/exe/bicepsMartelo.gif'},
 
     // { num: 'Exercício 1', nome: 'Puxada Supinada + pronada', sets: 3, reps: '8 + 10', rest: '40"', grupo: '', obs: 'Fazer 8 pergada supinada + 10 pegada pronada', img: 'https://m.leandrocesar.com/exe/puxadaFechadaPronada.gif'},

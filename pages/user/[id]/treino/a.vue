@@ -294,7 +294,6 @@ ul {
   flex-direction: row;
   justify-content: flex-end;
   margin: 1rem 15px 0 15px;
-  border: solid .2px #095D6230;
   border: solid .1px #05959c80;
   border-radius: 8px;
   color: var(--color-text);
@@ -309,7 +308,7 @@ ul {
   width: 100%;  font-size: .8rem;
   border-radius: 8px;
   /* border: solid .2px #095D6230; */
-  border: solid .1px #05959c80;
+  
   color: #05959c;
 }
 .alternate span:hover{
@@ -336,11 +335,13 @@ ul {
 .alternateGrid {
   background-color: #05959c30;
   font-weight: bold;
+  border: solid .1px #05959c80;
   color: #05959c;  
 }
 .alternateList {
   background-color: #05959c30;
   font-weight: bold;
+  border: solid .1px #05959c80;
   color: #05959c;  
 }
 .roww {
