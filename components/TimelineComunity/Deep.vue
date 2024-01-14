@@ -1,6 +1,6 @@
 <template>
     <h2>
-        Deep Acupuntura
+        Deep acupuntura
     </h2>
     <h5>
         Clínica de Terapias Chinesas
