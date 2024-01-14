@@ -1,4 +1,4 @@
-<template class="content">
+<template>
     <h2>
         Isadora Pecanha - Arquitetura
     </h2>
@@ -49,14 +49,6 @@
 </template>
 
 <style scoped>
-.content {
-  display:flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  color: var(--color-text);
-
-}
 .services {
 
     display: flex;
