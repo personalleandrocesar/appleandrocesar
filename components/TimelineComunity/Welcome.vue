@@ -55,20 +55,10 @@ console.log(teste.value);
   </div>
 
   <div class="content" v-if="mainDeep">
-    <h2>
-      Deep Acupuntura
-    </h2>
-    <h5>
-      Clínica de Terapias Chinesas
-    </h5>
+    <TimelineComunityDeep/>
   </div>
   <div class="content" v-else>
-    <h2>
-      Isadora Pecanha - Arquitetura
-    </h2>
-    <h5>
-      Arquitetura e interiores
-    </h5>
+    <TimelineComunityIsa/>
   </div>
     
 </template>
@@ -101,6 +91,7 @@ img {
   z-index: 10;
   filter: contrast(40%);
   transition: all .4s linear;
+  cursor: pointer;
 }
 img:hover {
   filter: contrast(100%);

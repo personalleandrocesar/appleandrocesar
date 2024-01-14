@@ -21,14 +21,14 @@ function buttonPartner () {
 </script>
 <template>
     <NuxtLayout>
-    <!-- <div class="link">
+    <div class="link">
         <NuxtLink @click="buttonFeed" :class="{ aActived : linkFeed}">
             Feed
         </NuxtLink>
         <NuxtLink @click="buttonPartner" :class="{ aActived: linkPartner }">
             Parcerias
         </NuxtLink>
-    </div> -->
+    </div>
     <div class="feed" v-if="feedShow">
         <TimelineFeedTwo/>
         <TimelineFeedWelcome/>
@@ -46,8 +46,6 @@ function buttonPartner () {
    margin-top: 1.5rem;
    font-size: 1.2rem;
    font-weight: bolder;
-   position: sticky;
-   top:0px;
    backdrop-filter: blur(5px);
    background-color: #ffffff80;
 }
@@ -58,6 +56,7 @@ a {
     width: 40%;
     color: #71809690;
     text-align: center;
+    cursor: pointer;
 }
 
 a:hover {
