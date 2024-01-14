@@ -19,8 +19,8 @@
         </div>
     </div>
 
-        <NuxtLink to='https://api.whatsapp.com/send?phone=5521936184024%20&text=Ol%C3%A1,%20fiquei%20interessado(a)%20nos%20seus%20Servi%C3%A7os,%20me%20chamo%20' class="button-client">
-            <Icon name="ic:outline-whatsapp"/>Marcar uma sessão
+        <NuxtLink to='https://api.whatsapp.com/send?phone=5521936184024%20&text=Ol%C3%A1%20Isadora,%20fiquei%20interessado(a)%20nos%20seus%20Servi%C3%A7os,%20me%20chamo%20' class="button-client">
+            <Icon name="ic:outline-whatsapp"/> Informações e orçamento
         </NuxtLink>
 
         <div class="local">
@@ -88,7 +88,7 @@
     box-shadow: 0 0px 5px #095D6210;
     border-radius: 8px;
     cursor: pointer;
-    width: 160px;
+    width: 200px;
     text-align: center;
     color: var(--color-text);
     line-height: 14px;
