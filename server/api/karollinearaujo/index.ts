@@ -1,10 +1,8 @@
 export default defineEventHandler((event) => {
-
-
   // Send JSON response
   return {
     "nome": "Karolline",
-    "nomeCompleto": "Karolline Araújo",
+    "nomeCompleto": "Ana Karolline da Silva Araújo",
     "email": "",
     "senha": "",
     "foto": "https://m.leandrocesar.com/img/karollinearaujo.jpeg",
