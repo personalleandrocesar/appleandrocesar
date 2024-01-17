@@ -1,32 +1,29 @@
 export default defineEventHandler((event) => {
   return [
     // Série Atual
-    { num: 'Exercício 1', nome: 'Puxada aberta pronada', sets: 4, reps: '12', rest: '40"', grupo: '', obs: 'Peg. neutra aberta: mãos na direção do cotovelo.', img: 'https://m.leandrocesar.com/img/preImagem.png'},
-    { num: 'Exercício 2', nome: 'Remada na polia baixa', sets: 3, reps: '8 +10" +4', rest: '40"', grupo: '', obs: 'peg. neutra.', img: 'https://m.leandrocesar.com/img/preImagem.png'},
-    { num: 'Exercício 3', nome: 'Remada máquina', sets: 3, reps: '15', rest: '40"', grupo: '', obs: 'Pegada pronada.', img: 'https://m.leandrocesar.com/img/preImagem.png'},
-    { num: 'Exercício 4', nome: 'Desenvolvimento aparelho', sets: 3, reps: '5 / 8', rest: '40"', grupo: '', obs: 'Drop-0set: fazer 8, dimiuir 1 ou 2 placas: +8.', img: 'https://m.leandrocesar.com/img/preImagem.png'},
-    { num: 'Exercício 5', nome: 'Supino inclinado (HBC)', sets: 3, reps: '10', rest: '40"', grupo: '', obs: 'Descendo lentamente.', img: 'https://m.leandrocesar.com/img/preImagem.png'},
-    { num: 'Exercício 6', nome: 'Supino Hammer', sets: 3, reps: '8', rest: '40"', grupo: '', obs: 'Falhando.', img: 'https://m.leandrocesar.com/img/preImagem.png'},
-    { num: 'Exercício 7', nome: 'Bíceps barra reta', sets: 3, reps: '', rest: '40"', grupo: '', obs: '', img: 'https://m.leandrocesar.com/img/preImagem.png'},
-    { num: 'Exercício 8', nome: 'Bíceps corda na polia baixa', sets: 3, reps: '8 / 15', rest: '40"', grupo: '', obs: 'Drop-set: fazer 8 repetições, diminui 1 ou 2 placas: + 15.', img: 'https://m.leandrocesar.com/img/preImagem.png'},
-    { num: 'Exercício 9', nome: 'Tríceps barra reta na polia alta', sets: 3, reps: '10 + 15', rest: '40"', grupo: '', obs: 'Fazer 10 com a pegada supinada, + 15 com a pegada pronada.', img: 'https://m.leandrocesar.com/img/preImagem.png'},
-    { num: 'Exercício 10', nome: 'Remada alta na polia baixa', sets: 3, reps: '12', rest: '40"', grupo: '', obs: 'Pegada fechada.', img: 'https://m.leandrocesar.com/img/preImagem.png'},
-    { num: 'Exercício 11', nome: 'Abdominal na máquina', sets: 3, reps: '15', rest: '40"', grupo: '', obs: 'Falhando.', img: 'https://m.leandrocesar.com/img/preImagem.png'},
-    { num: 'Exercício 12', nome: 'Abdominal infra no solo + remador', sets: 3, reps: '20 + falha', rest: '40"', grupo: '', obs: 'Fazer o abdômen infra jogando o joelho perto do rosto, levantando bem o quadril + remador até a falha', img: 'https://m.leandrocesar.com/img/preImagem.png'},
-
+    { id: 1, num: 'Exercício 1', nome: 'Leg 45º', sets: 3, reps: '10 c/1"', rest: '50"', grupo: '', obs: 'Segurar 1 segundo embaixo a cada repetição..', img: 'https://m.leandrocesar.com/exe/leg45.gif' },
+    { id: 2, num: 'Exercício 2', nome: 'Mesa Flexora', sets: 3, reps: '8 +10" ', rest: '50"', grupo: '', obs: 'Segurar 10 segundos em cima no final.', img: 'https://m.leandrocesar.com/exe/mesaFlexora.gif' },
+    { id: 3, num: 'Exercício 3', nome: 'Levantamento Terra', sets: 3, reps: '12', rest: '50"', grupo: '', obs: '', img: 'https://m.leandrocesar.com/exe/levantamentoTerra.gif' },
+    { id: 4, num: 'Exercício 4', nome: 'Abdutora', sets: 3, reps: '15c +10 +iso', rest: '50"', grupo: '', obs: 'Fazer 15 curtas + 10 repetições e segurar o máximo que aguentar no final.', img: 'https://m.leandrocesar.com/exe/abdutora.gif' },
+    { id: 5, num: 'Exercício 5', nome: 'Agachamento Búlgaro', sets: 3, reps: '10', rest: '50"', grupo: '', obs: 'Falhando', img: 'https://m.leandrocesar.com/exe/bulgaro.gif' },
+    { id: 6, num: 'Exercício 6', nome: 'Abdução de quadril na polia baixa', sets: 3, reps: '12', rest: '20"', grupo: '', obs: 'Descansar 20" apenas.', img: 'https://m.leandrocesar.com/exe/abducaoPolia.gif' },
+    { id: 7, num: 'Exercício 7', nome: 'Agachamento livre(HBL)', sets: 3, reps: '10', rest: '50"', grupo: '', obs: '', img: 'https://m.leandrocesar.com/exe/backSquat.gif' },
+    { id: 8, num: 'Exercício 8', nome: 'Stiff', sets: 3, reps: '10', rest: '50"', grupo: '', obs: 'Falhando.', img: 'https://m.leandrocesar.com/exe/stiffHBL.gif' },
+    { id: 9, num: 'Exercício 9', nome: 'Elevação Pélvica', sets: 3, reps: '12', rest: '50"', grupo: '', obs: '', img: 'https://m.leandrocesar.com/exe/elevacaoPelvicaHBM.gif' },
+    { id: 10, num: 'Exercício 10', nome: 'Extensão lombar', sets: 3, reps: 'Falha', rest: '50"', grupo: '', obs: '', img: 'https://m.leandrocesar.com/exe/extensaoLombar.png' },
 
     // Modelo:
-    // { num: 'Exercício 1', nome: '', sets: 3, reps: '', rest: '40"', grupo: '', obs: '', img: 'https://m.leandrocesar.com/img/preImagem.png'},
-    // { num: 'Exercício 2', nome: '', sets: 3, reps: '', rest: '40"', grupo: '', obs: '', img: 'https://m.leandrocesar.com/img/preImagem.png'},
-    // { num: 'Exercício 3', nome: '', sets: 3, reps: '', rest: '40"', grupo: '', obs: '', img: 'https://m.leandrocesar.com/img/preImagem.png'},
-    // { num: 'Exercício 4', nome: '', sets: 3, reps: '', rest: '40"', grupo: '', obs: '', img: 'https://m.leandrocesar.com/img/preImagem.png'},
-    // { num: 'Exercício 5', nome: '', sets: 3, reps: '', rest: '40"', grupo: '', obs: '', img: 'https://m.leandrocesar.com/img/preImagem.png'},
-    // { num: 'Exercício 6', nome: '', sets: 3, reps: '', rest: '40"', grupo: '', obs: '', img: 'https://m.leandrocesar.com/img/preImagem.png'},
-    // { num: 'Exercício 7', nome: '', sets: 3, reps: '', rest: '40"', grupo: '', obs: '', img: 'https://m.leandrocesar.com/img/preImagem.png'},
-    // { num: 'Exercício 8', nome: '', sets: 3, reps: '', rest: '40"', grupo: '', obs: '', img: 'https://m.leandrocesar.com/img/preImagem.png'},
-    // { num: 'Exercício 9', nome: '', sets: 3, reps: '', rest: '40"', grupo: '', obs: '', img: 'https://m.leandrocesar.com/img/preImagem.png'},
-    // { num: 'Exercício 10', nome: '', sets: 3, reps: '', rest: '40"', grupo: '', obs: '', img: 'https://m.leandrocesar.com/img/preImagem.png'},
-    // { num: 'Exercício 11', nome: '', sets: 3, reps: '', rest: '40"', grupo: '', obs: '', img: 'https://m.leandrocesar.com/img/preImagem.png'},
+    // { id: 1, num: 'Exercício 1', nome: '', sets: 3, reps: '', rest: '40"', grupo: '', obs: '', img: 'https://m.leandrocesar.com/img/preImagem.png' },
+    // { id: 2, num: 'Exercício 2', nome: '', sets: 3, reps: '', rest: '40"', grupo: '', obs: '', img: 'https://m.leandrocesar.com/img/preImagem.png' },
+    // { id: 3, num: 'Exercício 3', nome: '', sets: 3, reps: '', rest: '40"', grupo: '', obs: '', img: 'https://m.leandrocesar.com/img/preImagem.png' },
+    // { id: 4, num: 'Exercício 4', nome: '', sets: 3, reps: '', rest: '40"', grupo: '', obs: '', img: 'https://m.leandrocesar.com/img/preImagem.png' },
+    // { id: 5, num: 'Exercício 5', nome: '', sets: 3, reps: '', rest: '40"', grupo: '', obs: '', img: 'https://m.leandrocesar.com/img/preImagem.png' },
+    // { id: 6, num: 'Exercício 6', nome: '', sets: 3, reps: '', rest: '40"', grupo: '', obs: '', img: 'https://m.leandrocesar.com/img/preImagem.png' },
+    // { id: 7, num: 'Exercício 7', nome: '', sets: 3, reps: '', rest: '40"', grupo: '', obs: '', img: 'https://m.leandrocesar.com/img/preImagem.png' },
+    // { id: 8, num: 'Exercício 8', nome: '', sets: 3, reps: '', rest: '40"', grupo: '', obs: '', img: 'https://m.leandrocesar.com/img/preImagem.png' },
+    // { id: 9, num: 'Exercício 9', nome: '', sets: 3, reps: '', rest: '40"', grupo: '', obs: '', img: 'https://m.leandrocesar.com/img/preImagem.png' },
+    // { id: 10, num: 'Exercício 10', nome: '', sets: 3, reps: '', rest: '40"', grupo: '', obs: '', img: 'https://m.leandrocesar.com/img/preImagem.png' },
+    // { id: 11, num: 'Exercício 11', nome: '', sets: 3, reps: '', rest: '40"', grupo: '', obs: '', img: 'https://m.leandrocesar.com/img/preImagem.png' },
 
   ]
 })
