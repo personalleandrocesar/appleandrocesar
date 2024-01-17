@@ -4,7 +4,7 @@ export default defineEventHandler((event) => {
     "nomeCompleto": "Rosana Assis",
     "email": "",
     "foto": "https://m.leandrocesar.com/img/rosanaassis.png",
-    "servico": "Personal Trainer",
+    "servico": "Consultoria on-line",
     "objetivo": "Hipertrofia",
     "tempo": "60 min.",
     "dias": "6 dias",
@@ -14,12 +14,12 @@ export default defineEventHandler((event) => {
     "treinoD": "Quadriceps",
 
     // Dados Menu Global
-    "periodo": "11/12/23 - 11/01/24",
+    "periodo": "17/01/24 - 17/02/24",
     "status": 2,
     // Treino atual
-    "treinoActual": "13/12/23 - 12/01/24",
+    "treinoActual": "17/01/24 - 16/02/24",
     // Próxima Treino 
-    "treinoNext": "13/01/24",
+    "treinoNext": "17/02/24",
     // Avaliação atual
     "valuationActual": "01/12/2023",
     // Próxima avaliação 
