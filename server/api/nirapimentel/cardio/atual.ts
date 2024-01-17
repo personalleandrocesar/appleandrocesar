@@ -2,12 +2,12 @@ export default defineEventHandler((event) => {
     return {
         // Treino A
         "cardioA": "Esteira",
-        "cardioATime": "20 minutos",
-        "cardioADescription": "Caminhar forte entre 6.2 km/h a 7.0 km/h.",
+        "cardioATime": "15 minutos",
+        "cardioADescription": "Fazer trote leve direto; velocidade constante por volta de 7.5 km/h a 8.5km/h",
         // Treino B
         "cardioB": "Escada",
-        "cardioBTime": "15 minutos",
-        "cardioBDescription": "Fazer 15 minutos de forma constante, que não fique com falta de ar, no ritmo que dê para conversar com alguém, naõ ficar ofegante.",
+        "cardioBTime": "20 minutos",
+        "cardioBDescription": "Fazer 20 minutos de forma constante, que não fique com falta de ar, no ritmo que dê para conversar com alguém, naõ ficar ofegante.",
         // Treino C
         "cardioC": "", 
         "cardioCTime": "--",

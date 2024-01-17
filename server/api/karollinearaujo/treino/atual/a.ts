@@ -11,6 +11,7 @@ export default defineEventHandler((event) => {
     { num: 'Exercício 8', nome: 'Supino inclinado barra (HBL)', sets: 3, reps: '10', rest: '50"', grupo: '', obs: '', img: 'https://m.leandrocesar.com/exe/supino45HBL.gif' },
     { num: 'Exercício 9', nome: 'Tríceps testa com halteres', sets: 3, reps: '12', rest: '50"', grupo: '', obs: '', img: 'https://m.leandrocesar.com/exe/tricepsTestaHBC.gif' },
     { num: 'Exercício 10', nome: 'Tríceps corda na polia alta', sets: 3, reps: '12 + 12', rest: '50"', grupo: '', obs: 'Fazer rest-pause: Fazer 12 repetições, descansa 10": + 12 repetições.', img: 'https://m.leandrocesar.com/exe/tricepsCorda.gif' },
+    { num: 'Exercício 11', nome: 'Abdominal remador completo', sets: 3, reps: '25', rest: '50"', grupo: '', obs: '', img: 'https://m.leandrocesar.com/exe/abdominalRemadorCompleto.png' },
 
     // { id: 1, num: 'Exercício 1', nome: 'Leg press horizontal', sets: 3, reps: '20', rest: '50"', grupo: '', obs: 'Fazer com os pés paralelos mais pra cima.', img: 'https://m.leandrocesar.com/exe/legpress.gif'},
     // { id: 2, num: 'Exercício 2', nome: 'Extensora', sets: 3, reps: '15', rest: '50"', grupo: '', obs: '', img: 'https://m.leandrocesar.com/exe/extensora.gif'},
