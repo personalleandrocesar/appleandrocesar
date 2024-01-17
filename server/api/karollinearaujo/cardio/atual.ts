@@ -6,7 +6,7 @@ export default defineEventHandler((event) => {
         "cardioADescription": "Caminhar forte entre 6.2 km/h a 7.0 km/h.",
         // Treino B
         "cardioB": "--",
-        "cardioBTime": "15 minutos",
+        "cardioBTime": "--",
         "cardioBDescription": "Não precisa fazer cardio neste dia!",
         // Treino C
         "cardioC": "", 
