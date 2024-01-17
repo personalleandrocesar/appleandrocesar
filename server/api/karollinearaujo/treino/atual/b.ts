@@ -3,7 +3,7 @@ export default defineEventHandler((event) => {
     // Série Atual
     { num: 'Exercício 1', nome: 'Mesa flexora', sets: 3, reps: '10 c/1" + 4', rest: '50"', grupo: '', obs: '', img: 'https://m.leandrocesar.com/exe/mesaFlexora.gif' },
     { num: 'Exercício 2', nome: 'Leg press 45º', sets: 3, reps: '12', rest: '50"', grupo: '', obs: '', img: 'https://m.leandrocesar.com/exe/leg45.gif' },
-    { num: 'Exercício 3', nome: 'Elevação Pélvica', sets: 3, reps: '15', rest: '50"', grupo: '', obs: '', img: 'https://m.leandrocesar.com/exe/elevacaoPelvica.png' },
+    { num: 'Exercício 3', nome: 'Elevação Pélvica', sets: 3, reps: '15', rest: '50"', grupo: '', obs: '', img: 'https://m.leandrocesar.com/exe/elevacaoPelvicaHBM.gif' },
     { num: 'Exercício 4', nome: 'Stiff', sets: 3, reps: '15', rest: '50"', grupo: '', obs: 'Falhando.', img: 'https://m.leandrocesar.com/exe/stiffHBL.gif' },
     { num: 'Exercício 5', nome: 'Abdução de quadril na polia baixa', sets: 3, reps: '12', rest: '50"', grupo: '', obs: 'Segurar 2 segundos a cada repetição.', img: 'https://m.leandrocesar.com/exe/abducaoPolia.gif' },
     { num: 'Exercício 6', nome: 'Panturrilha aparelho em pé', sets: 2, reps: '20 (2t)', rest: '50"', grupo: '', obs: 'FAzer com 2 tempos a cada repetição.', img: 'https://m.leandrocesar.com/exe/panturrilhaAparelho.gif' },
