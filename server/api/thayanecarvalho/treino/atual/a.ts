@@ -11,7 +11,7 @@ export default defineEventHandler((event) => {
     { num: 'Exercício 8', nome: 'Elevação Pélvica', sets: 3, reps: '12', rest: '40"', grupo: '', obs: '', img: 'https://m.leandrocesar.com/exe/elevacaoPelvica.gif'},
     { num: 'Exercício 9', nome: 'Flexão de quadril (caneleira)', sets: 3, reps: '10', rest: '40"', grupo: '', obs: '', img: 'https://m.leandrocesar.com/exe/flexaoQuadril.gif'},
     { num: 'Exercício 10', nome: 'Panturrilha aparelho em pé', sets: 2, reps: '20 (2t)', rest: '40"', grupo: '', obs: 'FAzer com 2 tempos a cada repetição.', img: 'https://m.leandrocesar.com/exe/panturrilhaAparelho.gif'},
-    { num: 'Exercício 10', nome: 'Panturrilha sentada no aparelho', sets: 3, reps: '10 +10" +10', rest: '40"', grupo: '', obs: '', img: 'https://m.leandrocesar.com/exe/panturrilhaSentado.gif'},
+    { num: 'Exercício 11', nome: 'Panturrilha sentada no aparelho', sets: 3, reps: '10 +10" +10', rest: '40"', grupo: '', obs: '', img: 'https://m.leandrocesar.com/exe/panturrilhaSentado.gif'},
 
     // { id: 1, num: 'Exercício 1', nome: 'Leg press horizontal', sets: 3, reps: '20', rest: '50"', grupo: '', obs: 'Fazer com os pés paralelos mais pra cima.', img: 'https://m.leandrocesar.com/exe/legpress.gif'},
     // { id: 2, num: 'Exercício 2', nome: 'Extensora', sets: 3, reps: '15', rest: '50"', grupo: '', obs: '', img: 'https://m.leandrocesar.com/exe/extensora.gif'},
