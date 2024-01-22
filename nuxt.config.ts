@@ -20,7 +20,7 @@ export default defineNuxtConfig({
         // <noscript>JavaScript is required</noscript>
         { children: 'JavaScript is required' }
       ]
-    }
+    },
   },
   css: [
     '~/assets/main.css'
