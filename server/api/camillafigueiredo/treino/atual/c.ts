@@ -1,32 +1,30 @@
 export default defineEventHandler((event) => {
-  return  [
+  return [
     // Série Atual
-    { num: 'Exercício 1', nome: 'Puxada p/ frente', sets: 3, reps: '6 / 10', rest: '50"', grupo: 'Dorsal', obs: 'Drop-set: faz 6 rep. pesado, + 10 repetições(um pouco mais leve).', img: 'https://m.leandrocesar.com/img/preImagem.png' },
-    { num: 'Exercício 2', nome: 'Remada na polia baixa', sets: 4, reps: '20', rest: '40"', grupo: 'Dorsal', obs: 'Fazer com a pegada neutra;', img: 'https://m.leandrocesar.com/img/preImagem.png' },
-    { num: 'Exercício 3', nome: 'Crucifixo inverso', sets: 3, reps: '20', rest: '50"', grupo: 'Dorsal', obs: 'Fazer pegada neutra', img: 'https://m.leandrocesar.com/img/preImagem.png' },
-    { num: 'Exercício 4', nome: 'Supino inclinado (HBC)', sets: 3, reps: '10', rest: '40"', grupo: 'Peito', obs: 'Fazer com halteres; pegada pronada; falhando.', img: 'https://m.leandrocesar.com/img/preImagem.png' },
-    { num: 'Exercício 5', nome: 'Supino reto (HBL)', sets: 3, reps: '10', rest: '50"', grupo: 'Peito', obs: 'Mãos na direção do cotovelo.', img: 'https://m.leandrocesar.com/img/preImagem.png' },
-    { num: 'Exercício 6', nome: 'Desenvolvimento de ombro (HBM)', sets: 3, reps: '10', rest: '40"', grupo: 'Ombro', obs: 'Fazer sentada ou em pé; pegada pronada.', img: 'https://m.leandrocesar.com/img/preImagem.png' },
-    { num: 'Exercício 7', nome: 'Tríceps na polia alta (Barra V)', sets: 3, reps: '10 / falha', rest: '50"', grupo: 'Tríceps', obs: 'Drop-set: fazer 10 repetições pesado, diminui 2 placas: fazer até a falha', img: 'https://m.leandrocesar.com/img/preImagem.png' },
-    { num: 'Exercício 8', nome: 'Tríceps mergulho no banco', sets: 3, reps: 'falha', rest: '50"', grupo: 'Tríceps', obs: 'Fazer até a falha.', img: 'https://m.leandrocesar.com/img/preImagem.png' },
-    { num: 'Exercício 9', nome: 'Biceps barra reta (HBM)', sets: 3, reps: '10', rest: '50"', grupo: 'Bíceps', obs: 'Pegada supinada na direção do ombro.', img: 'https://m.leandrocesar.com/img/preImagem.png' },
-    { num: 'Exercício 10', nome: 'Remada alta (HBM)', sets: 3, reps: '15', rest: '40"', grupo: 'Ombro', obs: 'Fazer na barra livre, pegada mais fechada que a largura dos ombros.', img: 'https://m.leandrocesar.com/img/preImagem.png' },
-    { num: 'Exercício 11', nome: 'Elevação lateral de ombros', sets: 3, reps: '20', rest: '40"', grupo: 'Ombro', obs: '', img: 'https://m.leandrocesar.com/img/preImagem.png' },
-    { num: 'Exercício 12', nome: 'Bíceps corda na polia baixa', sets: 3, reps: '8 + 8" +8', rest: '50"', grupo: 'Bíceps', obs: '', img: 'https://m.leandrocesar.com/img/preImagem.png' },
- 
+    { id: 1, num: 'Exercício 1', nome: 'Low Row', sets: 3, reps: '10 c/ 1"', rest: '50"', grupo: '', obs: 'Pegada supinada; segurar 1" atrás a cada repetição.', img: 'https://m.leandrocesar.com/exe/lowRow.gif' },
+    { id: 2, num: 'Exercício 2', nome: 'Puxada hammer', sets: 3, reps: '8', rest: '50"', grupo: '', obs: 'Fazer pegada supinada, alternando.', img: 'https://m.leandrocesar.com/exe/highRow.gif' },
+    { id: 3, num: 'Exercício 3', nome: 'Puxada pronada fechada', sets: 3, reps: '12', rest: '50"', grupo: '', obs: '', img: 'https://m.leandrocesar.com/exe/puxadaFechadaPronada.gif' },
+    { id: 4, num: 'Exercício 4', nome: 'Pull Down', sets: 3, reps: '12', rest: '50"', grupo: '', obs: 'Fazer com a corda na polia alta.', img: 'https://m.leandrocesar.com/exe/pullDown.gif' },
+    { id: 5, num: 'Exercício 5', nome: 'Remada Serrote', sets: 3, reps: '8 c/1"', rest: '50"', grupo: '', obs: 'Segurar 1 segundo em cima a cada repetição, falhando.', img: 'https://m.leandrocesar.com/exe/remadaSerrote.gif' },
+    { id: 6, num: 'Exercício 6', nome: 'Crucifixo Dorsal', sets: 3, reps: '10', rest: '50"', grupo: '', obs: 'Pegada pronada, cotovelo em extensão levemente flexionada(5º).', img: 'https://m.leandrocesar.com/exe/crucifixoDorsal.gif' },
+    { id: 7, num: 'Exercício 7', nome: 'Remada alta', sets: 3, reps: '10 (2t)', rest: '50"', grupo: '', obs: 'Fazer com 2 tempos(bombear) em cima.', img: 'https://m.leandrocesar.com/exe/remadaAlta.gif' },
+    { id: 8, num: 'Exercício 8', nome: 'Bíceps Invertido', sets: 3, reps: '10', rest: '50"', grupo: '', obs: 'fazer com a barra W, pegada fechada.', img: 'https://m.leandrocesar.com/exe/bicepsInvertidoBarraW.gif' },
+    { id: 9, num: 'Exercício 9', nome: 'Bíceps Sentada', sets: 3, reps: '8', rest: '50"', grupo: '', obs: 'Fazer alternado, falhando.', img: 'https://m.leandrocesar.com/exe/bícepsSentado.gif' },
+    { id: 10, num: 'Exercício 10', nome: 'Bíceps corda na polia baixa', sets: 3, reps: '10 +10"', rest: '50"', grupo: '', obs: 'Fazer 10 repetições pesado e segurar 10 segundos em cima.', img: 'https://m.leandrocesar.com/exe/bicepsPolia.gif' },
+    { id: 11, num: 'Exercício 11', nome: 'Supino Reto (HBC)', sets: 4, reps: '12', rest: '50"', grupo: '', obs: 'Pegada pronada.', img: 'https://m.leandrocesar.com/exe/supinoReto.gif' },
+
     // Modelo:
-    //  { num: 'Exercício', nome: '', sets: 3, reps: '', rest: '40"', grupo: '', obs: '', img: 'https://m.leandrocesar.com/img/preImagem.png'}
-    
-    // Série 1
-    // { num: 'Exercício 1', nome: 'Remada no aparelho', sets: 3, reps: '8/ 12', rest: '40"', grupo: 'Quadriceps', obs: 'Fazer com a pegada neutra;' },
-    // { num: 'Exercício 2', nome: 'Puxada neutra', sets: 3, reps: '12', rest: '40"', grupo: 'Quadriceps', obs: '' },
-    // { num: 'Exercício 3', nome: 'Remada Curvada', sets: 3, reps: '15', rest: '40"', grupo: 'Quadriceps', obs: 'Fazer pegada pronada;' },
-    // { num: 'Exercício 4', nome: 'Supino reto', sets: 3, reps: '12', rest: '40"', grupo: 'Quadriceps', obs: '' },
-    // { num: 'Exercício 5', nome: 'Desenvolvimento c/ halteres', sets: 3, reps: '12', rest: '40"', grupo: 'Quadriceps', obs: '' },
-    // { num: 'Exercício 6', nome: 'Tríceps Máquina', sets: 3, reps: '15', rest: '40"', grupo: 'Quadriceps', obs: '' },
-    // { num: 'Exercício 7', nome: 'Remada alta', sets: 3, reps: '15', rest: '40"', grupo: 'Quadriceps', obs: 'Fazer na polia baixa;' },
-    // { num: 'Exercício 8', nome: 'Tríceps corda', sets: 3, reps: '15 (c/ 1")', rest: '40"', grupo: 'Quadriceps', obs: 'Segurar 1 segundo a cada repetição' },
-    // { num: 'Exercício 9', nome: 'Biceps martelo', sets: 3, reps: '12', rest: '40"', grupo: 'Quadriceps', obs: '' },
+    // { id: 1, num: 'Exercício 1', nome: '', sets: 3, reps: '', rest: '40"', grupo: '', obs: '', img: 'https://m.leandrocesar.com/exe/preImagem.png' },
+    // { id: 2, num: 'Exercício 2', nome: '', sets: 3, reps: '', rest: '40"', grupo: '', obs: '', img: 'https://m.leandrocesar.com/exe/preImagem.png' },
+    // { id: 3, num: 'Exercício 3', nome: '', sets: 3, reps: '', rest: '40"', grupo: '', obs: '', img: 'https://m.leandrocesar.com/exe/preImagem.png' },
+    // { id: 4, num: 'Exercício 4', nome: '', sets: 3, reps: '', rest: '40"', grupo: '', obs: '', img: 'https://m.leandrocesar.com/exe/preImagem.png' },
+    // { id: 5, num: 'Exercício 5', nome: '', sets: 3, reps: '', rest: '40"', grupo: '', obs: '', img: 'https://m.leandrocesar.com/exe/preImagem.png' },
+    // { id: 6, num: 'Exercício 6', nome: '', sets: 3, reps: '', rest: '40"', grupo: '', obs: '', img: 'https://m.leandrocesar.com/exe/preImagem.png' },
+    // { id: 7, num: 'Exercício 7', nome: '', sets: 3, reps: '', rest: '40"', grupo: '', obs: '', img: 'https://m.leandrocesar.com/exe/preImagem.png' },
+    // { id: 8, num: 'Exercício 8', nome: '', sets: 3, reps: '', rest: '40"', grupo: '', obs: '', img: 'https://m.leandrocesar.com/exe/preImagem.png' },
+    // { id: 9, num: 'Exercício 9', nome: '', sets: 3, reps: '', rest: '40"', grupo: '', obs: '', img: 'https://m.leandrocesar.com/exe/preImagem.png' },
+    // { id: 10, num: 'Exercício 10', nome: '', sets: 3, reps: '', rest: '40"', grupo: '', obs: '', img: 'https://m.leandrocesar.com/exe/preImagem.png' },
+    // { id: 11, num: 'Exercício 11', nome: '', sets: 3, reps: '', rest: '40"', grupo: '', obs: '', img: 'https://m.leandrocesar.com/exe/preImagem.png' },
 
   ]
 })

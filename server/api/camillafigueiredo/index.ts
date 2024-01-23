@@ -12,17 +12,18 @@ export default defineEventHandler((event) => {
     "objetivo": "Definição",
     "tempo": "60 min.",
     "dias": "6 dias",
-    "treinoA": "Quadriceps/adutores/peito/tríceps",
-    "treinoB": "Gluteo/panturrilha/costa/bíceps",
-    "treinoC": "",
+    "treinoA": "Peito/Tríceps",
+    "treinoB": "Gluteo/Posterior",
+    "treinoC": "Costa/Bíceps",
+    "treinoD": "Quadriceps",
     
     // Dados Menu Global
-    "periodo": "04/12/23 - 04/01/24",
+    "periodo": "22/01/24 - 22/02/24",
     "status": 2,
     // Treino atual
-    "treinoActual": "05/12/23 - 04/01/24",
+    "treinoActual": "23/01/24 - 22/02/24",
     // Próxima Treino 
-    "treinoNext": "05/01/24",
+    "treinoNext": "23/02/24",
     // Avaliação atual
     "valuationActual": "",
     // Próxima avaliação 
