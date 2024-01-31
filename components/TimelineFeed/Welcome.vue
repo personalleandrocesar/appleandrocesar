@@ -1,7 +1,6 @@
 <template>
 
   <div class="body-date">
-    <Icon name="material-symbols:event-rounded" />
     <span>
       01/01/2024
     </span>
@@ -63,12 +62,15 @@
 .body-date{
   color: var(--color-text);
   text-align: left;
-  margin: 2rem 1.5rem -30px 2rem;
+  margin: 2rem 2rem -30px 2rem;
   display: flex;
-  justify-content: flex-start;
+  justify-content: flex-end;
   flex-direction: row;
   align-items: flex-start;
   flex-wrap: wrap;
+}
+span {
+font-weight: bold;
 }
 .body{
   display: flex;
@@ -96,6 +98,7 @@
   margin: 3rem 1.5rem;
   border-radius: 7px;
 }
+
 
 .main-logo img {
   height: 100px;
