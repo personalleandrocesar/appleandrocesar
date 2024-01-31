@@ -49,9 +49,9 @@
   align-items: flex-start;
   flex-wrap: wrap;
 }
-span {
-font-weight: bold;
-}
+  span {
+  font-weight: bold;
+  }
 
 .body{
   display: flex;
