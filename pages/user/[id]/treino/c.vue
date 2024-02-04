@@ -430,6 +430,13 @@ h2 {
   justify-content: space-around;
   margin-top: .3rem;
 }
+.main-div-tree ul{
+  overflow-x: auto;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
 
 .main-div-tree ul li {
   border: solid .1px #05959c80;

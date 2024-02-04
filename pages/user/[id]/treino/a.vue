@@ -406,6 +406,13 @@ h2 {
   color: #05959c;
 }
 
+.main-div-tree ul{
+  overflow-x: auto;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
 .main-div-tree {
   position: relative;
   overflow-x: auto;
