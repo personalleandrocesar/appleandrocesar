@@ -8,9 +8,9 @@ export default defineEventHandler((event) => {
     { id: 5, num: 'Exercício 5', nome: 'Crucifixo inverso aparelho', sets: 3, reps: '10', rest: '50"', grupo: '', obs: '', img: 'https://m.leandrocesar.com/exe/crucifixoDorsal.gif' },
     { id: 6, num: 'Exercício 6', nome: 'Remada alta na polia baixa', sets: 3, reps: '10 c/1"', rest: '50"', grupo: '', obs: 'Segurar 1 segundo a cada repetição.', img: 'https://m.leandrocesar.com/exe/remadaAlta.gif' },
     { id: 7, num: 'Exercício 7', nome: 'Bíceps invertido + bíceps normal', sets: 3, reps: '10 +10', rest: '50"', grupo: '', obs: 'Fazer na polia baixa.', img: 'https://m.leandrocesar.com/exe/bicepsPolia.gif' },
-    { id: 8, num: 'Exercício 8', nome: 'Bíceps aparelho', sets: 3, reps: '12', rest: '50"', grupo: '', obs: 'Fazer 2 tempos.', img: 'https://m.leandrocesar.com/exe/tricepsMergulho.gif' },
-    { id: 9, num: 'Exercício 9', nome: 'Bíceps barra reta', sets: 3, reps: '8', rest: '50"', grupo: '', obs: 'Colocar a mão na barra na direção do ombro.', img: 'https://m.leandrocesar.com/exe/tricepsCorda.gif' },
-    { id: 10, num: 'Exercício 10', nome: 'Abdominal infra na paralela', sets: 3, reps: '20', rest: '50"', grupo: '', obs: '', img: 'https://m.leandrocesar.com/exe/tricepsTesta.gif' },
+    { id: 8, num: 'Exercício 8', nome: 'Bíceps aparelho', sets: 3, reps: '12', rest: '50"', grupo: '', obs: 'Fazer 2 tempos.', img: 'https://m.leandrocesar.com/exe/bicepsAparelho.gif' },
+    { id: 9, num: 'Exercício 9', nome: 'Bíceps barra reta', sets: 3, reps: '8', rest: '50"', grupo: '', obs: 'Colocar a mão na barra na direção do ombro.', img: 'https://m.leandrocesar.com/exe/bicepsBarra.gif' },
+    { id: 10, num: 'Exercício 10', nome: 'Abdominal infra na paralela', sets: 3, reps: '20', rest: '50"', grupo: '', obs: '', img: 'https://m.leandrocesar.com/exe/abdominalInfraParalela.png' },
 
 
     //  { num: 'Exercício 1', nome: 'Supino reto', sets: 5, reps: '15 a 20', rest: '50"', grupo: '', obs: '', img: 'https://m.leandrocesar.com/img/preImagem.png'},

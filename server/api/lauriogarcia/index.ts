@@ -10,9 +10,19 @@ export default defineEventHandler((event) => {
     "dias": "5 dias",
     "treinoA": "Peito/Costa/abdômen",
     "treinoB": "Ombro/Tríceps/Bíceps",
-    "treinoC": "Perna/abdômen"
+    "treinoC": "Perna/abdômen",
 
     // Dados Menu Global
+    "periodo": "05/02/24 - 05/03/24",
+    "status": 2,
+    // Treino atual
+    "treinoActual": "05/02/24 - 04/03/24",
+    // Próxima Treino 
+    "treinoNext": "05/03/24",
+    // Avaliação atual
+    "valuationActual": "",
+    // Próxima avaliação 
+    "valuationNext": ""
     
   }
 })
