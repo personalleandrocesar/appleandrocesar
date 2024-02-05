@@ -406,12 +406,20 @@ h2 {
   color: #05959c;
 }
 
-.main-div-tree ul{
+.main-div-tree ul {
   overflow-x: auto;
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
-  justify-content: space-between;
+  justify-content: space-evenly;
+}
+.main-div-tree ul li {
+  overflow-x: auto;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  margin-right: 102px;
 }
 .main-div-tree {
   position: relative;

@@ -1,17 +1,16 @@
 export default defineEventHandler((event) => {
   return [
     // Série Atual
-    { id: 1, num: 'Exercício 1', nome: 'Supino reto hammer', sets: 3, reps: '', rest: '40"', grupo: '', obs: '', img: 'https://m.leandrocesar.com/exe/supinoHammer.gif' },
-    { id: 2, num: 'Exercício 2', nome: 'Supino reto (HBC)', sets: 3, reps: '', rest: '40"', grupo: '', obs: '', img: 'https://m.leandrocesar.com/exe/supinoRetoHBC.gif' },
-    { id: 3, num: 'Exercício 3', nome: 'Desenvolvimento de ombros (HBC)', sets: 3, reps: '', rest: '40"', grupo: '', obs: '', img: 'https://m.leandrocesar.com/exe/desenvolvimentoHBC.gif' },
-    { id: 4, num: 'Exercício 4', nome: 'Elevação Lateral', sets: 3, reps: '', rest: '40"', grupo: '', obs: '', img: 'https://m.leandrocesar.com/exe/preImagem.gif' },
-    { id: 5, num: 'Exercício 5', nome: 'Supino inclinado', sets: 3, reps: '', rest: '40"', grupo: '', obs: '', img: 'https://m.leandrocesar.com/exe/preImagem.gif' },
-    { id: 6, num: 'Exercício 6', nome: 'Elevação Frontal', sets: 3, reps: '', rest: '40"', grupo: '', obs: '', img: 'https://m.leandrocesar.com/exe/preImagem.gif' },
-    { id: 7, num: 'Exercício 7', nome: 'Desenvolvimento de ombros (HBM)', sets: 3, reps: '', rest: '40"', grupo: '', obs: '', img: 'https://m.leandrocesar.com/exe/preImagem.gif' },
-    { id: 8, num: 'Exercício 8', nome: 'Tríceps mergulho no graviton', sets: 3, reps: '', rest: '40"', grupo: '', obs: '', img: 'https://m.leandrocesar.com/exe/preImagem.gif' },
-    { id: 9, num: 'Exercício 9', nome: 'Tríceps testa na polia alta barra reta', sets: 3, reps: '', rest: '40"', grupo: '', obs: '', img: 'https://m.leandrocesar.com/exe/preImagem.gif' },
-    { id: 10, num: 'Exercício 10', nome: 'Tríceps corda na polia alta', sets: 3, reps: '', rest: '40"', grupo: '', obs: '', img: 'https://m.leandrocesar.com/exe/preImagem.gif' },
-    { id: 11, num: 'Exercício 11', nome: '', sets: 3, reps: '', rest: '40"', grupo: '', obs: '', img: 'https://m.leandrocesar.com/exe/preImagem.gif' },
+    { id: 1, num: 'Exercício 1', nome: 'Supino reto hammer', sets: 3, reps: '8 +8', rest: '50"', grupo: '', obs: 'Rest-pause: Fazer 8 repetições, descansa 10": fazer + 10', img: 'https://m.leandrocesar.com/exe/supinoRetoHammer.png' },
+    { id: 2, num: 'Exercício 2', nome: 'Supino reto (HBC)', sets: 3, reps: '10', rest: '50"', grupo: '', obs: '', img: 'https://m.leandrocesar.com/exe/supinoReto.gif' },
+    { id: 3, num: 'Exercício 3', nome: 'Desenvolvimento de ombros (HBC)', sets: 3, reps: '10 c/2"', rest: '50"', grupo: '', obs: '', img: 'https://m.leandrocesar.com/exe/desenvolvimentoHalteres.gif' },
+    { id: 4, num: 'Exercício 4', nome: 'Elevação Lateral (HBC)', sets: 3, reps: '20', rest: '50"', grupo: '', obs: '', img: 'https://m.leandrocesar.com/exe/elevacaoLateralHBC.gif' },
+    { id: 5, num: 'Exercício 5', nome: 'Supino inclinado (HBL)', sets: 3, reps: '10', rest: '50"', grupo: '', obs: '', img: 'https://m.leandrocesar.com/exe/supino45HBL.gif' },
+    { id: 6, num: 'Exercício 6', nome: 'Elevação Frontal (HBC)', sets: 3, reps: '10', rest: '50"', grupo: '', obs: 'Alternando - peg. neutra.', img: 'https://m.leandrocesar.com/exe/elevacaoFrontalHBC.gif' },
+    { id: 7, num: 'Exercício 7', nome: 'Desenvolvimento de ombros (HBM)', sets: 3, reps: '15 (2T)', rest: '50"', grupo: '', obs: 'Fazer 2 tempos embaixo.', img: 'https://m.leandrocesar.com/exe/desenvolvimentoHBM.gif' },
+    { id: 8, num: 'Exercício 8', nome: 'Tríceps mergulho no graviton', sets: 3, reps: '12', rest: '50"', grupo: '', obs: '', img: 'https://m.leandrocesar.com/exe/tricepsMergulho.gif' },
+    { id: 9, num: 'Exercício 9', nome: 'Tríceps corda na polia alta', sets: 3, reps: '8 / 10 / 12', rest: '50"', grupo: '', obs: 'Pirâmide descrescente.', img: 'https://m.leandrocesar.com/exe/tricepsCorda.gif' },
+    { id: 10, num: 'Exercício 10', nome: 'Tríceps testa HBC', sets: 3, reps: '10', rest: '50"', grupo: '', obs: '', img: 'https://m.leandrocesar.com/exe/tricepsTesta.gif' },
 
 
 
