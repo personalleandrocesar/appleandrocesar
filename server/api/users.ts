@@ -24,5 +24,6 @@ export default defineEventHandler((event) => {
     "nailysantana": {"usuario": "nailysantana", "sennha": "santana@Na"},
     "karollinearaujo": {"usuario": "karollinearaujo", "sennha": "araujo@Ka"},
     "cristianosouza": { "usuario": "cristianosouza", "sennha": "souza@Cr"},
+    "biancabarcelos": { "usuario": "biancabarcelos", "sennha": "barcelos@Bi"},
   }    
 })
